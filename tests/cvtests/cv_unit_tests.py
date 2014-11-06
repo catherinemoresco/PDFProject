@@ -9,7 +9,7 @@ class all_white_test_case(unittest.TestCase):
 
     def setUp(self):
     	#all white image
-        self.image = cv2.imread("testimg/white.jpg")
+        self.image = cv2.imread("/test/testimg/white.jpg")
         self.document = new_document()
         
     def test_merge_text(self):
@@ -41,7 +41,7 @@ class all_black_test_case(unittest.TestCase):
 
     def setUp(self):
     	#all black image
-        self.image = cv2.imread("testimg/black.jpg")
+        self.image = cv2.imread("/test/testimg/black.jpg")
         
     def test_merge_text(self):
     	#compares number of detected contours to number we observe
@@ -72,7 +72,7 @@ class one_picture_test_case(unittest.TestCase):
 
     def setUp(self):
     	#image
-        self.image = cv2.imread("testimg/image.jpg")
+        self.image = cv2.imread("/test/testimg/image.jpg")
         
     def test_merge_text(self):
     	#compares number of detected contours to number we observe
@@ -102,7 +102,7 @@ class perfect_text_test_case(unittest.TestCase):
 
     def setUp(self):
         # perfect text
-        self.image = cv2.imread("testimg/perfecttext.jpg")
+        self.image = cv2.imread("/test/testimg/perfecttext.jpg")
         
     def test_merge_text(self):
         #compares number of detected contours to number we observe
@@ -132,7 +132,7 @@ class text_photo_test_case(unittest.TestCase):
 
     def setUp(self):
         #image
-        self.image = cv2.imread("testimg/textphoto.jpg")
+        self.image = cv2.imread("/test/testimg/textphoto.jpg")
         
     def test_merge_text(self):
         #compares number of detected contours to number we observe
@@ -160,7 +160,7 @@ class picture_and_text_test_case(unittest.TestCase):
 
     def setUp(self):
     	#text with image
-        self.image = cv2.imread("testimg/perfecttextwithtimage.jpg")
+        self.image = cv2.imread("/test/testimg/perfecttextwithtimage.jpg")
         
     def test_merge_text(self):
     	#compares number of detected contours to number we observe
@@ -190,7 +190,7 @@ class different_sized_test_case(unittest.TestCase):
 
     def setUp(self):
     	#strangely formatted text
-        self.image = cv2.imread("testimg/strangeformatting.jpg")
+        self.image = cv2.imread("/test/testimg/strangeformatting.jpg")
 
     def test_merge_text(self):
     	#compares number of detected contours to number we observe
@@ -220,7 +220,7 @@ class different_sized_test_case(unittest.TestCase):
 class skewed_pAndT_test_case(unittest.TestCase):
 
     def setUp(self):
-        self.image = cv2.imread("testimg/rotatedwithimage.jpg")
+        self.image = cv2.imread("/test/testimg/rotatedwithimage.jpg")
         
     def test_merge_text(self):
     	#compares number of detected contours to number we observe
@@ -250,7 +250,7 @@ class skewed_pAndT_test_case(unittest.TestCase):
 class skewed_text_test_case(unittest.TestCase):
 
     def setUp(self):
-        self.image = cv2.imread("testimg/rotated.jpg")
+        self.image = cv2.imread("/test/testimg/rotated.jpg")
         
     def test_merge_text(self):
     	#compares number of detected contours to number we observe
@@ -281,11 +281,11 @@ class skewed_text_test_case(unittest.TestCase):
 class pdf_reading_test_case(unittest.TestCase):
 
     def setUp(self):
-        self.pdf = PdfFileReader(file("testimg/testpdf.pdf", "rb"))
+        self.pdf = PdfFileReader(file("/test/testimg/testpdf.pdf", "rb"))
     
-        self.image0 = cv2.imread("testimg/rotatedwithimage.jpg")
-        self.image1 = cv2.imread("testimg/textphoto.jpg")
-        self.image2 = cv2.imread("testimg/perfecttext.jpg")
+        self.image0 = cv2.imread("/test/testimg/rotatedwithimage.jpg")
+        self.image1 = cv2.imread("/test/testimg/textphoto.jpg")
+        self.image2 = cv2.imread("/test/testimg/perfecttext.jpg")
 
 
     def test_extract_images(self):
