@@ -16,7 +16,7 @@ class line_test_case(unittest.TestCase):
 		self.assertEqual(self.lineID, 1)
 		self.assertTrue(self.highlights == [])
 
-	def test_add_annotation(self):
+	def test_add_highlight(self):
 		self.assertTrue(self.line.addHighlight(self.highlight))
 		self.assertEqual(len(self.line.highlights), 1)
 

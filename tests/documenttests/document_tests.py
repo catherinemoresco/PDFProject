@@ -7,8 +7,8 @@ import document
 class page_test_case(unittest.TestCase):
 
 	def setUp(self):
-		self.image1 = cv2.imread("/tests/cvtests/testimg/perfecttext.jpg")
-        self.image2 = cv2.imread("/tests/cvtests/testimg/black.jpg")
+		self.image1 = cv2.imread("/tests/testimg/perfecttext.jpg")
+        self.image2 = cv2.imread("/tests/testimg/black.jpg")
    		images = [image1, image2]
 		self.doc = Document("thisisthename", self.images)
 

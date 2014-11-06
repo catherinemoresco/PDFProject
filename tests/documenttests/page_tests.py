@@ -7,7 +7,7 @@ import document
 class page_test_case(unittest.TestCase):
 
 	def setUp(self):
-		self.image1 = cv2.imread("/tests/cvtests/testimg/perfecttext.jpg")
+		self.image1 = cv2.imread("/tests/testimg/perfecttext.jpg")
 		self.page = Page(self.image1, 1)
 		self.annotation = Annotation()
 
