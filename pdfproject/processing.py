@@ -6,32 +6,39 @@ import numpy as np
 ## Detection Algorithm for Scanned Document Images"
 
 ## import test image (development purposes only)
-test = cv2.imread("perfecttext.jpg")
-test2 = cv2.imread("perfecttextwithimage.jpg")
+test = cv2.imread("testimg/textphoto.jpg")
+test2 = cv2.imread("testimg/perfecttextwithimage.jpg")
 
 
 kernel = np.uint8(np.ones((2,2)))
 kernelbig = np.uint8(np.ones((5,5)))
+
+kernelrowsmall = np.float32(np.ones((1, 25)))/25
+kernelrow = np.float32(np.ones((1, 50)))/50
 
 
 ## step 1: convert to black and white
 
 ## accidentally combined many steps into one big function for now
 def convertToBW(img):
-	bw = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
+	end = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
 
-## sobel derivative (in x direction):
-	sobel = cv2.Sobel(bw, cv2.CV_8U, 1, 0, ksize=1)
+# sobel derivative (in x direction):
+	end = cv2.Sobel(end, cv2.CV_8U, 1, 0, ksize=1)
 
 ##	threshold image:
-	ret, thresh = cv2.threshold(sobel, 150, 255, cv2.THRESH_BINARY)
+  	ret, end = cv2.threshold(end, 50, 255, cv2.THRESH_BINARY)
 
-## erode and then dilate, to remove noise
-	eroded = cv2.erode(thresh, kernel, iterations=1)
-	dilated = cv2.dilate(eroded, kernelbig, iterations=4)
+# ## erode and then dilate, to remove noise
+	end = cv2.erode(end, kernel, iterations=1)
+	end = cv2.dilate(end, kernelbig, iterations=1)
+
+	end = cv2.filter2D(end, -1, kernelrow)
+	ret, end = cv2.threshold(end, 20, 255, cv2.THRESH_BINARY)
+	end = cv2.erode(end, kernelrow, iterations=3)
 
 
-	return dilated
+	return end
 
 ## step 2: horizontal gradient
 
@@ -44,7 +51,7 @@ def convertToBW(img):
 ## step 6: identify lines
 
 
-img = convertToBW(test2)
+img = convertToBW(test)
 
 
 #show image (development purposes only)
