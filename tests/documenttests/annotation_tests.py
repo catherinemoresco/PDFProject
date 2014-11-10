@@ -4,27 +4,33 @@ import page
 import line
 import document
 
-class highlight_test_case(unittest.TestCase):
+class annotation_test_case(unittest.TestCase):
 
 	def setUp(self):
-		self.highlight = Highlight(11, 100)
-		self.highlight1 = Highlight(22, 200)
+		self.annotation = Annotation()
+		self.annotation1 = Annotation()
+
 
 	def test_color(self):
-		self.highlight.set_color("#b5b5b5")
-		self.assertTrue(self.highlight.get_color() == "#b5b5b5")
-		self.highlight.set_color("apple")
-		self.assertTrue(self.highlight.get_color() == "#b5b5b5")
+		self.annotation.set_color("#b5b5b5")
+		self.assertTrue(self.annotation.get_color() == "#b5b5b5")
+		self.annotation.set_color("apple")
+		self.assertTrue(self.annotation.get_color() == "#b5b5b5")
 
 	def test_id(self):
-		self.assertTrue(self.highlight.get_id() == 0)
-		self.assertTrue(self.highlight1.get_id() == 1)
+		self.assertTrue(self.annotation.get_id() == 0)
+		self.assertTrue(self.annotation1.get_id() == 1)
 
 	def test_start_end(self):
-		self.assertTrue(self.highlight.get_start() == 11)
-		self.assertTrue(self.highlight.get_end() == 100)
-		self.assertTrue(self.highlight1.get_start() == 22)
-		self.assertTrue(self.highlight1.get_end() == 200)
+		self.annotation.set_topleft((11, 11))
+		self.annotation.set_bottomright((100, 100))
+		self.annotation1.set_topleft((20, 20))
+		self.annotation1.set_bottomright((200, 200))
+
+		self.assertTrue(self.annotation.get_topleft() == (11, 11))
+		self.assertTrue(self.annotation.get_bottomright() == (100,100))
+		self.assertTrue(self.annotation1.get_topleft() == (20, 20))
+		self.assertTrue(self.annotation1.get_bottomright() == (200, 200))
 
 
 if __name__ == '__main__':
