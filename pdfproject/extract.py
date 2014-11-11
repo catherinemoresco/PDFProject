@@ -2,26 +2,30 @@ import PythonMagick
 import PyPDF2
 import numpy as np 
 import base64
+import cv2
+import StringIO
 
 ## test image for development
-pdf_im = PyPDF2.PdfFileReader(file('testimg/testpdf.pdf', "rb"))
+pdf_im = file('testimg/testpdf.pdf', "rb")
 
 def extractImages(pdf):
     images = []
+
     pdf_im = PyPDF2.PdfFileReader(pdf)
     npage = pdf_im.getNumPages()
 
     for p in range(0, npage):
         img = PythonMagick.Image()
         blob = PythonMagick.Blob()
-        img.density("300")
-        img.read("testimg/testpdf.pdf[" + str(p) + "]") # read in at 300 dpi
-        img.write(blob, 'JPG')
+        img.density("75")
+        ## read in pdf
+        img.read("testimg/testpdf.pdf[" + str(p) + "]") 
 
+        ## write to buffer
+        img.write(blob, 'RGB', 16)
         rawdata =  base64.b64decode(blob.base64())
 
-        ## this step currently not working
-        img = np.ndarray((img.rows(), img.columns(), 2),dtype='uint16', buffer=rawdata)
+        ## convert raw data to np array
+        img = np.ndarray((img.rows(), img.columns(), 3),dtype='uint16', buffer=rawdata)
         images.append(img)
-    print images
-
+    return images

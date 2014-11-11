@@ -44,13 +44,3 @@ def getLines(inputimg):
   		lines[i] = ((x, y), (x+w, y+h))
   return cv2.imencode('.jpg', inputimg), json.dumps(lines)
 
-
-print getLines(test2)[0][1]
-
-
-
-#show image (development purposes only)
-# window = cv2.namedWindow("image", cv2.WINDOW_NORMAL)
-# cv2.imshow("image", img)
-# cv2.waitKey(0)
-# cv2.destroyAllWindows()
