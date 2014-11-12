@@ -3,10 +3,10 @@ import numpy as np
 import json
 
 ## import test image (development purposes only)
-test = cv2.imread("testimg/strangeformatting.jpg")
-test2 = cv2.imread("testimg/perfecttextwithimage.jpg")
+test = cv2.imread("tests/testimg/strangeformatting.jpg")
+test2 = cv2.imread("tests/testimg/perfecttextwithimage.jpg")
 
-testpdf = file("testimg/testpdf.pdf", "rb").read()
+testpdf = file("tests/testimg/testpdf.pdf", "rb").read()
 
 kernel = np.uint8(np.ones((2,2)))
 kernelbig = np.uint8(np.ones((5,5)))
