@@ -4,12 +4,12 @@ from flask import Flask, Response, request, session, g, redirect, url_for, abort
 from werkzeug import secure_filename
 import shelve
 import socket
-
-UPLOAD_FOLDER = './pdfproject/static/uploads'
+UPLOAD_FOLDER = './pdfproject/uploads'
 ALLOWED_EXTENSIONS = set(['pdf','PDF'])
-
 app = Flask(__name__)
-app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
+
+#app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
+app.config['UPLOAD_FOLDER'] = '/PDFProject/pdfproject/uploads'
 
 def allowed_file(filename):
     return '.' in filename and \
@@ -18,11 +18,9 @@ def allowed_file(filename):
 @app.route("/")
 def hello():
 	return "Hello World!"
-
 @app.route("/start/")
 def homeprint():
 	return render_template("home.html")
-
 @app.route("/process/",methods=['GET','POST'])
 def upload_file():
 	print 'upload file'
@@ -43,8 +41,6 @@ def upload_file():
 		return "No!"
 	return "NO"	
 
-'''
-@app.route('/static/uploads/<filename>')
+@app.route('/uploads/<filename>')
 def uploaded_file(filename):
     return send_from_directory(app.config['UPLOAD_FOLDER'], filename)
-'''
