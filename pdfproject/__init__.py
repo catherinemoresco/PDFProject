@@ -17,7 +17,7 @@ def allowed_file(filename):
 
 @app.route("/")
 def hello():
-	return "Hello World!"
+	return "<a href='/start/'>Start</a>"
 
 @app.route("/start/")
 def homeprint():
@@ -39,7 +39,7 @@ def upload_file():
 			filename = secure_filename(file.filename)
 			file.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
 			print "saved?"
-			return "upload success" #redirect(url_for('uploaded_file',filename=filename))
+			return redirect(url_for('uploaded_file', filename=filename)) #"upload success" #redirect(url_for('uploaded_file',filename=filename))
 		return "No!"
 	return "NO"	
 
