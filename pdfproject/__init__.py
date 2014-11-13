@@ -6,8 +6,8 @@ import shelve
 import socket
 UPLOAD_FOLDER = './pdfproject/uploads'
 ALLOWED_EXTENSIONS = set(['pdf','PDF'])
-app = Flask(__name__)
 
+app = Flask(__name__)
 #app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 app.config['UPLOAD_FOLDER'] = '/PDFProject/pdfproject/uploads'
 
@@ -18,9 +18,11 @@ def allowed_file(filename):
 @app.route("/")
 def hello():
 	return "Hello World!"
+
 @app.route("/start/")
 def homeprint():
 	return render_template("home.html")
+
 @app.route("/process/",methods=['GET','POST'])
 def upload_file():
 	print 'upload file'
