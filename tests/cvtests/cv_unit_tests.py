@@ -12,7 +12,6 @@ class all_white_test_case(unittest.TestCase):
     def setUp(self):
     	#all white image
         self.image = cv2.imread("testimg/white.jpg")
-        self.image = cv2.cvtColor(self.image, cv2.COLOR_BGR2GRAY)
         self.lines = json.loads(processing.getLines(self.image)[1])
         
     def test_merge_text(self):
@@ -27,7 +26,7 @@ class all_white_test_case(unittest.TestCase):
         self.assertTrue(len(self.lines) == 0)
                    
     def test_calculate_angle(self):
-    	img, angle = skew.straighten(self.image)
+    	img, angle = skew.straighten(cv2.cvtColor(self.image, cv2.COLOR_BGR2GRAY))
     	self.assertEqual(abs(angle - 0) < 2)
     	
     	
@@ -51,7 +50,7 @@ class all_black_test_case(unittest.TestCase):
         self.assertTrue(len(self.lines) == 0)  
             
     def test_calculate_angle(self):
-    	img, angle = skew.straighten(self.image)
+    	img, angle = skew.straighten(cv2.cvtColor(self.image, cv2.COLOR_BGR2GRAY))
     	self.assertEqual(abs(angle - 0) < 2)
 
    	
@@ -75,7 +74,7 @@ class one_picture_test_case(unittest.TestCase):
         self.assertTrue(len(self.lines) == 0) 
     
     def test_calculate_angle(self):
-    	img, angle = skew.straighten(self.image)
+    	img, angle = skew.straighten(cv2.cvtColor(self.image, cv2.COLOR_BGR2GRAY))
     	self.assertEqual(abs(angle - 0) < 2)
 
 
@@ -99,7 +98,7 @@ class perfect_text_test_case(unittest.TestCase):
         self.assertTrue((len(self.lines) - 18) < 5 and (len(self.lines) - 18) >= 0) 
     
     def test_calculate_angle(self):
-    	img, angle = skew.straighten(self.image)
+    	img, angle = skew.straighten(cv2.cvtColor(self.image, cv2.COLOR_BGR2GRAY))
     	self.assertEqual(abs(angle - 0) < 2)
 
 
@@ -123,7 +122,7 @@ class text_photo_test_case(unittest.TestCase):
         self.assertTrue((len(self.lines) - 15) < 5 and (len(self.lines) - 15) >= 0) 
     
     def test_calculate_angle(self):
-    	img, angle = skew.straighten(self.image)
+    	img, angle = skew.straighten(cv2.cvtColor(self.image, cv2.COLOR_BGR2GRAY))
     	self.assertEqual(abs(angle - 0) < 2)
    	
 class picture_and_text_test_case(unittest.TestCase):
@@ -146,7 +145,7 @@ class picture_and_text_test_case(unittest.TestCase):
         self.assertTrue((len(self.lines) - 35) < 5 and (len(self.lines) - 35) >= 0)
     
     def test_calculate_angle(self):
-    	img, angle = skew.straighten(self.image)
+    	img, angle = skew.straighten(cv2.cvtColor(self.image, cv2.COLOR_BGR2GRAY))
     	self.assertEqual(abs(angle - 0) < 2)
 
 class different_sized_test_case(unittest.TestCase):
