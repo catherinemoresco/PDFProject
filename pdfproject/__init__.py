@@ -8,7 +8,7 @@ import socket
 import re
 ALLOWED_EXTENSIONS = set(['pdf','PDF'])
 
-app = Flask(__name__)
+app = Flask(__name__,static_url_path = "",static_folder = "uploads")
 app.config['UPLOAD_FOLDER'] = '/PDFProject/pdfproject/uploads'
 
 def allowed_file(filename):
@@ -45,7 +45,7 @@ def upload_file():
 			filename = secure_filename(file.filename)
 			file.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
 			print "saved?"
-			processing.process(os.path.join(app.config['UPLOAD_FOLDER'], filename))
+			#processing.process(os.path.join(app.config['UPLOAD_FOLDER'], filename))
 			print "ran?"
 			return redirect(url_for('uploaded_file', filename=filename)) #"upload success" #redirect(url_for('uploaded_file',filename=filename))
 		return "No!"
@@ -56,7 +56,16 @@ def uploaded_file(filename):
 	p = filename+'.*jpg$'
 	patt = re.compile(p)
 	result = []
+	
 	for file in os.listdir("/PDFProject/pdfproject/uploads"):
 		if patt.match(file):
 			result.append(file)
-	return render_template(processed,result=result)#send_from_directory(app.config['UPLOAD_FOLDER'], filename)
+	return render_template('processed.html',result=result)#send_from_directory(app.config['UPLOAD_FOLDER'], filename)
+
+	
+	'''
+	for file in os.listdir("/PDFProject/pdfproject/uploads"):
+		if patt.match(file):
+			p = "../uploads/"+str(file)
+			result.append(p)
+	'''

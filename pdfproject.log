@@ -11041,3 +11041,536 @@ OpenCV Error: Assertion failed (src.type() == CV_8UC1) in adaptiveThreshold, fil
 2014-11-14 05:40:55,050 DEBG 'pdfproject' stderr output:
 OpenCV Error: Assertion failed (src.type() == CV_8UC1) in adaptiveThreshold, file /opencv/opencv-2.4.9/modules/imgproc/src/thresh.cpp, line 796
 
+2014-11-14 05:42:20,156 DEBG 'pdfproject' stderr output:
+OpenCV Error: Assertion failed (src.type() == CV_8UC1) in adaptiveThreshold, file /opencv/opencv-2.4.9/modules/imgproc/src/thresh.cpp, line 796
+
+2014-11-14 05:45:03,148 DEBG 'pdfproject' stderr output:
+OpenCV Error: Assertion failed (src.type() == CV_8UC1) in adaptiveThreshold, file /opencv/opencv-2.4.9/modules/imgproc/src/thresh.cpp, line 796
+
+2014-11-14 05:46:35,150 DEBG 'pdfproject' stdout output:
+upload file
+<type 'file'>
+filenamelec10_11.pdf
+allowing file
+saved?
+
+2014-11-14 05:46:35,179 DEBG 'pdfproject' stdout output:
+upload file
+<type '_io.BytesIO'>
+filenameFlag_of_Chicago%2C_Illinois.pdf
+allowing file
+saved?
+upload file
+<type '_io.BytesIO'>
+filenameHW 4.pdf
+allowing file
+saved?
+
+2014-11-14 05:46:35,185 DEBG 'pdfproject' stdout output:
+upload file
+<type '_io.BytesIO'>
+filenameFlag_of_Chicago%2C_Illinois.pdf
+allowing file
+saved?
+
+2014-11-14 05:47:02,533 DEBG 'pdfproject' stderr output:
+OpenCV Error: Assertion failed (src.type() == CV_8UC1) in adaptiveThreshold, file /opencv/opencv-2.4.9/modules/imgproc/src/thresh.cpp, line 796
+
+2014-11-14 05:47:17,820 DEBG 'pdfproject' stdout output:
+upload file
+<type '_io.BytesIO'>
+filenameHW 4.pdf
+allowing file
+saved?
+
+2014-11-14 05:47:26,488 DEBG 'pdfproject' stderr output:
+OpenCV Error: Assertion failed (src.type() == CV_8UC1) in adaptiveThreshold, file /opencv/opencv-2.4.9/modules/imgproc/src/thresh.cpp, line 796
+
+2014-11-14 05:47:44,738 DEBG 'pdfproject' stdout output:
+upload file
+<type '_io.BytesIO'>
+filenameHW 4.pdf
+allowing file
+saved?
+
+2014-11-14 05:48:11,204 DEBG 'pdfproject' stderr output:
+OpenCV Error: Assertion failed (src.type() == CV_8UC1) in adaptiveThreshold, file /opencv/opencv-2.4.9/modules/imgproc/src/thresh.cpp, line 796
+
+2014-11-14 05:48:21,501 DEBG 'pdfproject' stderr output:
+OpenCV Error: Assertion failed (src.type() == CV_8UC1) in adaptiveThreshold, file /opencv/opencv-2.4.9/modules/imgproc/src/thresh.cpp, line 796
+
+2014-11-14 05:49:08,954 DEBG 'pdfproject' stderr output:
+OpenCV Error: Assertion failed (src.type() == CV_8UC1) in adaptiveThreshold, file /opencv/opencv-2.4.9/modules/imgproc/src/thresh.cpp, line 796
+
+2014-11-14 05:50:38,499 DEBG 'pdfproject' stdout output:
+upload file
+<type '_io.BytesIO'>
+filenameHW 4.pdf
+allowing file
+saved?
+
+2014-11-14 05:50:38,530 DEBG 'pdfproject' stdout output:
+upload file
+<type '_io.BytesIO'>
+filenameHW 4.pdf
+allowing file
+saved?
+upload file
+<type '_io.BytesIO'>
+filenameHW 4.pdf
+allowing file
+saved?
+
+2014-11-14 05:50:46,189 DEBG 'pdfproject' stderr output:
+OpenCV Error: Assertion failed (src.type() == CV_8UC1) in adaptiveThreshold, file /opencv/opencv-2.4.9/modules/imgproc/src/thresh.cpp, line 796
+
+2014-11-14 05:50:56,992 DEBG 'pdfproject' stdout output:
+upload file
+<type '_io.BytesIO'>
+filenameHW 4.pdf
+allowing file
+saved?
+
+2014-11-14 05:51:10,147 DEBG 'pdfproject' stdout output:
+upload file
+<type '_io.BytesIO'>
+filenameHW 4.pdf
+allowing file
+saved?
+ran?
+
+2014-11-14 05:51:19,659 DEBG 'pdfproject' stderr output:
+OpenCV Error: Assertion failed (src.type() == CV_8UC1) in adaptiveThreshold, file /opencv/opencv-2.4.9/modules/imgproc/src/thresh.cpp, line 796
+
+2014-11-14 05:51:28,253 DEBG 'pdfproject' stdout output:
+upload file
+<type '_io.BytesIO'>
+filenameHW 4.pdf
+allowing file
+saved?
+
+2014-11-14 05:51:35,384 DEBG fd 9 closed, stopped monitoring <POutputDispatcher at 140105696950896 for <Subprocess at 140105696949456 with name pdfproject in state RUNNING> (stdout)>
+2014-11-14 05:51:35,385 DEBG fd 13 closed, stopped monitoring <POutputDispatcher at 140105696950968 for <Subprocess at 140105696949456 with name pdfproject in state RUNNING> (stderr)>
+2014-11-14 05:51:35,386 INFO exited: pdfproject (exit status 255; not expected)
+2014-11-14 05:51:35,386 DEBG received SIGCLD indicating a child quit
+2014-11-14 05:51:36,401 INFO spawned: 'pdfproject' with pid 7377
+2014-11-14 05:51:37,410 INFO success: pdfproject entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2014-11-14 05:51:44,780 DEBG 'pdfproject' stdout output:
+upload file
+<type '_io.BytesIO'>
+filenameHW 4.pdf
+allowing file
+saved?
+ran?
+
+2014-11-14 05:51:58,949 DEBG 'pdfproject' stdout output:
+upload file
+<type '_io.BytesIO'>
+filenameHW 4.pdf
+allowing file
+saved?
+ran?
+
+2014-11-14 05:52:38,993 DEBG 'pdfproject' stdout output:
+upload file
+<type '_io.BytesIO'>
+filenameHW 4.pdf
+allowing file
+saved?
+ran?
+
+2014-11-14 05:53:22,101 DEBG 'pdfproject' stdout output:
+upload file
+<type '_io.BytesIO'>
+filenameHW 4.pdf
+allowing file
+saved?
+ran?
+upload file
+<type '_io.BytesIO'>
+filenameHW 4.pdf
+allowing file
+saved?
+ran?
+
+2014-11-14 05:54:09,389 DEBG 'pdfproject' stdout output:
+upload file
+<type '_io.BytesIO'>
+filenameHW 4.pdf
+allowing file
+saved?
+ran?
+
+2014-11-14 05:56:32,456 DEBG 'pdfproject' stdout output:
+upload file
+<type '_io.BytesIO'>
+filenameHW 4.pdf
+allowing file
+saved?
+ran?
+
+2014-11-14 05:59:46,432 DEBG 'pdfproject' stdout output:
+upload file
+<type '_io.BytesIO'>
+filenameHW 4.pdf
+allowing file
+saved?
+ran?
+
+2014-11-14 05:59:46,441 DEBG 'pdfproject' stdout output:
+upload file
+<type '_io.BytesIO'>
+filename
+upload file
+<type '_io.BytesIO'>
+filename
+
+2014-11-14 05:59:46,452 DEBG 'pdfproject' stdout output:
+upload file
+<type '_io.BytesIO'>
+filename
+
+2014-11-14 05:59:55,912 DEBG 'pdfproject' stdout output:
+upload file
+<type '_io.BytesIO'>
+filename
+
+2014-11-14 06:00:40,628 DEBG 'pdfproject' stdout output:
+upload file
+<type '_io.BytesIO'>
+filenameHW 4.pdf
+allowing file
+saved?
+ran?
+
+2014-11-14 06:01:29,979 DEBG 'pdfproject' stdout output:
+upload file
+<type '_io.BytesIO'>
+filenameHW 4.pdf
+allowing file
+saved?
+ran?
+upload file
+<type '_io.BytesIO'>
+filenameHW 4.pdf
+allowing file
+saved?
+ran?
+
+2014-11-14 06:02:56,042 DEBG 'pdfproject' stdout output:
+upload file
+<type '_io.BytesIO'>
+filenameHW 4.pdf
+allowing file
+saved?
+ran?
+
+2014-11-14 06:02:56,060 DEBG 'pdfproject' stdout output:
+upload file
+<type '_io.BytesIO'>
+filename
+
+2014-11-14 06:03:36,653 DEBG 'pdfproject' stdout output:
+upload file
+<type '_io.BytesIO'>
+filenameHW 4.pdf
+allowing file
+saved?
+ran?
+
+2014-11-14 06:04:50,367 DEBG 'pdfproject' stdout output:
+upload file
+<type '_io.BytesIO'>
+filenameHW 4.pdf
+allowing file
+saved?
+ran?
+
+2014-11-14 06:06:44,501 DEBG 'pdfproject' stdout output:
+upload file
+<type '_io.BytesIO'>
+filenameHW 4.pdf
+allowing file
+saved?
+ran?
+
+2014-11-14 06:07:10,526 DEBG 'pdfproject' stdout output:
+upload file
+<type '_io.BytesIO'>
+filenameHW 4.pdf
+allowing file
+saved?
+ran?
+
+2014-11-14 06:07:14,884 DEBG 'pdfproject' stdout output:
+upload file
+<type '_io.BytesIO'>
+filenameHW 4.pdf
+allowing file
+saved?
+ran?
+
+2014-11-14 06:11:53,008 DEBG 'pdfproject' stdout output:
+upload file
+<type '_io.BytesIO'>
+filenameHW 4.pdf
+allowing file
+saved?
+ran?
+
+2014-11-14 06:13:35,741 DEBG 'pdfproject' stdout output:
+upload file
+<type '_io.BytesIO'>
+filenameHW 4.pdf
+allowing file
+saved?
+ran?
+
+2014-11-14 06:13:35,757 DEBG 'pdfproject' stdout output:
+upload file
+<type '_io.BytesIO'>
+filenameHW 4.pdf
+allowing file
+saved?
+ran?
+
+2014-11-14 06:14:13,457 DEBG 'pdfproject' stdout output:
+upload file
+<type '_io.BytesIO'>
+filenameHW 4.pdf
+allowing file
+saved?
+ran?
+upload file
+<type '_io.BytesIO'>
+filenameHW 4.pdf
+allowing file
+saved?
+ran?
+
+2014-11-14 06:17:37,482 DEBG 'pdfproject' stdout output:
+upload file
+<type '_io.BytesIO'>
+filenameHW 4.pdf
+allowing file
+saved?
+ran?
+
+2014-11-14 06:18:40,501 DEBG 'pdfproject' stdout output:
+upload file
+<type '_io.BytesIO'>
+filenameHW 4.pdf
+allowing file
+saved?
+ran?
+
+2014-11-14 06:19:41,346 DEBG 'pdfproject' stdout output:
+upload file
+<type '_io.BytesIO'>
+filenameHW 4.pdf
+allowing file
+saved?
+ran?
+
+2014-11-14 06:19:41,983 DEBG 'pdfproject' stdout output:
+upload file
+<type '_io.BytesIO'>
+filenameHW 4.pdf
+allowing file
+saved?
+ran?
+
+2014-11-14 06:21:05,084 DEBG 'pdfproject' stdout output:
+upload file
+<type '_io.BytesIO'>
+filenameHW 4.pdf
+allowing file
+saved?
+ran?
+upload file
+<type '_io.BytesIO'>
+filenameHW 4.pdf
+allowing file
+saved?
+ran?
+
+2014-11-14 06:24:01,278 DEBG 'pdfproject' stdout output:
+upload file
+<type '_io.BytesIO'>
+filenameHW 4.pdf
+allowing file
+saved?
+ran?
+
+2014-11-14 06:24:01,303 DEBG 'pdfproject' stdout output:
+upload file
+<type '_io.BytesIO'>
+filenameHW 4.pdf
+allowing file
+saved?
+ran?
+
+2014-11-14 06:24:33,645 DEBG 'pdfproject' stdout output:
+upload file
+<type '_io.BytesIO'>
+filenameHW 4.pdf
+allowing file
+saved?
+ran?
+
+2014-11-14 06:24:34,514 DEBG 'pdfproject' stdout output:
+upload file
+<type '_io.BytesIO'>
+filenameHW 4.pdf
+allowing file
+saved?
+ran?
+
+2014-11-14 06:27:48,156 DEBG 'pdfproject' stdout output:
+upload file
+<type '_io.BytesIO'>
+filenameHW 4.pdf
+allowing file
+saved?
+ran?
+
+2014-11-14 06:28:17,880 DEBG 'pdfproject' stdout output:
+upload file
+<type '_io.BytesIO'>
+filenameHW 4.pdf
+allowing file
+saved?
+ran?
+
+2014-11-14 06:29:59,400 DEBG 'pdfproject' stdout output:
+upload file
+<type '_io.BytesIO'>
+filenameHW 4.pdf
+allowing file
+saved?
+ran?
+
+2014-11-14 06:30:12,484 DEBG 'pdfproject' stdout output:
+upload file
+<type '_io.BytesIO'>
+filenameHW 4.pdf
+allowing file
+saved?
+ran?
+
+2014-11-14 06:30:49,792 DEBG 'pdfproject-reloader' stderr output:
+cat: 
+2014-11-14 06:30:49,796 DEBG 'pdfproject-reloader' stderr output:
+/tmp/flask-project.pid
+2014-11-14 06:30:49,805 DEBG 'pdfproject-reloader' stderr output:
+: No such file or directory
+2014-11-14 06:30:49,808 DEBG 'pdfproject-reloader' stderr output:
+
+
+2014-11-14 06:30:49,840 DEBG 'pdfproject-reloader' stderr output:
+/bin/sh: 1: kill: Usage: kill [-s sigspec | -signum | -sigspec] [pid | job]... or
+kill -l [exitstatus]
+
+2014-11-14 06:30:50,084 DEBG 'pdfproject' stdout output:
+upload file
+<type '_io.BytesIO'>
+filenameHW 4.pdf
+allowing file
+saved?
+ran?
+
+2014-11-14 06:31:12,551 DEBG 'pdfproject' stdout output:
+upload file
+<type '_io.BytesIO'>
+filenameHW 4.pdf
+allowing file
+saved?
+ran?
+
+2014-11-14 06:34:13,705 DEBG 'pdfproject' stdout output:
+upload file
+<type '_io.BytesIO'>
+filenameHW 4.pdf
+allowing file
+saved?
+ran?
+
+2014-11-14 06:35:30,380 DEBG 'pdfproject' stdout output:
+upload file
+<type '_io.BytesIO'>
+filenameHW 4.pdf
+allowing file
+saved?
+ran?
+
+2014-11-14 06:40:16,225 DEBG 'pdfproject' stdout output:
+upload file
+<type '_io.BytesIO'>
+filename
+upload file
+<type '_io.BytesIO'>
+filenameHW 4.pdf
+allowing file
+saved?
+ran?
+
+2014-11-14 06:41:27,642 DEBG 'pdfproject' stdout output:
+upload file
+<type '_io.BytesIO'>
+filenameHW 4.pdf
+allowing file
+saved?
+ran?
+
+2014-11-14 06:41:34,926 DEBG 'pdfproject' stderr output:
+OpenCV Error: Assertion failed (src.type() == CV_8UC1) in adaptiveThreshold, file /opencv/opencv-2.4.9/modules/imgproc/src/thresh.cpp, line 796
+
+2014-11-14 06:41:47,548 DEBG 'pdfproject' stdout output:
+upload file
+<type '_io.BytesIO'>
+filenameHW 4.pdf
+allowing file
+saved?
+
+2014-11-14 06:42:07,698 DEBG 'pdfproject' stdout output:
+upload file
+<type '_io.BytesIO'>
+filenameHW 4.pdf
+allowing file
+saved?
+ran?
+
+2014-11-14 06:43:15,884 DEBG 'pdfproject' stderr output:
+OpenCV Error: Assertion failed (src.type() == CV_8UC1) in adaptiveThreshold, file /opencv/opencv-2.4.9/modules/imgproc/src/thresh.cpp, line 796
+
+2014-11-14 06:45:22,647 DEBG 'pdfproject' stdout output:
+upload file
+<type '_io.BytesIO'>
+filenameHW 4.pdf
+allowing file
+saved?
+
+2014-11-14 06:46:52,724 DEBG 'pdfproject' stdout output:
+upload file
+<type '_io.BytesIO'>
+filenameHW 4.pdf
+allowing file
+saved?
+(877, 620, 3)
+
+2014-11-14 06:46:52,734 DEBG 'pdfproject' stdout output:
+upload file
+<type '_io.BytesIO'>
+filenameHW 4.pdf
+allowing file
+saved?
+(877, 620, 3)
+
+2014-11-14 06:46:52,748 DEBG 'pdfproject' stdout output:
+upload file
+<type '_io.BytesIO'>
+filenameHW 4.pdf
+allowing file
+saved?
+(877, 620, 3)
+

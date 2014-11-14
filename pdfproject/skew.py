@@ -17,7 +17,8 @@ def horizontal_sums(img):
 
 # rotate an image by an angle that maximizes the standard deviation of its row sums
 def straighten(img):
-
+	print img.shape
+	print img.type()
 	if (len(img.shape) > 2):
 		img = cv2.cvtColor(img, cv2.COLOR_RGB2GRAY)
 
