@@ -1,4 +1,4 @@
-#import processing
+#import automate
 import os
 from flask import Flask, Response, request, session, g, redirect, url_for, abort, render_template, flash, send_from_directory,jsonify
 from werkzeug import secure_filename
@@ -17,11 +17,11 @@ def allowed_file(filename):
 
 @app.route("/")
 def hello():
-	return "<a href='/start/'>Start</a>"
+	return render_template("layout.html")
 
 @app.route("/start/")
 def homeprint():
-	return render_template("home.html")
+	return render_template("start.html")
 
 @app.route("/process/",methods=['GET','POST'])
 def upload_file():

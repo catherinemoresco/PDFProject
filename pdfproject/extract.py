@@ -6,7 +6,7 @@ import cv2
 import StringIO
 
 ## test image for development
-pdf_im = file('testimg/testpdf.pdf', "rb")
+#pdf_im = file('testimg/testpdf.pdf', "rb")
 
 def extractImages(pdf):
     images = []
@@ -19,7 +19,7 @@ def extractImages(pdf):
         blob = PythonMagick.Blob()
         img.density("75")
         ## read in pdf
-        img.read("testimg/testpdf.pdf[" + str(p) + "]") 
+        img.read(pdf+"[" + str(p) + "]") 
 
         ## write to buffer
         img.write(blob, 'RGB', 16)
