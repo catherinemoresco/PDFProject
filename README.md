@@ -9,11 +9,15 @@ Catherine Moresco, Jonathan Jin, Megan Barnes, Michael Zhao, Alberto Rios, and C
 Features successfully implemented in this iteration include:
 - File uploading
 - Exporting PDF pages to JPG images
-- Processing images
-	+ Skew detection
-	+ 
+- Image processing
+	+ Skew detection and correction
+	+ Extraction of text line coordinates
+- Image display
 
-## Example Usage
+## Example Usage and Recommended Acceptance Tests
+It's pretty simple to use: upload your own document with the "upload" button, and watch it appear!
+
+The best images are ones that are well formed, and have only one page of text per PDF page. Images imbedded in the text are OK!
 
 
 ## Dependencies
