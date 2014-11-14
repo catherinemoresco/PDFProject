@@ -149,7 +149,7 @@ class different_sized_test_case(unittest.TestCase):
     	#one picture image
         self.image = cv2.imread("testimg/strangeformatting.jpg")
         self.lines = json.loads(processing.getLines(self.image)[1])
-        self.img, self.angle = skew.straighten(cv2.cvtColor(self.image), cv2.COLOR_BGR2GRAY))
+        self.img, self.angle = skew.straighten(cv2.cvtColor(self.image, cv2.COLOR_BGR2GRAY))
         
     def test_merge_text(self):
     	#makes sure number of contours is decreasing through processing
@@ -172,7 +172,7 @@ class skewed_pAndT_test_case(unittest.TestCase):
     	#one picture image
         self.image = cv2.imread("testimg/rotatedwithimage.jpg")
         self.lines = json.loads(processing.getLines(self.image)[1])
-        self.img, self.angle = skew.straighten(cv2.cvtColor(self.image), cv2.COLOR_BGR2GRAY))
+        self.img, self.angle = skew.straighten(cv2.cvtColor(self.image, cv2.COLOR_BGR2GRAY))
         
     def test_merge_text(self):
     	#makes sure number of contours is decreasing through processing
@@ -198,7 +198,7 @@ class skewed_text_test_case(unittest.TestCase):
     	#one picture image
         self.image = cv2.imread("testimg/rotated.jpg")
         self.lines = json.loads(processing.getLines(self.image)[1])
-        self.img, self.angle = skew.straighten(cv2.cvtColor(self.image), cv2.COLOR_BGR2GRAY))
+        self.img, self.angle = skew.straighten(cv2.cvtColor(self.image, cv2.COLOR_BGR2GRAY))
         
     def test_merge_text(self):
     	#makes sure number of contours is decreasing through processing
