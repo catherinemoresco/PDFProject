@@ -12,6 +12,7 @@ class all_white_test_case(unittest.TestCase):
     def setUp(self):
     	#all white image
         self.image = cv2.imread("testimg/white.jpg")
+        self.image = cv2.cvtColor(self.image, cv2.COLOR_BGR2GRAY)
         self.lines = json.loads(processing.getLines(self.image)[1])
         
     def test_merge_text(self):
@@ -35,6 +36,7 @@ class all_black_test_case(unittest.TestCase):
     def setUp(self):
     	#all black image
         self.image = cv2.imread("testimg/black.jpg")
+        self.image = cv2.cvtColor(self.image, cv2.COLOR_BGR2GRAY)
         self.lines = json.loads(processing.getLines(self.image)[1])
         
     def test_merge_text(self):
@@ -58,6 +60,7 @@ class one_picture_test_case(unittest.TestCase):
     def setUp(self):
     	#one picture image
         self.image = cv2.imread("testimg/image.jpg")
+        self.image = cv2.cvtColor(self.image, cv2.COLOR_BGR2GRAY)
         self.lines = json.loads(processing.getLines(self.image)[1])
         
     def test_merge_text(self):
@@ -81,6 +84,7 @@ class perfect_text_test_case(unittest.TestCase):
     def setUp(self):
     	#one picture image
         self.image = cv2.imread("testimg/perfecttext.jpg")
+        self.image = cv2.cvtColor(self.image, cv2.COLOR_BGR2GRAY)
         self.lines = json.loads(processing.getLines(self.image)[1])
         
     def test_merge_text(self):
@@ -104,6 +108,7 @@ class text_photo_test_case(unittest.TestCase):
     def setUp(self):
     	#one picture image
         self.image = cv2.imread("testimg/textphoto.jpg")
+        self.image = cv2.cvtColor(self.image, cv2.COLOR_BGR2GRAY)
         self.lines = json.loads(processing.getLines(self.image)[1])
         
     def test_merge_text(self):
@@ -126,6 +131,7 @@ class picture_and_text_test_case(unittest.TestCase):
     def setUp(self):
     	#one picture image
         self.image = cv2.imread("testimg/perfecttextwithimage.jpg")
+        self.image = cv2.cvtColor(self.image, cv2.COLOR_BGR2GRAY)
         self.lines = json.loads(processing.getLines(self.image)[1])
         
     def test_merge_text(self):
@@ -148,6 +154,7 @@ class different_sized_test_case(unittest.TestCase):
     def setUp(self):
     	#one picture image
         self.image = cv2.imread("testimg/strangeformatting.jpg")
+        self.image = cv2.cvtColor(self.image, cv2.COLOR_BGR2GRAY)
         self.lines = json.loads(processing.getLines(self.image)[1])
         self.img, self.angle = skew.straighten(cv2.cvtColor(self.image, cv2.COLOR_BGR2GRAY))
         
@@ -171,6 +178,7 @@ class skewed_pAndT_test_case(unittest.TestCase):
     def setUp(self):
     	#one picture image
         self.image = cv2.imread("testimg/rotatedwithimage.jpg")
+        self.image = cv2.cvtColor(self.image, cv2.COLOR_BGR2GRAY)
         self.lines = json.loads(processing.getLines(self.image)[1])
         self.img, self.angle = skew.straighten(cv2.cvtColor(self.image, cv2.COLOR_BGR2GRAY))
         
@@ -197,6 +205,7 @@ class skewed_text_test_case(unittest.TestCase):
     def setUp(self):
     	#one picture image
         self.image = cv2.imread("testimg/rotated.jpg")
+        self.image = cv2.cvtColor(self.image, cv2.COLOR_BGR2GRAY)
         self.lines = json.loads(processing.getLines(self.image)[1])
         self.img, self.angle = skew.straighten(cv2.cvtColor(self.image, cv2.COLOR_BGR2GRAY))
         
