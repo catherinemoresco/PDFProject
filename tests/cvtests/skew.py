@@ -1,16 +1,15 @@
 import numpy as np
-from scipy import misc
 import cv2
 
 # rotate an image by a given angle
 def rotate(img, angle):
-	height, width = img.shape[0], img.shape[1]
+	height, width = img.shape
 	rotmat = cv2.getRotationMatrix2D((width/2, height/2), angle, 1)
 	return cv2.warpAffine(img, rotmat, (width, height))
 
 # get the sum of the values of a row
 def horizontal_sums(img):
-	height, width = img.shape[0], img.shape[1]
+	height, width = img.shape
 	sums = []
 	for i in range(0+(height/25), height-(height/25), (height/10)):
 		sums.append(sum(img[i]))
@@ -29,11 +28,4 @@ def straighten(img):
 		stds[np.std(horizontal_sums(rotate(img, i)))] = i
 	angle = stds[max(stds.keys())]
 
-	return rotate(img, angle)
-
-window = cv2.namedWindow("image", cv2.WINDOW_NORMAL)
-img = cv2.imread("rotatedwithimage.jpg")
-test = straighten(img)
-cv2.imshow("image", test)
-cv2.waitKey(0)
-cv2.destroyAllWindows()
+	return rotate(test, angle)
