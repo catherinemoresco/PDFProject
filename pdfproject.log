@@ -4747,3 +4747,27 @@ filenameFrank03.pdf
 allowing file
 saved?
 
+2014-11-14 02:10:07,131 DEBG 'pdfproject-reloader' stderr output:
+cat: 
+2014-11-14 02:10:07,145 DEBG 'pdfproject-reloader' stderr output:
+/tmp/flask-project.pid
+2014-11-14 02:10:07,151 DEBG 'pdfproject-reloader' stderr output:
+: No such file or directory
+2014-11-14 02:10:07,157 DEBG 'pdfproject-reloader' stderr output:
+
+
+2014-11-14 02:10:07,165 DEBG 'pdfproject-reloader' stderr output:
+/bin/sh: 1: kill: 
+2014-11-14 02:10:07,169 DEBG 'pdfproject-reloader' stderr output:
+Usage: kill [-s sigspec | -signum | -sigspec] [pid | job]... or
+kill -l [exitstatus]
+2014-11-14 02:10:07,174 DEBG 'pdfproject-reloader' stderr output:
+
+
+2014-11-14 02:32:50,272 DEBG 'pdfproject' stdout output:
+upload file
+<type '_io.BytesIO'>
+filenametrialdocument.pdf
+allowing file
+saved?
+
