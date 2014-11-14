@@ -15,7 +15,7 @@ Features successfully implemented in this iteration include:
 - Image display
 
 ## Example Usage and Recommended Acceptance Tests
-It's pretty simple to use: upload your own document with the "upload" button, and watch it appear---straightened!
+It's pretty simple to use: upload your own document with the "upload" button, and watch it appear---processed and straightened!
 
 The best images are ones that are well formed, and have only one page of text per PDF page. Images imbedded in the text are OK!
 
@@ -36,10 +36,12 @@ For automatic server-crash recovery, install supervisord and start the server us
 ## How to Run Unit Tests
 #####Image Processing Tests:
 From within tests/cvtests, run the command `python -m unittest -v cv_unit_tests`.
+
 *- Megan and Catherine*
 
 ##### UI Tests:
  The unit tests that we initially submitted will not run given the changes in our UI desgin.We are researching automated processes for testing UI that will be incorporated into Iteration 2.
+
  *- Alberto and Cristian*
 
 ## Who did What
