@@ -14,23 +14,24 @@ kernelrow = np.float32(np.ones((1, 50)))/50
 
 
 def isolateLines(end):
-	end = cv2.cvtColor(end, cv2.COLOR_BGR2GRAY)
+  if (len(end.shape) == 3):
+	  end = cv2.cvtColor(end, cv2.COLOR_BGR2GRAY)
 
 # sobel derivative (in x direction):
-	end = cv2.Sobel(end, cv2.CV_8U, 1, 0, ksize=1)
+  end = cv2.Sobel(end, cv2.CV_8U, 1, 0, ksize=1)
 
 ##	threshold image:
-  	ret, end = cv2.threshold(end, 50, 255, cv2.THRESH_BINARY)
+  ret, end = cv2.threshold(end, 50, 255, cv2.THRESH_BINARY)
 
 ## erode and then dilate, to remove noise
-	end = cv2.erode(end, kernel, iterations=1)
-	end = cv2.dilate(end, kernelbig, iterations=1)
+  end = cv2.erode(end, kernel, iterations=1)
+  end = cv2.dilate(end, kernelbig, iterations=1)
 
-	end = cv2.filter2D(end, -1, kernelrow)
-	ret, end = cv2.threshold(end, 20, 255, cv2.THRESH_BINARY)
-	end = cv2.erode(end, kernelrow, iterations=3)
+  end = cv2.filter2D(end, -1, kernelrow)
+  ret, end = cv2.threshold(end, 20, 255, cv2.THRESH_BINARY)
+  end = cv2.erode(end, kernelrow, iterations=3)
 
-	return end
+  return end
 
 def getLines(inputimg):
   img = isolateLines(inputimg)
