@@ -163,7 +163,7 @@ class different_sized_test_case(unittest.TestCase):
         self.assertTrue((len(self.lines) - 37) < 5 and (len(self.lines) - 37) >= 0)
     
     def test_calculate_angle(self):
-    	self.assertTrue(abs(angle - 0) < 2)
+    	self.assertTrue(abs(self.angle - 0) < 2)
 
 
 class skewed_pAndT_test_case(unittest.TestCase):
@@ -187,9 +187,6 @@ class skewed_pAndT_test_case(unittest.TestCase):
     
     def test_calculate_angle(self):
     	self.assertTrue(abs(self.angle - 15) < 2)
-    
-    def test_rotate(self):
-    	self.assertTrue(abs(self.img - 0) < 2)
 
     	
 class skewed_text_test_case(unittest.TestCase):
@@ -213,9 +210,6 @@ class skewed_text_test_case(unittest.TestCase):
     
     def test_calculate_angle(self):
     	self.assertTrue(abs(self.angle - 15) < 2)
-    
-    def test_rotate(self):
-    	self.assertTrue(abs(self.img - 0) < 2)
 
 	
 if __name__ == '__main__':
