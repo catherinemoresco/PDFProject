@@ -1,4 +1,4 @@
-#import automate
+import automate
 import os
 from flask import Flask, Response, request, session, g, redirect, url_for, abort, render_template, flash, send_from_directory,jsonify
 from werkzeug import secure_filename
@@ -39,6 +39,8 @@ def upload_file():
 			filename = secure_filename(file.filename)
 			file.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
 			print "saved?"
+			automate.processPDF(os.path.join(app.config['UPLOAD_FOLDER'], filename))
+			print "ran?"
 			return redirect(url_for('uploaded_file', filename=filename)) #"upload success" #redirect(url_for('uploaded_file',filename=filename))
 		return "No!"
 	return "NO"	
