@@ -3,7 +3,6 @@ import PyPDF2
 import numpy as np 
 import base64
 import cv2
-import StringIO
 
 ## test image for development
 #pdf_im = file('testimg/testpdf.pdf', "rb")
