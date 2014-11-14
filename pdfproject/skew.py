@@ -17,11 +17,10 @@ def horizontal_sums(img):
 
 # rotate an image by an angle that maximizes the standard deviation of its row sums
 def straighten(img):
-	print img.shape
-	print img.type()
-	if (len(img.shape) > 2):
+	if len(img.shape) > 2:
 		img = cv2.cvtColor(img, cv2.COLOR_RGB2GRAY)
 
+	img = np.uint8(img)
 	img = cv2.adaptiveThreshold(img,255,cv2.ADAPTIVE_THRESH_GAUSSIAN_C,cv2.THRESH_BINARY, 11, 10)
 
 	stds = {}
@@ -35,4 +34,4 @@ def straighten(img):
 		stds[np.std(horizontal_sums(rotate(img, i)))] = i
 	angle = stds[max(stds.keys())]
 	
-	return rotate(img)
+	return rotate(img, angle)
