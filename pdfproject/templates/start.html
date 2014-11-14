@@ -1,0 +1,23 @@
+{% extends "layout.html" %}
+{% block body %}
+	<div class="form-box">
+		<h2>Upload File</h2>
+		Please select a .pdf file to upload:
+		<form id="uploadForm" onsubmit="return validateForm();" method="post" action="/process/" enctype="multipart/form-data">
+			<input type="file" name="uploadFile" accept=".pdf">
+			<input type="submit" value="Submit">
+		</form>			
+	</div>
+	<script type="text/javascript">
+		function validateForm(){
+			var up = document.getElementById("uploadFile").value;
+			var patt = /\.(pdf|PDF)$/; 
+			var result = patt.test(up);
+			if(!result){
+				alert("Invalid File");
+				return false;
+			}
+			return true;
+		}	
+	</script>
+{% endblock %}
