@@ -24,7 +24,7 @@ Third party packages:
 ## How to Run Unit Tests
 Alberto & Cristian: The unit tests that we initially submitted will not run given the changes in UI. We are looking into automated processes for testing UI that we will incorporate into iteration 2.
 ## Who did What
-Alberto & Cristian: We were in charge of User Interface design. We created the html displayed, worked on uploading files to server, and passing files to CV modules.
+Alberto & Cristian: We were in charge of User Interface design. We created the html displayed, worked on uploading files to server, passing files to CV modules, and displaying the resulting files.
 ## Evolution
 
 ## Additional Information
