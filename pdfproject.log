@@ -10367,3 +10367,677 @@ OSError: inotify watch limit reached
 2014-11-14 05:27:27,637 INFO exited: pdfproject-reloader (exit status 1; not expected)
 2014-11-14 05:27:27,639 DEBG received SIGCLD indicating a child quit
 2014-11-14 05:27:28,643 INFO gave up: pdfproject-reloader entered FATAL state, too many start retries too quickly
+2014-11-14 05:27:38,986 DEBG 'pdfproject-reloader' stderr output:
+cat: 
+2014-11-14 05:27:39,020 DEBG 'pdfproject-reloader' stderr output:
+/tmp/flask-project.pid
+2014-11-14 05:27:39,057 DEBG 'pdfproject-reloader' stderr output:
+: No such file or directory
+2014-11-14 05:27:39,059 DEBG 'pdfproject-reloader' stderr output:
+
+
+2014-11-14 05:27:39,060 DEBG 'pdfproject-reloader' stderr output:
+/bin/sh: 1: kill: 
+2014-11-14 05:27:39,063 DEBG 'pdfproject-reloader' stderr output:
+Usage: kill [-s sigspec | -signum | -sigspec] [pid | job]... or
+kill -l [exitstatus]
+2014-11-14 05:27:39,065 DEBG 'pdfproject-reloader' stderr output:
+
+
+2014-11-14 05:27:40,374 DEBG 'pdfproject' stdout output:
+upload file
+<type '_io.BytesIO'>
+filenameHW 4.pdf
+allowing file
+saved?
+[[[65535 65535 65535]
+  [65535 65535 65535]
+  [65535 65535 65535]
+  ..., 
+  [65535 65535 65535]
+  [65535 65535 65535]
+  [65535 65535 65535]]
+
+ [[65535 65535 65535]
+  [65535 65535 65535]
+  [65535 65535 65535]
+  ..., 
+  [65535 65535 65535]
+  [65535 65535 65535]
+  [65535 65535 65535]]
+
+ [[65535 65535 65535]
+  [65535 65535 65535]
+  [65535 65535 65535]
+  ..., 
+  [65535 65535 65535]
+  [65535 65535 65535]
+  [65535 65535 65535]]
+
+ ..., 
+ [[65535 65535 65535]
+  [65535 65535 65535]
+  [65535 65535 65535]
+  ..., 
+  [65535 65535 65535]
+  [65535 65535 65535]
+  [65535 65535 65535]]
+
+ [[65535 65535 65535]
+  [65535 65535 65535]
+  [65535 65535 65535]
+  ..., 
+  [65535 65535 65535]
+  [65535 65535 65535]
+  [65535 65535 65535]]
+
+ [[65535 65535 65535]
+  [65535 65535 65535]
+  [65535 65535 65535]
+  ..., 
+  [65535 65535 65535]
+  [65535 65535 65535]
+  [65535 65535 65535]]]
+543740
+[[[65535 65535 65535]
+  [65535 65535 65535]
+  [65535 65535 65535]
+  ..., 
+  [65535 65535 65535]
+  [65535 65535 65535]
+  [65535 65535 65535]]
+
+ [[65535 65535 65535]
+  [65535 65535 65535]
+  [65535 65535 65535]
+  ..., 
+  [65535 65535 65535]
+  [65535 65535 65535]
+  [65535 65535 65535]]
+
+ [[65535 65535 65535]
+  [65535 65535 65535]
+  [65535 65535 65535]
+  ..., 
+  [65535 65535 65535]
+  [65535 65535 65535]
+  [65535 65535 65535]]
+
+ ..., 
+ [[65535 65535 65535]
+  [65535 65535 65535]
+  [65535 65535 65535]
+  ..., 
+  [65535 65535 65535]
+  [65535 65535 65535]
+  [65535 65535 65535]]
+
+ [[65535 65535 65535]
+  [65535 65535 65535]
+  [65535 65535 65535]
+  ..., 
+  [65535 65535 65535]
+  [65535 65535 65535]
+  [65535 65535 65535]]
+
+ [[65535 65535 65535]
+  [65535 65535 65535]
+  [65535 65535 65535]
+  ..., 
+  [65535 65535 65535]
+  [65535 65535 65535]
+  [65535 65535 65535]]]
+543740
+ran?
+
+2014-11-14 05:28:51,584 DEBG 'pdfproject' stderr output:
+   **** Warning: considering '0000000000 XXXXX n' as a free entry.
+   **** Warning: considering '0000000000 XXXXX n' as a free entry.
+   **** Warning: considering '0000000000 XXXXX n' as a free entry.
+
+2014-11-14 05:28:51,795 DEBG 'pdfproject' stderr output:
+
+   **** This file had errors that were repaired or ignored.
+
+2014-11-14 05:28:51,800 DEBG 'pdfproject' stderr output:
+   **** The file was produced by: 
+   **** >>>> Mac OS X 10.9.5 Quartz PDFContext <<<<
+   **** Please notify the author of the software that produced this
+   **** file that it does not conform to Adobe's published PDF
+   **** specification.
+
+
+2014-11-14 05:28:52,103 DEBG 'pdfproject' stderr output:
+   **** Warning: considering '0000000000 XXXXX n' as a free entry.
+   **** Warning: considering '0000000000 XXXXX n' as a free entry.
+   **** Warning: considering '0000000000 XXXXX n' as a free entry.
+
+2014-11-14 05:28:52,332 DEBG 'pdfproject' stderr output:
+
+   **** This file had errors that were repaired or ignored.
+
+2014-11-14 05:28:52,338 DEBG 'pdfproject' stderr output:
+   **** The file was produced by: 
+   **** >>>> Mac OS X 10.9.5 Quartz PDFContext <<<<
+   **** Please notify the author of the software that produced this
+   **** file that it does not conform to Adobe's published PDF
+   **** specification.
+
+
+2014-11-14 05:28:52,563 DEBG 'pdfproject' stderr output:
+   **** Warning: considering '0000000000 XXXXX n' as a free entry.
+   **** Warning: considering '0000000000 XXXXX n' as a free entry.
+
+2014-11-14 05:28:52,566 DEBG 'pdfproject' stderr output:
+   **** Warning: considering '0000000000 XXXXX n' as a free entry.
+
+2014-11-14 05:28:52,799 DEBG 'pdfproject' stderr output:
+
+   **** This file had errors that were repaired or ignored.
+
+2014-11-14 05:28:52,802 DEBG 'pdfproject' stderr output:
+   **** The file was produced by: 
+   **** >>>> Mac OS X 10.9.5 Quartz PDFContext <<<<
+   **** Please notify the author of the software that produced this
+   **** file that it does not conform to Adobe's published PDF
+   **** specification.
+
+
+2014-11-14 05:28:53,037 DEBG 'pdfproject' stderr output:
+   **** Warning: considering '0000000000 XXXXX n' as a free entry.
+   **** Warning: considering '0000000000 XXXXX n' as a free entry.
+   **** Warning: considering '0000000000 XXXXX n' as a free entry.
+
+2014-11-14 05:28:53,315 DEBG 'pdfproject' stderr output:
+
+   **** This file had errors that were repaired or ignored.
+
+2014-11-14 05:28:53,316 DEBG 'pdfproject' stderr output:
+   **** The file was produced by: 
+   **** >>>> 
+2014-11-14 05:28:53,318 DEBG 'pdfproject' stderr output:
+Mac OS X 10.9.5 Quartz PDFContext
+2014-11-14 05:28:53,319 DEBG 'pdfproject' stderr output:
+ <<<<
+
+2014-11-14 05:28:53,321 DEBG 'pdfproject' stderr output:
+   **** Please notify the author of the software that produced this
+
+2014-11-14 05:28:53,323 DEBG 'pdfproject' stderr output:
+   **** file that it does not conform to Adobe's published PDF
+
+2014-11-14 05:28:53,326 DEBG 'pdfproject' stderr output:
+   **** specification.
+
+
+2014-11-14 05:28:53,558 DEBG 'pdfproject' stderr output:
+   **** Warning: considering '0000000000 XXXXX n' as a free entry.
+   **** Warning: considering '0000000000 XXXXX n' as a free entry.
+   **** Warning: considering '0000000000 XXXXX n' as a free entry.
+
+2014-11-14 05:28:53,831 DEBG 'pdfproject' stderr output:
+
+   **** This file had errors that were repaired or ignored.
+   **** The file was produced by: 
+   **** >>>> Mac OS X 10.9.5 Quartz PDFContext <<<<
+   **** Please notify the author of the software that produced this
+   **** file that it does not conform to Adobe's published PDF
+   **** specification.
+
+
+2014-11-14 05:28:54,063 DEBG 'pdfproject' stderr output:
+   **** Warning: considering '0000000000 XXXXX n' as a free entry.
+   **** Warning: considering '0000000000 XXXXX n' as a free entry.
+
+2014-11-14 05:28:54,069 DEBG 'pdfproject' stderr output:
+   **** Warning: considering '0000000000 XXXXX n' as a free entry.
+
+2014-11-14 05:28:54,305 DEBG 'pdfproject' stderr output:
+
+   **** This file had errors that were repaired or ignored.
+
+2014-11-14 05:28:54,310 DEBG 'pdfproject' stderr output:
+   **** The file was produced by: 
+   **** >>>> Mac OS X 10.9.5 Quartz PDFContext <<<<
+   **** Please notify the author of the software that produced this
+   **** file that it does not conform to Adobe's published PDF
+   **** specification.
+
+
+2014-11-14 05:28:54,542 DEBG 'pdfproject' stderr output:
+   **** Warning: considering '0000000000 XXXXX n' as a free entry.
+   **** Warning: considering '0000000000 XXXXX n' as a free entry.
+   **** Warning: considering '0000000000 XXXXX n' as a free entry.
+
+2014-11-14 05:28:54,776 DEBG 'pdfproject' stderr output:
+
+   **** This file had errors that were repaired or ignored.
+
+2014-11-14 05:28:54,780 DEBG 'pdfproject' stderr output:
+   **** The file was produced by: 
+   **** >>>> Mac OS X 10.9.5 Quartz PDFContext <<<<
+   **** Please notify the author of the software that produced this
+   **** file that it does not conform to Adobe's published PDF
+   **** specification.
+
+
+2014-11-14 05:28:55,018 DEBG 'pdfproject' stderr output:
+   **** Warning: considering '0000000000 XXXXX n' as a free entry.
+   **** Warning: considering '0000000000 XXXXX n' as a free entry.
+   **** Warning: considering '0000000000 XXXXX n' as a free entry.
+
+2014-11-14 05:28:55,443 DEBG 'pdfproject' stderr output:
+
+   **** This file had errors that were repaired or ignored.
+
+2014-11-14 05:28:55,445 DEBG 'pdfproject' stderr output:
+   **** The file was produced by: 
+   **** >>>> Mac OS X 10.9.5 Quartz PDFContext <<<<
+   **** Please notify the author of the software that produced this
+   **** file that it does not conform to Adobe's published PDF
+   **** specification.
+
+
+2014-11-14 05:28:55,684 DEBG 'pdfproject' stderr output:
+   **** Warning: considering '0000000000 XXXXX n' as a free entry.
+   **** Warning: considering '0000000000 XXXXX n' as a free entry.
+   **** Warning: considering '0000000000 XXXXX n' as a free entry.
+
+2014-11-14 05:28:55,894 DEBG 'pdfproject' stderr output:
+
+   **** This file had errors that were repaired or ignored.
+
+2014-11-14 05:28:55,899 DEBG 'pdfproject' stderr output:
+   **** The file was produced by: 
+   **** >>>> Mac OS X 10.9.5 Quartz PDFContext <<<<
+   **** Please notify the author of the software that produced this
+   **** file that it does not conform to Adobe's published PDF
+   **** specification.
+
+
+2014-11-14 05:28:56,135 DEBG 'pdfproject' stderr output:
+   **** Warning: considering '0000000000 XXXXX n' as a free entry.
+   **** Warning: considering '0000000000 XXXXX n' as a free entry.
+   **** Warning: considering '0000000000 XXXXX n' as a free entry.
+
+2014-11-14 05:28:56,355 DEBG 'pdfproject' stderr output:
+
+   **** This file had errors that were repaired or ignored.
+
+2014-11-14 05:28:56,360 DEBG 'pdfproject' stderr output:
+   **** The file was produced by: 
+   **** >>>> Mac OS X 10.9.5 Quartz PDFContext <<<<
+   **** Please notify the author of the software that produced this
+   **** file that it does not conform to Adobe's published PDF
+   **** specification.
+
+
+2014-11-14 05:28:56,601 DEBG 'pdfproject' stderr output:
+   **** Warning: considering '0000000000 XXXXX n' as a free entry.
+   **** Warning: considering '0000000000 XXXXX n' as a free entry.
+   **** Warning: considering '0000000000 XXXXX n' as a free entry.
+
+2014-11-14 05:28:56,851 DEBG 'pdfproject' stderr output:
+
+   **** This file had errors that were repaired or ignored.
+
+2014-11-14 05:28:56,855 DEBG 'pdfproject' stderr output:
+   **** The file was produced by: 
+   **** >>>> Mac OS X 10.9.5 Quartz PDFContext <<<<
+   **** Please notify the author of the software that produced this
+   **** file that it does not conform to Adobe's published PDF
+   **** specification.
+
+
+2014-11-14 05:28:57,096 DEBG 'pdfproject' stderr output:
+   **** Warning: considering '0000000000 XXXXX n' as a free entry.
+
+2014-11-14 05:28:57,100 DEBG 'pdfproject' stderr output:
+   **** Warning: considering '0000000000 XXXXX n' as a free entry.
+   **** Warning: considering '0000000000 XXXXX n' as a free entry.
+
+2014-11-14 05:28:57,338 DEBG 'pdfproject' stderr output:
+
+   **** This file had errors that were repaired or ignored.
+
+2014-11-14 05:28:57,343 DEBG 'pdfproject' stderr output:
+   **** The file was produced by: 
+   **** >>>> Mac OS X 10.9.5 Quartz PDFContext <<<<
+   **** Please notify the author of the software that produced this
+   **** file that it does not conform to Adobe's published PDF
+   **** specification.
+
+
+2014-11-14 05:28:57,586 DEBG 'pdfproject' stderr output:
+   **** Warning: considering '0000000000 XXXXX n' as a free entry.
+   **** Warning: considering '0000000000 XXXXX n' as a free entry.
+   **** Warning: considering '0000000000 XXXXX n' as a free entry.
+
+2014-11-14 05:28:57,833 DEBG 'pdfproject' stderr output:
+
+   **** This file had errors that were repaired or ignored.
+
+2014-11-14 05:28:57,837 DEBG 'pdfproject' stderr output:
+   **** The file was produced by: 
+   **** >>>> Mac OS X 10.9.5 Quartz PDFContext <<<<
+   **** Please notify the author of the software that produced this
+   **** file that it does not conform to Adobe's published PDF
+   **** specification.
+
+
+2014-11-14 05:28:58,083 DEBG 'pdfproject' stderr output:
+   **** Warning: considering '0000000000 XXXXX n' as a free entry.
+   **** Warning: considering '0000000000 XXXXX n' as a free entry.
+   **** Warning: considering '0000000000 XXXXX n' as a free entry.
+
+2014-11-14 05:28:58,482 DEBG 'pdfproject' stderr output:
+
+   **** This file had errors that were repaired or ignored.
+
+2014-11-14 05:28:58,487 DEBG 'pdfproject' stderr output:
+   **** The file was produced by: 
+   **** >>>> Mac OS X 10.9.5 Quartz PDFContext <<<<
+   **** Please notify the author of the software that produced this
+   **** file that it does not conform to Adobe's published PDF
+   **** specification.
+
+
+2014-11-14 05:28:58,731 DEBG 'pdfproject' stderr output:
+   **** Warning: considering '0000000000 XXXXX n' as a free entry.
+   **** Warning: considering '0000000000 XXXXX n' as a free entry.
+   **** Warning: considering '0000000000 XXXXX n' as a free entry.
+
+2014-11-14 05:28:58,940 DEBG 'pdfproject' stderr output:
+
+   **** This file had errors that were repaired or ignored.
+
+2014-11-14 05:28:58,944 DEBG 'pdfproject' stderr output:
+   **** The file was produced by: 
+   **** >>>> Mac OS X 10.9.5 Quartz PDFContext <<<<
+   **** Please notify the author of the software that produced this
+   **** file that it does not conform to Adobe's published PDF
+   **** specification.
+
+
+2014-11-14 05:28:59,193 DEBG 'pdfproject' stderr output:
+   **** Warning: considering '0000000000 XXXXX n' as a free entry.
+   **** Warning: considering '0000000000 XXXXX n' as a free entry.
+   **** Warning: considering '0000000000 XXXXX n' as a free entry.
+
+2014-11-14 05:28:59,511 DEBG 'pdfproject' stderr output:
+
+   **** This file had errors that were repaired or ignored.
+
+2014-11-14 05:28:59,515 DEBG 'pdfproject' stderr output:
+   **** The file was produced by: 
+   **** >>>> Mac OS X 10.9.5 Quartz PDFContext <<<<
+   **** Please notify the author of the software that produced this
+   **** file that it does not conform to Adobe's published PDF
+   **** specification.
+
+
+2014-11-14 05:28:59,763 DEBG 'pdfproject' stderr output:
+   **** Warning: considering '0000000000 XXXXX n' as a free entry.
+   **** Warning: considering '0000000000 XXXXX n' as a free entry.
+   **** Warning: considering '0000000000 XXXXX n' as a free entry.
+
+2014-11-14 05:29:00,161 DEBG 'pdfproject' stderr output:
+
+   **** This file had errors that were repaired or ignored.
+
+2014-11-14 05:29:00,165 DEBG 'pdfproject' stderr output:
+   **** The file was produced by: 
+   **** >>>> Mac OS X 10.9.5 Quartz PDFContext <<<<
+   **** Please notify the author of the software that produced this
+   **** file that it does not conform to Adobe's published PDF
+   **** specification.
+
+
+2014-11-14 05:29:00,419 DEBG 'pdfproject' stderr output:
+   **** Warning: considering '0000000000 XXXXX n' as a free entry.
+   **** Warning: considering '0000000000 XXXXX n' as a free entry.
+   **** Warning: considering '0000000000 XXXXX n' as a free entry.
+
+2014-11-14 05:29:00,689 DEBG 'pdfproject' stderr output:
+
+   **** This file had errors that were repaired or ignored.
+
+2014-11-14 05:29:00,694 DEBG 'pdfproject' stderr output:
+   **** The file was produced by: 
+   **** >>>> Mac OS X 10.9.5 Quartz PDFContext <<<<
+   **** Please notify the author of the software that produced this
+   **** file that it does not conform to Adobe's published PDF
+   **** specification.
+
+
+2014-11-14 05:29:00,949 DEBG 'pdfproject' stderr output:
+   **** Warning: considering '0000000000 XXXXX n' as a free entry.
+
+2014-11-14 05:29:00,952 DEBG 'pdfproject' stderr output:
+   **** Warning: considering '0000000000 XXXXX n' as a free entry.
+   **** Warning: considering '0000000000 XXXXX n' as a free entry.
+
+2014-11-14 05:29:01,371 DEBG 'pdfproject' stderr output:
+
+   **** This file had errors that were repaired or ignored.
+
+2014-11-14 05:29:01,376 DEBG 'pdfproject' stderr output:
+   **** The file was produced by: 
+   **** >>>> Mac OS X 10.9.5 Quartz PDFContext <<<<
+   **** Please notify the author of the software that produced this
+   **** file that it does not conform to Adobe's published PDF
+   **** specification.
+
+
+2014-11-14 05:29:01,635 DEBG 'pdfproject' stderr output:
+   **** Warning: considering '0000000000 XXXXX n' as a free entry.
+   **** Warning: considering '0000000000 XXXXX n' as a free entry.
+   **** Warning: considering '0000000000 XXXXX n' as a free entry.
+
+2014-11-14 05:29:01,868 DEBG 'pdfproject' stderr output:
+
+   **** This file had errors that were repaired or ignored.
+
+2014-11-14 05:29:01,875 DEBG 'pdfproject' stderr output:
+   **** The file was produced by: 
+   **** >>>> Mac OS X 10.9.5 Quartz PDFContext <<<<
+   **** Please notify the author of the software that produced this
+   **** file that it does not conform to Adobe's published PDF
+   **** specification.
+
+
+2014-11-14 05:29:02,128 DEBG 'pdfproject' stderr output:
+   **** Warning: considering '0000000000 XXXXX n' as a free entry.
+   **** Warning: considering '0000000000 XXXXX n' as a free entry.
+   **** Warning: considering '0000000000 XXXXX n' as a free entry.
+
+2014-11-14 05:29:02,362 DEBG 'pdfproject' stderr output:
+
+   **** This file had errors that were repaired or ignored.
+
+2014-11-14 05:29:02,369 DEBG 'pdfproject' stderr output:
+   **** The file was produced by: 
+   **** >>>> Mac OS X 10.9.5 Quartz PDFContext <<<<
+   **** Please notify the author of the software that produced this
+   **** file that it does not conform to Adobe's published PDF
+   **** specification.
+
+
+2014-11-14 05:29:02,626 DEBG 'pdfproject' stderr output:
+   **** Warning: considering '0000000000 XXXXX n' as a free entry.
+   **** Warning: considering '0000000000 XXXXX n' as a free entry.
+   **** Warning: considering '0000000000 XXXXX n' as a free entry.
+
+2014-11-14 05:29:02,859 DEBG 'pdfproject' stderr output:
+
+   **** This file had errors that were repaired or ignored.
+
+2014-11-14 05:29:02,867 DEBG 'pdfproject' stderr output:
+   **** The file was produced by: 
+   **** >>>> Mac OS X 10.9.5 Quartz PDFContext <<<<
+   **** Please notify the author of the software that produced this
+   **** file that it does not conform to Adobe's published PDF
+   **** specification.
+
+
+2014-11-14 05:29:03,128 DEBG 'pdfproject' stderr output:
+   **** Warning: considering '0000000000 XXXXX n' as a free entry.
+
+2014-11-14 05:29:03,133 DEBG 'pdfproject' stderr output:
+   **** Warning: considering '0000000000 XXXXX n' as a free entry.
+   **** Warning: considering '0000000000 XXXXX n' as a free entry.
+
+2014-11-14 05:29:03,537 DEBG 'pdfproject' stderr output:
+
+   **** This file had errors that were repaired or ignored.
+
+2014-11-14 05:29:03,540 DEBG 'pdfproject' stderr output:
+   **** The file was produced by: 
+   **** >>>> Mac OS X 10.9.5 Quartz PDFContext <<<<
+   **** Please notify the author of the software that produced this
+   **** file that it does not conform to Adobe's published PDF
+   **** specification.
+
+
+2014-11-14 05:29:03,808 DEBG 'pdfproject' stderr output:
+   **** Warning: considering '0000000000 XXXXX n' as a free entry.
+   **** Warning: considering '0000000000 XXXXX n' as a free entry.
+   **** Warning: considering '0000000000 XXXXX n' as a free entry.
+
+2014-11-14 05:29:04,079 DEBG 'pdfproject' stderr output:
+
+   **** This file had errors that were repaired or ignored.
+
+2014-11-14 05:29:04,085 DEBG 'pdfproject' stderr output:
+   **** The file was produced by: 
+   **** >>>> Mac OS X 10.9.5 Quartz PDFContext <<<<
+   **** Please notify the author of the software that produced this
+   **** file that it does not conform to Adobe's published PDF
+   **** specification.
+
+
+2014-11-14 05:29:04,348 DEBG 'pdfproject' stderr output:
+   **** Warning: considering '0000000000 XXXXX n' as a free entry.
+   **** Warning: considering '0000000000 XXXXX n' as a free entry.
+   **** Warning: considering '0000000000 XXXXX n' as a free entry.
+
+2014-11-14 05:29:04,799 DEBG 'pdfproject' stderr output:
+
+   **** This file had errors that were repaired or ignored.
+
+2014-11-14 05:29:04,803 DEBG 'pdfproject' stderr output:
+   **** The file was produced by: 
+   **** >>>> Mac OS X 10.9.5 Quartz PDFContext <<<<
+   **** Please notify the author of the software that produced this
+   **** file that it does not conform to Adobe's published PDF
+   **** specification.
+
+
+2014-11-14 05:29:05,073 DEBG 'pdfproject' stderr output:
+   **** Warning: considering '0000000000 XXXXX n' as a free entry.
+   **** Warning: considering '0000000000 XXXXX n' as a free entry.
+   **** Warning: considering '0000000000 XXXXX n' as a free entry.
+
+2014-11-14 05:29:05,452 DEBG 'pdfproject' stderr output:
+
+   **** This file had errors that were repaired or ignored.
+
+2014-11-14 05:29:05,458 DEBG 'pdfproject' stderr output:
+   **** The file was produced by: 
+   **** >>>> Mac OS X 10.9.5 Quartz PDFContext <<<<
+   **** Please notify the author of the software that produced this
+   **** file that it does not conform to Adobe's published PDF
+   **** specification.
+
+
+2014-11-14 05:29:05,733 DEBG 'pdfproject' stderr output:
+   **** Warning: considering '0000000000 XXXXX n' as a free entry.
+   **** Warning: considering '0000000000 XXXXX n' as a free entry.
+   **** Warning: considering '0000000000 XXXXX n' as a free entry.
+
+2014-11-14 05:29:05,943 DEBG 'pdfproject' stderr output:
+
+   **** This file had errors that were repaired or ignored.
+
+2014-11-14 05:29:05,947 DEBG 'pdfproject' stderr output:
+   **** The file was produced by: 
+   **** >>>> Mac OS X 10.9.5 Quartz PDFContext <<<<
+   **** Please notify the author of the software that produced this
+   **** file that it does not conform to Adobe's published PDF
+   **** specification.
+
+
+2014-11-14 05:29:06,225 DEBG 'pdfproject' stderr output:
+   **** Warning: considering '0000000000 XXXXX n' as a free entry.
+   **** Warning: considering '0000000000 XXXXX n' as a free entry.
+   **** Warning: considering '0000000000 XXXXX n' as a free entry.
+
+2014-11-14 05:29:06,506 DEBG 'pdfproject' stderr output:
+
+   **** This file had errors that were repaired or ignored.
+
+2014-11-14 05:29:06,512 DEBG 'pdfproject' stderr output:
+   **** The file was produced by: 
+   **** >>>> Mac OS X 10.9.5 Quartz PDFContext <<<<
+   **** Please notify the author of the software that produced this
+   **** file that it does not conform to Adobe's published PDF
+   **** specification.
+
+
+2014-11-14 05:29:06,785 DEBG 'pdfproject' stderr output:
+   **** Warning: considering '0000000000 XXXXX n' as a free entry.
+   **** Warning: considering '0000000000 XXXXX n' as a free entry.
+   **** Warning: considering '0000000000 XXXXX n' as a free entry.
+
+2014-11-14 05:29:07,141 DEBG 'pdfproject' stderr output:
+
+   **** This file had errors that were repaired or ignored.
+
+2014-11-14 05:29:07,144 DEBG 'pdfproject' stderr output:
+   **** The file was produced by: 
+   **** >>>> Mac OS X 10.9.5 Quartz PDFContext <<<<
+   **** Please notify the author of the software that produced this
+   **** file that it does not conform to Adobe's published PDF
+   **** specification.
+
+
+2014-11-14 05:29:07,423 DEBG 'pdfproject' stderr output:
+   **** Warning: considering '0000000000 XXXXX n' as a free entry.
+   **** Warning: considering '0000000000 XXXXX n' as a free entry.
+   **** Warning: considering '0000000000 XXXXX n' as a free entry.
+
+2014-11-14 05:29:07,697 DEBG 'pdfproject' stderr output:
+
+   **** This file had errors that were repaired or ignored.
+
+2014-11-14 05:29:07,702 DEBG 'pdfproject' stderr output:
+   **** The file was produced by: 
+   **** >>>> Mac OS X 10.9.5 Quartz PDFContext <<<<
+   **** Please notify the author of the software that produced this
+   **** file that it does not conform to Adobe's published PDF
+   **** specification.
+
+
+2014-11-14 05:29:07,977 DEBG 'pdfproject' stderr output:
+   **** Warning: considering '0000000000 XXXXX n' as a free entry.
+   **** Warning: considering '0000000000 XXXXX n' as a free entry.
+   **** Warning: considering '0000000000 XXXXX n' as a free entry.
+
+2014-11-14 05:29:08,362 DEBG 'pdfproject' stderr output:
+
+   **** This file had errors that were repaired or ignored.
+
+2014-11-14 05:29:08,365 DEBG 'pdfproject' stderr output:
+   **** The file was produced by: 
+   **** >>>> Mac OS X 10.9.5 Quartz PDFContext <<<<
+   **** Please notify the author of the software that produced this
+   **** file that it does not conform to Adobe's published PDF
+   **** specification.
+
+
+2014-11-14 05:29:08,465 DEBG 'pdfproject' stderr output:
+OpenCV Error: Assertion failed (src.type() == CV_8UC1) in adaptiveThreshold, file /opencv/opencv-2.4.9/modules/imgproc/src/thresh.cpp, line 796
+
+2014-11-14 05:40:55,050 DEBG 'pdfproject' stderr output:
+OpenCV Error: Assertion failed (src.type() == CV_8UC1) in adaptiveThreshold, file /opencv/opencv-2.4.9/modules/imgproc/src/thresh.cpp, line 796
+
