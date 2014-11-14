@@ -27,6 +27,7 @@ class all_white_test_case(unittest.TestCase):
                    
     def test_calculate_angle(self):
     	img, angle = skew.straighten(cv2.cvtColor(self.image, cv2.COLOR_BGR2GRAY))
+    	print angle
     	self.assertTrue(abs(angle - 0) < 2)
     	
     	
@@ -50,6 +51,7 @@ class all_black_test_case(unittest.TestCase):
             
     def test_calculate_angle(self):
     	img, angle = skew.straighten(cv2.cvtColor(self.image, cv2.COLOR_BGR2GRAY))
+    	print angle
     	self.assertTrue(abs(angle - 0) < 2)
 
    	
@@ -73,6 +75,7 @@ class one_picture_test_case(unittest.TestCase):
     
     def test_calculate_angle(self):
     	img, angle = skew.straighten(cv2.cvtColor(self.image, cv2.COLOR_BGR2GRAY))
+    	print angle
     	self.assertTrue(abs(angle - 0) < 2)
 
 
@@ -96,6 +99,7 @@ class perfect_text_test_case(unittest.TestCase):
     
     def test_calculate_angle(self):
     	img, angle = skew.straighten(cv2.cvtColor(self.image, cv2.COLOR_BGR2GRAY))
+    	print angle
     	self.assertTrue(abs(angle - 0) < 2)
 
 
@@ -119,6 +123,7 @@ class text_photo_test_case(unittest.TestCase):
     
     def test_calculate_angle(self):
     	img, angle = skew.straighten(cv2.cvtColor(self.image, cv2.COLOR_BGR2GRAY))
+    	print angle
     	self.assertTrue(abs(angle - 0) < 2)
    	
 class picture_and_text_test_case(unittest.TestCase):
@@ -141,6 +146,7 @@ class picture_and_text_test_case(unittest.TestCase):
     
     def test_calculate_angle(self):
     	img, angle = skew.straighten(cv2.cvtColor(self.image, cv2.COLOR_BGR2GRAY))
+    	print angle
     	self.assertTrue(abs(angle - 0) < 2)
 
 class different_sized_test_case(unittest.TestCase):
@@ -159,10 +165,10 @@ class different_sized_test_case(unittest.TestCase):
 
     def test_text_area_dilation(self):
      	#compares number of detected lines to number we observe to make sure they are equal
-        print len(self.lines)
         self.assertTrue((len(self.lines) - 37) < 5 and (len(self.lines) - 37) >= 0)
     
     def test_calculate_angle(self):
+    	print self.angle
     	self.assertTrue(abs(self.angle - 0) < 2)
 
 
@@ -186,6 +192,7 @@ class skewed_pAndT_test_case(unittest.TestCase):
         self.assertTrue((len(self.lines) - 35) < 5 and (len(self.lines) - 35) >= 0)
     
     def test_calculate_angle(self):
+    	print self.angle
     	self.assertTrue(abs(self.angle - 15) < 2)
 
     	
@@ -209,6 +216,7 @@ class skewed_text_test_case(unittest.TestCase):
         self.assertTrue((len(self.lines) - 18) < 5 and (len(self.lines) - 18) >= 0)
     
     def test_calculate_angle(self):
+    	print self.angle
     	self.assertTrue(abs(self.angle - 15) < 2)
 
 	
