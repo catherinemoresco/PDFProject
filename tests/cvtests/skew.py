@@ -28,4 +28,4 @@ def straighten(img):
 		stds[np.std(horizontal_sums(rotate(img, i)))] = i
 	angle = stds[max(stds.keys())]
 
-	return rotate(test, angle)
+	return rotate(img, angle)
