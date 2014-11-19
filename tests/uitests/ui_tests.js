@@ -1,8 +1,12 @@
+var j, l;
+
 var testResults = "";
 
 function test(num, expect, actual) {
-  var testResult = expect == actual ? "Passed" : "Failed";
-  var testDiagnosis = "Test " + num ": " + testResult + "\n";
+  var testResult, testDiagnosis;
+
+  testResult = expect == actual ? "Passed" : "Failed";
+  testDiagnosis = "Test " + num ": " + testResult + "\n";
 
   testResults += testDiagnosis;
 }
@@ -26,20 +30,22 @@ test(5, setHRectangle(6000, 6000, 7000, 7000), false);
 test(6, setHRectangle(0,0,0,0), false);
 
 //Test 7: Proper Highlighting
-var l = getLine(1);
+l = getLine(1);
 test(7, setHRectangle(l[0], l[1], l[2], l[3])
           && compareHRectangle(l[0],l[1],1[2],l[3]), true);
 
 //Test 8: Proper Highlighting
+l = getLine(1);
 test(8, setHRectangle(l[0]-10,l[1],1[2]+10,l[3])
     && compareHRectangle(l[0],l[1],1[2],l[3]), true);
 
 //Test 9: Proper Highlighting
-test(9, setHRectangle(ll[0]-10,l[1]-4,1[2]+10,l[3]-4)
+l = getLine(1);
+test(9, setHRectangle(l[0]-10,l[1]-4,1[2]+10,l[3]-4)
     && compareHRectangle(l[0],l[1],1[2],l[3]), true);
 
 //Test 10: Proper Highlighting
-var j = getLine(3);
+j = getLine(3);
 test(10, setHRectangle(j[0],j[1],j[2],j[3])
     && !compareHRectangle(l[0],l[1],1[2],l[3]), true);
 //There are other cases in this category I'd like to implement but these require already having analyzed a pdf file
