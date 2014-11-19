@@ -8,7 +8,7 @@ import socket
 import re
 ALLOWED_EXTENSIONS = set(['pdf','PDF'])
 
-app = Flask(__name__,static_url_path = "",static_folder = "uploads")
+app = Flask(__name__,static_url_path = "",static_folder = "static/uploads")
 app.config['UPLOAD_FOLDER'] = './pdfproject/static/uploads'
 
 def allowed_file(filename):
@@ -62,9 +62,8 @@ def uploaded_file(filename):
 			result.append(file)
 	return render_template('processed.html',result=result)#send_from_directory(app.config['UPLOAD_FOLDER'], filename)
 
-
 	'''
-	for file in os.listdir("/pdfproject/pdfproject/uploads"):
+	for file in os.listdir("/PDFProject/pdfproject/uploads"):
 		if patt.match(file):
 			p = "../uploads/"+str(file)
 			result.append(p)
