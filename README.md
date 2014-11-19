@@ -32,7 +32,7 @@ Features to be included:
 Ultimately, there are elements of our original design that we will realistically not have time to implement---element-wise OCRing for highlighting, for example. However, we plan to achieve functionality for the most basic and most common use cases.
 
 ## Who's doing what:
-The teams will remain largely the same. Alberto and Christian will being doing front-end work (and Catherine will work with them on the fine-looking front-end design), and Megan and Catherine will be working on image processing. Alberto will also be working on server-side operations.
+The teams will remain largely the same. Alberto and Christian will being doing front-end work (and Catherine will work with them on the fine-looking front-end design), and Megan and Catherine will be working on image processing. Alberto will also be working on server-side operations. Jonathan will be working on test coverage.
 
 ## Features
 
