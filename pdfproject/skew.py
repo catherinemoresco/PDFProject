@@ -6,7 +6,7 @@ def rotate(img, angle):
 	height = img.shape[0]
 	width = img.shape[1]
 	rotmat = cv2.getRotationMatrix2D((width/2, height/2), angle, 1)
-	return cv2.warpAffine(img, rotmat, (width, height))
+	return cv2.warpAffine(img, rotmat, (width, height), borderMode=cv2.BORDER_TRANSPARENT)
 
 # get the sum of the values of a row
 def horizontal_sums(img):
