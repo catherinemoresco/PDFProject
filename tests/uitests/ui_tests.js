@@ -1,11 +1,10 @@
 var testResults = "";
 
-function testOutput(num, expect, actual) {
-  return "Test " + num ": " + (expect == actual ? "Passed" : "Failed") + "\n":
-}
-
 function test(num, expect, actual) {
-  testResults += testOutput(num, expect, actual);
+  var testResult = expect == actual ? "Passed" : "Failed";
+  var testDiagnosis = "Test " + num ": " + testResult + "\n";
+
+  testResults += testDiagnosis;
 }
 
 //test 1: Upload Button
