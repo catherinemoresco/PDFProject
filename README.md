@@ -82,7 +82,11 @@ We were in charge of User Interface design. We created the HTML displayed, worke
 ##### Catherine & Megan: 
 We were in charge of the Computer Vision aspect of the project.  We worked on processing image files in order to determine whether or not they should be rotated and to determine where lines were in text documents.
 
-Michael Zhao set up the server.
+##### Michael Zhao
+Set up the server.
+
+##### Jonathan Jin
+Taking on QA and test coverage responsibilities.
 
 ## Evolution
 While our first iteration of the software construction process did not meet all the grand visions we have for it, it was a good first step. We implemented the basic functions of file uploading, and impage processing and displaying, and laid the groundwork for user interaction with the document. 
