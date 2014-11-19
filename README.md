@@ -32,7 +32,15 @@ Features to be included:
 Ultimately, there are elements of our original design that we will realistically not have time to implement---element-wise OCRing for highlighting, for example. However, we plan to achieve functionality for the most basic and most common use cases.
 
 ## Who's doing what:
-The teams will remain largely the same. Alberto and Christian will being doing front-end work (and Catherine will work with them on the fine-looking front-end design), and Megan and Catherine will be working on image processing. Alberto will also be working on server-side operations. Jonathan will be working on test coverage.
+The teams will remain largely the same. 
+
+Alberto and Christian will being doing front-end work (and Catherine will work with them on the fine-looking front-end design).
+
+Megan and Catherine will be working on image processing. 
+
+Alberto will also be working on server-side operations. 
+
+Jonathan will be working on test coverage and helping to migrate front-end tests towards a more robust, automated system.
 
 ## Features
 
@@ -78,7 +86,6 @@ From within tests/cvtests, run the command `python -m unittest -v cv_unit_tests`
 ##### Alberto & Cristian: 
 We were in charge of User Interface design. We created the HTML displayed, worked on uploading files to server, passing files to CV modules, and displaying the resulting files.
 
-
 ##### Catherine & Megan: 
 We were in charge of the Computer Vision aspect of the project.  We worked on processing image files in order to determine whether or not they should be rotated and to determine where lines were in text documents.
 
@@ -86,7 +93,7 @@ We were in charge of the Computer Vision aspect of the project.  We worked on pr
 Set up the server.
 
 ##### Jonathan Jin
-Taking on QA and test coverage responsibilities.
+Taking on QA and test coverage responsibilities. Designed the preliminary front-end testing framework that, as of 11/19/14, comprises the primary front-end test suite.
 
 ## Evolution
 While our first iteration of the software construction process did not meet all the grand visions we have for it, it was a good first step. We implemented the basic functions of file uploading, and impage processing and displaying, and laid the groundwork for user interaction with the document. 
