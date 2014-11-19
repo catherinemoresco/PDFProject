@@ -25,11 +25,10 @@ Features to be included:
 	 + Modification of skew algorithm to distinguish images from text
 	 + Enhanced handling of noise and blacked-out margins
 
-
 ##### Overall: 
 - Opportunities for user correction of algorithmic failings!
 
-Ultimately, there are elements of our original design that we will realistically not have time to implement---element-wise OCRing for highlighting, for example. However, we plan to achieve functionality for the most basic and most common use cases.
+Ultimately, there are elements of our original design that we will realistically not have time to implement --- element-wise OCRing for highlighting, for example. However, we plan to achieve functionality for the most basic and most common use cases.
 
 ## Who's doing what:
 The teams will remain largely the same. 
@@ -40,7 +39,7 @@ Megan and Catherine will be working on image processing.
 
 Alberto will also be working on server-side operations. 
 
-Jonathan will be working on test coverage and helping to migrate front-end tests towards a more robust, automated system.
+Jonathan will be working on test coverage. He will also be helping to migrate front-end tests towards a more robust, automated system. In the meantime, he will contribute towards the design of a built-from-scratch front-end unit testing framework.
 
 ## Features
 
