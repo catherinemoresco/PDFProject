@@ -11574,3 +11574,340 @@ allowing file
 saved?
 (877, 620, 3)
 
+2014-11-14 07:18:00,929 DEBG 'pdfproject' stdout output:
+upload file
+<type '_io.BytesIO'>
+filenameMorescoResume102014.pdf
+allowing file
+saved?
+ran?
+
+2014-11-14 07:18:00,938 DEBG 'pdfproject' stdout output:
+upload file
+<type '_io.BytesIO'>
+filenameMorescoResume102014.pdf
+allowing file
+saved?
+ran?
+
+2014-11-14 07:42:24,056 CRIT Supervisor running as root (no user in config file)
+2014-11-14 07:42:24,068 INFO supervisord started with pid 18415
+2014-11-14 07:42:25,084 INFO spawned: 'pdfproject-reloader' with pid 18418
+2014-11-14 07:42:25,109 INFO spawned: 'pdfproject' with pid 18419
+2014-11-14 07:42:25,262 DEBG 'pdfproject-reloader' stderr output:
+Traceback (most recent call last):
+
+2014-11-14 07:42:25,265 DEBG 'pdfproject-reloader' stderr output:
+  File "/usr/local/bin/watchmedo", line 9, in <module>
+
+2014-11-14 07:42:25,268 DEBG 'pdfproject' stderr output:
+
+Error: Already running on PID 7377 (or pid file '/tmp/flask-project.pid' is stale)
+
+
+2014-11-14 07:42:25,272 DEBG 'pdfproject-reloader' stderr output:
+    
+2014-11-14 07:42:25,275 DEBG 'pdfproject-reloader' stderr output:
+load_entry_point('watchdog==0.8.1', 'console_scripts', 'watchmedo')()
+
+2014-11-14 07:42:25,279 DEBG 'pdfproject-reloader' stderr output:
+  File "/usr/local/lib/python2.7/dist-packages/watchdog/watchmedo.py", line 566, in main
+
+2014-11-14 07:42:25,282 DEBG 'pdfproject-reloader' stderr output:
+    
+2014-11-14 07:42:25,286 DEBG 'pdfproject-reloader' stderr output:
+parser.dispatch()
+
+2014-11-14 07:42:25,290 DEBG 'pdfproject-reloader' stderr output:
+  File "/usr/local/lib/python2.7/dist-packages/argh/helpers.py", line 53, in dispatch
+    return dispatch(self, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/argh/dispatching.py", line 125, in dispatch
+    for line in lines:
+  File "/usr/local/lib/python2.7/dist-packages/argh/dispatching.py", line 202, in _execute_command
+    for line in result:
+  File "/usr/local/lib/python2.7/dist-packages/argh/dispatching.py", line 158, in _call
+    result = args.function(args)
+  File "/usr/local/lib/python2.7/dist-packages/watchdog/watchmedo.py", line 444, in shell_command
+    observe_with(observer, handler, args.directories, args.recursive)
+  File "/usr/local/lib/python2.7/dist-packages/watchdog/watchmedo.py", line 118, in observe_with
+    observer.schedule(event_handler, pathname, recursive)
+  File "/usr/local/lib/python2.7/dist-packages/watchdog/observers/api.py", line 327, in schedule
+
+2014-11-14 07:42:25,294 DEBG 'pdfproject-reloader' stderr output:
+    timeout=self.timeout)
+  File "/usr/local/lib/python2.7/dist-packages/watchdog/observers/inotify.py", line 118, in __init__
+    watch.is_recursive)
+  File "/usr/local/lib/python2.7/dist-packages/watchdog/observers/inotify_buffer.py", line 63, in __init__
+    self._inotify = Inotify(path, recursive)
+  File "/usr/local/lib/python2.7/dist-packages/watchdog/observers/inotify_c.py", line 176, in __init__
+    self._add_dir_watch(path, recursive, event_mask)
+  File "/usr/local/lib/python2.7/dist-packages/watchdog/observers/inotify_c.py", line 352, in _add_dir_watch
+    self._add_watch(path, mask)
+  File "/usr/local/lib/python2.7/dist-packages/watchdog/observers/inotify_c.py", line 373, in _add_watch
+    Inotify._raise_error()
+  File "/usr/local/lib/python2.7/dist-packages/watchdog/observers/inotify_c.py", line 390, in _raise_error
+    raise OSError("inotify watch limit reached")
+OSError: inotify watch limit reached
+
+2014-11-14 07:42:25,299 DEBG fd 9 closed, stopped monitoring <POutputDispatcher at 140029034887792 for <Subprocess at 140029034886352 with name pdfproject in state STARTING> (stdout)>
+2014-11-14 07:42:25,301 DEBG fd 13 closed, stopped monitoring <POutputDispatcher at 140029034887864 for <Subprocess at 140029034886352 with name pdfproject in state STARTING> (stderr)>
+2014-11-14 07:42:25,302 INFO exited: pdfproject (exit status 1; not expected)
+2014-11-14 07:42:25,304 DEBG received SIGCLD indicating a child quit
+2014-11-14 07:42:25,319 DEBG fd 8 closed, stopped monitoring <POutputDispatcher at 140029034887072 for <Subprocess at 140029034886568 with name pdfproject-reloader in state STARTING> (stderr)>
+2014-11-14 07:42:25,322 DEBG fd 6 closed, stopped monitoring <POutputDispatcher at 140029034886856 for <Subprocess at 140029034886568 with name pdfproject-reloader in state STARTING> (stdout)>
+2014-11-14 07:42:25,324 INFO exited: pdfproject-reloader (exit status 1; not expected)
+2014-11-14 07:42:25,327 DEBG received SIGCLD indicating a child quit
+2014-11-14 07:42:26,343 INFO spawned: 'pdfproject-reloader' with pid 18426
+2014-11-14 07:42:26,368 INFO spawned: 'pdfproject' with pid 18427
+2014-11-14 07:42:26,519 DEBG 'pdfproject' stderr output:
+
+Error: Already running on PID 7377 (or pid file '/tmp/flask-project.pid' is stale)
+
+
+2014-11-14 07:42:26,524 DEBG 'pdfproject-reloader' stderr output:
+Traceback (most recent call last):
+
+2014-11-14 07:42:26,528 DEBG 'pdfproject-reloader' stderr output:
+  File "/usr/local/bin/watchmedo", line 9, in <module>
+
+2014-11-14 07:42:26,532 DEBG 'pdfproject-reloader' stderr output:
+    
+2014-11-14 07:42:26,535 DEBG 'pdfproject-reloader' stderr output:
+load_entry_point('watchdog==0.8.1', 'console_scripts', 'watchmedo')()
+
+2014-11-14 07:42:26,539 DEBG 'pdfproject-reloader' stderr output:
+  File "/usr/local/lib/python2.7/dist-packages/watchdog/watchmedo.py", line 566, in main
+
+2014-11-14 07:42:26,542 DEBG 'pdfproject-reloader' stderr output:
+    
+2014-11-14 07:42:26,546 DEBG 'pdfproject-reloader' stderr output:
+parser.dispatch()
+
+2014-11-14 07:42:26,550 DEBG 'pdfproject-reloader' stderr output:
+  File "/usr/local/lib/python2.7/dist-packages/argh/helpers.py", line 53, in dispatch
+    return dispatch(self, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/argh/dispatching.py", line 125, in dispatch
+    for line in lines:
+  File "/usr/local/lib/python2.7/dist-packages/argh/dispatching.py", line 202, in _execute_command
+    for line in result:
+  File "/usr/local/lib/python2.7/dist-packages/argh/dispatching.py", line 158, in _call
+    result = args.function(args)
+  File "/usr/local/lib/python2.7/dist-packages/watchdog/watchmedo.py", line 444, in shell_command
+
+2014-11-14 07:42:26,553 DEBG fd 9 closed, stopped monitoring <POutputDispatcher at 140029034888152 for <Subprocess at 140029034886352 with name pdfproject in state STARTING> (stdout)>
+2014-11-14 07:42:26,555 DEBG fd 14 closed, stopped monitoring <POutputDispatcher at 140029034421208 for <Subprocess at 140029034886352 with name pdfproject in state STARTING> (stderr)>
+2014-11-14 07:42:26,557 INFO exited: pdfproject (exit status 1; not expected)
+2014-11-14 07:42:26,559 DEBG received SIGCLD indicating a child quit
+2014-11-14 07:42:26,565 DEBG 'pdfproject-reloader' stderr output:
+    observe_with(observer, handler, args.directories, args.recursive)
+  File "/usr/local/lib/python2.7/dist-packages/watchdog/watchmedo.py", line 118, in observe_with
+    observer.schedule(event_handler, pathname, recursive)
+  File "/usr/local/lib/python2.7/dist-packages/watchdog/observers/api.py", line 327, in schedule
+    timeout=self.timeout)
+  File "/usr/local/lib/python2.7/dist-packages/watchdog/observers/inotify.py", line 118, in __init__
+    watch.is_recursive)
+  File "/usr/local/lib/python2.7/dist-packages/watchdog/observers/inotify_buffer.py", line 63, in __init__
+    self._inotify = Inotify(path, recursive)
+  File "/usr/local/lib/python2.7/dist-packages/watchdog/observers/inotify_c.py", line 176, in __init__
+    self._add_dir_watch(path, recursive, event_mask)
+  File "/usr/local/lib/python2.7/dist-packages/watchdog/observers/inotify_c.py", line 352, in _add_dir_watch
+    self._add_watch(path, mask)
+  File "/usr/local/lib/python2.7/dist-packages/watchdog/observers/inotify_c.py", line 373, in _add_watch
+    Inotify._raise_error()
+  File "/usr/local/lib/python2.7/dist-packages/watchdog/observers/inotify_c.py", line 390, in _raise_error
+    raise OSError("inotify watch limit reached")
+OSError: inotify watch limit reached
+
+2014-11-14 07:42:26,578 DEBG fd 8 closed, stopped monitoring <POutputDispatcher at 140029034887936 for <Subprocess at 140029034886568 with name pdfproject-reloader in state STARTING> (stderr)>
+2014-11-14 07:42:26,581 DEBG fd 6 closed, stopped monitoring <POutputDispatcher at 140029034887144 for <Subprocess at 140029034886568 with name pdfproject-reloader in state STARTING> (stdout)>
+2014-11-14 07:42:26,584 INFO exited: pdfproject-reloader (exit status 1; not expected)
+2014-11-14 07:42:26,586 DEBG received SIGCLD indicating a child quit
+2014-11-14 07:42:28,604 INFO spawned: 'pdfproject-reloader' with pid 18434
+2014-11-14 07:42:28,626 INFO spawned: 'pdfproject' with pid 18435
+2014-11-14 07:42:28,783 DEBG 'pdfproject' stderr output:
+
+Error: Already running on PID 7377 (or pid file '/tmp/flask-project.pid' is stale)
+
+
+2014-11-14 07:42:28,793 DEBG 'pdfproject-reloader' stderr output:
+Traceback (most recent call last):
+
+2014-11-14 07:42:28,797 DEBG 'pdfproject-reloader' stderr output:
+  File "/usr/local/bin/watchmedo", line 9, in <module>
+
+2014-11-14 07:42:28,800 DEBG 'pdfproject-reloader' stderr output:
+    
+2014-11-14 07:42:28,804 DEBG 'pdfproject-reloader' stderr output:
+load_entry_point('watchdog==0.8.1', 'console_scripts', 'watchmedo')()
+
+2014-11-14 07:42:28,808 DEBG fd 9 closed, stopped monitoring <POutputDispatcher at 140029034887792 for <Subprocess at 140029034886352 with name pdfproject in state STARTING> (stdout)>
+2014-11-14 07:42:28,811 DEBG fd 14 closed, stopped monitoring <POutputDispatcher at 140029034421136 for <Subprocess at 140029034886352 with name pdfproject in state STARTING> (stderr)>
+2014-11-14 07:42:28,814 INFO exited: pdfproject (exit status 1; not expected)
+2014-11-14 07:42:28,818 DEBG received SIGCLD indicating a child quit
+2014-11-14 07:42:28,822 DEBG 'pdfproject-reloader' stderr output:
+  File "/usr/local/lib/python2.7/dist-packages/watchdog/watchmedo.py", line 566, in main
+    parser.dispatch()
+  File "/usr/local/lib/python2.7/dist-packages/argh/helpers.py", line 53, in dispatch
+    return dispatch(self, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/argh/dispatching.py", line 125, in dispatch
+    for line in lines:
+  File "/usr/local/lib/python2.7/dist-packages/argh/dispatching.py", line 202, in _execute_command
+    for line in result:
+  File "/usr/local/lib/python2.7/dist-packages/argh/dispatching.py", line 158, in _call
+    result = args.function(args)
+  File "/usr/local/lib/python2.7/dist-packages/watchdog/watchmedo.py", line 444, in shell_command
+    observe_with(observer, handler, args.directories, args.recursive)
+  File "/usr/local/lib/python2.7/dist-packages/watchdog/watchmedo.py", line 118, in observe_with
+    observer.schedule(event_handler, pathname, recursive)
+  File "/usr/local/lib/python2.7/dist-packages/watchdog/observers/api.py", line 327, in schedule
+    timeout=self.timeout)
+  File "/usr/local/lib/python2.7/dist-packages/watchdog/observers/inotify.py", line 118, in __init__
+    watch.is_recursive)
+  File "/usr/local/lib/python2.7/dist-packages/watchdog/observers/inotify_buffer.py", line 63, in __init__
+    self._inotify = Inotify(path, recursive)
+  File "/usr/local/lib/python2.7/dist-packages/watchdog/observers/inotify_c.py", line 176, in __init__
+    self._add_dir_watch(path, recursive, event_mask)
+  File "/usr/local/lib/python2.7/dist-packages/watchdog/observers/inotify_c.py", line 352, in _add_dir_watch
+    self._add_watch(path, mask)
+  File "/usr/local/lib/python2.7/dist-packages/watchdog/observers/inotify_c.py", line 373, in _add_watch
+    Inotify._raise_error()
+  File "/usr/local/lib/python2.7/dist-packages/watchdog/observers/inotify_c.py", line 390, in _raise_error
+    raise OSError("inotify watch limit reached")
+OSError: inotify watch limit reached
+
+2014-11-14 07:42:28,831 DEBG fd 6 closed, stopped monitoring <POutputDispatcher at 140029034888008 for <Subprocess at 140029034886568 with name pdfproject-reloader in state STARTING> (stdout)>
+2014-11-14 07:42:28,834 DEBG fd 8 closed, stopped monitoring <POutputDispatcher at 140029034887216 for <Subprocess at 140029034886568 with name pdfproject-reloader in state STARTING> (stderr)>
+2014-11-14 07:42:28,836 INFO exited: pdfproject-reloader (exit status 1; not expected)
+2014-11-14 07:42:28,838 DEBG received SIGCLD indicating a child quit
+2014-11-14 07:42:31,858 INFO spawned: 'pdfproject-reloader' with pid 18442
+2014-11-14 07:42:31,872 INFO spawned: 'pdfproject' with pid 18443
+2014-11-14 07:42:32,029 DEBG 'pdfproject-reloader' stderr output:
+Traceback (most recent call last):
+
+2014-11-14 07:42:32,031 DEBG 'pdfproject-reloader' stderr output:
+  File "/usr/local/bin/watchmedo", line 9, in <module>
+
+2014-11-14 07:42:32,031 DEBG 'pdfproject-reloader' stderr output:
+    
+2014-11-14 07:42:32,032 DEBG 'pdfproject-reloader' stderr output:
+load_entry_point('watchdog==0.8.1', 'console_scripts', 'watchmedo')()
+
+2014-11-14 07:42:32,033 DEBG 'pdfproject-reloader' stderr output:
+  File "/usr/local/lib/python2.7/dist-packages/watchdog/watchmedo.py", line 566, in main
+
+2014-11-14 07:42:32,034 DEBG 'pdfproject-reloader' stderr output:
+    
+2014-11-14 07:42:32,035 DEBG 'pdfproject-reloader' stderr output:
+parser.dispatch()
+
+2014-11-14 07:42:32,035 DEBG 'pdfproject-reloader' stderr output:
+  File "/usr/local/lib/python2.7/dist-packages/argh/helpers.py", line 53, in dispatch
+
+2014-11-14 07:42:32,036 DEBG 'pdfproject-reloader' stderr output:
+    
+2014-11-14 07:42:32,037 DEBG 'pdfproject-reloader' stderr output:
+return dispatch(self, *args, **kwargs)
+
+2014-11-14 07:42:32,040 DEBG 'pdfproject-reloader' stderr output:
+  File "/usr/local/lib/python2.7/dist-packages/argh/dispatching.py", line 125, in dispatch
+    for line in lines:
+  File "/usr/local/lib/python2.7/dist-packages/argh/dispatching.py", line 202, in _execute_command
+    for line in result:
+  File "/usr/local/lib/python2.7/dist-packages/argh/dispatching.py", line 158, in _call
+    result = args.function(args)
+  File "/usr/local/lib/python2.7/dist-packages/watchdog/watchmedo.py", line 444, in shell_command
+    observe_with(observer, handler, args.directories, args.recursive)
+  File "/usr/local/lib/python2.7/dist-packages/watchdog/watchmedo.py", line 118, in observe_with
+    observer.schedule(event_handler, pathname, recursive)
+  File "/usr/local/lib/python2.7/dist-packages/watchdog/observers/api.py", line 327, in schedule
+    timeout=self.timeout)
+  File "/usr/local/lib/python2.7/dist-packages/watchdog/observers/inotify.py", line 118, in __init__
+    watch.is_recursive)
+  File "/usr/local/lib/python2.7/dist-packages/watchdog/observers/inotify_buffer.py", line 63, in __init__
+    self._inotify = Inotify(path, recursive)
+  File "/usr/local/lib/python2.7/dist-packages/watchdog/observers/inotify_c.py", line 176, in __init__
+    self._add_dir_watch(path, recursive, event_mask)
+  File "/usr/local/lib/python2.7/dist-packages/watchdog/observers/inotify_c.py", line 352, in _add_dir_watch
+
+2014-11-14 07:42:32,045 DEBG 'pdfproject-reloader' stderr output:
+    self._add_watch(path, mask)
+  File "/usr/local/lib/python2.7/dist-packages/watchdog/observers/inotify_c.py", line 373, in _add_watch
+    Inotify._raise_error()
+  File "/usr/local/lib/python2.7/dist-packages/watchdog/observers/inotify_c.py", line 390, in _raise_error
+    raise OSError("inotify watch limit reached")
+OSError: inotify watch limit reached
+
+2014-11-14 07:42:32,058 DEBG fd 6 closed, stopped monitoring <POutputDispatcher at 140029034886856 for <Subprocess at 140029034886568 with name pdfproject-reloader in state STARTING> (stdout)>
+2014-11-14 07:42:32,059 DEBG fd 8 closed, stopped monitoring <POutputDispatcher at 140029034887144 for <Subprocess at 140029034886568 with name pdfproject-reloader in state STARTING> (stderr)>
+2014-11-14 07:42:32,061 INFO exited: pdfproject-reloader (exit status 1; not expected)
+2014-11-14 07:42:32,063 DEBG received SIGCLD indicating a child quit
+2014-11-14 07:42:32,067 DEBG 'pdfproject' stderr output:
+
+Error: Already running on PID 7377 (or pid file '/tmp/flask-project.pid' is stale)
+
+
+2014-11-14 07:42:32,072 INFO gave up: pdfproject-reloader entered FATAL state, too many start retries too quickly
+2014-11-14 07:42:32,083 DEBG fd 9 closed, stopped monitoring <POutputDispatcher at 140029034886640 for <Subprocess at 140029034886352 with name pdfproject in state STARTING> (stdout)>
+2014-11-14 07:42:32,086 DEBG fd 14 closed, stopped monitoring <POutputDispatcher at 140029034421280 for <Subprocess at 140029034886352 with name pdfproject in state STARTING> (stderr)>
+2014-11-14 07:42:32,088 INFO exited: pdfproject (exit status 1; not expected)
+2014-11-14 07:42:32,091 DEBG received SIGCLD indicating a child quit
+2014-11-14 07:42:33,094 INFO gave up: pdfproject entered FATAL state, too many start retries too quickly
+2014-11-14 07:44:24,833 DEBG 'pdfproject' stdout output:
+upload file
+<type '_io.BytesIO'>
+filename
+
+2014-11-14 07:44:24,837 CRIT uncaptured python exception, closing channel <POutputDispatcher at 140105696950824 for <Subprocess at 140105696949456 with name pdfproject in state RUNNING> (stdout)> (<type 'exceptions.IOError'>:[Errno 5] Input/output error [/usr/local/lib/python2.7/dist-packages/supervisor/supervisord.py|runforever|235] [/usr/local/lib/python2.7/dist-packages/supervisor/dispatchers.py|handle_read_event|231] [/usr/local/lib/python2.7/dist-packages/supervisor/dispatchers.py|record_output|165] [/usr/local/lib/python2.7/dist-packages/supervisor/dispatchers.py|_log|146] [/usr/local/lib/python2.7/dist-packages/supervisor/loggers.py|log|293] [/usr/local/lib/python2.7/dist-packages/supervisor/loggers.py|emit|86] [/usr/local/lib/python2.7/dist-packages/supervisor/loggers.py|handleError|90] [/usr/lib/python2.7/traceback.py|print_exception|124] [/usr/lib/python2.7/traceback.py|_print|13])
+2014-11-18 18:27:09,151 WARN received SIGTERM indicating exit request
+2014-11-18 18:27:09,151 WARN received SIGTERM indicating exit request
+2014-11-18 18:27:09,160 WARN received SIGTERM indicating exit request
+2014-11-18 18:27:09,162 WARN received SIGTERM indicating exit request
+2014-11-18 18:27:09,162 WARN received SIGTERM indicating exit request
+2014-11-18 18:27:09,163 WARN received SIGTERM indicating exit request
+2014-11-18 18:27:09,163 WARN received SIGTERM indicating exit request
+2014-11-18 18:27:09,165 WARN received SIGTERM indicating exit request
+2014-11-18 18:27:09,167 WARN received SIGTERM indicating exit request
+2014-11-18 18:27:09,170 WARN received SIGTERM indicating exit request
+2014-11-18 18:27:09,195 WARN received SIGTERM indicating exit request
+2014-11-18 18:29:55,595 CRIT Supervisor running as root (no user in config file)
+2014-11-18 18:29:55,598 INFO supervisord started with pid 21384
+2014-11-18 18:29:56,612 INFO spawned: 'pdfproject-reloader' with pid 21387
+2014-11-18 18:29:56,624 INFO spawned: 'pdfproject' with pid 21388
+2014-11-18 18:29:57,630 INFO success: pdfproject-reloader entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2014-11-18 18:29:57,631 INFO success: pdfproject entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2014-11-18 18:30:12,752 WARN received SIGINT indicating exit request
+2014-11-18 18:30:12,753 DEBG killing pdfproject (pid 21388) with signal SIGTERM
+2014-11-18 18:30:12,753 INFO waiting for pdfproject-reloader, pdfproject to die
+2014-11-18 18:30:12,846 DEBG fd 9 closed, stopped monitoring <POutputDispatcher at 139727357647472 for <Subprocess at 139727357646032 with name pdfproject in state STOPPING> (stdout)>
+2014-11-18 18:30:12,847 DEBG fd 13 closed, stopped monitoring <POutputDispatcher at 139727357647544 for <Subprocess at 139727357646032 with name pdfproject in state STOPPING> (stderr)>
+2014-11-18 18:30:12,847 INFO stopped: pdfproject (exit status 0)
+2014-11-18 18:30:12,847 DEBG received SIGCLD indicating a child quit
+2014-11-18 18:30:12,847 DEBG killing pdfproject-reloader (pid 21387) with signal SIGTERM
+2014-11-18 18:30:12,850 DEBG fd 8 closed, stopped monitoring <POutputDispatcher at 139727357646752 for <Subprocess at 139727357646248 with name pdfproject-reloader in state STOPPING> (stderr)>
+2014-11-18 18:30:12,850 DEBG fd 6 closed, stopped monitoring <POutputDispatcher at 139727357646536 for <Subprocess at 139727357646248 with name pdfproject-reloader in state STOPPING> (stdout)>
+2014-11-18 18:30:12,851 INFO stopped: pdfproject-reloader (terminated by SIGTERM)
+2014-11-18 18:30:12,851 DEBG received SIGCLD indicating a child quit
+2014-11-18 18:36:28,336 CRIT Supervisor running as root (no user in config file)
+2014-11-18 18:36:28,339 INFO supervisord started with pid 21428
+2014-11-18 18:36:29,353 INFO spawned: 'pdfproject-reloader' with pid 21431
+2014-11-18 18:36:29,364 INFO spawned: 'pdfproject' with pid 21432
+2014-11-18 18:36:30,366 INFO success: pdfproject-reloader entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2014-11-18 18:36:30,367 INFO success: pdfproject entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2014-11-18 18:36:37,945 WARN received SIGINT indicating exit request
+2014-11-18 18:36:37,946 DEBG killing pdfproject (pid 21432) with signal SIGTERM
+2014-11-18 18:36:37,947 INFO waiting for pdfproject-reloader, pdfproject to die
+2014-11-18 18:36:38,062 DEBG fd 9 closed, stopped monitoring <POutputDispatcher at 140164778285680 for <Subprocess at 140164778284240 with name pdfproject in state STOPPING> (stdout)>
+2014-11-18 18:36:38,062 DEBG fd 13 closed, stopped monitoring <POutputDispatcher at 140164778285752 for <Subprocess at 140164778284240 with name pdfproject in state STOPPING> (stderr)>
+2014-11-18 18:36:38,062 INFO stopped: pdfproject (exit status 0)
+2014-11-18 18:36:38,062 DEBG received SIGCLD indicating a child quit
+2014-11-18 18:36:38,063 DEBG killing pdfproject-reloader (pid 21431) with signal SIGTERM
+2014-11-18 18:36:38,066 DEBG fd 8 closed, stopped monitoring <POutputDispatcher at 140164778284960 for <Subprocess at 140164778284456 with name pdfproject-reloader in state STOPPING> (stderr)>
+2014-11-18 18:36:38,066 DEBG fd 6 closed, stopped monitoring <POutputDispatcher at 140164778284744 for <Subprocess at 140164778284456 with name pdfproject-reloader in state STOPPING> (stdout)>
+2014-11-18 18:36:38,068 INFO stopped: pdfproject-reloader (terminated by SIGTERM)
+2014-11-18 18:36:38,069 DEBG received SIGCLD indicating a child quit
+2014-11-18 18:36:40,015 CRIT Supervisor running as root (no user in config file)
+2014-11-18 18:36:40,019 INFO supervisord started with pid 21458
+2014-11-18 18:36:41,041 INFO spawned: 'pdfproject-reloader' with pid 21461
+2014-11-18 18:36:41,051 INFO spawned: 'pdfproject' with pid 21462
+2014-11-18 18:36:42,053 INFO success: pdfproject-reloader entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2014-11-18 18:36:42,054 INFO success: pdfproject entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
