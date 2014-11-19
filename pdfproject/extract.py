@@ -5,7 +5,6 @@ import base64
 import cv2
 
 ## test image for development
-#pdf_im = file('testimg/testpdf.pdf', "rb")
 
 def extractImages(pdf):
     images = []

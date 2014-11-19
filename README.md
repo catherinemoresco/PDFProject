@@ -4,6 +4,32 @@
 
 Catherine Moresco, Jonathan Jin, Megan Barnes, Michael Zhao, Alberto Rios, and Cristian Saucedo
 
+## Update 11/19/14: Iteration 2 Plans
+Features to be included:
+
+##### UI:
+- Highlights!
+- Annotations!
+- Deleting highlights and annotations!
+- Some fine-looking front-end desgin!
+
+##### Server:
+- Modified PDF document download!
+	+ Getting highlight data from frontend
+	+ Merging highlights and SVG edits
+- Streamlined file handling!
+
+##### Image processing:
+- Refined image processing algorithms!
+
+##### Overall: 
+- Opportunities for user correction of algorithmic failings!
+
+Ultimately, there are elements of our original design that we will realistically not have time to implement---element-wise OCRing for highlighting, for example. However, we plan to achieve functionality for the most basic and most common use cases.
+
+## Who's doing what:
+The teams will remain largely the same. Alberto and Christian will being doing front-end work (and Catherine will work with them on the fine-looking front-end design), and Megan and Catherine will be working on image processing. Alberto will also be working on server-side operations.
+
 ## Features
 
 Features successfully implemented in this iteration include:
@@ -63,5 +89,5 @@ The frontend will likely implement more objects as development continues, althou
 
 ## Additional Information
 
-Some limitations are worthy of note. Our image processing algorithms can use improvement. In this iteration, they only support documents that are fairly well-formed: rotated no more than 90 degrees in either direction, with fairly straight text lines, and good contrast. In the future, we intend to implement more sophisticated and efficient algorithms, as well as providing opportunities to correct errors in processing.
+Some limitations are worthy of note. Our image processing algorithms can use improvement. In this iteration, they only support documents that are fairly well-formed: rotated no more than 90 degrees in either direction, with fairly straight text lines, and good contrast. In the future, we intend to implement more sophisticated and efficient algorithms, as well as providing opportunities for the user to correct errors in processing.
 
