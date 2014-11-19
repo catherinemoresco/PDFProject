@@ -9,7 +9,7 @@ import re
 ALLOWED_EXTENSIONS = set(['pdf','PDF'])
 
 app = Flask(__name__,static_url_path = "",static_folder = "uploads")
-app.config['UPLOAD_FOLDER'] = '/PDFProject/pdfproject/uploads'
+app.config['UPLOAD_FOLDER'] = './pdfproject/static/uploads'
 
 def allowed_file(filename):
     return '.' in filename and \
@@ -57,14 +57,14 @@ def uploaded_file(filename):
 	patt = re.compile(p)
 	result = []
 
-	for file in os.listdir("/PDFProject/pdfproject/uploads"):
+	for file in os.listdir("./pdfproject/static/uploads"):
 		if patt.match(file):
 			result.append(file)
 	return render_template('processed.html',result=result)#send_from_directory(app.config['UPLOAD_FOLDER'], filename)
 
 
 	'''
-	for file in os.listdir("/PDFProject/pdfproject/uploads"):
+	for file in os.listdir("/pdfproject/pdfproject/uploads"):
 		if patt.match(file):
 			p = "../uploads/"+str(file)
 			result.append(p)
