@@ -9,19 +9,19 @@ function testOutput(num, isPassed) {
 m += testOutput(1, uploadButtonTest());
 
 //Test 2: Correct File Type
-m += testOutput(2, setUFile("test.jpg") == false);
+m += testOutput(2, !setUFile("test.jpg"));
 
 //Test 3: Correct File Type
-m += testOutput(3, setUFile("test.pdf") == true);
+m += testOutput(3, setUFile("test.pdf"));
 
 //Test 4: Proper Highlighting 
-m += testOutput(4, setHRectangle(-100, -100, 0, 0) == false);
+m += testOutput(4, !setHRectangle(-100, -100, 0, 0));
 
 //Test 5: Proper Highlighting 
-m += testOutput(5, setHRectangle(6000, 6000, 7000, 7000) == false);
+m += testOutput(5, !setHRectangle(6000, 6000, 7000, 7000));
 
 //Test 6: Proper Highlighting 
-m += testOutput(6, setHRectangle(0,0,0,0) == false);
+m += testOutput(6, !setHRectangle(0,0,0,0));
 
 //Test 7: Proper Highlighting
 var l = getLine(1);
