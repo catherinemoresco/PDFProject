@@ -106,3 +106,4 @@ The frontend will likely implement more objects as development continues, althou
 
 Some limitations are worthy of note. Our image processing algorithms can use improvement. In this iteration, they only support documents that are fairly well-formed: rotated no more than 90 degrees in either direction, with fairly straight text lines, and good contrast. In the future, we intend to implement more sophisticated and efficient algorithms, as well as providing opportunities for the user to correct errors in processing.
 
+As of 11/19, our front-end testing system could use some work. It uses a global "results" string that each tests appends a "pass-or-fail" string to. We are currently looking into testing framework solutions that can cooperate seamlessly with the rest of our chosen stack.
