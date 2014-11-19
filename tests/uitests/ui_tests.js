@@ -33,22 +33,26 @@ test(6, setHRectangle(0,0,0,0), false,
 //Test 7: Proper Highlighting
 l = getLine(1);
 test(7, setHRectangle(l[0], l[1], l[2], l[3])
-          && compareHRectangle(l[0],l[1],1[2],l[3]), true);
+          && compareHRectangle(l[0],l[1],1[2],l[3]), true,
+     "setHRectangle works");
 
 //Test 8: Proper Highlighting
 l = getLine(1);
 test(8, setHRectangle(l[0]-10,l[1],1[2]+10,l[3])
-    && compareHRectangle(l[0],l[1],1[2],l[3]), true);
+    && compareHRectangle(l[0],l[1],1[2],l[3]), true,
+     "setHRectangle works");
 
 //Test 9: Proper Highlighting
 l = getLine(1);
 test(9, setHRectangle(l[0]-10,l[1]-4,1[2]+10,l[3]-4)
-    && compareHRectangle(l[0],l[1],1[2],l[3]), true);
+    && compareHRectangle(l[0],l[1],1[2],l[3]), true,
+     "setHRectangle works");
 
 //Test 10: Proper Highlighting
 j = getLine(3);
 test(10, setHRectangle(j[0],j[1],j[2],j[3])
-    && !compareHRectangle(l[0],l[1],1[2],l[3]), true);
+    && !compareHRectangle(l[0],l[1],1[2],l[3]), true,
+     "setHRectangle works");
 //There are other cases in this category I'd like to implement but these require already having analyzed a pdf file
 
 //Test 11: Proper annotating 
