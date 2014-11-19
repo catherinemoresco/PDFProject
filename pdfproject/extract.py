@@ -4,7 +4,6 @@ import numpy as np
 import base64
 import cv2
 
-## test image for development
 
 def extractImages(pdf):
     images = []
@@ -25,5 +24,5 @@ def extractImages(pdf):
 
         ## convert raw data to np array
         img = np.ndarray((img.rows(), img.columns(), 3),dtype='uint16', buffer=rawdata)
-        images.append(img)
+        images.append(img/255)
     return images

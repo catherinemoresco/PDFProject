@@ -3,7 +3,6 @@ import PyPDF2
 import numpy as np 
 import base64
 import cv2
-import StringIO
 
 ## test image for development
 pdf_im = file('testimg/testpdf.pdf', "rb")
@@ -29,3 +28,12 @@ def extractImages(pdf):
         img = np.ndarray((img.rows(), img.columns(), 3),dtype='uint16', buffer=rawdata)
         images.append(img)
     return images
+
+
+# cv2.namedWindow("w")
+# images = extractImages(pdf_im)
+# cv2.imshow("w", images[0])
+# cv2.waitKey(0)
+# cv2.destroyAllWindows()
+# cv2.imwrite("hello.jpg", images[0]/255)
+

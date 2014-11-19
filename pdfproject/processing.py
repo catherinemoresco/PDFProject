@@ -5,8 +5,7 @@ import cv2
 
 def process(pdf):
 	images = extract.extractImages(pdf)
-	# map(skew.straighten, images)
-	# map(getlines.getLines, images)
+	images = [skew.straighten(i) for i in images]
 	n=1
 	for i in images:
 		p = pdf+str(n)+".jpg"
