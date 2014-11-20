@@ -15,10 +15,10 @@ def extractImages(pdf):
     pdf_im = PyPDF2.PdfFileReader(pdf)
     npage = pdf_im.getNumPages()
 
-    for p in range(0, 1):
+    for p in range(0, 5):
         img = PythonMagick.Image()
         blob = PythonMagick.Blob()
-        img.density("300")
+        img.density("75")
         img.antiAlias(True)
 
         ## read in pdf
@@ -40,8 +40,8 @@ def extractImages(pdf):
 
 cv2.namedWindow("w")
 images = extractImages(pdf_im)
-cv2.imshow("w", images[0])
-cv2.waitKey(0)
-cv2.destroyAllWindows()
-cv2.imwrite("hello.jpg", images[0]/255)
+# cv2.imshow("w", images[4])
+# cv2.waitKey(0)
+# cv2.destroyAllWindows()
+cv2.imwrite("hello.jpg", images[4]/255)
 

@@ -1,0 +1,1 @@
+mpq.metrics.jsonp_callback(0);

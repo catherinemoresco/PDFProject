@@ -6,9 +6,17 @@ from werkzeug import secure_filename
 import shelve
 import socket
 import re
+from flask.ext.assets import Environment, Bundle
+
 ALLOWED_EXTENSIONS = set(['pdf','PDF'])
 
-app = Flask(__name__,static_url_path = "",static_folder = "static/uploads")
+app = Flask(__name__)
+
+# configure assets
+assets = Environment(app)
+assets.url = app.static_url_path
+
+## set upload folder
 app.config['UPLOAD_FOLDER'] = './pdfproject/static/uploads'
 
 def allowed_file(filename):
@@ -60,7 +68,7 @@ def uploaded_file(filename):
 
 	for file in os.listdir("./pdfproject/static/uploads"):
 		if patt.match(file):
-			result.append(file)
+			result.append("static/uploads/"+file)
 	return render_template('processed.html',result=result)#send_from_directory(app.config['UPLOAD_FOLDER'], filename)
 
 	'''
