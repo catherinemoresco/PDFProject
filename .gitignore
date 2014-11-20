@@ -1,3 +1,4 @@
 *.pyc
 .DS_Store
 static/uploads/*.pdf*.jpg
+pdfproject/static/uploads/

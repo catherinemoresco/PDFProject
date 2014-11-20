@@ -16,15 +16,4 @@
 		</div>
 	</body>
 </html>
-<script type="text/javascript">
-	function validateForm(){
-		var up = document.getElementById("uploadFile").value;
-		var patt = /\.(pdf|PDF)$/; 
-		var result = patt.test(up);
-		if(!result){
-			alert("Invalid File");
-			return false;
-		}
-		return true;
-	}	
-</script>
+<script type="text/javascript" src="../js/home.js"></script>
