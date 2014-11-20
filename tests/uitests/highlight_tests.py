@@ -9,7 +9,7 @@ class Highlight(unittest.TestCase):
     def setUp(self):
         self.driver = webdriver.Chrome()
 
-        # FIXME
+        # FIXME: I am so sorry
         response = self.driver.get("http://localhost:5000")
 
 
