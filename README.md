@@ -81,6 +81,9 @@ From within tests/cvtests, run the command `python -m unittest -v cv_unit_tests`
 ##### UI Tests:
  The unit tests that we initially submitted will not run given the changes in our UI desgin.We are researching automated processes for testing UI that will be incorporated into Iteration 2.
 
+ 1. Run the app locally with `python runserver.py`
+ 2. Run the individual test suites with `python tests/uitests/<suite_name>`
+
  *- Alberto and Cristian*
 
 ## Who did What
