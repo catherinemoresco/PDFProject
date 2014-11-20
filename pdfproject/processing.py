@@ -5,8 +5,9 @@ import cv2
 
 def process(pdf):
 	images = extract.extractImages(pdf)
-	images = [skew.straighten(i) for i in images]
+	# images = [skew.straighten(i) for i in images]
 	n=1
+	print "images found: " + str(len(images))
 	for i in images:
 		p = pdf+str(n)+".jpg"
 		cv2.imwrite(p,i)

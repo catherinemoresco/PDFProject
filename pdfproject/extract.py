@@ -1,28 +1,41 @@
-import PythonMagick
-import PyPDF2
-import numpy as np 
-import base64
+import subprocess
 import cv2
+import io
+import numpy as np
+
+def getStream(filename):
+    ## run ghostscript command as a subprocess and get output
+    pipe = subprocess.Popen("gs -dNOPAUSE -sDEVICE=jpeg -sOutputFile=%stdout -dJPEGQ=100 -r300 -q "+ filename + " -c quit", stdout=subprocess.PIPE, shell=True)
+    out, err = pipe.communicate()
 
 
-def extractImages(pdf):
-    images = []
+    bytes = io.BytesIO(out)
+    stream = bytes.read()
 
-    pdf_im = PyPDF2.PdfFileReader(pdf)
-    npage = pdf_im.getNumPages()
+    return stream
 
-    for p in range(0, npage):
-        img = PythonMagick.Image()
-        blob = PythonMagick.Blob()
-        img.density("75")
-        ## read in pdf
-        img.read(pdf+"[" + str(p) + "]") 
 
-        ## write to buffer
-        img.write(blob, 'RGB', 16)
-        rawdata =  base64.b64decode(blob.base64())
 
-        ## convert raw data to np array
-        img = np.ndarray((img.rows(), img.columns(), 3),dtype='uint16', buffer=rawdata)
-        images.append(img/255)
-    return images
+def extractImages(filename): 
+    stream = getStream(filename)
+
+    print "extracting..."
+    imgstart = 0
+    imgend = 0
+    i = 0
+
+    ## parse for jpgs
+    decoded_images = []
+    while True:
+        next_img_start = stream.find(b'\xff\xd8', i)
+        if next_img_start < 0:
+            break
+        next_img_end = stream.find(b'\xff\xd9', i)
+        if next_img_end < 0:
+            break
+        decoded_image = cv2.imdecode(np.fromstring(stream[next_img_start:next_img_end+2], np.uint8), cv2.CV_LOAD_IMAGE_COLOR)
+        decoded_images.append(decoded_image)
+        i = next_img_end + 2
+    print "images found: " + str(len(decoded_images))
+    return decoded_images
+
