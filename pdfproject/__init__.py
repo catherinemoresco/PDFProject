@@ -45,6 +45,7 @@ def upload_file():
 			filename = secure_filename(file.filename)
 			file.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
 			print "saved?"
+			print (os.path.join(app.config['UPLOAD_FOLDER'], filename))
 			processing.process(os.path.join(app.config['UPLOAD_FOLDER'], filename))
 			print "ran?"
 			return redirect(url_for('uploaded_file', filename=filename)) #"upload success" #redirect(url_for('uploaded_file',filename=filename))

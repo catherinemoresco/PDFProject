@@ -24,6 +24,8 @@ Features to be included:
 	 + Better skew detection accuracy
 	 + Modification of skew algorithm to distinguish images from text
 	 + Enhanced handling of noise and blacked-out margins
+- Eliminate ImageMagick dependency!
+	+ Require Ghostscript instead, which has a much simpler installation process.
 
 ##### Overall: 
 - Opportunities for user correction of algorithmic failings!
@@ -63,7 +65,7 @@ Install python packages with `pip install -r <path/to/requirements.txt>`.
 Third party packages (see respective websites for installation instructions):
 
 - [OpenCV2](http://opencv.org/)
-- [ImageMagick](http://www.imagemagick.org/) and [PythonMagick](http://www.imagemagick.org/download/python/)
+- [Ghostscript](http://ghostscript.com/doc/current/Install.htm)
 
 ## How to Run
 After installing dependencies, you can run the app locally with `python runserver.py`.

@@ -5,6 +5,7 @@ import numpy as np
 
 def getStream(filename):
     ## run ghostscript command as a subprocess and get output
+    print filename
     pipe = subprocess.Popen("gs -dNOPAUSE -sDEVICE=jpeg -sOutputFile=%stdout -dJPEGQ=100 -r300 -q "+ filename + " -c quit", stdout=subprocess.PIPE, shell=True)
     out, err = pipe.communicate()
 
