@@ -29,11 +29,8 @@ def findFile(pattern, path):
             if fnmatch.fnmatch(name, pattern):
                 result.append(os.path.join(root, name))
     return result
-@app.route("/")
-def hello():
-	return render_template("layout.html")
 
-@app.route("/start/")
+@app.route("/")
 def homeprint():
 	return render_template("start.html")
 
