@@ -16,11 +16,3 @@ def processPDF(pdfPath):
 	f = open(fpath,'w')
 	f.write('hi there\n') # python will convert \n to os.linesep
 	f.close() # you can omit in most cases as the destructor will call if
-'''
-	for i in images:
-		straightImage= skew.straigthen(i)
-		outImage,lines = processing.getLines(straightImage)
-		processedImages.append((outImage,lines))
-	#for p in processedImages:
-	#	p[0]
-'''

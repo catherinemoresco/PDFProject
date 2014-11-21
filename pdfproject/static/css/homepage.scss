@@ -1,0 +1,116 @@
+@import "main";
+
+body{
+	margin: 0px;
+	padding:0px;
+    padding-top: 1px;
+    margin-top: -1px;
+}
+
+.page-one-content{
+	background:$home-background no-repeat center center fixed;
+	background-size: cover;
+	overflow: auto;
+	height:100vh;
+	min-height:400px;
+	position: relative;
+
+}
+
+/* Header styles */
+
+.header-container{
+	position:absolute;
+}
+
+.header-bg{
+	height: 100vh;
+	min-height:400px;
+	width:100vw;
+	background-color:$text-color;
+	opacity:.5;
+	position: absolute;
+	box-shadow: 0 0 5px black;
+}
+
+.header-box{
+	height: 70vh;
+	width:100vw;
+	color:white;
+	font-family: Raleway;
+	text-align:center;
+	padding-top: 30vh;
+	filter:blur(5px);
+	position:absolute;
+
+	h1{
+		font-size: 70px;
+		margin:0;
+	}
+}
+
+
+
+/* Form Box Styles*/
+
+.form-container{
+	text-align: center;
+	position:absolute;
+	bottom: 100px;
+}
+
+.form-background{
+	background-color:$text-color;
+	opacity:1;
+	position:absolute;
+	top:0;
+	height: 100px;
+	width: 100vw;
+	box-shadow: 0 0 100px $text-color;
+
+}
+
+.form-box{
+	color:white;
+	position:absolute;
+	height: 100px;
+	width:100vw;
+	top:0vh;
+}
+
+.form-content{
+	margin-top: 20px;
+}
+
+
+/* Form Styles */
+
+form{
+	color: white;
+	font-family: Montserrat;
+}
+
+input{
+	color:$text-color;
+	font-family: Montserrat, sans-serif;
+	display:none;
+
+}
+
+form .icon{
+	display: inline-block;
+	text-align: center;
+	font:Montserrat;
+	margin-left: 2.5vw;
+	margin-right: 2.5vw;
+	width:70px;
+}
+
+form .icon:hover{
+	color:$accent-color;
+}
+
+svg{
+	margin-left:auto;
+	margin-right:auto;
+}

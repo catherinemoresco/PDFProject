@@ -20,7 +20,6 @@ def getStream(filename):
 def extractImages(filename): 
     stream = getStream(filename)
 
-    print "extracting..."
     imgstart = 0
     imgend = 0
     i = 0

@@ -1,18 +1,18 @@
+<!DOCTYPE html>
+
 <html>
-	<head>
-        <meta charset="utf-8"/>
-		<title>PDF Highlighter and Annotator</title>
-		<link rel="stylesheet" type="text/css" href="../static/home.css"/>			
-	</head>
+{% include 'head.html' %}
 	<body>
 		<h1>PDF Highlighter and Annotator</h1>
 		<div class="form-box">
-			<h2>Upload File</h2>
-			Please select a .pdf file to upload:
+			<h1>PDF Project</h1>
+			<p>Please select a .pdf file to upload:</p>
+
 			<form id="uploadForm" onsubmit="return validateForm();" method="post" action="/process/" enctype="multipart/form-data">
 				<input type="file" name="uploadFile" accept=".pdf">
 				<input type="submit" value="Submit">
-			</form>			
+			</form>	
+					
 		</div>
 	</body>
 </html>

@@ -15,6 +15,14 @@ app = Flask(__name__)
 # configure assets
 assets = Environment(app)
 assets.url = app.static_url_path
+scss = Bundle('css/main.scss', 'css/base.scss', filters='pyscss', output='css/all.css')
+homescss = Bundle('css/main.scss', 'css/homepage.scss', filters='pyscss', output='css/home.css')
+readscss = Bundle('css/main.scss', 'css/reader.scss', filters='pyscss', output='css/read.css')
+assets.register('scss_all', scss)
+assets.register('scss_home', homescss)
+assets.register('scss_read', readscss)
+
+
 
 ## set upload folder
 app.config['UPLOAD_FOLDER'] = './pdfproject/static/uploads'
@@ -67,10 +75,3 @@ def uploaded_file(filename):
 		if patt.match(file):
 			result.append("static/uploads/"+file)
 	return render_template('processed.html',result=result)#send_from_directory(app.config['UPLOAD_FOLDER'], filename)
-
-	'''
-	for file in os.listdir("/PDFProject/pdfproject/uploads"):
-		if patt.match(file):
-			p = "../uploads/"+str(file)
-			result.append(p)
-	'''

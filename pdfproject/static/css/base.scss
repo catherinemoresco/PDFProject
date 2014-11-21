@@ -1,10 +1,18 @@
 @import "main";
 
 body{
-	background-color: $bg-color;
-}
-
-html{
+	background-color: #FFF;
 	font-family: $main-font;
 }
 
+h1, h2, h3, h4, h5, h6{
+	font-family: $header-font;
+	text-decoration:none;
+	font-weight:normal;
+	margin:0;
+}
+
+.main-content{
+	margin:0;
+	padding:0;
+}
