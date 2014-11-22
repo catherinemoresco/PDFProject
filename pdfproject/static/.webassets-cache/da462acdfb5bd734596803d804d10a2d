@@ -1,0 +1,3 @@
+Vbody {\u000a  margin: 0; }\u000a\u000a  .pdf-page {\u000a    width: 80vw;\u000a    height: 1000px;\u000a    background-size: contain;\u000a    background-repeat: no-repeat;\u000a    margin: 10px;\u000a    box-shadow: 0 0 10px #0D161D; }\u000a\u000a    .pdf-pages {\u000a      height: 100vh;\u000a      overflow: auto;\u000a      background: #A8A29E;\u000a      padding: 5px;\u000a      width: 75vw; }\u000a
+p1
+.

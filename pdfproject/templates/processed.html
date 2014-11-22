@@ -2,18 +2,19 @@
 
 <html>
 	{% include 'head.html' %}
+		{% assets "scss_read" %}
+		<link rel="stylesheet" type="text/css" href="{{ ASSET_URL }}"/>	
+		{% endassets %}	
 	<div class=page>
-		<h1>PDF Highlighter and Annotator</h1>
 		{% block body %}
-		<h2>Hello!</h2>
-		{{l}}
-		{% for r in result %}
-		<h1>{{l}}</h1>
+			<div class="pdf-pages">
+				{% for r in result %}
+				<div class="page-wrapper" style="width:75vw;padding-bottom:{{ratio}}%;position:relative">
+					<div class="pdf-page" style="background-image:url(/{{r}})"></div>	
+				</div>
+				{% endfor %}
+	</div>
 
-		<img src="/{{r}}" alt="some_text">
-
-
-		{% endfor %}
 		{% endblock %}
 	</div>
 </html>

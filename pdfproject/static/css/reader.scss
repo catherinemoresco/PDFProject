@@ -1,1 +1,33 @@
 @import "main";
+
+@mixin calc($property, $expression) { 
+  #{$property}: -webkit-calc(#{$expression}); 
+  #{$property}: calc(#{$expression}); 
+} 
+
+body{
+	margin:0;
+}
+
+
+
+
+.pdf-page{
+	background-size:contain;
+	background-repeat:no-repeat;
+	background-position:center center;
+	margin:10px;
+	box-shadow: 0 0 10px $text-color;
+	background-color:white;
+	position:absolute;
+    top: 0; bottom: 0; left: 0; right: 0;
+
+}
+
+.pdf-pages{
+	height:100vh;
+	overflow: auto;
+	background: $warm-gray;
+	padding:5px;
+	width:75vw;
+}
