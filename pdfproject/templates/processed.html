@@ -45,11 +45,13 @@
 		for(var i =0; i<len;i++){
 			divs[i].id = i;
 			divs[i].addEventListener("mousedown",function(event){
-				initX = event.pageX-this.offsetLeft-this.offsetParent.offsetLeft;
-				initY= event.pageY-this.offsetTop-this.offsetParent.offsetTop;
-				//alert("X: "+initX+" Y: "+initY);
-				mousedown = true;
-				console.log(this.offsetTop);
+				if(event.button == 0){
+					initX = event.pageX-this.offsetLeft-this.offsetParent.offsetLeft;
+					initY= event.pageY-this.offsetTop-this.offsetParent.offsetTop;
+					//alert("X: "+initX+" Y: "+initY);
+					mousedown = true;
+					console.log(this.offsetTop);
+				}
 			})
 			divs[i].addEventListener("mousemove",function(){
 				if(mousedown){
@@ -70,7 +72,7 @@
 			})
 			divs[i].addEventListener("mouseup",function(event){
 				if(dynamicRect){
-					dynamicRect.remove()
+					dynamicRect.remove();
 					dynamicRect = false;
 				}	
 				if(mousedown){
@@ -78,6 +80,9 @@
 					var endX = event.pageX-this.offsetLeft-this.offsetParent.offsetLeft;
 					var endY= event.pageY-this.offsetTop-this.offsetParent.offsetTop;
 					var rect = divDraws[eval(this.id)].rect(endX-initX,endY-initY).move(initX,initY).fill('#FFFF66').opacity('0.5');
+					rect.dblclick(function(){
+						this.remove();
+					})
 				}			
 			})
 		}
