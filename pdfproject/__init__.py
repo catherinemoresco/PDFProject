@@ -72,7 +72,10 @@ def uploaded_file(filename, ratio):
 	patt = re.compile(p)
 	result = []
 	print ratio
+	n=1
 	for file in os.listdir("./pdfproject/static/uploads"):
 		if patt.match(file):
-			result.append("static/uploads/"+file)
-	return render_template('processed.html',result=result, ratio=ratio)#send_from_directory(app.config['UPLOAD_FOLDER'], filename)
+			result.append("static/uploads/"+filename+str(n)+'.jpg')
+			n = n+1
+	jsondata = "/static/uploads/"+filename+".json.txt"
+	return render_template('processed.html',result=result, ratio=ratio,jsondata=jsondata)#send_from_directory(app.config['UPLOAD_FOLDER'], filename)

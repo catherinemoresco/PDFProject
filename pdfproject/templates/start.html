@@ -4,7 +4,8 @@
 <html>
 	{% include 'head.html' %}
 	{% assets "scss_home" %}
-	<link rel="stylesheet" type="text/css" href="{{ ASSET_URL }}"/>	
+		<link rel="stylesheet" type="text/css" href="{{ ASSET_URL }}"/>
+		<script type="text/javascript" src="{{ url_for('static', filename='js/home.js') }}"></script>		
 	{% endassets %}	
 	<body>
 		<div class="page-one-content">
@@ -85,19 +86,5 @@
 					</div>
 				</div>
 			</div>
-
-
-		<script type="text/javascript">
-			function validateForm(){
-				var up = document.getElementById("uploadFile").value;
-				var patt = /\.(pdf|PDF)$/; 
-				var result = patt.test(up);
-				if(!result){
-					alert("Invalid File");
-					return false;
-				}
-				return true;
-			}	
-		</script>
 	</body>
 </html>

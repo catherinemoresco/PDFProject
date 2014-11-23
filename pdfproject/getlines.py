@@ -37,5 +37,5 @@ def getLines(inputimg):
   	if cv2.contourArea(contours[i]) > 500:
   		x, y, w, h = cv2.boundingRect(contours[i])
   		lines[i] = ((x, y), (x+w, y+h))
-  return cv2.imencode('.jpg', inputimg), json.dumps(lines)
+  return lines#cv2.imencode('.jpg', inputimg), json.dumps(lines)
 

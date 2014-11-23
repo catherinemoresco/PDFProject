@@ -11911,3 +11911,1499 @@ filename
 2014-11-18 18:36:41,051 INFO spawned: 'pdfproject' with pid 21462
 2014-11-18 18:36:42,053 INFO success: pdfproject-reloader entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
 2014-11-18 18:36:42,054 INFO success: pdfproject entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2014-11-21 19:56:56,153 CRIT Supervisor running as root (no user in config file)
+2014-11-21 19:56:56,158 INFO supervisord started with pid 27281
+2014-11-21 19:56:57,172 INFO spawned: 'pdfproject-reloader' with pid 27284
+2014-11-21 19:56:57,184 INFO spawned: 'pdfproject' with pid 27285
+2014-11-21 19:56:58,188 INFO success: pdfproject-reloader entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2014-11-21 19:56:58,190 INFO success: pdfproject entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2014-11-21 20:01:35,802 DEBG fd 9 closed, stopped monitoring <POutputDispatcher at 140047991483136 for <Subprocess at 140047991481696 with name pdfproject in state RUNNING> (stdout)>
+2014-11-21 20:01:35,803 DEBG fd 13 closed, stopped monitoring <POutputDispatcher at 140047991483208 for <Subprocess at 140047991481696 with name pdfproject in state RUNNING> (stderr)>
+2014-11-21 20:01:35,803 INFO exited: pdfproject (exit status 255; not expected)
+2014-11-21 20:01:35,804 DEBG received SIGCLD indicating a child quit
+2014-11-21 20:01:36,818 INFO spawned: 'pdfproject' with pid 27531
+2014-11-21 20:01:37,824 INFO success: pdfproject entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2014-11-21 20:13:10,268 DEBG 'pdfproject' stderr output:
+   **** Warning: considering '0000000000 XXXXX n' as a free entry.
+
+2014-11-21 20:13:10,424 DEBG 'pdfproject' stderr output:
+
+   **** This file had errors that were repaired or ignored.
+
+2014-11-21 20:13:10,425 DEBG 'pdfproject' stderr output:
+   **** The file was produced by: 
+   **** >>>> Mac OS X 10.9.5 Quartz PDFContext <<<<
+   **** Please notify the author of the software that produced this
+   **** file that it does not conform to Adobe's published PDF
+   **** specification.
+
+
+2014-11-21 20:14:03,574 DEBG 'pdfproject' stderr output:
+   **** Warning: considering '0000000000 XXXXX n' as a free entry.
+
+2014-11-21 20:14:03,739 DEBG 'pdfproject' stderr output:
+
+   **** This file had errors that were repaired or ignored.
+
+2014-11-21 20:14:03,741 DEBG 'pdfproject' stderr output:
+   **** The file was produced by: 
+   **** >>>> Mac OS X 10.9.5 Quartz PDFContext <<<<
+   **** Please notify the author of the software that produced this
+   **** file that it does not conform to Adobe's published PDF
+   **** specification.
+
+
+2014-11-21 20:14:27,829 DEBG 'pdfproject' stderr output:
+   **** Warning: considering '0000000000 XXXXX n' as a free entry.
+
+2014-11-21 20:14:27,985 DEBG 'pdfproject' stderr output:
+
+   **** This file had errors that were repaired or ignored.
+
+2014-11-21 20:14:27,986 DEBG 'pdfproject' stderr output:
+   **** The file was produced by: 
+   **** >>>> Mac OS X 10.9.5 Quartz PDFContext <<<<
+   **** Please notify the author of the software that produced this
+   **** file that it does not conform to Adobe's published PDF
+   **** specification.
+
+
+2014-11-21 20:17:34,768 DEBG 'pdfproject' stderr output:
+   **** Warning: considering '0000000000 XXXXX n' as a free entry.
+
+2014-11-21 20:17:34,925 DEBG 'pdfproject' stderr output:
+
+   **** This file had errors that were repaired or ignored.
+
+2014-11-21 20:17:34,926 DEBG 'pdfproject' stderr output:
+   **** The file was produced by: 
+   **** >>>> Mac OS X 10.9.5 Quartz PDFContext <<<<
+   **** Please notify the author of the software that produced this
+   **** file that it does not conform to Adobe's published PDF
+   **** specification.
+
+
+2014-11-22 16:08:25,919 DEBG 'pdfproject' stdout output:
+upload file
+<type '_io.BytesIO'>
+filenametest2.pdf
+allowing file
+saved?
+./pdfproject/static/uploads/test2.pdf
+./pdfproject/static/uploads/test2.pdf
+images found: 1
+images found: 1
+ran?
+upload file
+<type '_io.BytesIO'>
+filenametest2.pdf
+allowing file
+saved?
+./pdfproject/static/uploads/test2.pdf
+./pdfproject/static/uploads/test2.pdf
+images found: 1
+images found: 1
+ran?
+upload file
+<type '_io.BytesIO'>
+filename
+
+2014-11-22 16:08:25,920 CRIT uncaptured python exception, closing channel <POutputDispatcher at 140047991483136 for <Subprocess at 140047991481696 with name pdfproject in state RUNNING> (stdout)> (<type 'exceptions.IOError'>:[Errno 5] Input/output error [/usr/local/lib/python2.7/dist-packages/supervisor/supervisord.py|runforever|235] [/usr/local/lib/python2.7/dist-packages/supervisor/dispatchers.py|handle_read_event|231] [/usr/local/lib/python2.7/dist-packages/supervisor/dispatchers.py|record_output|165] [/usr/local/lib/python2.7/dist-packages/supervisor/dispatchers.py|_log|146] [/usr/local/lib/python2.7/dist-packages/supervisor/loggers.py|log|293] [/usr/local/lib/python2.7/dist-packages/supervisor/loggers.py|emit|86] [/usr/local/lib/python2.7/dist-packages/supervisor/loggers.py|handleError|90] [/usr/lib/python2.7/traceback.py|print_exception|124] [/usr/lib/python2.7/traceback.py|_print|13])
+2014-11-22 21:23:35,175 CRIT Supervisor running as root (no user in config file)
+2014-11-22 21:23:35,180 INFO supervisord started with pid 30265
+2014-11-22 21:23:36,195 INFO spawned: 'pdfproject-reloader' with pid 30268
+2014-11-22 21:23:36,205 INFO spawned: 'pdfproject' with pid 30269
+2014-11-22 21:23:36,399 DEBG 'pdfproject' stderr output:
+
+Error: Already running on PID 27531 (or pid file '/tmp/flask-project.pid' is stale)
+
+
+2014-11-22 21:23:36,414 DEBG fd 9 closed, stopped monitoring <POutputDispatcher at 140372583221872 for <Subprocess at 140372583220432 with name pdfproject in state STARTING> (stdout)>
+2014-11-22 21:23:36,414 DEBG fd 13 closed, stopped monitoring <POutputDispatcher at 140372583221944 for <Subprocess at 140372583220432 with name pdfproject in state STARTING> (stderr)>
+2014-11-22 21:23:36,414 INFO exited: pdfproject (exit status 1; not expected)
+2014-11-22 21:23:36,415 DEBG received SIGCLD indicating a child quit
+2014-11-22 21:23:37,416 INFO success: pdfproject-reloader entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2014-11-22 21:23:37,430 INFO spawned: 'pdfproject' with pid 30279
+2014-11-22 21:23:37,607 DEBG 'pdfproject' stderr output:
+
+Error: Already running on PID 27531 (or pid file '/tmp/flask-project.pid' is stale)
+
+
+2014-11-22 21:23:37,619 DEBG fd 9 closed, stopped monitoring <POutputDispatcher at 140372583221872 for <Subprocess at 140372583220432 with name pdfproject in state STARTING> (stdout)>
+2014-11-22 21:23:37,620 DEBG fd 13 closed, stopped monitoring <POutputDispatcher at 140372583221008 for <Subprocess at 140372583220432 with name pdfproject in state STARTING> (stderr)>
+2014-11-22 21:23:37,620 INFO exited: pdfproject (exit status 1; not expected)
+2014-11-22 21:23:37,621 DEBG received SIGCLD indicating a child quit
+2014-11-22 21:23:39,636 INFO spawned: 'pdfproject' with pid 30284
+2014-11-22 21:23:39,780 DEBG 'pdfproject' stderr output:
+
+Error: Already running on PID 27531 (or pid file '/tmp/flask-project.pid' is stale)
+
+
+2014-11-22 21:23:39,793 DEBG fd 9 closed, stopped monitoring <POutputDispatcher at 140372583221872 for <Subprocess at 140372583220432 with name pdfproject in state STARTING> (stdout)>
+2014-11-22 21:23:39,794 DEBG fd 13 closed, stopped monitoring <POutputDispatcher at 140372583221944 for <Subprocess at 140372583220432 with name pdfproject in state STARTING> (stderr)>
+2014-11-22 21:23:39,794 INFO exited: pdfproject (exit status 1; not expected)
+2014-11-22 21:23:39,795 DEBG received SIGCLD indicating a child quit
+2014-11-22 21:23:42,812 INFO spawned: 'pdfproject' with pid 30289
+2014-11-22 21:23:42,972 DEBG 'pdfproject' stderr output:
+
+Error: Already running on PID 27531 (or pid file '/tmp/flask-project.pid' is stale)
+
+
+2014-11-22 21:23:42,984 DEBG fd 9 closed, stopped monitoring <POutputDispatcher at 140372583221008 for <Subprocess at 140372583220432 with name pdfproject in state STARTING> (stdout)>
+2014-11-22 21:23:42,985 DEBG fd 13 closed, stopped monitoring <POutputDispatcher at 140372583222232 for <Subprocess at 140372583220432 with name pdfproject in state STARTING> (stderr)>
+2014-11-22 21:23:42,985 INFO exited: pdfproject (exit status 1; not expected)
+2014-11-22 21:23:42,986 DEBG received SIGCLD indicating a child quit
+2014-11-22 21:23:43,987 INFO gave up: pdfproject entered FATAL state, too many start retries too quickly
+2014-11-22 21:26:57,999 CRIT Supervisor running as root (no user in config file)
+2014-11-22 21:26:58,004 INFO supervisord started with pid 30748
+2014-11-22 21:26:59,018 INFO spawned: 'pdfproject-reloader' with pid 30751
+2014-11-22 21:26:59,026 INFO spawned: 'pdfproject' with pid 30752
+2014-11-22 21:26:59,173 DEBG 'pdfproject' stderr output:
+
+Error: Already running on PID 27531 (or pid file '/tmp/flask-project.pid' is stale)
+
+
+2014-11-22 21:26:59,188 DEBG fd 9 closed, stopped monitoring <POutputDispatcher at 140039006362224 for <Subprocess at 140039006360784 with name pdfproject in state STARTING> (stdout)>
+2014-11-22 21:26:59,189 DEBG fd 13 closed, stopped monitoring <POutputDispatcher at 140039006362296 for <Subprocess at 140039006360784 with name pdfproject in state STARTING> (stderr)>
+2014-11-22 21:26:59,190 INFO exited: pdfproject (exit status 1; not expected)
+2014-11-22 21:26:59,190 DEBG received SIGCLD indicating a child quit
+2014-11-22 21:27:00,192 INFO success: pdfproject-reloader entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2014-11-22 21:27:00,207 INFO spawned: 'pdfproject' with pid 30762
+2014-11-22 21:27:00,360 DEBG 'pdfproject' stderr output:
+
+Error: Already running on PID 27531 (or pid file '/tmp/flask-project.pid' is stale)
+
+
+2014-11-22 21:27:00,373 DEBG fd 9 closed, stopped monitoring <POutputDispatcher at 140039006362224 for <Subprocess at 140039006360784 with name pdfproject in state STARTING> (stdout)>
+2014-11-22 21:27:00,374 DEBG fd 13 closed, stopped monitoring <POutputDispatcher at 140039006361360 for <Subprocess at 140039006360784 with name pdfproject in state STARTING> (stderr)>
+2014-11-22 21:27:00,374 INFO exited: pdfproject (exit status 1; not expected)
+2014-11-22 21:27:00,374 DEBG received SIGCLD indicating a child quit
+2014-11-22 21:27:02,391 INFO spawned: 'pdfproject' with pid 30767
+2014-11-22 21:27:02,551 DEBG 'pdfproject' stderr output:
+
+Error: Already running on PID 27531 (or pid file '/tmp/flask-project.pid' is stale)
+
+
+2014-11-22 21:27:02,564 DEBG fd 9 closed, stopped monitoring <POutputDispatcher at 140039006362224 for <Subprocess at 140039006360784 with name pdfproject in state STARTING> (stdout)>
+2014-11-22 21:27:02,565 DEBG fd 13 closed, stopped monitoring <POutputDispatcher at 140039006362296 for <Subprocess at 140039006360784 with name pdfproject in state STARTING> (stderr)>
+2014-11-22 21:27:02,565 INFO exited: pdfproject (exit status 1; not expected)
+2014-11-22 21:27:02,566 DEBG received SIGCLD indicating a child quit
+2014-11-22 21:27:05,582 INFO spawned: 'pdfproject' with pid 30772
+2014-11-22 21:27:05,736 DEBG 'pdfproject' stderr output:
+
+Error: Already running on PID 27531 (or pid file '/tmp/flask-project.pid' is stale)
+
+
+2014-11-22 21:27:05,749 DEBG fd 9 closed, stopped monitoring <POutputDispatcher at 140039006361360 for <Subprocess at 140039006360784 with name pdfproject in state STARTING> (stdout)>
+2014-11-22 21:27:05,750 DEBG fd 13 closed, stopped monitoring <POutputDispatcher at 140039006362584 for <Subprocess at 140039006360784 with name pdfproject in state STARTING> (stderr)>
+2014-11-22 21:27:05,750 INFO exited: pdfproject (exit status 1; not expected)
+2014-11-22 21:27:05,751 DEBG received SIGCLD indicating a child quit
+2014-11-22 21:27:06,753 INFO gave up: pdfproject entered FATAL state, too many start retries too quickly
+2014-11-22 21:29:23,232 DEBG 'pdfproject-reloader' stderr output:
+cat: 
+2014-11-22 21:29:23,233 CRIT uncaptured python exception, closing channel <POutputDispatcher at 140372583221152 for <Subprocess at 140372583220648 with name pdfproject-reloader in state RUNNING> (stderr)> (<type 'exceptions.IOError'>:[Errno 5] Input/output error [/usr/local/lib/python2.7/dist-packages/supervisor/supervisord.py|runforever|235] [/usr/local/lib/python2.7/dist-packages/supervisor/dispatchers.py|handle_read_event|231] [/usr/local/lib/python2.7/dist-packages/supervisor/dispatchers.py|record_output|165] [/usr/local/lib/python2.7/dist-packages/supervisor/dispatchers.py|_log|146] [/usr/local/lib/python2.7/dist-packages/supervisor/loggers.py|log|293] [/usr/local/lib/python2.7/dist-packages/supervisor/loggers.py|emit|86] [/usr/local/lib/python2.7/dist-packages/supervisor/loggers.py|handleError|90] [/usr/lib/python2.7/traceback.py|print_exception|124] [/usr/lib/python2.7/traceback.py|_print|13])
+2014-11-22 22:20:14,468 DEBG 'pdfproject-reloader' stderr output:
+cat: 
+2014-11-22 22:20:14,469 DEBG 'pdfproject-reloader' stderr output:
+/tmp/flask-project.pid
+2014-11-22 22:20:14,470 DEBG 'pdfproject-reloader' stderr output:
+: No such file or directory
+2014-11-22 22:20:14,470 DEBG 'pdfproject-reloader' stderr output:
+
+
+2014-11-22 22:20:14,471 DEBG 'pdfproject-reloader' stderr output:
+/bin/sh: 1: kill: 
+2014-11-22 22:20:14,471 DEBG 'pdfproject-reloader' stderr output:
+Usage: kill [-s sigspec | -signum | -sigspec] [pid | job]... or
+kill -l [exitstatus]
+2014-11-22 22:20:14,472 DEBG 'pdfproject-reloader' stderr output:
+
+
+2014-11-22 22:23:51,492 CRIT Supervisor running as root (no user in config file)
+2014-11-22 22:23:51,498 INFO supervisord started with pid 1470
+2014-11-22 22:23:52,513 INFO spawned: 'pdfproject-reloader' with pid 1473
+2014-11-22 22:23:52,525 INFO spawned: 'pdfproject' with pid 1474
+2014-11-22 22:23:52,712 DEBG 'pdfproject' stderr output:
+Traceback (most recent call last):
+  File "/usr/local/bin/gunicorn", line 11, in <module>
+    sys.exit(run())
+
+2014-11-22 22:23:52,714 DEBG 'pdfproject' stderr output:
+  File "/usr/local/lib/python2.7/dist-packages/gunicorn/app/wsgiapp.py", line 74, in run
+    WSGIApplication("%(prog)s [OPTIONS] [APP_MODULE]").run()
+  File "/usr/local/lib/python2.7/dist-packages/gunicorn/app/base.py", line 185, in run
+    super(Application, self).run()
+  File "/usr/local/lib/python2.7/dist-packages/gunicorn/app/base.py", line 71, in run
+    Arbiter(self).run()
+  File "/usr/local/lib/python2.7/dist-packages/gunicorn/arbiter.py", line 169, in run
+    self.manage_workers()
+  File "/usr/local/lib/python2.7/dist-packages/gunicorn/arbiter.py", line 477, in manage_workers
+    self.spawn_workers()
+  File "/usr/local/lib/python2.7/dist-packages/gunicorn/arbiter.py", line 542, in spawn_workers
+    time.sleep(0.1 * random.random())
+  File "/usr/local/lib/python2.7/dist-packages/gunicorn/arbiter.py", line 209, in handle_chld
+    self.reap_workers()
+  File "/usr/local/lib/python2.7/dist-packages/gunicorn/arbiter.py", line 459, in reap_workers
+    raise HaltServer(reason, self.WORKER_BOOT_ERROR)
+gunicorn.errors.HaltServer: <HaltServer 'Worker failed to boot.' 3>
+
+2014-11-22 22:23:52,727 DEBG fd 9 closed, stopped monitoring <POutputDispatcher at 139772176308848 for <Subprocess at 139772176307408 with name pdfproject in state STARTING> (stdout)>
+2014-11-22 22:23:52,728 DEBG fd 13 closed, stopped monitoring <POutputDispatcher at 139772176308920 for <Subprocess at 139772176307408 with name pdfproject in state STARTING> (stderr)>
+2014-11-22 22:23:52,729 INFO exited: pdfproject (exit status 1; not expected)
+2014-11-22 22:23:52,729 DEBG received SIGCLD indicating a child quit
+2014-11-22 22:23:53,731 INFO success: pdfproject-reloader entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2014-11-22 22:23:53,745 INFO spawned: 'pdfproject' with pid 1485
+2014-11-22 22:23:53,928 DEBG 'pdfproject' stderr output:
+Traceback (most recent call last):
+  File "/usr/local/bin/gunicorn", line 11, in <module>
+
+2014-11-22 22:23:53,929 DEBG 'pdfproject' stderr output:
+    sys.exit(run())
+  File "/usr/local/lib/python2.7/dist-packages/gunicorn/app/wsgiapp.py", line 74, in run
+    WSGIApplication("%(prog)s [OPTIONS] [APP_MODULE]").run()
+  File "/usr/local/lib/python2.7/dist-packages/gunicorn/app/base.py", line 185, in run
+    super(Application, self).run()
+  File "/usr/local/lib/python2.7/dist-packages/gunicorn/app/base.py", line 71, in run
+    Arbiter(self).run()
+  File "/usr/local/lib/python2.7/dist-packages/gunicorn/arbiter.py", line 169, in run
+    self.manage_workers()
+  File "/usr/local/lib/python2.7/dist-packages/gunicorn/arbiter.py", line 477, in manage_workers
+
+2014-11-22 22:23:53,929 DEBG 'pdfproject' stderr output:
+    self.spawn_workers()
+  File "/usr/local/lib/python2.7/dist-packages/gunicorn/arbiter.py", line 541, in spawn_workers
+
+2014-11-22 22:23:53,930 DEBG 'pdfproject' stderr output:
+    self.spawn_worker()
+  File "/usr/local/lib/python2.7/dist-packages/gunicorn/arbiter.py", line 494, in spawn_worker
+
+2014-11-22 22:23:53,930 DEBG 'pdfproject' stderr output:
+    self.cfg, self.log)
+  File "/usr/local/lib/python2.7/dist-packages/gunicorn/workers/base.py", line 46, in __init__
+
+2014-11-22 22:23:53,930 DEBG 'pdfproject' stderr output:
+    self.max_requests = cfg.max_requests or MAXSIZE
+  File "/usr/local/lib/python2.7/dist-packages/gunicorn/config.py", line 53, in __getattr__
+
+2014-11-22 22:23:53,958 DEBG 'pdfproject' stderr output:
+    def __getattr__(self, name):
+
+2014-11-22 22:23:53,960 DEBG 'pdfproject' stderr output:
+  File "/usr/local/lib/python2.7/dist-packages/gunicorn/arbiter.py", line 209, in handle_chld
+    self.reap_workers()
+  File "/usr/local/lib/python2.7/dist-packages/gunicorn/arbiter.py", line 459, in reap_workers
+    raise HaltServer(reason, self.WORKER_BOOT_ERROR)
+gunicorn.errors.HaltServer: <HaltServer 'Worker failed to boot.' 3>
+
+2014-11-22 22:23:53,987 DEBG fd 9 closed, stopped monitoring <POutputDispatcher at 139772176308848 for <Subprocess at 139772176307408 with name pdfproject in state STARTING> (stdout)>
+2014-11-22 22:23:53,987 DEBG fd 13 closed, stopped monitoring <POutputDispatcher at 139772176307984 for <Subprocess at 139772176307408 with name pdfproject in state STARTING> (stderr)>
+2014-11-22 22:23:53,987 INFO exited: pdfproject (exit status 1; not expected)
+2014-11-22 22:23:53,988 DEBG received SIGCLD indicating a child quit
+2014-11-22 22:23:56,003 INFO spawned: 'pdfproject' with pid 1491
+2014-11-22 22:23:56,190 DEBG 'pdfproject' stderr output:
+Traceback (most recent call last):
+  File "/usr/local/bin/gunicorn", line 11, in <module>
+
+2014-11-22 22:23:56,191 DEBG 'pdfproject' stderr output:
+    sys.exit(run())
+  File "/usr/local/lib/python2.7/dist-packages/gunicorn/app/wsgiapp.py", line 74, in run
+    WSGIApplication("%(prog)s [OPTIONS] [APP_MODULE]").run()
+  File "/usr/local/lib/python2.7/dist-packages/gunicorn/app/base.py", line 185, in run
+    super(Application, self).run()
+  File "/usr/local/lib/python2.7/dist-packages/gunicorn/app/base.py", line 71, in run
+    Arbiter(self).run()
+  File "/usr/local/lib/python2.7/dist-packages/gunicorn/arbiter.py", line 169, in run
+    self.manage_workers()
+  File "/usr/local/lib/python2.7/dist-packages/gunicorn/arbiter.py", line 477, in manage_workers
+    self.spawn_workers()
+  File "/usr/local/lib/python2.7/dist-packages/gunicorn/arbiter.py", line 542, in spawn_workers
+    time.sleep(0.1 * random.random())
+  File "/usr/local/lib/python2.7/dist-packages/gunicorn/arbiter.py", line 209, in handle_chld
+    self.reap_workers()
+  File "/usr/local/lib/python2.7/dist-packages/gunicorn/arbiter.py", line 459, in reap_workers
+    raise HaltServer(reason, self.WORKER_BOOT_ERROR)
+gunicorn.errors.HaltServer: <HaltServer 'Worker failed to boot.' 3>
+
+2014-11-22 22:23:56,205 DEBG fd 9 closed, stopped monitoring <POutputDispatcher at 139772176308848 for <Subprocess at 139772176307408 with name pdfproject in state STARTING> (stdout)>
+2014-11-22 22:23:56,206 DEBG fd 13 closed, stopped monitoring <POutputDispatcher at 139772176308920 for <Subprocess at 139772176307408 with name pdfproject in state STARTING> (stderr)>
+2014-11-22 22:23:56,206 INFO exited: pdfproject (exit status 1; not expected)
+2014-11-22 22:23:56,206 DEBG received SIGCLD indicating a child quit
+2014-11-22 22:23:59,224 INFO spawned: 'pdfproject' with pid 1497
+2014-11-22 22:23:59,423 DEBG 'pdfproject' stderr output:
+Traceback (most recent call last):
+  File "/usr/local/bin/gunicorn", line 11, in <module>
+    sys.exit(run())
+
+2014-11-22 22:23:59,424 DEBG 'pdfproject' stderr output:
+  File "/usr/local/lib/python2.7/dist-packages/gunicorn/app/wsgiapp.py", line 74, in run
+    WSGIApplication("%(prog)s [OPTIONS] [APP_MODULE]").run()
+  File "/usr/local/lib/python2.7/dist-packages/gunicorn/app/base.py", line 185, in run
+    super(Application, self).run()
+  File "/usr/local/lib/python2.7/dist-packages/gunicorn/app/base.py", line 71, in run
+    Arbiter(self).run()
+  File "/usr/local/lib/python2.7/dist-packages/gunicorn/arbiter.py", line 169, in run
+    self.manage_workers()
+  File "/usr/local/lib/python2.7/dist-packages/gunicorn/arbiter.py", line 477, in manage_workers
+    self.spawn_workers()
+  File "/usr/local/lib/python2.7/dist-packages/gunicorn/arbiter.py", line 542, in spawn_workers
+    time.sleep(0.1 * random.random())
+  File "/usr/local/lib/python2.7/dist-packages/gunicorn/arbiter.py", line 209, in handle_chld
+    self.reap_workers()
+  File "/usr/local/lib/python2.7/dist-packages/gunicorn/arbiter.py", line 459, in reap_workers
+    raise HaltServer(reason, self.WORKER_BOOT_ERROR)
+gunicorn.errors.HaltServer: <HaltServer 'Worker failed to boot.' 3>
+
+2014-11-22 22:23:59,446 DEBG fd 9 closed, stopped monitoring <POutputDispatcher at 139772176307984 for <Subprocess at 139772176307408 with name pdfproject in state STARTING> (stdout)>
+2014-11-22 22:23:59,447 DEBG fd 13 closed, stopped monitoring <POutputDispatcher at 139772176309208 for <Subprocess at 139772176307408 with name pdfproject in state STARTING> (stderr)>
+2014-11-22 22:23:59,447 INFO exited: pdfproject (exit status 1; not expected)
+2014-11-22 22:23:59,448 DEBG received SIGCLD indicating a child quit
+2014-11-22 22:24:00,449 INFO gave up: pdfproject entered FATAL state, too many start retries too quickly
+2014-11-22 22:24:16,816 DEBG 'pdfproject-reloader' stderr output:
+/bin/sh: 1: kill: 
+2014-11-22 22:24:16,825 DEBG 'pdfproject-reloader' stderr output:
+No such process
+
+2014-11-22 22:24:16,828 DEBG 'pdfproject-reloader' stderr output:
+
+
+2014-11-22 22:24:16,833 DEBG 'pdfproject-reloader' stderr output:
+/bin/sh: 1: kill: No such process
+
+
+2014-11-22 22:24:16,836 DEBG 'pdfproject-reloader' stderr output:
+/bin/sh: 1: kill: 
+2014-11-22 22:24:16,841 DEBG 'pdfproject-reloader' stderr output:
+No such process
+
+2014-11-22 22:24:16,843 DEBG 'pdfproject-reloader' stderr output:
+
+
+2014-11-22 22:24:16,847 DEBG 'pdfproject-reloader' stderr output:
+/bin/sh: 1: kill: 
+2014-11-22 22:24:16,848 DEBG 'pdfproject-reloader' stderr output:
+No such process
+
+2014-11-22 22:24:16,849 DEBG 'pdfproject-reloader' stderr output:
+
+
+2014-11-22 22:25:43,818 CRIT Supervisor running as root (no user in config file)
+2014-11-22 22:25:43,823 INFO supervisord started with pid 1543
+2014-11-22 22:25:44,837 INFO spawned: 'pdfproject-reloader' with pid 1546
+2014-11-22 22:25:44,846 INFO spawned: 'pdfproject' with pid 1547
+2014-11-22 22:25:45,044 DEBG 'pdfproject' stderr output:
+Traceback (most recent call last):
+  File "/usr/local/bin/gunicorn", line 11, in <module>
+
+2014-11-22 22:25:45,045 DEBG 'pdfproject' stderr output:
+    sys.exit(run())
+  File "/usr/local/lib/python2.7/dist-packages/gunicorn/app/wsgiapp.py", line 74, in run
+    WSGIApplication("%(prog)s [OPTIONS] [APP_MODULE]").run()
+  File "/usr/local/lib/python2.7/dist-packages/gunicorn/app/base.py", line 185, in run
+    super(Application, self).run()
+  File "/usr/local/lib/python2.7/dist-packages/gunicorn/app/base.py", line 71, in run
+    Arbiter(self).run()
+  File "/usr/local/lib/python2.7/dist-packages/gunicorn/arbiter.py", line 169, in run
+    self.manage_workers()
+  File "/usr/local/lib/python2.7/dist-packages/gunicorn/arbiter.py", line 477, in manage_workers
+    self.spawn_workers()
+  File "/usr/local/lib/python2.7/dist-packages/gunicorn/arbiter.py", line 542, in spawn_workers
+    time.sleep(0.1 * random.random())
+  File "/usr/local/lib/python2.7/dist-packages/gunicorn/arbiter.py", line 209, in handle_chld
+    self.reap_workers()
+  File "/usr/local/lib/python2.7/dist-packages/gunicorn/arbiter.py", line 459, in reap_workers
+    raise HaltServer(reason, self.WORKER_BOOT_ERROR)
+gunicorn.errors.HaltServer: <HaltServer 'Worker failed to boot.' 3>
+
+2014-11-22 22:25:45,059 DEBG fd 9 closed, stopped monitoring <POutputDispatcher at 140547612670576 for <Subprocess at 140547612669136 with name pdfproject in state STARTING> (stdout)>
+2014-11-22 22:25:45,060 DEBG fd 13 closed, stopped monitoring <POutputDispatcher at 140547612670648 for <Subprocess at 140547612669136 with name pdfproject in state STARTING> (stderr)>
+2014-11-22 22:25:45,061 INFO exited: pdfproject (exit status 1; not expected)
+2014-11-22 22:25:45,061 DEBG received SIGCLD indicating a child quit
+2014-11-22 22:25:46,063 INFO success: pdfproject-reloader entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2014-11-22 22:25:46,078 INFO spawned: 'pdfproject' with pid 1558
+2014-11-22 22:25:46,252 DEBG 'pdfproject' stderr output:
+Traceback (most recent call last):
+  File "/usr/local/bin/gunicorn", line 11, in <module>
+
+2014-11-22 22:25:46,253 DEBG 'pdfproject' stderr output:
+    sys.exit(run())
+  File "/usr/local/lib/python2.7/dist-packages/gunicorn/app/wsgiapp.py", line 74, in run
+    WSGIApplication("%(prog)s [OPTIONS] [APP_MODULE]").run()
+  File "/usr/local/lib/python2.7/dist-packages/gunicorn/app/base.py", line 185, in run
+    super(Application, self).run()
+  File "/usr/local/lib/python2.7/dist-packages/gunicorn/app/base.py", line 71, in run
+    Arbiter(self).run()
+  File "/usr/local/lib/python2.7/dist-packages/gunicorn/arbiter.py", line 169, in run
+    self.manage_workers()
+  File "/usr/local/lib/python2.7/dist-packages/gunicorn/arbiter.py", line 477, in manage_workers
+    self.spawn_workers()
+  File "/usr/local/lib/python2.7/dist-packages/gunicorn/arbiter.py", line 542, in spawn_workers
+    time.sleep(0.1 * random.random())
+  File "/usr/local/lib/python2.7/dist-packages/gunicorn/arbiter.py", line 209, in handle_chld
+    self.reap_workers()
+  File "/usr/local/lib/python2.7/dist-packages/gunicorn/arbiter.py", line 459, in reap_workers
+    raise HaltServer(reason, self.WORKER_BOOT_ERROR)
+gunicorn.errors.HaltServer
+2014-11-22 22:25:46,253 DEBG 'pdfproject' stderr output:
+: <HaltServer 'Worker failed to boot.' 3>
+
+2014-11-22 22:25:46,267 DEBG fd 9 closed, stopped monitoring <POutputDispatcher at 140547612670576 for <Subprocess at 140547612669136 with name pdfproject in state STARTING> (stdout)>
+2014-11-22 22:25:46,268 DEBG fd 13 closed, stopped monitoring <POutputDispatcher at 140547612669712 for <Subprocess at 140547612669136 with name pdfproject in state STARTING> (stderr)>
+2014-11-22 22:25:46,269 INFO exited: pdfproject (exit status 1; not expected)
+2014-11-22 22:25:46,269 DEBG received SIGCLD indicating a child quit
+2014-11-22 22:25:48,285 INFO spawned: 'pdfproject' with pid 1564
+2014-11-22 22:25:48,468 DEBG 'pdfproject' stderr output:
+Traceback (most recent call last):
+  File "/usr/local/bin/gunicorn", line 11, in <module>
+
+2014-11-22 22:25:48,469 DEBG 'pdfproject' stderr output:
+    sys.exit(run())
+  File "/usr/local/lib/python2.7/dist-packages/gunicorn/app/wsgiapp.py", line 74, in run
+    WSGIApplication("%(prog)s [OPTIONS] [APP_MODULE]").run()
+  File "/usr/local/lib/python2.7/dist-packages/gunicorn/app/base.py", line 185, in run
+    super(Application, self).run()
+  File "/usr/local/lib/python2.7/dist-packages/gunicorn/app/base.py", line 71, in run
+    Arbiter(self).run()
+  File "/usr/local/lib/python2.7/dist-packages/gunicorn/arbiter.py", line 169, in run
+    self.manage_workers()
+  File "/usr/local/lib/python2.7/dist-packages/gunicorn/arbiter.py", line 477, in manage_workers
+    self.spawn_workers()
+  File "/usr/local/lib/python2.7/dist-packages/gunicorn/arbiter.py", line 542, in spawn_workers
+
+2014-11-22 22:25:48,470 DEBG 'pdfproject' stderr output:
+    time.sleep(0.1 * random.random())
+  File "/usr/local/lib/python2.7/dist-packages/gunicorn/arbiter.py", line 209, in handle_chld
+    self.reap_workers()
+  File "/usr/local/lib/python2.7/dist-packages/gunicorn/arbiter.py", line 459, in reap_workers
+    raise HaltServer(reason, self.WORKER_BOOT_ERROR)
+gunicorn.errors.HaltServer: <HaltServer 'Worker failed to boot.' 3>
+
+2014-11-22 22:25:48,484 DEBG fd 9 closed, stopped monitoring <POutputDispatcher at 140547612670576 for <Subprocess at 140547612669136 with name pdfproject in state STARTING> (stdout)>
+2014-11-22 22:25:48,485 DEBG fd 13 closed, stopped monitoring <POutputDispatcher at 140547612670648 for <Subprocess at 140547612669136 with name pdfproject in state STARTING> (stderr)>
+2014-11-22 22:25:48,485 INFO exited: pdfproject (exit status 1; not expected)
+2014-11-22 22:25:48,485 DEBG received SIGCLD indicating a child quit
+2014-11-22 22:25:51,503 INFO spawned: 'pdfproject' with pid 1570
+2014-11-22 22:25:51,705 DEBG 'pdfproject' stderr output:
+Traceback (most recent call last):
+  File "/usr/local/bin/gunicorn", line 11, in <module>
+
+2014-11-22 22:25:51,707 DEBG 'pdfproject' stderr output:
+    sys.exit(run())
+  File "/usr/local/lib/python2.7/dist-packages/gunicorn/app/wsgiapp.py", line 74, in run
+    WSGIApplication("%(prog)s [OPTIONS] [APP_MODULE]").run()
+  File "/usr/local/lib/python2.7/dist-packages/gunicorn/app/base.py", line 185, in run
+    super(Application, self).run()
+  File "/usr/local/lib/python2.7/dist-packages/gunicorn/app/base.py", line 71, in run
+    Arbiter(self).run()
+  File "/usr/local/lib/python2.7/dist-packages/gunicorn/arbiter.py", line 169, in run
+    self.manage_workers()
+  File "/usr/local/lib/python2.7/dist-packages/gunicorn/arbiter.py", line 477, in manage_workers
+    self.spawn_workers()
+  File "/usr/local/lib/python2.7/dist-packages/gunicorn/arbiter.py", line 541, in spawn_workers
+    self.spawn_worker()
+  File "/usr/local/lib/python2.7/dist-packages/gunicorn/arbiter.py", line 496, in spawn_worker
+    pid = os.fork()
+  File "/usr/local/lib/python2.7/dist-packages/gunicorn/arbiter.py", line 209, in handle_chld
+    self.reap_workers()
+  File "/usr/local/lib/python2.7/dist-packages/gunicorn/arbiter.py", line 459, in reap_workers
+    raise HaltServer(reason, self.WORKER_BOOT_ERROR)
+gunicorn.errors.HaltServer: <HaltServer 'Worker failed to boot.' 3>
+
+2014-11-22 22:25:51,730 DEBG fd 9 closed, stopped monitoring <POutputDispatcher at 140547612669712 for <Subprocess at 140547612669136 with name pdfproject in state STARTING> (stdout)>
+2014-11-22 22:25:51,731 DEBG fd 13 closed, stopped monitoring <POutputDispatcher at 140547612670936 for <Subprocess at 140547612669136 with name pdfproject in state STARTING> (stderr)>
+2014-11-22 22:25:51,731 INFO exited: pdfproject (exit status 1; not expected)
+2014-11-22 22:25:51,732 DEBG received SIGCLD indicating a child quit
+2014-11-22 22:25:52,733 INFO gave up: pdfproject entered FATAL state, too many start retries too quickly
+2014-11-22 22:26:21,729 DEBG 'pdfproject-reloader' stderr output:
+/bin/sh: 1: kill: 
+2014-11-22 22:26:21,732 DEBG 'pdfproject-reloader' stderr output:
+/bin/sh: 1: kill: 
+2014-11-22 22:26:21,734 DEBG 'pdfproject-reloader' stderr output:
+No such process
+
+
+2014-11-22 22:26:21,735 DEBG 'pdfproject-reloader' stderr output:
+No such process
+
+2014-11-22 22:26:21,735 DEBG 'pdfproject-reloader' stderr output:
+
+
+2014-11-22 22:26:21,738 DEBG 'pdfproject-reloader' stderr output:
+/bin/sh: 1: kill: No such process
+
+
+2014-11-22 22:26:34,495 CRIT Supervisor running as root (no user in config file)
+2014-11-22 22:26:34,500 INFO supervisord started with pid 1611
+2014-11-22 22:26:35,515 INFO spawned: 'pdfproject-reloader' with pid 1614
+2014-11-22 22:26:35,525 INFO spawned: 'pdfproject' with pid 1615
+2014-11-22 22:26:36,531 INFO success: pdfproject-reloader entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2014-11-22 22:26:36,533 INFO success: pdfproject entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2014-11-22 22:29:26,273 DEBG 'pdfproject' stdout output:
+upload file
+<type '_io.BytesIO'>
+filenameHW 7.pdf
+allowing file
+saved?
+./pdfproject/static/uploads/HW_7.pdf
+./pdfproject/static/uploads/HW_7.pdf
+images found: 2
+images found: 2
+141.451612903
+ran?
+
+2014-11-22 22:29:26,282 DEBG 'pdfproject' stdout output:
+141.451612903
+
+2014-11-22 22:32:34,897 DEBG 'pdfproject' stdout output:
+141.451612903
+
+2014-11-22 22:32:34,919 DEBG 'pdfproject' stdout output:
+upload file
+<type '_io.BytesIO'>
+filenameHW 7.pdf
+allowing file
+saved?
+./pdfproject/static/uploads/HW_7.pdf
+./pdfproject/static/uploads/HW_7.pdf
+images found: 2
+images found: 2
+141.451612903
+ran?
+
+2014-11-22 22:41:14,264 DEBG fd 9 closed, stopped monitoring <POutputDispatcher at 140135810173552 for <Subprocess at 140135810172112 with name pdfproject in state RUNNING> (stdout)>
+2014-11-22 22:41:14,266 DEBG fd 13 closed, stopped monitoring <POutputDispatcher at 140135810173624 for <Subprocess at 140135810172112 with name pdfproject in state RUNNING> (stderr)>
+2014-11-22 22:41:14,267 INFO exited: pdfproject (exit status 3; not expected)
+2014-11-22 22:41:14,267 DEBG received SIGCLD indicating a child quit
+2014-11-22 22:41:15,281 INFO spawned: 'pdfproject' with pid 2102
+2014-11-22 22:41:15,453 DEBG 'pdfproject' stderr output:
+Traceback (most recent call last):
+  File "/usr/local/bin/gunicorn", line 11, in <module>
+
+2014-11-22 22:41:15,454 DEBG 'pdfproject' stderr output:
+    sys.exit(run())
+  File "/usr/local/lib/python2.7/dist-packages/gunicorn/app/wsgiapp.py", line 74, in run
+    WSGIApplication("%(prog)s [OPTIONS] [APP_MODULE]").run()
+  File "/usr/local/lib/python2.7/dist-packages/gunicorn/app/base.py", line 185, in run
+    super(Application, self).run()
+  File "/usr/local/lib/python2.7/dist-packages/gunicorn/app/base.py", line 71, in run
+    Arbiter(self).run()
+  File "/usr/local/lib/python2.7/dist-packages/gunicorn/arbiter.py", line 169, in run
+    self.manage_workers()
+  File "/usr/local/lib/python2.7/dist-packages/gunicorn/arbiter.py", line 477, in manage_workers
+    self.spawn_workers()
+  File "/usr/local/lib/python2.7/dist-packages/gunicorn/arbiter.py", line 542, in spawn_workers
+    time.sleep(0.1 * random.random())
+  File "/usr/local/lib/python2.7/dist-packages/gunicorn/arbiter.py", line 209, in handle_chld
+    self.reap_workers()
+  File "/usr/local/lib/python2.7/dist-packages/gunicorn/arbiter.py", line 459, in reap_workers
+    raise HaltServer(reason, self.WORKER_BOOT_ERROR)
+gunicorn.errors.HaltServer: <HaltServer 'Worker failed to boot.' 3>
+
+2014-11-22 22:41:15,468 DEBG fd 9 closed, stopped monitoring <POutputDispatcher at 140135810173552 for <Subprocess at 140135810172112 with name pdfproject in state STARTING> (stdout)>
+2014-11-22 22:41:15,470 DEBG fd 13 closed, stopped monitoring <POutputDispatcher at 140135810172688 for <Subprocess at 140135810172112 with name pdfproject in state STARTING> (stderr)>
+2014-11-22 22:41:15,470 INFO exited: pdfproject (exit status 1; not expected)
+2014-11-22 22:41:15,471 DEBG received SIGCLD indicating a child quit
+2014-11-22 22:41:16,485 INFO spawned: 'pdfproject' with pid 2108
+2014-11-22 22:41:16,670 DEBG 'pdfproject' stderr output:
+Traceback (most recent call last):
+  File "/usr/local/bin/gunicorn", line 11, in <module>
+
+2014-11-22 22:41:16,671 DEBG 'pdfproject' stderr output:
+    sys.exit(run())
+  File "/usr/local/lib/python2.7/dist-packages/gunicorn/app/wsgiapp.py", line 74, in run
+    WSGIApplication("%(prog)s [OPTIONS] [APP_MODULE]").run()
+  File "/usr/local/lib/python2.7/dist-packages/gunicorn/app/base.py", line 185, in run
+    super(Application, self).run()
+  File "/usr/local/lib/python2.7/dist-packages/gunicorn/app/base.py", line 71, in run
+    Arbiter(self).run()
+  File "/usr/local/lib/python2.7/dist-packages/gunicorn/arbiter.py", line 169, in run
+
+2014-11-22 22:41:16,672 DEBG 'pdfproject' stderr output:
+    self.manage_workers()
+  File "/usr/local/lib/python2.7/dist-packages/gunicorn/arbiter.py", line 477, in manage_workers
+
+2014-11-22 22:41:16,672 DEBG 'pdfproject' stderr output:
+    self.spawn_workers()
+  File "/usr/local/lib/python2.7/dist-packages/gunicorn/arbiter.py", line 542, in spawn_workers
+    time.sleep(0.1 * random.random())
+
+2014-11-22 22:41:16,673 DEBG 'pdfproject' stderr output:
+  File "/usr/local/lib/python2.7/dist-packages/gunicorn/arbiter.py", line 209, in handle_chld
+    self.reap_workers()
+  File "/usr/local/lib/python2.7/dist-packages/gunicorn/arbiter.py", line 459, in reap_workers
+
+2014-11-22 22:41:16,674 DEBG 'pdfproject' stderr output:
+    raise HaltServer(reason, self.WORKER_BOOT_ERROR)
+gunicorn.errors.HaltServer: <HaltServer 'Worker failed to boot.' 3>
+
+2014-11-22 22:41:16,687 DEBG fd 9 closed, stopped monitoring <POutputDispatcher at 140135810173552 for <Subprocess at 140135810172112 with name pdfproject in state STARTING> (stdout)>
+2014-11-22 22:41:16,688 DEBG fd 13 closed, stopped monitoring <POutputDispatcher at 140135810173624 for <Subprocess at 140135810172112 with name pdfproject in state STARTING> (stderr)>
+2014-11-22 22:41:16,688 INFO exited: pdfproject (exit status 1; not expected)
+2014-11-22 22:41:16,689 DEBG received SIGCLD indicating a child quit
+2014-11-22 22:41:18,708 INFO spawned: 'pdfproject' with pid 2114
+2014-11-22 22:41:18,890 DEBG 'pdfproject' stderr output:
+Traceback (most recent call last):
+  File "/usr/local/bin/gunicorn", line 11, in <module>
+
+2014-11-22 22:41:18,890 DEBG 'pdfproject' stderr output:
+    sys.exit(run())
+  File "/usr/local/lib/python2.7/dist-packages/gunicorn/app/wsgiapp.py", line 74, in run
+    WSGIApplication("%(prog)s [OPTIONS] [APP_MODULE]").run()
+  File "/usr/local/lib/python2.7/dist-packages/gunicorn/app/base.py", line 185, in run
+    super(Application, self).run()
+  File "/usr/local/lib/python2.7/dist-packages/gunicorn/app/base.py", line 71, in run
+    Arbiter(self).run()
+  File "/usr/local/lib/python2.7/dist-packages/gunicorn/arbiter.py", line 169, in run
+
+2014-11-22 22:41:18,891 DEBG 'pdfproject' stderr output:
+    
+2014-11-22 22:41:18,891 DEBG 'pdfproject' stderr output:
+self.manage_workers()
+
+2014-11-22 22:41:18,892 DEBG 'pdfproject' stderr output:
+  File "/usr/local/lib/python2.7/dist-packages/gunicorn/arbiter.py", line 477, in manage_workers
+    self.spawn_workers()
+  File "/usr/local/lib/python2.7/dist-packages/gunicorn/arbiter.py", line 542, in spawn_workers
+    time.sleep(0.1 * random.random())
+  File "/usr/local/lib/python2.7/dist-packages/gunicorn/arbiter.py", line 209, in handle_chld
+    self.reap_workers()
+  File "/usr/local/lib/python2.7/dist-packages/gunicorn/arbiter.py", line 459, in reap_workers
+    raise HaltServer(reason, self.WORKER_BOOT_ERROR)
+gunicorn.errors.HaltServer: <HaltServer 'Worker failed to boot.' 3>
+
+2014-11-22 22:41:18,906 DEBG fd 9 closed, stopped monitoring <POutputDispatcher at 140135810172688 for <Subprocess at 140135810172112 with name pdfproject in state STARTING> (stdout)>
+2014-11-22 22:41:18,907 DEBG fd 13 closed, stopped monitoring <POutputDispatcher at 140135810173912 for <Subprocess at 140135810172112 with name pdfproject in state STARTING> (stderr)>
+2014-11-22 22:41:18,907 INFO exited: pdfproject (exit status 1; not expected)
+2014-11-22 22:41:18,908 DEBG received SIGCLD indicating a child quit
+2014-11-22 22:41:21,925 INFO spawned: 'pdfproject' with pid 2120
+2014-11-22 22:41:22,108 DEBG 'pdfproject' stderr output:
+Traceback (most recent call last):
+  File "/usr/local/bin/gunicorn", line 11, in <module>
+
+2014-11-22 22:41:22,110 DEBG 'pdfproject' stderr output:
+    sys.exit(run())
+  File "/usr/local/lib/python2.7/dist-packages/gunicorn/app/wsgiapp.py", line 74, in run
+    WSGIApplication("%(prog)s [OPTIONS] [APP_MODULE]").run()
+  File "/usr/local/lib/python2.7/dist-packages/gunicorn/app/base.py", line 185, in run
+    super(Application, self).run()
+  File "/usr/local/lib/python2.7/dist-packages/gunicorn/app/base.py", line 71, in run
+    Arbiter(self).run()
+  File "/usr/local/lib/python2.7/dist-packages/gunicorn/arbiter.py", line 169, in run
+    self.manage_workers()
+  File "/usr/local/lib/python2.7/dist-packages/gunicorn/arbiter.py", line 477, in manage_workers
+    self.spawn_workers()
+  File "/usr/local/lib/python2.7/dist-packages/gunicorn/arbiter.py", line 542, in spawn_workers
+    time.sleep(0.1 * random.random())
+  File "/usr/local/lib/python2.7/dist-packages/gunicorn/arbiter.py", line 209, in handle_chld
+    self.reap_workers()
+
+2014-11-22 22:41:22,110 DEBG 'pdfproject' stderr output:
+  File "/usr/local/lib/python2.7/dist-packages/gunicorn/arbiter.py", line 459, in reap_workers
+    raise HaltServer(reason, self.WORKER_BOOT_ERROR)
+gunicorn.errors.HaltServer: <HaltServer 'Worker failed to boot.' 3>
+
+2014-11-22 22:41:22,124 DEBG fd 9 closed, stopped monitoring <POutputDispatcher at 140135810173552 for <Subprocess at 140135810172112 with name pdfproject in state STARTING> (stdout)>
+2014-11-22 22:41:22,125 DEBG fd 13 closed, stopped monitoring <POutputDispatcher at 140135809706896 for <Subprocess at 140135810172112 with name pdfproject in state STARTING> (stderr)>
+2014-11-22 22:41:22,126 INFO exited: pdfproject (exit status 1; not expected)
+2014-11-22 22:41:22,126 DEBG received SIGCLD indicating a child quit
+2014-11-22 22:41:23,128 INFO gave up: pdfproject entered FATAL state, too many start retries too quickly
+2014-11-22 22:41:36,183 DEBG 'pdfproject-reloader' stderr output:
+/bin/sh: 1: kill: 
+2014-11-22 22:41:36,192 DEBG 'pdfproject-reloader' stderr output:
+No such process
+
+2014-11-22 22:41:36,194 DEBG 'pdfproject-reloader' stderr output:
+
+
+2014-11-22 22:41:36,195 DEBG 'pdfproject-reloader' stderr output:
+/bin/sh: 1: kill: 
+2014-11-22 22:41:36,196 DEBG 'pdfproject-reloader' stderr output:
+No such process
+
+
+2014-11-22 22:41:36,202 DEBG 'pdfproject-reloader' stderr output:
+/bin/sh: 1: kill: No such process
+
+
+2014-11-22 22:41:36,204 DEBG 'pdfproject-reloader' stderr output:
+/bin/sh: 1: kill: No such process
+
+
+2014-11-22 22:42:39,938 DEBG 'pdfproject-reloader' stderr output:
+/bin/sh: 1: kill: No such process
+
+
+2014-11-22 22:42:39,943 DEBG 'pdfproject-reloader' stderr output:
+/bin/sh: 1: kill: No such process
+
+
+2014-11-22 22:42:39,944 DEBG 'pdfproject-reloader' stderr output:
+/bin/sh: 1: kill: No such process
+
+
+2014-11-22 22:42:39,945 DEBG 'pdfproject-reloader' stderr output:
+/bin/sh: 1: kill: No such process
+
+
+2014-11-22 22:42:39,956 DEBG 'pdfproject-reloader' stderr output:
+/bin/sh: 1: kill: No such process
+
+
+2014-11-22 22:44:37,176 DEBG 'pdfproject-reloader' stderr output:
+/bin/sh: 1: kill: No such process
+
+
+2014-11-22 22:44:37,209 DEBG 'pdfproject-reloader' stderr output:
+/bin/sh: 1: kill: 
+2014-11-22 22:44:37,209 DEBG 'pdfproject-reloader' stderr output:
+No such process
+
+2014-11-22 22:44:37,209 DEBG 'pdfproject-reloader' stderr output:
+
+
+2014-11-22 22:44:37,217 DEBG 'pdfproject-reloader' stderr output:
+/bin/sh: 1: kill: No such process
+
+
+2014-11-22 22:44:37,219 DEBG 'pdfproject-reloader' stderr output:
+/bin/sh: 1: kill: No such process
+
+
+2014-11-22 22:44:37,222 DEBG 'pdfproject-reloader' stderr output:
+/bin/sh: 1: kill: No such process
+
+
+2014-11-22 22:44:37,225 DEBG 'pdfproject-reloader' stderr output:
+/bin/sh: 1: kill: 
+2014-11-22 22:44:37,226 DEBG 'pdfproject-reloader' stderr output:
+No such process
+
+
+2014-11-22 22:44:37,231 DEBG 'pdfproject-reloader' stderr output:
+/bin/sh: 1: kill: No such process
+
+
+2014-11-22 22:44:37,233 DEBG 'pdfproject-reloader' stderr output:
+/bin/sh: 1: kill: No such process
+
+
+2014-11-22 22:45:17,245 DEBG 'pdfproject-reloader' stderr output:
+/bin/sh: 1: kill: 
+2014-11-22 22:45:17,251 DEBG 'pdfproject-reloader' stderr output:
+No such process
+
+
+2014-11-22 22:45:17,255 DEBG 'pdfproject-reloader' stderr output:
+/bin/sh: 1: kill: No such process
+
+
+2014-11-22 22:45:17,257 DEBG 'pdfproject-reloader' stderr output:
+/bin/sh: 1: kill: 
+2014-11-22 22:45:17,258 DEBG 'pdfproject-reloader' stderr output:
+No such process
+
+2014-11-22 22:45:17,259 DEBG 'pdfproject-reloader' stderr output:
+
+
+2014-11-22 22:45:17,259 DEBG 'pdfproject-reloader' stderr output:
+/bin/sh: 1: kill: No such process
+
+
+2014-11-22 22:45:27,495 CRIT Supervisor running as root (no user in config file)
+2014-11-22 22:45:27,501 INFO supervisord started with pid 2267
+2014-11-22 22:45:28,515 INFO spawned: 'pdfproject-reloader' with pid 2270
+2014-11-22 22:45:28,525 INFO spawned: 'pdfproject' with pid 2271
+2014-11-22 22:45:29,530 INFO success: pdfproject-reloader entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2014-11-22 22:45:29,533 INFO success: pdfproject entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2014-11-22 22:47:01,311 DEBG 'pdfproject' stdout output:
+upload file
+<type '_io.BytesIO'>
+filenameHW 7.pdf
+allowing file
+saved?
+./pdfproject/static/uploads/HW_7.pdf
+./pdfproject/static/uploads/HW_7.pdf
+images found: 2
+images found: 2
+141.451612903
+ran?
+
+2014-11-22 22:47:01,327 DEBG 'pdfproject' stdout output:
+141.451612903
+
+2014-11-22 22:50:55,077 DEBG 'pdfproject' stdout output:
+upload file
+<type '_io.BytesIO'>
+filenameHW 7.pdf
+allowing file
+saved?
+./pdfproject/static/uploads/HW_7.pdf
+./pdfproject/static/uploads/HW_7.pdf
+images found: 2
+images found: 2
+141.451612903
+ran?
+141.451612903
+
+2014-11-22 22:50:55,085 DEBG 'pdfproject' stdout output:
+HW_7.pdf.json.txt
+
+2014-11-22 22:52:24,741 DEBG 'pdfproject' stdout output:
+141.451612903
+
+2014-11-22 22:52:24,761 DEBG 'pdfproject' stdout output:
+upload file
+<type '_io.BytesIO'>
+filenameHW 7.pdf
+allowing file
+saved?
+./pdfproject/static/uploads/HW_7.pdf
+./pdfproject/static/uploads/HW_7.pdf
+images found: 2
+images found: 2
+141.451612903
+ran?
+
+2014-11-22 22:52:34,407 DEBG 'pdfproject' stderr output:
+   **** Unrecoverable error in xref!
+
+2014-11-22 22:52:34,409 DEBG 'pdfproject' stderr output:
+   **** Error reading a content stream. The page may be incomplete.
+
+2014-11-22 22:52:34,410 DEBG 'pdfproject' stderr output:
+   **** File did not complete the page properly and may be damaged.
+
+2014-11-22 22:52:34,482 DEBG 'pdfproject' stderr output:
+
+   **** This file had errors that were repaired or ignored.
+
+2014-11-22 22:52:34,484 DEBG 'pdfproject' stderr output:
+   **** Please notify the author of the software that produced this
+
+2014-11-22 22:52:34,485 DEBG 'pdfproject' stderr output:
+   **** file that it does not conform to Adobe's published PDF
+   **** specification.
+
+
+2014-11-22 22:54:30,880 DEBG 'pdfproject' stdout output:
+141.451612903
+upload file
+<type '_io.BytesIO'>
+filenameHW 7.pdf
+allowing file
+saved?
+./pdfproject/static/uploads/HW_7.pdf
+./pdfproject/static/uploads/HW_7.pdf
+images found: 2
+images found: 2
+141.451612903
+ran?
+
+2014-11-22 22:54:30,884 DEBG 'pdfproject' stdout output:
+upload file
+<type '_io.BytesIO'>
+filenameHW 7.pdf
+allowing file
+saved?
+./pdfproject/static/uploads/HW_7.pdf
+./pdfproject/static/uploads/HW_7.pdf
+images found: 2
+images found: 2
+141.451612903
+ran?
+
+2014-11-22 22:54:30,897 DEBG 'pdfproject' stdout output:
+141.451612903
+
+2014-11-22 22:57:10,969 DEBG 'pdfproject' stdout output:
+upload file
+<type '_io.BytesIO'>
+filenameHW 7.pdf
+allowing file
+saved?
+./pdfproject/static/uploads/HW_7.pdf
+./pdfproject/static/uploads/HW_7.pdf
+images found: 2
+images found: 2
+141.451612903
+ran?
+
+2014-11-22 22:57:10,995 DEBG 'pdfproject' stdout output:
+141.451612903
+
+2014-11-22 23:07:10,265 DEBG fd 9 closed, stopped monitoring <POutputDispatcher at 140716224100976 for <Subprocess at 140716224099536 with name pdfproject in state RUNNING> (stdout)>
+2014-11-22 23:07:10,268 DEBG fd 13 closed, stopped monitoring <POutputDispatcher at 140716224101048 for <Subprocess at 140716224099536 with name pdfproject in state RUNNING> (stderr)>
+2014-11-22 23:07:10,269 INFO exited: pdfproject (exit status 255; not expected)
+2014-11-22 23:07:10,269 DEBG received SIGCLD indicating a child quit
+2014-11-22 23:07:11,283 INFO spawned: 'pdfproject' with pid 3298
+2014-11-22 23:07:12,295 INFO success: pdfproject entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2014-11-22 23:09:09,272 DEBG 'pdfproject' stdout output:
+upload file
+<type '_io.BytesIO'>
+filenameHW 7.pdf
+allowing file
+saved?
+./pdfproject/static/uploads/HW_7.pdf
+./pdfproject/static/uploads/HW_7.pdf
+images found: 2
+images found: 2
+141.451612903
+ran?
+141.451612903
+
+2014-11-22 23:10:16,756 DEBG 'pdfproject' stdout output:
+141.451612903
+
+2014-11-22 23:10:16,762 DEBG 'pdfproject' stdout output:
+upload file
+<type '_io.BytesIO'>
+filenameHW 7.pdf
+allowing file
+saved?
+./pdfproject/static/uploads/HW_7.pdf
+./pdfproject/static/uploads/HW_7.pdf
+images found: 2
+images found: 2
+141.451612903
+ran?
+
+2014-11-22 23:10:35,192 DEBG 'pdfproject' stdout output:
+141.451612903
+
+2014-11-22 23:10:35,205 DEBG 'pdfproject' stdout output:
+upload file
+<type '_io.BytesIO'>
+filenameHW 7.pdf
+allowing file
+saved?
+./pdfproject/static/uploads/HW_7.pdf
+./pdfproject/static/uploads/HW_7.pdf
+images found: 2
+images found: 2
+141.451612903
+ran?
+
+2014-11-22 23:11:58,076 DEBG 'pdfproject' stdout output:
+141.451612903
+
+2014-11-22 23:11:58,085 DEBG 'pdfproject' stdout output:
+upload file
+<type '_io.BytesIO'>
+filenameHW 7.pdf
+allowing file
+saved?
+./pdfproject/static/uploads/HW_7.pdf
+./pdfproject/static/uploads/HW_7.pdf
+images found: 2
+images found: 2
+141.451612903
+ran?
+
+2014-11-22 23:16:24,116 DEBG 'pdfproject' stdout output:
+141.451612903
+
+2014-11-22 23:16:24,120 DEBG 'pdfproject' stdout output:
+upload file
+<type '_io.BytesIO'>
+filenameHW 7.pdf
+allowing file
+saved?
+./pdfproject/static/uploads/HW_7.pdf
+./pdfproject/static/uploads/HW_7.pdf
+images found: 2
+images found: 2
+141.451612903
+ran?
+
+2014-11-22 23:24:56,184 DEBG 'pdfproject' stdout output:
+141.451612903
+
+2014-11-22 23:28:58,678 DEBG 'pdfproject' stdout output:
+141.451612903
+
+2014-11-22 23:38:20,152 DEBG 'pdfproject' stdout output:
+141.451612903
+141.451612903
+
+2014-11-22 23:38:50,484 DEBG 'pdfproject' stdout output:
+141.451612903
+
+2014-11-22 23:40:25,405 DEBG 'pdfproject' stdout output:
+141.451612903
+
+2014-11-22 23:40:42,201 DEBG 'pdfproject' stdout output:
+141.451612903
+
+2014-11-22 23:40:42,464 DEBG 'pdfproject' stdout output:
+141.451612903
+
+2014-11-22 23:43:23,583 DEBG 'pdfproject' stdout output:
+141.451612903
+
+2014-11-22 23:44:02,035 DEBG 'pdfproject' stdout output:
+141.451612903
+
+2014-11-22 23:44:02,048 DEBG 'pdfproject' stdout output:
+upload file
+<type '_io.BytesIO'>
+filenameHW 7.pdf
+allowing file
+saved?
+./pdfproject/static/uploads/HW_7.pdf
+./pdfproject/static/uploads/HW_7.pdf
+images found: 2
+images found: 2
+141.451612903
+ran?
+
+2014-11-22 23:47:04,587 DEBG 'pdfproject' stdout output:
+141.451612903
+
+2014-11-22 23:50:13,365 DEBG 'pdfproject' stdout output:
+141.451612903
+
+2014-11-22 23:50:30,572 DEBG 'pdfproject' stdout output:
+141.451612903
+
+2014-11-22 23:51:47,109 DEBG 'pdfproject' stdout output:
+141.451612903
+
+2014-11-22 23:51:47,431 DEBG 'pdfproject' stderr output:
+ImportError
+2014-11-22 23:51:47,433 DEBG 'pdfproject' stderr output:
+: 
+2014-11-22 23:51:47,434 DEBG 'pdfproject' stderr output:
+numpy.core.multiarray failed to import
+2014-11-22 23:51:47,434 DEBG 'pdfproject' stderr output:
+
+
+2014-11-22 23:51:47,469 DEBG 'pdfproject' stderr output:
+ImportError
+2014-11-22 23:51:47,470 DEBG 'pdfproject' stderr output:
+: 
+2014-11-22 23:51:47,471 DEBG 'pdfproject' stderr output:
+numpy.core.multiarray failed to import
+2014-11-22 23:51:47,472 DEBG 'pdfproject' stderr output:
+
+
+2014-11-22 23:51:47,510 DEBG 'pdfproject' stderr output:
+ImportError
+2014-11-22 23:51:47,516 DEBG 'pdfproject' stderr output:
+: 
+2014-11-22 23:51:47,517 DEBG 'pdfproject' stderr output:
+numpy.core.multiarray failed to import
+2014-11-22 23:51:47,518 DEBG 'pdfproject' stderr output:
+
+
+2014-11-22 23:51:47,521 DEBG 'pdfproject' stderr output:
+ImportError
+2014-11-22 23:51:47,525 DEBG 'pdfproject' stderr output:
+: 
+2014-11-22 23:51:47,537 DEBG 'pdfproject' stderr output:
+numpy.core.multiarray failed to import
+2014-11-22 23:51:47,553 DEBG 'pdfproject' stderr output:
+
+
+2014-11-22 23:51:47,804 DEBG 'pdfproject' stderr output:
+ImportError
+2014-11-22 23:51:47,813 DEBG 'pdfproject' stderr output:
+: 
+2014-11-22 23:51:47,817 DEBG 'pdfproject' stderr output:
+numpy.core.multiarray failed to import
+2014-11-22 23:51:47,819 DEBG 'pdfproject' stderr output:
+
+
+2014-11-22 23:51:47,897 DEBG 'pdfproject' stderr output:
+ImportError
+2014-11-22 23:51:47,905 DEBG 'pdfproject' stderr output:
+: 
+2014-11-22 23:51:47,917 DEBG 'pdfproject' stderr output:
+
+
+2014-11-22 23:51:47,936 DEBG 'pdfproject' stderr output:
+ImportError
+2014-11-22 23:51:47,942 DEBG 'pdfproject' stderr output:
+: 
+2014-11-22 23:51:47,944 DEBG 'pdfproject' stderr output:
+numpy.core.multiarray failed to import
+2014-11-22 23:51:47,948 DEBG 'pdfproject' stderr output:
+
+
+2014-11-22 23:51:48,347 DEBG fd 9 closed, stopped monitoring <POutputDispatcher at 140716224100976 for <Subprocess at 140716224099536 with name pdfproject in state RUNNING> (stdout)>
+2014-11-22 23:51:48,348 DEBG fd 13 closed, stopped monitoring <POutputDispatcher at 140716224100112 for <Subprocess at 140716224099536 with name pdfproject in state RUNNING> (stderr)>
+2014-11-22 23:51:48,349 INFO exited: pdfproject (exit status 255; not expected)
+2014-11-22 23:51:48,349 DEBG received SIGCLD indicating a child quit
+2014-11-22 23:51:49,363 INFO spawned: 'pdfproject' with pid 5751
+2014-11-22 23:51:50,369 INFO success: pdfproject entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2014-11-22 23:52:26,615 DEBG 'pdfproject' stdout output:
+141.451612903
+
+2014-11-22 23:53:21,688 DEBG 'pdfproject' stdout output:
+141.451612903
+
+2014-11-22 23:56:37,331 DEBG 'pdfproject' stdout output:
+141.451612903
+
+2014-11-22 23:56:52,936 DEBG 'pdfproject' stdout output:
+141.451612903
+
+2014-11-22 23:58:33,401 DEBG 'pdfproject-reloader' stderr output:
+cat: 
+2014-11-22 23:58:33,407 DEBG 'pdfproject-reloader' stderr output:
+/tmp/flask-project.pid
+2014-11-22 23:58:33,414 DEBG 'pdfproject-reloader' stderr output:
+: No such file or directory
+2014-11-22 23:58:33,416 DEBG 'pdfproject-reloader' stderr output:
+
+/bin/sh: 1: kill: Usage: kill [-s sigspec | -signum | -sigspec] [pid | job]... or
+kill -l [exitstatus]
+
+2014-11-22 23:58:33,449 DEBG 'pdfproject' stdout output:
+141.451612903
+
+2014-11-22 23:59:45,716 DEBG 'pdfproject' stdout output:
+141.451612903
+
+2014-11-22 23:59:45,740 DEBG 'pdfproject' stdout output:
+141.451612903
+
+2014-11-23 00:00:29,468 DEBG 'pdfproject' stdout output:
+141.451612903
+
+2014-11-23 00:00:44,946 DEBG 'pdfproject' stdout output:
+141.451612903
+
+2014-11-23 00:01:11,101 DEBG 'pdfproject' stdout output:
+141.451612903
+
+2014-11-23 00:02:52,565 DEBG 'pdfproject' stdout output:
+141.451612903
+
+2014-11-23 00:04:18,302 DEBG 'pdfproject' stdout output:
+141.451612903
+
+2014-11-23 00:05:13,592 DEBG 'pdfproject' stdout output:
+141.451612903
+
+2014-11-23 00:06:50,587 DEBG 'pdfproject' stdout output:
+141.451612903
+
+2014-11-23 00:06:56,548 DEBG 'pdfproject' stdout output:
+141.451612903
+
+2014-11-23 07:14:27,518 DEBG 'pdfproject' stdout output:
+141.451612903
+141.451612903
+141.451612903
+upload file
+<type '_io.BytesIO'>
+filenameHW 6.pdf
+allowing file
+saved?
+./pdfproject/static/uploads/HW_6.pdf
+./pdfproject/static/uploads/HW_6.pdf
+images found: 3
+images found: 3
+141.451612903
+ran?
+141.451612903
+upload file
+<type '_io.BytesIO'>
+filenameHW 7.pdf
+allowing file
+saved?
+./pdfproject/static/uploads/HW_7.pdf
+./pdfproject/static/uploads/HW_7.pdf
+images found: 2
+images found: 2
+141.451612903
+ran?
+
+2014-11-23 07:14:27,523 CRIT uncaptured python exception, closing channel <POutputDispatcher at 140716224100976 for <Subprocess at 140716224099536 with name pdfproject in state RUNNING> (stdout)> (<type 'exceptions.IOError'>:[Errno 5] Input/output error [/usr/local/lib/python2.7/dist-packages/supervisor/supervisord.py|runforever|235] [/usr/local/lib/python2.7/dist-packages/supervisor/dispatchers.py|handle_read_event|231] [/usr/local/lib/python2.7/dist-packages/supervisor/dispatchers.py|record_output|165] [/usr/local/lib/python2.7/dist-packages/supervisor/dispatchers.py|_log|146] [/usr/local/lib/python2.7/dist-packages/supervisor/loggers.py|log|293] [/usr/local/lib/python2.7/dist-packages/supervisor/loggers.py|emit|86] [/usr/local/lib/python2.7/dist-packages/supervisor/loggers.py|handleError|90] [/usr/lib/python2.7/traceback.py|print_exception|124] [/usr/lib/python2.7/traceback.py|_print|13])
+2014-11-23 07:28:38,114 CRIT Supervisor running as root (no user in config file)
+2014-11-23 07:28:38,119 INFO supervisord started with pid 9959
+2014-11-23 07:28:39,133 INFO spawned: 'pdfproject-reloader' with pid 9962
+2014-11-23 07:28:39,145 INFO spawned: 'pdfproject' with pid 9963
+2014-11-23 07:28:40,149 INFO success: pdfproject-reloader entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2014-11-23 07:28:40,153 INFO success: pdfproject entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2014-11-23 07:29:18,653 DEBG 'pdfproject' stdout output:
+upload file
+<type '_io.BytesIO'>
+filenameHW 6.pdf
+allowing file
+saved?
+./pdfproject/static/uploads/HW_6.pdf
+./pdfproject/static/uploads/HW_6.pdf
+images found: 3
+images found: 3
+141.451612903
+ran?
+
+2014-11-23 07:29:18,680 DEBG 'pdfproject' stdout output:
+141.451612903
+
+2014-11-23 07:30:13,104 DEBG 'pdfproject' stdout output:
+141.451612903
+
+2014-11-23 07:32:09,690 DEBG 'pdfproject' stdout output:
+141.451612903
+
+2014-11-23 07:32:09,702 DEBG 'pdfproject' stdout output:
+141.451612903
+
+2014-11-23 07:33:26,261 DEBG 'pdfproject' stdout output:
+141.451612903
+
+2014-11-23 07:34:33,336 DEBG 'pdfproject' stdout output:
+141.451612903
+
+2014-11-23 07:35:06,492 DEBG 'pdfproject' stdout output:
+141.451612903
+
+2014-11-23 07:35:06,516 DEBG 'pdfproject' stdout output:
+141.451612903
+
+2014-11-23 07:36:56,796 DEBG 'pdfproject' stdout output:
+141.451612903
+
+2014-11-23 07:38:50,776 DEBG 'pdfproject' stdout output:
+141.451612903
+
+2014-11-23 07:38:50,828 DEBG 'pdfproject' stdout output:
+141.451612903
+
+2014-11-23 07:40:30,532 DEBG 'pdfproject' stdout output:
+141.451612903
+
+2014-11-23 07:43:56,501 DEBG 'pdfproject' stdout output:
+141.451612903
+
+2014-11-23 07:43:56,516 DEBG 'pdfproject' stdout output:
+upload file
+<type '_io.BytesIO'>
+filenameHW 6.pdf
+allowing file
+saved?
+./pdfproject/static/uploads/HW_6.pdf
+./pdfproject/static/uploads/HW_6.pdf
+images found: 3
+images found: 3
+141.451612903
+ran?
+
+2014-11-23 07:43:56,524 DEBG 'pdfproject' stdout output:
+141.451612903
+
+2014-11-23 07:45:17,152 DEBG 'pdfproject' stdout output:
+141.451612903
+
+2014-11-23 07:46:24,960 DEBG 'pdfproject' stdout output:
+141.451612903
+
+2014-11-23 07:46:44,717 DEBG 'pdfproject' stdout output:
+141.451612903
+141.451612903
+
+2014-11-23 07:46:44,741 DEBG 'pdfproject' stdout output:
+141.451612903
+
+2014-11-23 07:53:27,522 DEBG 'pdfproject' stdout output:
+141.451612903
+
+2014-11-23 07:55:56,469 DEBG 'pdfproject' stdout output:
+141.451612903
+upload file
+<type '_io.BytesIO'>
+filenameHW 7.pdf
+allowing file
+saved?
+./pdfproject/static/uploads/HW_7.pdf
+./pdfproject/static/uploads/HW_7.pdf
+images found: 2
+images found: 2
+141.451612903
+ran?
+
+2014-11-23 07:57:15,412 DEBG 'pdfproject' stdout output:
+141.451612903
+
+2014-11-23 08:00:18,107 DEBG 'pdfproject' stdout output:
+141.451612903
+
+2014-11-23 08:00:18,141 DEBG 'pdfproject' stdout output:
+141.451612903
+
+2014-11-23 08:13:09,416 DEBG 'pdfproject' stdout output:
+141.451612903
+
+2014-11-23 08:28:09,381 DEBG 'pdfproject' stdout output:
+141.451612903
+
+2014-11-23 08:29:57,315 DEBG 'pdfproject' stdout output:
+141.451612903
+
+2014-11-23 08:30:29,657 DEBG 'pdfproject' stdout output:
+141.451612903
+141.451612903
+
+2014-11-23 08:40:19,261 DEBG 'pdfproject' stdout output:
+141.451612903
+
+2014-11-23 08:44:18,185 DEBG 'pdfproject' stdout output:
+141.451612903
+
+2014-11-23 09:05:01,063 DEBG 'pdfproject' stdout output:
+141.451612903
+
+2014-11-23 09:09:48,452 DEBG 'pdfproject' stdout output:
+141.451612903
+
+2014-11-23 09:10:45,260 DEBG 'pdfproject' stdout output:
+141.451612903
+141.451612903
+
+2014-11-23 09:13:17,644 DEBG 'pdfproject' stdout output:
+141.451612903
+141.451612903
+
+2014-11-23 09:16:52,212 DEBG 'pdfproject' stdout output:
+upload file
+<type '_io.BytesIO'>
+filenameHW 7.pdf
+allowing file
+saved?
+./pdfproject/static/uploads/HW_7.pdf
+./pdfproject/static/uploads/HW_7.pdf
+images found: 2
+images found: 2
+141.451612903
+ran?
+
+2014-11-23 09:16:52,228 DEBG 'pdfproject' stdout output:
+141.451612903
+141.451612903
+141.451612903
+
+2014-11-23 09:19:15,636 DEBG 'pdfproject' stdout output:
+141.451612903
+141.451612903
+
+2014-11-23 09:29:31,812 DEBG 'pdfproject' stdout output:
+141.451612903
+
+2014-11-23 09:29:32,040 DEBG 'pdfproject' stdout output:
+141.451612903
+
+2014-11-23 09:30:22,894 DEBG 'pdfproject' stdout output:
+141.451612903
+
+2014-11-23 09:30:41,634 DEBG 'pdfproject' stdout output:
+141.451612903
+
+2014-11-23 09:31:31,269 DEBG 'pdfproject-reloader' stderr output:
+cat: 
+2014-11-23 09:31:31,270 DEBG 'pdfproject-reloader' stderr output:
+/tmp/flask-project.pid
+2014-11-23 09:31:31,270 DEBG 'pdfproject-reloader' stderr output:
+: No such file or directory
+2014-11-23 09:31:31,271 DEBG 'pdfproject-reloader' stderr output:
+
+
+2014-11-23 09:31:31,276 DEBG 'pdfproject-reloader' stderr output:
+/bin/sh: 1: kill: 
+2014-11-23 09:31:31,277 DEBG 'pdfproject-reloader' stderr output:
+Usage: kill [-s sigspec | -signum | -sigspec] [pid | job]... or
+kill -l [exitstatus]
+2014-11-23 09:31:31,277 DEBG 'pdfproject-reloader' stderr output:
+
+
+2014-11-23 09:32:38,844 DEBG 'pdfproject' stdout output:
+141.451612903
+
+2014-11-23 09:34:34,240 DEBG 'pdfproject' stdout output:
+141.451612903
+
+2014-11-23 09:34:52,777 DEBG 'pdfproject' stdout output:
+141.451612903
+
+2014-11-23 09:38:42,016 DEBG 'pdfproject' stdout output:
+141.451612903
+
+2014-11-23 09:38:42,392 DEBG 'pdfproject' stdout output:
+141.451612903
+
+2014-11-23 09:43:16,796 DEBG 'pdfproject' stdout output:
+141.451612903
+
+2014-11-23 09:50:50,312 DEBG 'pdfproject' stdout output:
+141.451612903
+
+2014-11-23 09:51:22,328 DEBG 'pdfproject-reloader' stderr output:
+cat: 
+2014-11-23 09:51:22,342 CRIT uncaptured python exception, closing channel <POutputDispatcher at 139772176308128 for <Subprocess at 139772176307624 with name pdfproject-reloader in state RUNNING> (stderr)> (<type 'exceptions.IOError'>:[Errno 5] Input/output error [/usr/local/lib/python2.7/dist-packages/supervisor/supervisord.py|runforever|235] [/usr/local/lib/python2.7/dist-packages/supervisor/dispatchers.py|handle_read_event|231] [/usr/local/lib/python2.7/dist-packages/supervisor/dispatchers.py|record_output|165] [/usr/local/lib/python2.7/dist-packages/supervisor/dispatchers.py|_log|146] [/usr/local/lib/python2.7/dist-packages/supervisor/loggers.py|log|293] [/usr/local/lib/python2.7/dist-packages/supervisor/loggers.py|emit|86] [/usr/local/lib/python2.7/dist-packages/supervisor/loggers.py|handleError|90] [/usr/lib/python2.7/traceback.py|print_exception|124] [/usr/lib/python2.7/traceback.py|_print|13])
+2014-11-23 09:51:22,404 DEBG 'pdfproject' stdout output:
+141.451612903
+
+2014-11-23 09:51:22,417 DEBG 'pdfproject' stdout output:
+141.451612903
+
+2014-11-23 09:53:26,424 DEBG 'pdfproject' stdout output:
+141.451612903
+
+2014-11-23 09:57:29,265 DEBG 'pdfproject' stdout output:
+141.451612903
+
+2014-11-23 10:07:58,392 DEBG 'pdfproject' stdout output:
+141.451612903
+
+2014-11-23 10:07:58,412 DEBG 'pdfproject' stdout output:
+141.451612903
+
+2014-11-23 10:08:26,640 DEBG 'pdfproject' stdout output:
+141.451612903
+
+2014-11-23 10:17:48,568 DEBG 'pdfproject' stdout output:
+141.451612903
+
+2014-11-23 10:21:15,181 DEBG 'pdfproject' stdout output:
+141.451612903
+
+2014-11-23 10:22:14,008 DEBG 'pdfproject' stdout output:
+141.451612903
+
+2014-11-23 10:22:14,044 DEBG 'pdfproject' stdout output:
+141.451612903
+
+2014-11-23 10:24:08,408 DEBG 'pdfproject' stdout output:
+141.451612903
+
+2014-11-23 10:24:08,421 DEBG 'pdfproject' stdout output:
+141.451612903
+
+2014-11-23 10:36:00,618 DEBG 'pdfproject' stdout output:
+141.451612903
+
+2014-11-23 10:38:13,744 DEBG 'pdfproject' stdout output:
+141.451612903
+
+2014-11-23 10:38:13,759 DEBG 'pdfproject' stdout output:
+141.451612903
+
+2014-11-23 10:51:05,804 DEBG 'pdfproject' stdout output:
+141.451612903
+
+2014-11-23 10:55:59,100 DEBG 'pdfproject' stdout output:
+141.451612903
+
+2014-11-23 10:57:52,648 DEBG 'pdfproject' stdout output:
+141.451612903
+
+2014-11-23 10:58:55,507 DEBG 'pdfproject' stdout output:
+141.451612903
+
+2014-11-23 10:59:52,390 DEBG 'pdfproject' stdout output:
+141.451612903
+
+2014-11-23 11:03:40,660 DEBG 'pdfproject' stdout output:
+141.451612903
+141.451612903
+
