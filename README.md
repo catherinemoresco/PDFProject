@@ -41,7 +41,7 @@ Megan and Catherine will be working on image processing.
 
 Alberto will also be working on server-side operations. 
 
-Jonathan will be working on test coverage. He will also be helping to migrate front-end tests towards a more robust, automated system. In the meantime, he will contribute towards the design of a built-from-scratch front-end unit testing framework.
+Jonathan has primary QA responsibilities. He handles maintaining the test suite and test coverage. He maintains the cleanliness and modularity of the test suite.
 
 ## Features
 

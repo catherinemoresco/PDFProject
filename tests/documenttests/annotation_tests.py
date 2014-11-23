@@ -10,7 +10,6 @@ class annotation_test_case(unittest.TestCase):
 		self.annotation = Annotation()
 		self.annotation1 = Annotation()
 
-
 	def test_color(self):
 		self.annotation.set_color("#b5b5b5")
 		self.assertTrue(self.annotation.get_color() == "#b5b5b5")
