@@ -2,10 +2,13 @@ import extract
 import skew
 import getlines
 import cv2
+import json
+
 
 def process(pdf):
 	largest_ratio = 0
 	images = extract.extractImages(pdf)
+	lines = {} 
 	# images = [skew.straighten(i) for i in images]
 	n=1
 	print "images found: " + str(len(images))
@@ -14,6 +17,9 @@ def process(pdf):
 		if ratio > largest_ratio:
 			largest_ratio = ratio
 		p = pdf+str(n)+".jpg"
+		lines[n]=getlines.getLines(i)
 		cv2.imwrite(p,i)
 		n = n+1
-	return largest_ratio*100
+	with open ((pdf+".json.txt"),'w') as outfile:
+		json.dump(lines,outfile)
+	return largest_ratio*100 

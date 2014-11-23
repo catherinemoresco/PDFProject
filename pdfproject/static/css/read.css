@@ -1,6 +1,8 @@
 
 body {
-  margin: 0; }
+  margin: 0; 
+  background: #A8A29E;
+}
 
   .pdf-page {
     background-size: contain;
@@ -16,8 +18,11 @@ body {
     right: 0; }
 
     .pdf-pages {
-      height: 100vh;
-      overflow: auto;
+      /* height: 100vh; */
+      overflow: visible;
       background: #A8A29E;
       padding: 5px;
-      width: 75vw; }
+      width: 75vw; 
+	  margin-left: auto;
+	  margin-right: auto;
+	  }
