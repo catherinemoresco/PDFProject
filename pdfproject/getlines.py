@@ -52,5 +52,3 @@ def getLines(inputimg):
   		lines[i] = ((x, y), (x+w, y+h))
 
   return lines
-
-print getLines(img)
