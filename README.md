@@ -22,7 +22,6 @@ Features to be included:
 ##### Image processing:
 - Refined image processing algorithms!
 	 + Better skew detection accuracy
-	 + Modification of skew algorithm to distinguish images from text
 	 + Enhanced handling of noise and blacked-out margins
 - Eliminate ImageMagick dependency!
 	+ Require Ghostscript instead, which has a much simpler installation process.
