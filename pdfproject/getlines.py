@@ -27,10 +27,12 @@ def isolateLines(end):
 ## apply line filter:
 	end = cv2.filter2D(end, -1, kernelrow)
 
-## final threshold and erosion
-	ret, end = cv2.threshold(end, 20, 255, cv2.THRESH_BINARY)
-	end = cv2.erode(end, kernelrow, iterations=3)
-  
+## final threshold and dilation/erosion
+	ret, end = cv2.threshold(end, 1, 255, cv2.THRESH_BINARY)
+
+	end = cv2.erode(end, kernelrow, iterations=5)
+	end = cv2.erode(end, kernelrow, iterations=5)
+
 	return end
 
 def getLines(inputimg):
