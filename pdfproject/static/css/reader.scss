@@ -9,8 +9,9 @@ body{
 	margin:0;
 }
 
-
-
+rect{
+	mix-blend-mode:multiply;
+}
 
 .pdf-page{
 	background-size:contain;

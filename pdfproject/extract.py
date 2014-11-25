@@ -4,7 +4,7 @@ import io
 import numpy as np
 
 def getStream(filename):
-    ## run ghostscript command as a subprocess and get output
+    """ converts PDF to series of JPGs, and returns bytestream of output """
     print filename
     pipe = subprocess.Popen("gs -dNOPAUSE -sDEVICE=jpeg -sOutputFile=%stdout -dJPEGQ=100 -r300 -q "+ filename + " -c quit", stdout=subprocess.PIPE, shell=True)
     out, err = pipe.communicate()
@@ -18,6 +18,7 @@ def getStream(filename):
 
 
 def extractImages(filename): 
+    """ Parses bytestream of JPGs, and returns a list of the images represented as numpy arrays """
     stream = getStream(filename)
 
     imgstart = 0

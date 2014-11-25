@@ -3,9 +3,10 @@ import cv2
 
 # rotate an image by a given angle
 def rotate(img, angle):
-	height, width = img.shape
+	height = img.shape[0]
+	width = img.shape[1]
 	rotmat = cv2.getRotationMatrix2D((width/2, height/2), angle, 1)
-	return cv2.warpAffine(img, rotmat, (width, height))
+	return cv2.warpAffine(img, rotmat, (width, height), borderMode=cv2.BORDER_CONSTANT, borderValue = (255, 255, 255))
 
 # get the sum of the values of a row
 def horizontal_sums(img):
@@ -16,10 +17,12 @@ def horizontal_sums(img):
 	return sums
 
 # rotate an image by an angle that maximizes the standard deviation of its row sums
-def straighten(img):
-	if (len(img.shape) > 2):
+def straighten(img0):
+	img = np.copy(img0)
+	if len(img.shape) > 2:
 		img = cv2.cvtColor(img, cv2.COLOR_RGB2GRAY)
 
+	img = np.uint8(img)
 	img = cv2.adaptiveThreshold(img,255,cv2.ADAPTIVE_THRESH_GAUSSIAN_C,cv2.THRESH_BINARY, 11, 10)
 
 	stds = {}
@@ -33,9 +36,4 @@ def straighten(img):
 		stds[np.std(horizontal_sums(rotate(img, i)))] = i
 	angle = stds[max(stds.keys())]
 	
-	return (rotate(img, angle), angle)
-
-# test = cv2.imread('testimg/rotatedwithimage.jpg')
-# cv2.namedWindow("w")
-# cv2.imshow("w", straighten(test)[0])
-# cv2.waitKey(0)
+	return (rotate(img0, angle), angle)

@@ -3,6 +3,7 @@ import cv2
 
 # rotate an image by a given angle
 def rotate(img, angle):
+	""" Given an image and angle, returns a rotated copy of the image """
 	height = img.shape[0]
 	width = img.shape[1]
 	rotmat = cv2.getRotationMatrix2D((width/2, height/2), angle, 1)
@@ -10,14 +11,15 @@ def rotate(img, angle):
 
 # get the sum of the values of a row
 def horizontal_sums(img):
+	""" Return list of sums of pixel values across regularly spaced rows """
 	height, width = img.shape
 	sums = []
 	for i in range(0+height/4, height-height/4, (height/50)):
 		sums.append(sum(img[i]))
 	return sums
 
-# rotate an image by an angle that maximizes the standard deviation of its row sums
 def straighten(img0):
+	""" Find rotation angle that maximizes standard deviation of row sums, and returns image rotated at that angle """
 	img = np.copy(img0)
 	if len(img.shape) > 2:
 		img = cv2.cvtColor(img, cv2.COLOR_RGB2GRAY)
