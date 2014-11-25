@@ -2,6 +2,7 @@ import cv2 as cv2
 import unittest
 import getlines
 import skew
+import extract
 import math
 
 class all_white_test_case(unittest.TestCase):
@@ -232,6 +233,27 @@ class black_margins(unittest.TestCase):
     def test_calculate_angle(self):
     	#compares calculated angle to observed angle to make sure they are equal
     	self.assertTrue(abs(self.angle - 2) < 2)
+    	
+class long_pdf(unittest.TestCase):
+
+	def setUp(self):
+		#specify file path for pdf with 57 images
+		self.filepath = "testimg/Biagioli_GalileoCourtier.PDF"
+		
+	def test_extract_images(self):
+		#compares number of images extracted from pdf to number we observe to make sure they are equal
+		self.assertTrue(len(extract.extractImages(self.filepath)) == 0)
+		
+
+class empty_pdf(unittest.TestCase):
+
+	def setUp(self):
+		#specify file path for pdf with 0 images
+		self.filepath = "testimg/empty.pdf"
+		
+	def test_extract_images(self):
+		#compares number of images extracted from pdf to number we observe to make sure they are equal
+		self.assertTrue(len(extract.extractImages(self.filepath)) == 57)
 
 	
 if __name__ == '__main__':
