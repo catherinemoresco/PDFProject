@@ -5,6 +5,29 @@ import skew
 import extract
 import math
 
+##WHAT THESE TESTS DO:
+# The first twelve test classes represent different image inputs to the functions within 
+# getlines.py and skew.py, which represent the two facets of our processing algorithm.  
+# The tests within classes:
+#	-test_merge_text: tests basic requirement of getlines.isolateLines (which is our line
+#	  getting function comprised of our home-cooked combination of opencv methods), that
+#	  our chosen combination of image-processing methods reduces the number of contours 
+#	  (simplifies) the image.
+#   -test_text_area_dilation: tests more specific requirement of getlines.getLines, that
+#     the number of identified lines through our line-getting function are accurate to what
+#	  we observe to be the number of lines in the actual image (to within an acceptable 
+#     discrepancy)
+#   -test_calculate_angle: tests skew.rotate/skew.straighten to make sure that the skew 
+#    angle detected by our skew.py functions is equal to the skew angle we observe in the
+#    image (to within an acceptable discrepancy).
+#    
+# The last two test classes represent different .pdf inputs to the functions within 
+# extract.py, which represents the processing functionality of page-splitting (splitting
+# a multi-page .pdf document into its separate images)
+# Tests within class:
+#   -test_extract_images: tests that extract.extractImages returns the number of images 
+#    that are observed in the document
+
 class all_white_test_case(unittest.TestCase):
 
     def setUp(self):
