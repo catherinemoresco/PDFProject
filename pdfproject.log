@@ -13419,3 +13419,275 @@ cat:
 2014-11-23 11:18:27,915 DEBG 'pdfproject' stdout output:
 141.451612903
 
+2014-11-23 17:52:48,765 DEBG 'pdfproject' stdout output:
+upload file
+<type '_io.BytesIO'>
+filenameHW 7.pdf
+allowing file
+saved?
+./pdfproject/static/uploads/HW_7.pdf
+./pdfproject/static/uploads/HW_7.pdf
+images found: 2
+images found: 2
+141.451612903
+ran?
+upload file
+<type 'file'>
+filenameFindlen_SitesofKnowledge.pdf
+allowing file
+saved?
+./pdfproject/static/uploads/Findlen_SitesofKnowledge.pdf
+./pdfproject/static/uploads/Findlen_SitesofKnowledge.pdf
+images found: 31
+images found: 31
+
+2014-11-23 17:52:48,797 CRIT uncaptured python exception, closing channel <POutputDispatcher at 140639015828080 for <Subprocess at 140639015826640 with name pdfproject in state RUNNING> (stdout)> (<type 'exceptions.IOError'>:[Errno 5] Input/output error [/usr/local/lib/python2.7/dist-packages/supervisor/supervisord.py|runforever|235] [/usr/local/lib/python2.7/dist-packages/supervisor/dispatchers.py|handle_read_event|231] [/usr/local/lib/python2.7/dist-packages/supervisor/dispatchers.py|record_output|165] [/usr/local/lib/python2.7/dist-packages/supervisor/dispatchers.py|_log|146] [/usr/local/lib/python2.7/dist-packages/supervisor/loggers.py|log|293] [/usr/local/lib/python2.7/dist-packages/supervisor/loggers.py|emit|86] [/usr/local/lib/python2.7/dist-packages/supervisor/loggers.py|handleError|90] [/usr/lib/python2.7/traceback.py|print_exception|124] [/usr/lib/python2.7/traceback.py|_print|13])
+2014-11-23 18:04:41,512 WARN received SIGTERM indicating exit request
+2014-11-23 18:04:41,532 WARN received SIGTERM indicating exit request
+2014-11-23 18:04:41,567 DEBG fd 8 closed, stopped monitoring <POutputDispatcher at 140039006361504 for <Subprocess at 140039006361000 with name pdfproject-reloader in state RUNNING> (stderr)>
+2014-11-23 18:04:48,312 CRIT Supervisor running as root (no user in config file)
+2014-11-23 18:04:48,316 INFO supervisord started with pid 20296
+2014-11-23 18:04:49,330 INFO spawned: 'pdfproject-reloader' with pid 20299
+2014-11-23 18:04:49,343 INFO spawned: 'pdfproject' with pid 20300
+2014-11-23 18:04:50,346 INFO success: pdfproject-reloader entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2014-11-23 18:04:50,347 INFO success: pdfproject entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2014-11-23 18:04:59,528 DEBG 'pdfproject' stderr output:
+   **** Warning: considering '0000000000 XXXXX n' as a free entry.
+   **** Warning: considering '0000000000 XXXXX n' as a free entry.
+   **** Warning: considering '0000000000 XXXXX n' as a free entry.
+
+2014-11-23 18:05:03,813 DEBG 'pdfproject' stderr output:
+
+   **** This file had errors that were repaired or ignored.
+
+2014-11-23 18:05:03,814 DEBG 'pdfproject' stderr output:
+   **** The file was produced by: 
+   **** >>>> ProQuest Information & Learning -  <<<<
+   **** Please notify the author of the software that produced this
+   **** file that it does not conform to Adobe's published PDF
+   **** specification.
+
+
+2014-11-23 18:05:21,275 WARN received SIGINT indicating exit request
+2014-11-23 18:05:21,276 DEBG killing pdfproject (pid 20300) with signal SIGTERM
+2014-11-23 18:05:21,276 INFO waiting for pdfproject-reloader, pdfproject to die
+2014-11-23 18:05:24,205 DEBG 'pdfproject' stdout output:
+upload file
+<type 'file'>
+filenameBennett_MechanicsPhilosophy.pdf
+allowing file
+saved?
+./pdfproject/static/uploads/Bennett_MechanicsPhilosophy.pdf
+./pdfproject/static/uploads/Bennett_MechanicsPhilosophy.pdf
+images found: 28
+images found: 28
+129.411764706
+ran?
+
+2014-11-23 18:05:24,251 WARN received SIGINT indicating exit request
+2014-11-23 18:05:24,253 DEBG fd 9 closed, stopped monitoring <POutputDispatcher at 139894360656496 for <Subprocess at 139894360655056 with name pdfproject in state STOPPING> (stdout)>
+2014-11-23 18:05:24,253 DEBG fd 13 closed, stopped monitoring <POutputDispatcher at 139894360656568 for <Subprocess at 139894360655056 with name pdfproject in state STOPPING> (stderr)>
+2014-11-23 18:05:24,253 INFO stopped: pdfproject (exit status 0)
+2014-11-23 18:05:24,253 DEBG received SIGCLD indicating a child quit
+2014-11-23 18:05:24,254 DEBG killing pdfproject-reloader (pid 20299) with signal SIGTERM
+2014-11-23 18:05:24,257 DEBG fd 8 closed, stopped monitoring <POutputDispatcher at 139894360655776 for <Subprocess at 139894360655272 with name pdfproject-reloader in state STOPPING> (stderr)>
+2014-11-23 18:05:24,257 DEBG fd 6 closed, stopped monitoring <POutputDispatcher at 139894360655560 for <Subprocess at 139894360655272 with name pdfproject-reloader in state STOPPING> (stdout)>
+2014-11-23 18:05:24,257 INFO stopped: pdfproject-reloader (terminated by SIGTERM)
+2014-11-23 18:05:24,257 DEBG received SIGCLD indicating a child quit
+2014-11-23 18:05:29,131 CRIT Supervisor running as root (no user in config file)
+2014-11-23 18:05:29,135 INFO supervisord started with pid 20332
+2014-11-23 18:05:30,149 INFO spawned: 'pdfproject-reloader' with pid 20335
+2014-11-23 18:05:30,163 INFO spawned: 'pdfproject' with pid 20336
+2014-11-23 18:05:31,169 INFO success: pdfproject-reloader entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2014-11-23 18:05:31,169 INFO success: pdfproject entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2014-11-23 18:10:34,805 DEBG 'pdfproject' stdout output:
+129.411764706
+32
+129.411764706
+upload file
+<type '_io.BytesIO'>
+filenameHW6.pdf
+allowing file
+saved?
+./pdfproject/static/uploads/HW6.pdf
+./pdfproject/static/uploads/HW6.pdf
+images found: 5
+images found: 5
+129.411764706
+ran?
+upload file
+<type '_io.BytesIO'>
+filenameHW 7.pdf
+allowing file
+saved?
+./pdfproject/static/uploads/HW_7.pdf
+./pdfproject/static/uploads/HW_7.pdf
+images found: 2
+images found: 2
+141.451612903
+ran?
+upload file
+<type '_io.BytesIO'>
+filenameFlag_of_Chicago%2C_Illinois.pdf
+allowing file
+saved?
+./pdfproject/static/uploads/Flag_of_Chicago2C_Illinois.pdf
+./pdfproject/static/uploads/Flag_of_Chicago2C_Illinois.pdf
+images found: 1
+images found: 1
+66.6666666667
+ran?
+upload file
+<type '_io.BytesIO'>
+filenameHW3 (1).pdf
+allowing file
+saved?
+./pdfproject/static/uploads/HW3_1.pdf
+./pdfproject/static/uploads/HW3_1.pdf
+images found: 3
+images found: 3
+129.411764706
+ran?
+66.6666666667
+3
+
+2014-11-23 18:10:34,821 DEBG 'pdfproject' stdout output:
+141.451612903
+129.411764706
+66.6666666667
+120
+66.6666666667
+129.411764706
+
+2014-11-23 18:17:11,541 DEBG 'pdfproject' stderr output:
+   **** Warning: considering '0000000000 XXXXX n' as a free entry.
+   **** Warning: considering '0000000000 XXXXX n' as a free entry.
+   **** Warning: considering '0000000000 XXXXX n' as a free entry.
+
+2014-11-23 18:17:15,816 DEBG 'pdfproject' stderr output:
+
+   **** This file had errors that were repaired or ignored.
+
+2014-11-23 18:17:15,817 DEBG 'pdfproject' stderr output:
+   **** The file was produced by: 
+   **** >>>> ProQuest Information & Learning -  <<<<
+   **** Please notify the author of the software that produced this
+   **** file that it does not conform to Adobe's published PDF
+   **** specification.
+
+
+2014-11-23 18:53:12,912 DEBG 'pdfproject' stdout output:
+66.6666666667
+129.411764706
+
+2014-11-23 18:53:12,921 DEBG 'pdfproject' stdout output:
+upload file
+<type 'file'>
+filenameBennett_MechanicsPhilosophy.pdf
+allowing file
+saved?
+./pdfproject/static/uploads/Bennett_MechanicsPhilosophy.pdf
+./pdfproject/static/uploads/Bennett_MechanicsPhilosophy.pdf
+images found: 28
+images found: 28
+129.411764706
+ran?
+
+2014-11-23 18:55:10,093 DEBG 'pdfproject' stdout output:
+141.451612903
+
+2014-11-23 18:56:11,393 DEBG 'pdfproject' stdout output:
+141.451612903
+
+2014-11-23 18:57:17,894 DEBG 'pdfproject' stdout output:
+141.451612903
+
+2014-11-23 18:58:24,569 DEBG 'pdfproject' stdout output:
+141.451612903
+
+2014-11-23 18:58:58,901 DEBG 'pdfproject' stdout output:
+141.451612903
+
+2014-11-23 18:58:58,980 DEBG 'pdfproject' stdout output:
+141.451612903
+
+2014-11-23 19:03:36,870 DEBG 'pdfproject' stdout output:
+141.451612903
+
+2014-11-23 19:05:40,908 DEBG 'pdfproject' stdout output:
+141.451612903
+
+2014-11-23 19:07:46,296 DEBG 'pdfproject' stdout output:
+141.451612903
+
+2014-11-23 19:09:26,520 DEBG 'pdfproject' stdout output:
+141.451612903
+
+2014-11-23 19:09:26,621 DEBG 'pdfproject' stderr output:
+ImportError
+2014-11-23 19:09:26,621 DEBG 'pdfproject' stderr output:
+: 
+2014-11-23 19:09:26,621 DEBG 'pdfproject' stderr output:
+numpy.core.multiarray failed to import
+2014-11-23 19:09:26,622 DEBG 'pdfproject' stderr output:
+
+
+2014-11-23 19:09:26,645 DEBG 'pdfproject' stderr output:
+ImportError
+2014-11-23 19:09:26,646 DEBG 'pdfproject' stderr output:
+: 
+2014-11-23 19:09:26,646 DEBG 'pdfproject' stderr output:
+numpy.core.multiarray failed to import
+2014-11-23 19:09:26,646 DEBG 'pdfproject' stderr output:
+
+
+2014-11-23 19:09:26,674 DEBG 'pdfproject' stderr output:
+Traceback (most recent call last):
+  File "/usr/local/bin/gunicorn", line 11, in <module>
+    sys.exit(run())
+  File "/usr/local/lib/python2.7/dist-packages/gunicorn/app/wsgiapp.py", line 74, in run
+    WSGIApplication("%(prog)s [OPTIONS] [APP_MODULE]").run()
+  File "/usr/local/lib/python2.7/dist-packages/gunicorn/app/base.py", line 185, in run
+    super(Application, self).run()
+  File "/usr/local/lib/python2.7/dist-packages/gunicorn/app/base.py", line 71, in run
+    Arbiter(self).run()
+  File "/usr/local/lib/python2.7/dist-packages/gunicorn/arbiter.py", line 202, in run
+    self.stop(False)
+  File "/usr/local/lib/python2.7/dist-packages/gunicorn/arbiter.py", line 343, in stop
+    time.sleep(0.1)
+  File "/usr/local/lib/python2.7/dist-packages/gunicorn/arbiter.py", line 209, in handle_chld
+    self.reap_workers()
+  File "/usr/local/lib/python2.7/dist-packages/gunicorn/arbiter.py", line 459, in reap_workers
+    raise HaltServer(reason, self.WORKER_BOOT_ERROR)
+gunicorn.errors.HaltServer: 
+2014-11-23 19:09:26,676 DEBG 'pdfproject' stderr output:
+<HaltServer 'Worker failed to boot.' 3>
+
+2014-11-23 19:09:26,695 DEBG 'pdfproject' stderr output:
+ImportError
+2014-11-23 19:09:26,696 DEBG 'pdfproject' stderr output:
+: 
+2014-11-23 19:09:26,696 DEBG 'pdfproject' stderr output:
+numpy.core.multiarray failed to import
+2014-11-23 19:09:26,697 DEBG 'pdfproject' stderr output:
+
+
+2014-11-23 19:09:26,715 DEBG fd 9 closed, stopped monitoring <POutputDispatcher at 140126919797360 for <Subprocess at 140126919795920 with name pdfproject in state RUNNING> (stdout)>
+2014-11-23 19:09:26,716 DEBG fd 13 closed, stopped monitoring <POutputDispatcher at 140126919797432 for <Subprocess at 140126919795920 with name pdfproject in state RUNNING> (stderr)>
+2014-11-23 19:09:26,716 INFO exited: pdfproject (exit status 1; not expected)
+2014-11-23 19:09:26,716 DEBG received SIGCLD indicating a child quit
+2014-11-23 19:09:27,730 INFO spawned: 'pdfproject' with pid 20716
+2014-11-23 19:09:28,735 INFO success: pdfproject entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2014-11-23 21:22:49,083 DEBG 'pdfproject' stdout output:
+141.451612903
+upload file
+<type 'file'>
+filenameFindlen_ClosetWonders.pdf
+allowing file
+saved?
+./pdfproject/static/uploads/Findlen_ClosetWonders.pdf
+./pdfproject/static/uploads/Findlen_ClosetWonders.pdf
+images found: 16
+images found: 16
+
+2014-11-23 21:22:49,083 CRIT uncaptured python exception, closing channel <POutputDispatcher at 140126919797360 for <Subprocess at 140126919795920 with name pdfproject in state RUNNING> (stdout)> (<type 'exceptions.IOError'>:[Errno 5] Input/output error [/usr/local/lib/python2.7/dist-packages/supervisor/supervisord.py|runforever|235] [/usr/local/lib/python2.7/dist-packages/supervisor/dispatchers.py|handle_read_event|231] [/usr/local/lib/python2.7/dist-packages/supervisor/dispatchers.py|record_output|165] [/usr/local/lib/python2.7/dist-packages/supervisor/dispatchers.py|_log|146] [/usr/local/lib/python2.7/dist-packages/supervisor/loggers.py|log|293] [/usr/local/lib/python2.7/dist-packages/supervisor/loggers.py|emit|86] [/usr/local/lib/python2.7/dist-packages/supervisor/loggers.py|handleError|90] [/usr/lib/python2.7/traceback.py|print_exception|124] [/usr/lib/python2.7/traceback.py|_print|13])
