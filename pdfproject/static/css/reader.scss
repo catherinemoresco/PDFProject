@@ -9,7 +9,7 @@ body{
 	margin:0;
 }
 
-rect{
+svg{
 	mix-blend-mode:multiply;
 }
 
@@ -26,9 +26,8 @@ rect{
 }
 
 .pdf-pages{
-	height:100vh;
-	overflow: auto;
+	overflow: visible;
 	background: $warm-gray;
 	padding:5px;
-	width:75vw;
+	width:100vw;
 }
