@@ -36,7 +36,7 @@ The teams will remain largely the same.
 
 Alberto and Christian will being doing front-end work (and Catherine will work with them on the fine-looking front-end design).
 
-Megan and Catherine will be working on image processing. 
+Megan and Catherine will be working on image processing and image processing testing. 
 
 Alberto will also be working on server-side operations. 
 
@@ -75,7 +75,7 @@ For automatic server-crash recovery, install supervisord and start the server us
 #####Image Processing Tests:
 From within tests/cvtests, run the command `python -m unittest -v cv_unit_tests`.
 
-The folder 'cvtests' contains the test file and source files for our image processing algorithms.  More specific information about which functions and what functionality the tests are concerned with is within 'cv_unit_tests.py'.
+The folder 'cvtests' contains the test file and copies of source files for our image processing algorithms.  More specific information about which functions and what functionality the tests are concerned with is within 'cv_unit_tests.py'.
 
 *- Megan and Catherine*
 
