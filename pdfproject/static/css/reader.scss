@@ -9,8 +9,9 @@ body{
 	margin:0;
 }
 
-
-
+svg{
+	mix-blend-mode:multiply;
+}
 
 .pdf-page{
 	background-size:contain;
@@ -25,9 +26,8 @@ body{
 }
 
 .pdf-pages{
-	height:100vh;
-	overflow: auto;
+	overflow: visible;
 	background: $warm-gray;
 	padding:5px;
-	width:75vw;
+	width:100vw;
 }

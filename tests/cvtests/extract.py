@@ -1,47 +1,41 @@
-import PythonMagick
-import PyPDF2
-import numpy as np 
-import base64
+import subprocess
 import cv2
+import io
+import numpy as np
 
-imgname = "testimg/Biagioli_GalileoCourtier.pdf"
-
-## test image for development
-pdf_im = file(imgname, "rb")
-
-def extractImages(pdf):
-    images = []
-
-    pdf_im = PyPDF2.PdfFileReader(pdf)
-    npage = pdf_im.getNumPages()
-
-    for p in range(0, 5):
-        img = PythonMagick.Image()
-        blob = PythonMagick.Blob()
-        img.density("75")
-        img.antiAlias(True)
-
-        ## read in pdf
-
-        img.read(imgname + "[" + str(p) + "]") 
+def getStream(filename):
+    ## run ghostscript command as a subprocess and get output
+    print filename
+    pipe = subprocess.Popen("gs -dNOPAUSE -sDEVICE=jpeg -sOutputFile=%stdout -dJPEGQ=100 -r300 -q "+ filename + " -c quit", stdout=subprocess.PIPE, shell=True)
+    out, err = pipe.communicate()
 
 
-        ## write to buffer
-        img.write(blob, 'RGB', 16)
-        rawdata =  base64.b64decode(blob.base64())
+    bytes = io.BytesIO(out)
+    stream = bytes.read()
 
-        ## convert raw data to np array
-        img = np.ndarray((img.rows(), img.columns(), 3),dtype='uint16', buffer=rawdata)
-        # img = cv2.GaussianBlur(img, (3,3),1)
- 
-        images.append(img)
-    return images
+    return stream
 
 
-cv2.namedWindow("w")
-images = extractImages(pdf_im)
-# cv2.imshow("w", images[4])
-# cv2.waitKey(0)
-# cv2.destroyAllWindows()
-cv2.imwrite("hello.jpg", images[4]/255)
+
+def extractImages(filename): 
+    stream = getStream(filename)
+
+    imgstart = 0
+    imgend = 0
+    i = 0
+
+    ## parse for jpgs
+    decoded_images = []
+    while True:
+        next_img_start = stream.find(b'\xff\xd8', i)
+        if next_img_start < 0:
+            break
+        next_img_end = stream.find(b'\xff\xd9', i)
+        if next_img_end < 0:
+            break
+        decoded_image = cv2.imdecode(np.fromstring(stream[next_img_start:next_img_end+2], np.uint8), cv2.CV_LOAD_IMAGE_COLOR)
+        decoded_images.append(decoded_image)
+        i = next_img_end + 2
+    print "images found: " + str(len(decoded_images))
+    return decoded_images
 

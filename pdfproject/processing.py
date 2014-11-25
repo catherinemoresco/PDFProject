@@ -6,6 +6,7 @@ import json
 
 
 def process(pdf):
+	""" Extract images, fix skew, and get line positions, writing images and data to files and returning largest aspect ratio """
 	largest_ratio = 0
 	images = extract.extractImages(pdf)
 	lines = {} 
