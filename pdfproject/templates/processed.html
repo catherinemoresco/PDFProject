@@ -21,6 +21,8 @@
 	</div>
 	<script type="text/javascript">
 		var initX,initY,mousedown,dynamicRect;
+		var windowWidth = window.innerWidth;
+		var windowHeight = window.innerHeight;
 		var jsonArray = $.getJSON( "{{jsondata}}", function() {
 			console.log( "success" );
 		})
@@ -37,11 +39,13 @@
 		var  divs = document.getElementsByClassName('pdf-page');
 		var len = divs.length;
 		var divDraws = [];
+		window.onresize = rescale;
 		var j =0;
 		{% for r in result %}
 			divDraws[j] = SVG("{{r}}");
 			j = j+1;
 		{% endfor %}
+		//Resize event
 		for(var i =0; i<len;i++){
 			divs[i].id = i;
 			divs[i].addEventListener("mousedown",function(event){
@@ -83,8 +87,27 @@
 					rect.dblclick(function(){
 						this.remove();
 					})
+					
 				}			
 			})
+		}
+		function rescale(){
+			console.log("resize");
+			var newWidth = window.innerWidth;
+			var newHeigth = window.innerHeight;
+			var scalex = newWidth/windowWidth;
+			var scaley = newHeigth/windowHeight;
+			windowWidth = newWidth;
+			windowHeight = newHeigth;
+			for(var i =0; i<len;i++){
+				divDraws[i].each(function(i,children){
+					console.log(this);
+					this.width(this.width()*scalex);
+					this.height(this.height()*scaley);
+				})
+				//console.log(divDraws[i]);
+			}
+			
 		}
 	</script>
 </html>
