@@ -30,9 +30,11 @@ Features to be included:
 - [ ] Opportunities for user correction of algorithmic failings!
 
 ## Example Usage and Recommended Acceptance Tests
-It's pretty simple to use: upload your own document with the "upload" button, and watch it appear---processed and straightened!
+It's pretty simple to use: upload your own document with the "upload" button, and watch it appear, processed and straightened!
 
 The best images are ones that are well formed, and have only one page of text per PDF page. Images imbedded in the text are OK!
+
+Don't have your own document? That's okay! There's a sample PDF document in `/tests` called "tryme.pdf". Try uploading it for a demonstration of skew correction and line detection!
 
 
 ## Dependencies
@@ -119,6 +121,7 @@ Following is a diagram of the organizational structure of the code:
 		[images used in readme file]
 	.gitignore
 	README.md 								<- readme (YOU ARE HERE)
+	pdfproject.log
 	requirements.txt 						<- requirements
 	run.sh
 	runserver.py 							<- script to run locally
