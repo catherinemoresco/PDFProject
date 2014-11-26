@@ -132,7 +132,7 @@ Still, we managed to complete an implentation that works for many well-formed do
 
 Like this.
 
-![](readme-assets/lines.png)
+![](readme-assets/lines.jpg)
 
 OpenCV then has a function which can find the contours surrounding each of these features, and a bounding box of each line is returned as the vales to be passed to the front-end as possible locations for highlights.
 
