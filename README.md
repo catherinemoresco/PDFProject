@@ -149,3 +149,9 @@ Main framework of UI testting and UI elements, suchs as annotations and highligh
 ## Evolution
 One of the major ways in which our current implementation differs from our initial design is the architecture and design portion of the backend. We designed a somewhat elaborate class diagram to structure our document data. Once we started writing code, however, we realized that the PDF data would best be handled by a pipe-and-filter architecture, and so our approach became more functional, implementing no Python classes at all.
 
+As a reminder, our original class diagram looked like this:
+![](readme-assets/ClassDiagrams.jpg)
+Instead of implementing this structure, we use no classes, and instead (in the backend) only use a list of filenames referring to images of pages and their corresponding line data to refer to a document. The edits and annotations are never managed in the backend at all, but constructed and rendered directly in the DOM.
+
+
+
