@@ -89,9 +89,18 @@ PythonMagick has several downsides:
 - It is slow. 
 - It is virtually undocumented.
 
-In exploring other options, I learned that ImageMagick itself uses another sortware suite, Ghostscript, for PDF rendering. Ghostscript does not have Python bindings, so we make a call to it via a subprocess and pipe the output into a buffer variable. 
+In exploring other options, I learned that ImageMagick itself uses another sortware suite, Ghostscript, for PDF rendering. Ghostscript does not have Python bindings, so we make a call to it via a subprocess and pipe the raw output into a buffer variable, and then parse the resulting bytestream to extract the JPGs.
 
 (This whole process was so traumatic that [Catherine blogged about it](http://catmores.co/cv/pdf/2014/11/13/teaching-my-computer-to-read-pdfs-are-evil.html). [Twice](http://catmores.co/pdf/2014/11/19/teaching-my-computer-to-read-not-good-enough.html).)
+
+##### Skew Detection
+
+We also did a lot of research into pre-existing line detecting and skew correcting algorithms. Our line detection algorithm relies upon use of horizontal line filters, so it is best if the lines are as straight across as possible when the line detection algorithm is applied. Some document analysis strategies involve identifying lines first, and then correcting for skew; many of these involve ridge detection and much more mathematically complex operations than we would like to implement, in the interest of being able to complete the image processing in a reasonable amount of time. We assume that the text lines are largely straight, as our software is intended for scanned images; [handling of curled lines](http://link.springer.com/chapter/10.1007%2F978-3-642-03767-2_21), while a worthwhile and interesting feature to implement in the future, is not necessary for the essential functionality of our application.
+
+The skew detection algorithm that we arrived at is efficient and reasonably robust. It involves iterating through a range of rotation angles, and finding the one that maximizes the variation of the sums of pixel values across a row. *Why* this works can be explained by the following graphs:
+
+![Rows](readme-assets/Rows.jpg)
+![Columns](readme-assets/Columns.jpg)
 
 
 
