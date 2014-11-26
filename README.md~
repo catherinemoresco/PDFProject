@@ -137,9 +137,6 @@ Set up the server.
 ### Jonathan Jin
 Taking on QA and test coverage responsibilities for the front-end tests. Designed the preliminary front-end testing framework that, as of 11/19/14, comprises the primary front-end test suite.
 
-###Cristian Saucedo
-Main framework of UI testting and UI elements, suchs as annotations and highlighting.
-
 ## Evolution
 One of the major ways in which our current implementation differs from our initial design is the architecture and design portion of the backend. We designed a somewhat elaborate class diagram to structure our document data. Once we started writing code, however, we realized that the PDF data would best be handled by a pipe-and-filter architecture, and so our approach became more functional, implementing no Python classes at all.
 
