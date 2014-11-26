@@ -7,6 +7,7 @@ import shelve
 import socket
 import re
 from flask.ext.assets import Environment, Bundle
+import datetime
 
 ALLOWED_EXTENSIONS = set(['pdf','PDF'])
 
@@ -63,7 +64,7 @@ def upload_file():
 		if file and allowed_file(file.filename):
 			print 'allowing file'
 			## Secure filename to prevent malicious inputs
-			filename = secure_filename(file.filename)
+			filename = secure_filename(file.filename + str(datetime.datetime.utcnow()))
 			## Save file
 			file.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
 			print "saved?"
