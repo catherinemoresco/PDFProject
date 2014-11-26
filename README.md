@@ -103,9 +103,12 @@ The skew detection algorithm that we arrived at is efficient and reasonably robu
 
 And the following graphs, which correspond to the sums of its rows and colums, respectively:
 
-![Rows](readme-assets/Rows.png)
-![Columns](readme-assets/Columns.png)
+<p style="align:center">
+<img src="readme-assets/Rows.png">
+<img src="readme-assets/Columns.png">
+</p>
 
+In each, the red line represents the mean value, and the blue represents the sums. The rows show dramatic, evently-spaced peaks which correspond to the text lines and the white space between them. The columns show fluctuation, but stay much closer to the mean value, with major peaks at the margins. We initially used standard deviation as a measure of optimal rotation, but through experimentation we learned that variance was a better metric; extreme outliers, such as those at the margins in the column graph (seen in the image page itself as the dark lines in the margins), can skew the standard deviation more than is desired. 
 
 
 
