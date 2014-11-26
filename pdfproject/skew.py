@@ -13,13 +13,11 @@ def rotate(img, angle):
 def horizontal_sums(img):
 	""" Return list of sums of pixel values across regularly spaced rows """
 	height, width = img.shape
-	sums = []
-	for i in range(0+height/4, height-height/4, (height/50)):
-		sums.append(sum(img[i]))
+	sums=np.sum(img, axis=1)
 	return sums
 
 def straighten(img0):
-	""" Find rotation angle that maximizes standard deviation of row sums, and returns image rotated at that angle """
+	""" Find rotation angle that maximizes variation of row sums, and returns image rotated at that angle """
 	img = np.copy(img0)
 	if len(img.shape) > 2:
 		img = cv2.cvtColor(img, cv2.COLOR_RGB2GRAY)
@@ -27,15 +25,15 @@ def straighten(img0):
 	img = np.uint8(img)
 	img = cv2.adaptiveThreshold(img,255,cv2.ADAPTIVE_THRESH_GAUSSIAN_C,cv2.THRESH_BINARY, 11, 10)
 
-	stds = {}
+	variances = {}
 
 	# this can be done recurisively, and to greater precision
 	# but this works for now
-	for x in range(-90, 90, 5):
-		stds[np.std(horizontal_sums(rotate(img, x)))] = x
-	angle = stds[max(stds.keys())]
+	for x in range(-90, 90, 10):
+		variances[np.var(horizontal_sums(rotate(img, x)))] = x
+	angle = variances[max(variances.keys())]
 	for i in range(angle-10, angle+10):
-		stds[np.std(horizontal_sums(rotate(img, i)))] = i
-	angle = stds[max(stds.keys())]
+		variances[np.var(horizontal_sums(rotate(img, i)))] = i
+	angle = variances[max(variances.keys())]
 	
-	return rotate(img0, angle)
+	return rotate(img0, float(angle))
