@@ -81,7 +81,7 @@ We were in charge of User Interface design. We created the HTML displayed, worke
 ### Catherine & Megan: 
 We were in charge of the Computer Vision aspect of the project, which had several challenging aspects.
 
-##### PDF Rasterizing
+#### PDF Rasterizing
 We put a lot of research into pre-existing PDF rendering software; while PDF itself is not a proprietary format, PDF documents cannot be rasterized for image processing with any software written in pure Python. We began with a Python library that provides Python bindings for the ImageMagick software suite. 
 
 PythonMagick has several downsides: 
@@ -93,7 +93,7 @@ In exploring other options, I learned that ImageMagick itself uses another sortw
 
 (This whole process was so traumatic that [Catherine blogged about it](http://catmores.co/cv/pdf/2014/11/13/teaching-my-computer-to-read-pdfs-are-evil.html). [Twice](http://catmores.co/pdf/2014/11/19/teaching-my-computer-to-read-not-good-enough.html).)
 
-##### Skew Detection
+#### Skew Detection
 
 We also did a lot of research into pre-existing line detecting and skew correcting algorithms. Our line detection algorithm relies upon use of horizontal line filters, so it is best if the lines are as straight across as possible when the line detection algorithm is applied. Some document analysis strategies involve identifying lines first, and then correcting for skew; many of these involve ridge detection and much more mathematically complex operations than we would like to implement, in the interest of being able to complete the image processing in a reasonable amount of time. We assume that the text lines are largely straight, as our software is intended for scanned images; [handling of curled lines](http://link.springer.com/chapter/10.1007%2F978-3-642-03767-2_21), while a worthwhile and interesting feature to implement in the future, is not necessary for the essential functionality of our application.
 
@@ -101,12 +101,13 @@ The skew detection algorithm that we arrived at is efficient and reasonably robu
 
 ![Sample page](readme-assets/Biagioli_ScientificRevolution.pdf16.jpg)
 
-And the following graphs, which correspond to the sums of its rows and colums, respectively:
+And the following graphs, which correspond to the sums of its rows and columns:
 
-<p style="align:center">
-<img src="readme-assets/Rows.png">
-<img src="readme-assets/Columns.png">
-</p>
+##### Rows
+![](readme-assets/Rows.png)
+##### Columns
+![](readme-assets/Columns.png)
+
 
 In each, the red line represents the mean value, and the blue represents the sums. The rows show dramatic, evently-spaced peaks which correspond to the text lines and the white space between them. The columns show fluctuation, but stay much closer to the mean value, with major peaks at the margins. We initially used standard deviation as a measure of optimal rotation, but through experimentation we learned that variance was a better metric; extreme outliers, such as those at the margins in the column graph (seen in the image page itself as the dark lines in the margins), can skew the standard deviation more than is desired. 
 
