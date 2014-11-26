@@ -3,3 +3,4 @@
 static/uploads/*.pdf*.jpg
 pdfproject/static/uploads/
 pdfproject/static/.webassets-cache/
+pdfproject.log
