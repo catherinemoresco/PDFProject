@@ -75,12 +75,50 @@ The folder 'cvtests' contains the test file and copies of source files for our i
 5. Passing the json string back to the web app as a ....json.txt file, upload_file() in _init_.py redirects to a page which corresponds to the uploaded_file() function in _init_.py, which displays each of the processed images that were returned after straightening and reads the line coordinates for highlighting from the ....json.txt file.  The page is once again rendered using html/css/javascript from pdfproject/templates and pdfproject/static.
 6. THE REST OF THIS NEEDS TO BE ABOUT RENDERING HIGHLIGHTS/ANNOTATIONS AND SAVING/EXPORTING FILES WHEN IT IS POSSIBLE.  PLEASE REVIEW/CORRECT/ADD STUFF
 
-
+### Data Flow Diagram
 A data flow diagram for our backend processes is provided below.
 
 ![](readme-assets/dataflowdiagram.jpg)
 
 Our architecture resembles a hybrid between a pipe-and-filter and data-centered architecture. A pipe-and-filter architecture makes sense for our task, because image processing consists mostly of passing the PDF and image data through a series of filter that modifies said data and extracts needed information. Writing to and reading from memory is necessitated by our choice to implement our software as a web application; it is the method most suited to passing file data from one app route to the next. 
+
+### File structure
+```
+/pdfproject
+	/pdfproject
+		/static
+			/uploads
+			/css
+				/images
+					[image assets]
+				/svg
+					[svg image assets]
+				[css and scss files]	
+			/js
+				[JavaScript files]
+		/templates
+			[HTML templates for page rendering]
+		[image processing modules]
+		__init__.py 				<- Main server file
+	/tests
+		/cvtests
+			/testimg
+				[images used for testing]
+			[image processing modules]
+			cv_unit_tests.py 		<- CV unit testing script
+		/uitests
+			annotation_tests.py 	<- UI unit testing scripts
+			highlight_tests.py
+			upload_tests.py
+	/readme-assets
+		[images used in readme file]
+	.gitignore
+	README.md 						<- readme (YOU ARE HERE)
+	requirements.txt 				<- requirements
+	run.sh
+	runserver.py 					<- script to run locally
+	supervisord.conf
+```
 
 ## Who Did What
 ### Alberto & Cristian: 
