@@ -99,8 +99,8 @@ We also did a lot of research into pre-existing line detecting and skew correcti
 
 The skew detection algorithm that we arrived at is efficient and reasonably robust. It involves iterating through a range of rotation angles, and finding the one that maximizes the variation of the sums of pixel values across a row. *Why* this works can be explained by the following graphs:
 
-![Rows](readme-assets/Rows.jpg)
-![Columns](readme-assets/Columns.jpg)
+![Rows](readme-assets/Rows.jpg =250x)
+![Columns](readme-assets/Columns.jpg =250x)
 
 
 
