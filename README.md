@@ -112,6 +112,19 @@ And the following graphs, which correspond to the sums of its rows and columns:
 In each, the red line represents the mean value, and the blue represents the sums. The rows show dramatic, evently-spaced peaks which correspond to the text lines and the white space between them. The columns show fluctuation, but stay much closer to the mean value, with major peaks at the margins. We initially used standard deviation as a measure of optimal rotation, but through experimentation we learned that variance was a better metric; extreme outliers, such as those at the margins in the column graph (seen in the image page itself as the dark lines in the margins), can skew the standard deviation more than is desired. 
 
 
+#### Get Text Lines
+
+This is arguably the hardest of the tasks we set out to accomplish, and the least perfect. Scanned documents are extremely diverse in appearance, and it is difficult to construct an algorithm that works universally. 
+
+Still, we managed to complete an implentation that works for many well-formed documents. It works with a series of blurs and filters to create a new image with large white boxes where the words used to be.
+
+Like this.
+
+![](readme-assets/lines.png)
+
+OpenCV then has a function which can find the contours surrounding each of these features, and a bounding box of each line is returned as the vales to be passed to the front-end as possible locations for highlights.
+
+
 
 ### Michael Zhao
 Set up the server.
