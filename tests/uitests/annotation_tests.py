@@ -13,16 +13,16 @@ class Annotation(unittest.TestCase):
     def setUp(self):
         self.driver = webdriver.Chrome()
         filePath = os.getcwd() + test_file
-        driver.get(start_url)
-        uploadF = driver.getelement_by_name('fileUpload')
+        self.driver.get(start_url)
+        uploadF = self.driver.getelement_by_name('fileUpload')
         uploadF.click()
         uploadF.send_keys(filePath)
         elem.send_keys(Keys.RETURN)
-        driver.getelement_by_name('Submit').click()  
+        self.driver.getelement_by_name('Submit').click()  
         #response = self.driver.get("http://localhost:5000")
 
     def test_negative_off_page(self):
-        actions = ActionChains(driver)
+        actions = ActionChains(self.driver)
         actions.click(button)
         actions.move_to_element_with_offset(html, -100, -100)
         actions.click()
@@ -33,7 +33,7 @@ class Annotation(unittest.TestCase):
         self.assertRaises(NoSuchElementException, actions.find_element_by_id, "textbox") 
 
     def test_large_off_Page(self):
-        actions = ActionChains(driver)
+        actions = ActionChains(self.driver)
         actions.click(button)
         actions.move_to_element_with_offset(html, 6000, 6000)
         actions.click()
@@ -43,7 +43,7 @@ class Annotation(unittest.TestCase):
         self.assertRaises(NoSuchElementException, actions.find_element_by_id, "textbox") 
 
     def test_empty_text(self):
-        actions = ActionChains(driver)
+        actions = ActionChains(self.driver)
         actions.click(button)
         actions.move_to_element_with_offset(html, 50, 50)
         actions.click()
@@ -52,7 +52,7 @@ class Annotation(unittest.TestCase):
         self.assertRaises(NoSuchElementException, actions.find_element_by_id, "textbox") 
 
     def test_valid_text(self):
-        actions = ActionChains(driver)
+        actions = ActionChains(self.driver)
         actions.click(button)
         actions.move_to_element_with_offset(html, 50, 50)
         actions.click()
