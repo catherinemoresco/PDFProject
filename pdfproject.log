@@ -13691,3 +13691,61 @@ images found: 16
 images found: 16
 
 2014-11-23 21:22:49,083 CRIT uncaptured python exception, closing channel <POutputDispatcher at 140126919797360 for <Subprocess at 140126919795920 with name pdfproject in state RUNNING> (stdout)> (<type 'exceptions.IOError'>:[Errno 5] Input/output error [/usr/local/lib/python2.7/dist-packages/supervisor/supervisord.py|runforever|235] [/usr/local/lib/python2.7/dist-packages/supervisor/dispatchers.py|handle_read_event|231] [/usr/local/lib/python2.7/dist-packages/supervisor/dispatchers.py|record_output|165] [/usr/local/lib/python2.7/dist-packages/supervisor/dispatchers.py|_log|146] [/usr/local/lib/python2.7/dist-packages/supervisor/loggers.py|log|293] [/usr/local/lib/python2.7/dist-packages/supervisor/loggers.py|emit|86] [/usr/local/lib/python2.7/dist-packages/supervisor/loggers.py|handleError|90] [/usr/lib/python2.7/traceback.py|print_exception|124] [/usr/lib/python2.7/traceback.py|_print|13])
+2014-11-26 00:20:57,314 CRIT Supervisor running as root (no user in config file)
+2014-11-26 00:20:57,318 INFO supervisord started with pid 24217
+2014-11-26 00:20:58,332 INFO spawned: 'pdfproject-reloader' with pid 24220
+2014-11-26 00:20:58,345 INFO spawned: 'pdfproject' with pid 24221
+2014-11-26 00:20:59,348 INFO success: pdfproject-reloader entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2014-11-26 00:20:59,349 INFO success: pdfproject entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2014-11-26 00:21:30,917 DEBG 'pdfproject' stdout output:
+141.451612903
+
+2014-11-26 00:29:06,316 DEBG 'pdfproject' stdout output:
+141.451612903
+
+2014-11-26 00:29:47,456 DEBG 'pdfproject' stdout output:
+141.451612903
+141.451612903
+
+2014-11-26 00:29:47,476 DEBG 'pdfproject' stdout output:
+141.451612903
+
+2014-11-26 00:29:47,488 DEBG 'pdfproject' stdout output:
+upload file
+<type '_io.BytesIO'>
+filenameHW 7.pdf
+allowing file
+saved?
+./pdfproject/static/uploads/HW_7.pdf
+./pdfproject/static/uploads/HW_7.pdf
+images found: 2
+images found: 2
+141.451612903
+ran?
+
+2014-11-26 00:30:31,617 DEBG 'pdfproject' stdout output:
+141.451612903
+
+2014-11-26 00:30:31,620 DEBG 'pdfproject' stdout output:
+141.451612903
+
+2014-11-26 00:53:38,448 DEBG 'pdfproject' stdout output:
+141.451612903
+upload file
+<type '_io.BytesIO'>
+filenameFlag_of_Chicago%2C_Illinois.pdf
+allowing file
+saved?
+./pdfproject/static/uploads/Flag_of_Chicago2C_Illinois.pdf
+./pdfproject/static/uploads/Flag_of_Chicago2C_Illinois.pdf
+images found: 1
+images found: 1
+66.6666666667
+ran?
+
+2014-11-26 00:53:38,471 DEBG 'pdfproject' stdout output:
+141.451612903
+
+2014-11-26 00:53:38,480 DEBG 'pdfproject' stdout output:
+66.6666666667
+
