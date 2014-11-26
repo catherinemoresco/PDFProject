@@ -7,11 +7,11 @@ import document
 class highlight_test_case(unittest.TestCase):
 
 	def setUp(self):
-		self.highlight = Highlight(11, 100)
+		self.highlight  = Highlight(11, 100)
 		self.highlight1 = Highlight(22, 200)
 
 	def test_color(self):
-		color = "#b5b5b5"
+		color      = "#b5b5b5"
                 color_name = "apple"
 
                 self.highlight.set_color(color)

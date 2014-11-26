@@ -1,4 +1,3 @@
-from pdfproject import app
 from flask import url_for
 
 import unittest
