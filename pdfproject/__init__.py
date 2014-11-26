@@ -62,20 +62,19 @@ def upload_file():
 			ratio = processing.process(os.path.join(app.config['UPLOAD_FOLDER'], filename))
 			print ratio
 			print "ran?"
-			return redirect(url_for('uploaded_file', filename=filename, ratio=ratio)) #"upload success" #redirect(url_for('uploaded_file',filename=filename))
+			return redirect(url_for('uploaded_file', filename=filename)) #"upload success" #redirect(url_for('uploaded_file',filename=filename))
 		return "No!"
 	return "NO"
 
-@app.route('/uploads/<filename>/<ratio>')
-def uploaded_file(filename, ratio):
+@app.route('/uploads/<filename>')
+def uploaded_file(filename):
 	p = filename+'.*jpg$'
 	patt = re.compile(p)
 	result = []
-	print ratio
 	n=1
 	for file in os.listdir("./pdfproject/static/uploads"):
 		if patt.match(file):
 			result.append("static/uploads/"+filename+str(n)+'.jpg')
 			n = n+1
 	jsondata = "/static/uploads/"+filename+".json.txt"
-	return render_template('processed.html',result=result, ratio=ratio,jsondata=jsondata)#send_from_directory(app.config['UPLOAD_FOLDER'], filename)
+	return render_template('processed.html',result=result, jsondata=jsondata)#send_from_directory(app.config['UPLOAD_FOLDER'], filename)

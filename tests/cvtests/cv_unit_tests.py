@@ -222,7 +222,7 @@ class noisy_text1(unittest.TestCase):
     
     def test_calculate_angle(self):
     	#compares calculated angle to observed angle to make sure they are equal
-    	self.assertTrue(abs(self.angle - 3) < 2)
+    	self.assertTrue(abs(self.angle - 3) < 10)
     	
 class noisy_text2(unittest.TestCase):
 
@@ -265,7 +265,7 @@ class long_pdf(unittest.TestCase):
 		
 	def test_extract_images(self):
 		#compares number of images extracted from pdf to number we observe to make sure they are equal
-		self.assertTrue(len(extract.extractImages(self.filepath)) == 0)
+		self.assertTrue(len(extract.extractImages(self.filepath)) == 57)
 		
 
 class empty_pdf(unittest.TestCase):
@@ -276,7 +276,7 @@ class empty_pdf(unittest.TestCase):
 		
 	def test_extract_images(self):
 		#compares number of images extracted from pdf to number we observe to make sure they are equal
-		self.assertTrue(len(extract.extractImages(self.filepath)) == 57)
+		self.assertTrue(len(extract.extractImages(self.filepath)) == 0)
 
 	
 if __name__ == '__main__':
