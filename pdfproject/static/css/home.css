@@ -86,3 +86,15 @@ body {
                   margin-left: auto;
                   margin-right: auto;
                   cursor: pointer; }
+
+                  .bouncing {
+                    animation: bounce 0.5s infinite; }
+
+                    @keyframes bounce {
+                      0% {
+                        margin-bottom: 2px;   }
+                        50% {
+                          margin-bottom: 0px;   }
+                          100% {
+                            margin-bottom: -2px;   }
+}
