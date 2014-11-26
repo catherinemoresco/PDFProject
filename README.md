@@ -10,7 +10,7 @@ Features to be included:
 ##### UI:
 - [ ] Highlights!
 - [ ] Annotations!
-- [x] Deleting highlights and annotations!
+- [x] Deleting highlights and annotations! 
 - [x] Some fine-looking front-end desgin!
 
 ##### Server:
@@ -27,7 +27,7 @@ Features to be included:
 	+ Require Ghostscript instead, which has a much simpler installation process.
 
 ##### Overall: 
-- Opportunities for user correction of algorithmic failings!
+- [ ] Opportunities for user correction of algorithmic failings!
 
 ## Example Usage and Recommended Acceptance Tests
 It's pretty simple to use: upload your own document with the "upload" button, and watch it appear---processed and straightened!
