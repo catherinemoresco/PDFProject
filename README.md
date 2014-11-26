@@ -29,19 +29,6 @@ Features to be included:
 ##### Overall: 
 - Opportunities for user correction of algorithmic failings!
 
-Ultimately, there are elements of our original design that we will realistically not have time to implement --- element-wise OCRing for highlighting, for example. However, we plan to achieve functionality for the most basic and most common use cases.
-
-## Who's doing what:
-The teams will remain largely the same. 
-
-Alberto and Christian will being doing front-end work (and Catherine will work with them on the fine-looking front-end design).
-
-Megan and Catherine will be working on image processing and image processing testing. 
-
-Alberto will also be working on server-side operations. 
-
-Jonathan has primary QA responsibilities. He handles maintaining the test suite and test coverage. He maintains the cleanliness and modularity of the test suite.
-
 ## Features
 
 Features successfully implemented in this iteration include:
@@ -88,27 +75,33 @@ The folder 'cvtests' contains the test file and copies of source files for our i
  *- Alberto and Cristian*
 
 ## Who did What
-##### Alberto & Cristian: 
+### Alberto & Cristian: 
 We were in charge of User Interface design. We created the HTML displayed, worked on uploading files to server, passing files to CV modules, and displaying the resulting files.
 
-##### Catherine & Megan: 
-We were in charge of the Computer Vision aspect of the project.  We worked on processing image files in order to determine whether or not they should be rotated and to determine where lines were in text documents.
+### Catherine & Megan: 
+We were in charge of the Computer Vision aspect of the project, which had several challenging aspects.
 
-##### Michael Zhao
+##### PDF Rasterizing
+We put a lot of research into pre-existing PDF rendering software; while PDF itself is not a proprietary format, PDF documents cannot be rasterized for image processing with any software written in pure Python. We began with a Python library that provides Python bindings for the ImageMagick software suite. 
+
+PythonMagick has several downsides: 
+- It is incredibly difficult to install.
+- It is slow. 
+- It is virtually undocumented.
+
+In exploring other options, I learned that ImageMagick itself uses another sortware suite, Ghostscript, for PDF rendering. Ghostscript does not have Python bindings, so we make a call to it via a subprocess and pipe the output into a buffer variable. 
+
+(This whole process was so traumatic that [Catherine blogged about it](http://catmores.co/cv/pdf/2014/11/13/teaching-my-computer-to-read-pdfs-are-evil.html). [Twice](http://catmores.co/pdf/2014/11/19/teaching-my-computer-to-read-not-good-enough.html).)
+
+
+
+
+### Michael Zhao
 Set up the server.
 
-##### Jonathan Jin
-Taking on QA and test coverage responsibilities. Designed the preliminary front-end testing framework that, as of 11/19/14, comprises the primary front-end test suite.
+### Jonathan Jin
+Taking on QA and test coverage responsibilities for the front-end tests. Designed the preliminary front-end testing framework that, as of 11/19/14, comprises the primary front-end test suite.
 
 ## Evolution
-While our first iteration of the software construction process did not meet all the grand visions we have for it, it was a good first step. We implemented the basic functions of file uploading, and impage processing and displaying, and laid the groundwork for user interaction with the document. 
-
 One of the major ways in which our current implementation differs from our initial design is the architecture and design portion of the backend. We designed a somewhat elaborate class diagram to structure our document data. Once we started writing code, however, we realized that the PDF data would best be handled by a pipe-and-filter architecture, and so our approach became more functional, implementing no Python classes at all.
 
-The frontend will likely implement more objects as development continues, although it is unlikely to develop into the complextiy of our original plan. And this isn't necessarily a bad thing! After all, Simplicity is one of the twelve principles behind the Agile Manifesto.
-
-## Additional Information
-
-Some limitations are worthy of note. Our image processing algorithms can use improvement. In this iteration, they only support documents that are fairly well-formed: rotated no more than 90 degrees in either direction, with fairly straight text lines, and good contrast. In the future, we intend to implement more sophisticated and efficient algorithms, as well as providing opportunities for the user to correct errors in processing.
-
-As of 11/19, our front-end testing system could use some work. It uses a global "results" string that each tests appends a "pass-or-fail" string to. We are currently looking into testing framework solutions that can cooperate seamlessly with the rest of our chosen stack.
