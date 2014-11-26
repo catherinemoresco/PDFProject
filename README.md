@@ -29,16 +29,6 @@ Features to be included:
 ##### Overall: 
 - Opportunities for user correction of algorithmic failings!
 
-## Features
-
-Features successfully implemented in this iteration include:
-- File uploading
-- Exporting PDF pages to JPG images
-- Image processing
-	+ Skew detection and correction
-	+ Extraction of text line coordinates
-- Image display
-
 ## Example Usage and Recommended Acceptance Tests
 It's pretty simple to use: upload your own document with the "upload" button, and watch it appear---processed and straightened!
 
@@ -78,15 +68,15 @@ The folder 'cvtests' contains the test file and copies of source files for our i
 1. Our web app contains the initial functionality for uploading a PDF.  The app's code can be found in pdfproject/_init_.py, with functions to handle the home screen, as well as uploading.  The content/styling/javascript functions for the app's pages can be found within pdfproject/templates and pdfproject/static.
 2. Once the user has chosen a PDF to upload, the upload_file() function in _init_.py saves the file to the uploads folder on the server
 3. upload_file() then calls processing.process() from pdfproject/processing.py on the PDF file to initialize image processing
-	a. process() first calls extract.extractImages() from pdfproject/extract.py in order to pull images (.jpg) representing each page of the PDF from the file.  These will be passed to the rest of the image processing functions.
-	b. process() calls skew.straighten() (from pdfproject/skew.py) on each of the images, which first uses skew.horizontal_sums() to help calculate the probable skew angle of the input image and then skew.rotate() to generate an image rotated at that angle.  It returns a rotated image for every input image.
-	c. process() calls getlines.getLines() on each straightened image.  getLines() calls its helper function, getlines.isolateLines() which contains the entire algorithm for creating a grayscale image which has black where blank space should be and white where it thinks there are text lines.  getLines() then detects the pixel coordinates of the lines and returns them in a list.
+	1. process() first calls extract.extractImages() from pdfproject/extract.py in order to pull images (.jpg) representing each page of the PDF from the file.  These will be passed to the rest of the image processing functions.
+	2. process() calls skew.straighten() (from pdfproject/skew.py) on each of the images, which first uses skew.horizontal_sums() to help calculate the probable skew angle of the input image and then skew.rotate() to generate an image rotated at that angle.  It returns a rotated image for every input image.
+	2. process() calls getlines.getLines() on each straightened image.  getLines() calls its helper function, getlines.isolateLines() which contains the entire algorithm for creating a grayscale image which has black where blank space should be and white where it thinks there are text lines.  getLines() then detects the pixel coordinates of the lines and returns them in a list.
 4. processing.process() gathers the lines and puts them in a dictionary, mapped to their page number as a key.  The dictionary is returned as a json string.
 5. Passing the json string back to the web app as a ....json.txt file, upload_file() in _init_.py redirects to a page which corresponds to the uploaded_file() function in _init_.py, which displays each of the processed images that were returned after straightening and reads the line coordinates for highlighting from the ....json.txt file.  The page is once again rendered using html/css/javascript from pdfproject/templates and pdfproject/static.
 6. THE REST OF THIS NEEDS TO BE ABOUT RENDERING HIGHLIGHTS/ANNOTATIONS AND SAVING/EXPORTING FILES WHEN IT IS POSSIBLE.  PLEASE REVIEW/CORRECT/ADD STUFF
 
 
-## Who did What
+## Who Did What
 ### Alberto & Cristian: 
 We were in charge of User Interface design. We created the HTML displayed, worked on uploading files to server, passing files to CV modules, and displaying the resulting files.
 
@@ -113,7 +103,7 @@ The skew detection algorithm that we arrived at is efficient and reasonably robu
 
 ![Sample page](readme-assets/Biagioli_ScientificRevolution.pdf16.jpg)
 
-And the following graphs, which correspond to the sums of its rows and columns:
+And the following graphs, which correspond to the sums of its rows and columns. A sum will be zero is every pixel in the row is black, and it will be at it's maximum when every pixel in the row is white.
 
 ##### Rows
 ![](readme-assets/Rows.png)
@@ -121,7 +111,7 @@ And the following graphs, which correspond to the sums of its rows and columns:
 ![](readme-assets/Columns.png)
 
 
-In each, the red line represents the mean value, and the blue represents the sums. The rows show dramatic, evently-spaced peaks which correspond to the text lines and the white space between them. The columns show fluctuation, but stay much closer to the mean value, with major peaks at the margins. To find where the text is the straightest, we want the horizontal sums to resemble the first of these graphs as closely as possible: with dramatic, evenly spaced peaks. We initially used standard deviation as a measure of optimal rotation, but through experimentation we learned that variance was a better metric; extreme outliers, such as those at the margins in the column graph (seen in the image page itself as the dark lines in the margins), can skew the standard deviation more than is desired. 
+In each, the red line represents the mean value, and the blue represents the sums. The rows show dramatic, evently-spaced peaks which correspond to the text lines and the white space between them; the white spaces are the maxima, and the pixel rows that follow the lines of text are the minima. The column graph shows fluctuation, but stay much closer to the mean value, with major peaks only at the margins. To find where the text is the straightest, we want the horizontal sums to resemble the first of these graphs as closely as possible: with dramatic, evenly spaced peaks. We initially used standard deviation as a measure of optimal rotation, but through experimentation we learned that variance was a better metric; extreme outliers, such as those at the margins in the column graph (seen in the image page itself as the dark lines in the margins), can skew the standard deviation more than is desired. 
 
 
 #### Get Text Lines
