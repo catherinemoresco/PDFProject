@@ -3,6 +3,7 @@ import cv2
 
 # rotate an image by a given angle
 def rotate(img, angle):
+	""" Given an image and angle, returns a rotated copy of the image """
 	height = img.shape[0]
 	width = img.shape[1]
 	rotmat = cv2.getRotationMatrix2D((width/2, height/2), angle, 1)
@@ -10,30 +11,37 @@ def rotate(img, angle):
 
 # get the sum of the values of a row
 def horizontal_sums(img):
+	""" Return list of sums of pixel values across regularly spaced rows """
 	height, width = img.shape
-	sums = []
-	for i in range(0+height/4, height-height/4, (height/50)):
-		sums.append(sum(img[i]))
+
+
+
+	sums=np.sum(img, axis=1)
 	return sums
 
-# rotate an image by an angle that maximizes the standard deviation of its row sums
 def straighten(img0):
+	""" Find rotation angle that maximizes variation of row sums, and returns image rotated at that angle """
 	img = np.copy(img0)
+
 	if len(img.shape) > 2:
 		img = cv2.cvtColor(img, cv2.COLOR_RGB2GRAY)
 
-	img = np.uint8(img)
+	# Threshold and remove noise
 	img = cv2.adaptiveThreshold(img,255,cv2.ADAPTIVE_THRESH_GAUSSIAN_C,cv2.THRESH_BINARY, 11, 10)
+	kernel = np.uint8(np.ones((2,2)))
+	img = cv2.dilate(img, kernel, iterations=1)
+	img = cv2.erode(img, kernel, iterations=1)
 
-	stds = {}
+	img = np.uint8(img)
+
+	variances = {}
 
 	# this can be done recurisively, and to greater precision
 	# but this works for now
-	for x in range(-90, 90, 5):
-		stds[np.std(horizontal_sums(rotate(img, x)))] = x
-	angle = stds[max(stds.keys())]
+	for x in range(-90, 90, 10):
+		variances[np.var(horizontal_sums(rotate(img, x)))] = x
+	angle = variances[max(variances.keys())]
 	for i in range(angle-10, angle+10):
-		stds[np.std(horizontal_sums(rotate(img, i)))] = i
-	angle = stds[max(stds.keys())]
-	
+		variances[np.var(horizontal_sums(rotate(img, i)))] = i
+	angle = variances[max(variances.keys())]
 	return (rotate(img0, angle), angle)
