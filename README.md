@@ -138,7 +138,7 @@ OpenCV then has a function which can find the contours surrounding each of these
 
 #### Catherine Also Did the Front-End Design
 
-There's not much to say here. The flask-assets extension was used, which allows for compilation of scss within Flask. The stock photo was provided, free, by [Unsplash](https://unsplash.com/). I used the Google Fonts API for fonts, which are Montserrat for headers and buttons, and Open Sans for the rest.
+There's not much to say here. The flask-assets extension was used, which allows for compilation of SCSS within Flask. The stock photo was provided, free, by [Unsplash](https://unsplash.com/). I used the Google Fonts API for fonts, which are Montserrat for headers and buttons, and Open Sans for the rest.
 
 
 ### Michael Zhao
