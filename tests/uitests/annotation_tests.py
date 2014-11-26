@@ -23,45 +23,63 @@ class Annotation(unittest.TestCase):
 
     def test_negative_off_page(self):
         actions = ActionChains(self.driver)
+
         actions.click(button)
         actions.move_to_element_with_offset(html, -100, -100)
         actions.click()
         actions.send_keys("test text box")
         actions.send_keys(Keys.RETURN)
+
         actions.perform()
 
-        self.assertRaises(NoSuchElementException, actions.find_element_by_id, "textbox") 
+        self.assertRaises(NoSuchElementException,
+                actions.find_element_by_id,
+                "textbox")
 
     def test_large_off_Page(self):
         actions = ActionChains(self.driver)
+
         actions.click(button)
         actions.move_to_element_with_offset(html, 6000, 6000)
         actions.click()
         actions.send_keys("test text box")
         actions.send_keys(Keys.RETURN)
+
         actions.perform()
-        self.assertRaises(NoSuchElementException, actions.find_element_by_id, "textbox") 
+
+        self.assertRaises(NoSuchElementException, 
+                actions.find_element_by_id, 
+                "textbox")
 
     def test_empty_text(self):
         actions = ActionChains(self.driver)
+
         actions.click(button)
         actions.move_to_element_with_offset(html, 50, 50)
         actions.click()
         actions.send_keys(Keys.RETURN)
+
         actions.perform()
-        self.assertRaises(NoSuchElementException, actions.find_element_by_id, "textbox") 
+
+        self.assertRaises(NoSuchElementException,
+                actions.find_element_by_id,
+                "textbox")
 
     def test_valid_text(self):
         actions = ActionChains(self.driver)
+
         actions.click(button)
         actions.move_to_element_with_offset(html, 50, 50)
         actions.click()
         actions.send_keys("test text box")
         actions.send_keys(Keys.RETURN)
+
         actions.perform()
 
-        self.assert(actions.find_element_by_id("textbox"))
-        self.assertEqual(actions.find_element_by_id("textbox").get_attribute('value'), "test text box")
+        textbox = actions.find_element_by_id("textbox")
+
+        self.assert(textbox)
+        self.assertEqual(textbox.get_attribute('value'), "test text box")
 
     def tearDown(self):
         self.driver.close()
