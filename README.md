@@ -8,22 +8,22 @@ Catherine Moresco, Jonathan Jin, Megan Barnes, Michael Zhao, Alberto Rios, and C
 Features to be included:
 
 ##### UI:
-- Highlights!
-- Annotations!
-- Deleting highlights and annotations!
-- Some fine-looking front-end desgin!
+- [ ] Highlights!
+- [ ] Annotations!
+- [x] Deleting highlights and annotations!
+- [x] Some fine-looking front-end desgin!
 
 ##### Server:
-- Modified PDF document download!
+- [ ] Modified PDF document download!
 	+ Getting highlight data from frontend
 	+ Merging highlights and SVG edits
-- Streamlined file handling!
+- [x] Streamlined file handling!
 
 ##### Image processing:
-- Refined image processing algorithms!
+- [x] Refined image processing algorithms!
 	 + Better skew detection accuracy
 	 + Enhanced handling of noise and blacked-out margins
-- Eliminate ImageMagick dependency!
+- [x] Eliminate ImageMagick dependency!
 	+ Require Ghostscript instead, which has a much simpler installation process.
 
 ##### Overall: 
@@ -153,5 +153,5 @@ As a reminder, our original class diagram looked like this:
 ![](readme-assets/ClassDiagrams.jpg)
 Instead of implementing this structure, we use no classes, and instead (in the backend) only use a list of filenames referring to images of pages and their corresponding line data to refer to a document. The edits and annotations are never managed in the backend at all, but constructed and rendered directly in the DOM.
 
-
+(See the data flow diagram in "Program Structure" for details on our updated design.)
 
