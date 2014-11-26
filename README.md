@@ -76,6 +76,12 @@ The folder 'cvtests' contains the test file and copies of source files for our i
 6. THE REST OF THIS NEEDS TO BE ABOUT RENDERING HIGHLIGHTS/ANNOTATIONS AND SAVING/EXPORTING FILES WHEN IT IS POSSIBLE.  PLEASE REVIEW/CORRECT/ADD STUFF
 
 
+A data flow diagram for our backend processes is provided below.
+
+![](readme-assets/dataflowdiagram.jpg)
+
+Our architecture resembles a hybrid between a pipe-and-filter and data-centered architecture. A pipe-and-filter architecture makes sense for our task, because image processing consists mostly of passing the PDF and image data through a series of filter that modifies said data and extracts needed information. Writing to and reading from memory is necessitated by our choice to implement our software as a web application; it is the method most suited to passing file data from one app route to the next. 
+
 ## Who Did What
 ### Alberto & Cristian: 
 We were in charge of User Interface design. We created the HTML displayed, worked on uploading files to server, passing files to CV modules, and displaying the resulting files.
