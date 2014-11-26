@@ -5,11 +5,9 @@ body {
     margin-top: 0;
 	margin-bottom:0;
 	background: #A8A29E;
-	margin-left: 12%;
-	margin-right:12%;
 }
 .pdf-page {
-	width:1024px;
+	width:auto;
 	height:auto;
 	margin: 10px;
 	box-shadow: 0 0 10px #0D161D;

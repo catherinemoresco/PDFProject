@@ -138,13 +138,15 @@ There's not much to say here. The flask-assets extension was used, which allows 
 
 
 ### Michael Zhao
-Set up the server.
+Set up the server stack, which is a Flask instance served by Gunicorn via supervisord. Our choice of server-side software, most importantly Python, enables the application to be packageable and run on any other server with the correct dependencies installed.
+
+Wrote the code that handles exporting of annotations into a new PDF. This currently takes advantage of the jsPDF library, allowing us to generate the final products entirely on the client side; this takes load off the server and reduces our storage requirements. However, for certain situations we might need to use a server-side (inevitably Python-based) library in addition or instead of jsPDF, which despite its novelty is still feature-limited and poorly documented.
 
 ### Jonathan Jin
 Taking on QA and test coverage responsibilities for the front-end tests. Designed the preliminary front-end testing framework that, as of 11/19/14, comprises the primary front-end test suite.
 
 ###Cristian Saucedo
-Main framework of UI testting and UI elements, suchs as annotations and highlighting.
+Main framework of UI testing and UI elements, such as annotations and highlighting.
 
 ## Evolution
 One of the major ways in which our current implementation differs from our initial design is the architecture and design portion of the backend. We designed a somewhat elaborate class diagram to structure our document data. Once we started writing code, however, we realized that the PDF data would best be handled by a pipe-and-filter architecture, and so our approach became more functional, implementing no Python classes at all.
