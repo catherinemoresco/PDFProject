@@ -143,7 +143,7 @@ Set up the server stack, which is a Flask instance served by Gunicorn via superv
 Wrote the code that handles exporting of annotations into a new PDF. This currently takes advantage of the jsPDF library, allowing us to generate the final products entirely on the client side; this takes load off the server and reduces our storage requirements. However, for certain situations we might need to use a server-side (inevitably Python-based) library in addition or instead of jsPDF, which despite its novelty is still feature-limited and poorly documented.
 
 ### Jonathan Jin
-Taking on QA and test coverage responsibilities for the front-end tests. Designed the preliminary front-end testing framework that, as of 11/19/14, comprises the primary front-end test suite.
+Took on primary QA and testing responsilities, in particular for the front-end integration test suite. Instigated the migration from the initial ad-hoc Javascript-based "test suite" -- using `console.log`, boolean equality operations, and a "test results" string -- towards an automated integration test suite using Python's `unittest`, [Selenium](http://www.seleniumhq.org/), and the [Chrome web driver](https://code.google.com/p/selenium/wiki/ChromeDriver).
 
 ###Cristian Saucedo
 Main framework of UI testing and UI elements, such as annotations and highlighting.
