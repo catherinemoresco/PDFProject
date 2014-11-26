@@ -1,25 +1,19 @@
 
 body {
-  margin: 0; }
-
-  svg {
-    mix-blend-mode: multiply; }
-
-    .pdf-page {
-      background-size: contain;
-      background-repeat: no-repeat;
-      background-position: center center;
-      margin: 10px;
-      box-shadow: 0 0 10px #0D161D;
-      background-color: white;
-      position: absolute;
-      top: 0;
-      bottom: 0;
-      left: 0;
-      right: 0; }
-
-      .pdf-pages {
-        overflow: visible;
-        background: #A8A29E;
-        padding: 5px;
-        width: 100vw; }
+	min-width: 1024px;
+	height: auto;
+    margin-top: 0;
+	margin-bottom:0;
+	background: #A8A29E;
+	margin-left: 12%;
+	margin-right:12%;
+}
+.pdf-page {
+	width:1024px;
+	height:auto;
+	margin: 10px;
+	box-shadow: 0 0 10px #0D161D;
+	background-color: white;
+	margin-left: auto;
+	margin-right: auto;
+}
