@@ -82,10 +82,15 @@ A data flow diagram for our backend processes is provided below.
 
 Our architecture resembles a hybrid between a pipe-and-filter and data-centered architecture. A pipe-and-filter architecture makes sense for our task, because image processing consists mostly of passing the PDF and image data through a series of filter that modifies said data and extracts needed information. Writing to and reading from memory is necessitated by our choice to implement our software as a web application; it is the method most suited to passing file data from one app route to the next. 
 
-### File structure
+### File Structure
+
+Confused about where a particular part of the project is implemented? Look no further! 
+
+Following is a diagram of the organizational structure of the code:
+
 ```
 /pdfproject
-	/pdfproject
+	/pdfproject						
 		/static
 			/uploads
 			/css
@@ -95,28 +100,28 @@ Our architecture resembles a hybrid between a pipe-and-filter and data-centered 
 					[svg image assets]
 				[css and scss files]	
 			/js
-				[JavaScript files]
+				[JavaScript files]  		<- front-end scripts
 		/templates
 			[HTML templates for page rendering]
-		[image processing modules]
-		__init__.py 				<- Main server file
+		[image processing modules]			<- image processing scripts
+		__init__.py 						<- main server file
 	/tests
 		/cvtests
 			/testimg
 				[images used for testing]
 			[image processing modules]
-			cv_unit_tests.py 		<- CV unit testing script
+			cv_unit_tests.py 				<- image processing testing script
 		/uitests
-			annotation_tests.py 	<- UI unit testing scripts
+			annotation_tests.py 			<- UI unit testing scripts
 			highlight_tests.py
 			upload_tests.py
 	/readme-assets
 		[images used in readme file]
 	.gitignore
-	README.md 						<- readme (YOU ARE HERE)
-	requirements.txt 				<- requirements
+	README.md 								<- readme (YOU ARE HERE)
+	requirements.txt 						<- requirements
 	run.sh
-	runserver.py 					<- script to run locally
+	runserver.py 							<- script to run locally
 	supervisord.conf
 ```
 
