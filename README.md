@@ -107,7 +107,7 @@ In exploring other options, I learned that ImageMagick itself uses another sortw
 
 #### Skew Detection
 
-We also did a lot of research into pre-existing line detecting and skew correcting algorithms. Our line detection algorithm relies upon use of horizontal line filters, so it is best if the lines are as straight across as possible when the line detection algorithm is applied. Some document analysis strategies involve identifying lines first, and then correcting for skew; many of these involve ridge detection and much more mathematically complex operations than we would like to implement, in the interest of being able to complete the image processing in a reasonable amount of time. We assume that the text lines are largely straight, as our software is intended for scanned images; [handling of curled lines](http://link.springer.com/chapter/10.1007%2F978-3-642-03767-2_21), while a worthwhile and interesting feature to implement in the future, is not necessary for the essential functionality of our application.
+We also did a lot of research into pre-existing line detecting and skew correcting algorithms. Our line detection algorithm relies upon use of horizontal line filters, so it is best if the lines are as straight across as possible when the line detection algorithm is applied. Some document analysis strategies involve identifying lines first, and then correcting for skew; many of these involve ridge detection and much more mathematically complex operations than we would like to implement, in the interest of being able to complete the image processing in a reasonable amount of time. We assume that the text lines are largely straight, as our software is intended for scanned images; [handling of curled lines](http://link.springer.com/chapter/10.1007%2F978-3-642-03767-2_21), for example, while a worthwhile and interesting feature to implement in the future, is not necessary for the essential functionality of our application.
 
 The skew detection algorithm that we arrived at is efficient and reasonably robust. It involves iterating through a range of rotation angles, and finding the one that maximizes the variation of the sums of pixel values across a row. *Why* this works can be explained by looking at the following image:
 
@@ -121,14 +121,14 @@ And the following graphs, which correspond to the sums of its rows and columns:
 ![](readme-assets/Columns.png)
 
 
-In each, the red line represents the mean value, and the blue represents the sums. The rows show dramatic, evently-spaced peaks which correspond to the text lines and the white space between them. The columns show fluctuation, but stay much closer to the mean value, with major peaks at the margins. We initially used standard deviation as a measure of optimal rotation, but through experimentation we learned that variance was a better metric; extreme outliers, such as those at the margins in the column graph (seen in the image page itself as the dark lines in the margins), can skew the standard deviation more than is desired. 
+In each, the red line represents the mean value, and the blue represents the sums. The rows show dramatic, evently-spaced peaks which correspond to the text lines and the white space between them. The columns show fluctuation, but stay much closer to the mean value, with major peaks at the margins. To find where the text is the straightest, we want the horizontal sums to resemble the first of these graphs as closely as possible: with dramatic, evenly spaced peaks. We initially used standard deviation as a measure of optimal rotation, but through experimentation we learned that variance was a better metric; extreme outliers, such as those at the margins in the column graph (seen in the image page itself as the dark lines in the margins), can skew the standard deviation more than is desired. 
 
 
 #### Get Text Lines
 
 This is arguably the hardest of the tasks we set out to accomplish, and the least perfect. Scanned documents are extremely diverse in appearance, and it is difficult to construct an algorithm that works universally. 
 
-Still, we managed to complete an implentation that works for many well-formed documents. It works with a series of blurs and filters to create a new image with large white boxes where the words used to be.
+Nevertheless, we managed to complete an implentation that works for most well-formed documents. It works with a series of blurs and filters to create a new image with large white boxes where the words used to be.
 
 Like this.
 
@@ -136,6 +136,9 @@ Like this.
 
 OpenCV then has a function which can find the contours surrounding each of these features, and a bounding box of each line is returned as the vales to be passed to the front-end as possible locations for highlights.
 
+#### Catherine Also Did the Front-End Design
+
+There's not much to say here. The flask-assets extension was used, which allows for compilation of scss within Flask. The stock photo was provided, free, by [Unsplash](https://unsplash.com/). I used the Google Fonts API for fonts, which are Montserrat for headers and buttons, and Open Sans for the rest.
 
 
 ### Michael Zhao
