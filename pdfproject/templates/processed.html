@@ -25,48 +25,92 @@
 			return c;
 		}
 
+		/**
+ 		* Convert an image 
+ 		* to a base64 string
+ 		* @param  {String}   url         
+ 		* @param  {Function} callback    
+ 		* @param  {String}   [outputFormat=image/png]           
+		* http://stackoverflow.com/questions/6150289/how-to-convert-image-into-base64-string-using-javascript?lq=1
+ 		*/
+		function convertImgToBase64(url, callback, outputFormat){
+    		var canvas = document.createElement('CANVAS'),
+        		ctx = canvas.getContext('2d'),
+        		img = new Image;
+    		img.crossOrigin = 'Anonymous';
+    		img.onload = function(){
+        		var dataURL;
+        		canvas.height = img.height;
+        		canvas.width = img.width;
+        		ctx.drawImage(img, 0, 0);
+        		dataURL = canvas.toDataURL(outputFormat);
+        		callback.call(this, dataURL);
+        		canvas = null; 
+    		};
+    		img.src = url;
+		}
+
 		function export_to_pdf(method) {
 			method = typeof method !== 'undefined' ? method : "datauristring";
 
-			var i, j, k;
-			for(i=0; i < divDraws.length; i++) {
-				// Get all the rectangular highlights in the document.
-				// TODO: Add more annotation types here once supported
-				rects = divDraws[i].children().filter(function(el){return el.type=="rect"});
+			// Create a new jsPDF document to hold our annotations
+			var doc = new jsPDF();
 
-				rect_list = []; // list of rects we need to draw in the PDF
+			var i, j, k, pg;
+			for(pg = 0; pg < pageDraws.length; pg++) { // for each page in the document
+				for(i=0; i < lineDraws[pg].length; i++) { // for each line in the page
+					// Get all the rectangular highlights in the current page,
+					// lineDraws[page number][lineNumber] = rect
+					// Thus lineDraws[page number] = [rect]
+					// TODO: Add more annotation types here once supported
+					rects = lineDraws[pg][i].children().filter(function(el){return el.type=="rect"});
 
-				for(j=0; j<rects.length; j++) {
-					var rect_list_item = new Array();
-					// Note: These properties are string type.
-					rect_list_item["pos_x"] = parseInt( rects[j].node.getAttribute("x") );
-					rect_list_item["pos_y"] = parseInt( rects[j].node.getAttribute("y") );
-					rect_list_item["width"] = parseInt( rects[j].node.getAttribute("width") );
-					rect_list_item["height"] = parseInt( rects[j].node.getAttribute("height") );
-					fillColor = rects[j].node.getAttribute("fill");
-					rect_list_item["fillColor_decimal"] = hexstring_to_numlist(fillColor);
-					rect_list_item["opacity"] = parseInt( rects[j].node.getAttribute("opacity") );
+					rect_list = []; // list of rects we need to draw in the PDF
 
-					//rect_list.push([pos_x, pos_y, width, height, fillColor_decimal, opacity]);
-					rect_list.push(rect_list_item);
-				}
+					for(j=0; j<rects.length; j++) { // add each rect and its properties to rect_list
+						var rect_list_item = new Array();
+						// Note: These properties are string type.
+						rect_list_item["pos_x"] = parseInt( rects[j].node.getAttribute("x") );
+						rect_list_item["pos_y"] = parseInt( rects[j].node.getAttribute("y") );
+						rect_list_item["width"] = parseInt( rects[j].node.getAttribute("width") );
+						rect_list_item["height"] = parseInt( rects[j].node.getAttribute("height") );
+						fillColor = rects[j].node.getAttribute("fill");
+						rect_list_item["fillColor_decimal"] = hexstring_to_numlist(fillColor);
+						rect_list_item["opacity"] = parseInt( rects[j].node.getAttribute("opacity") );
+	
+						//rect_list.push([pos_x, pos_y, width, height, fillColor_decimal, opacity]);
+						rect_list.push(rect_list_item);
+					} // for each rect, add to rect_list
+				} // for each line
 
-				// Create a new jsPDF document to hold our annotations
-				var doc = new jsPDF();
-
-				// Import the current PDF as the base layer.
+				// Add a new page in the generated PDF
 				doc.addPage();
+
+				// Import the current document (as JPEG) as the base layer.
+				// addImage(imageData as raw JPEG data or base64 data-URI, format, x, y, w, h)
+				pageimageURL = pageDraws[pg].node.children[0].href.baseVal;
+				pageimageWidth = pageDraws[pg].node.children[0].width.baseVal.value;
+				pageimageHeight = pageDraws[pg].node.children[0].height.baseVal.value;
+				pageimageX = 0;
+				pageimageY = 0;
+				convertImgToBase64(pageimageURL,
+					function(img){
+						doc.addImage(img, 'JPEG', 0, 0, pageimageWidth, pageimageHeight);
+					},
+					'image/jpeg'
+				);
 
 				// Tell jsPDF to draw each rectangle
 				for(k = 0; k < rect_list.length; k++) {
 					doc.setFillColor(rect_list[k]["fillColor_decimal"][0], rect_list[k]["fillColor_decimal"][1], rect_list[k]["fillColor_decimal"][2], rect_list[k]["opacity"]);
 					doc.rect(rect_list[k]["pos_x"], rect_list[k]["pos_y"], rect_list[k]["width"], rect_list[k]["height"], "F");
-					doc.setFillColor(0,0,0,0.9);
-					doc.rect(0,k * 120,100,100, "F");
-				}
-			}
+					// debug:
+						// doc.setFillColor(0,0,0,0.9);
+						// doc.rect(0,k * 120,100,100, "F");
+				} // for each rectangle
+			} // for each page
 			return doc.output(method);
-		}
+		} // function export_to_pdf
 
 	</script>
 </html>
