@@ -50,7 +50,8 @@ body {
     top: 0;
     height: 110px;
     width: 100vw;
-    box-shadow: 0 0 100px #0D161D; }
+    box-shadow: 0 0 100px #0D161D;
+    ]; }
 
     .form-box {
       color: white;
@@ -71,30 +72,23 @@ body {
             font-family: Montserrat, sans-serif;
             display: none; }
 
-            form .icon {
-              display: inline-block;
-              text-align: center;
-              font: Montserrat;
-              margin-left: 2.5vw;
-              margin-right: 2.5vw;
-              width: 70px; }
+            svg {
+              fill: white; }
 
-              form .icon:hover {
-                color: #D98C3C; }
+              form .icon {
+                display: inline-block;
+                text-align: center;
+                font: Montserrat;
+                margin-left: 2.5vw;
+                margin-right: 2.5vw;
+                width: 70px; }
 
-                svg {
-                  margin-left: auto;
-                  margin-right: auto;
-                  cursor: pointer; }
+                .icon:hover {
+                  color: #D98C3C; }
+                  .icon:hover svg {
+                    fill: #D98C3C; }
 
-                  .bouncing {
-                    animation: bounce 0.5s infinite; }
-
-                    @keyframes bounce {
-                      0% {
-                        margin-bottom: 2px;   }
-                        50% {
-                          margin-bottom: 0px;   }
-                          100% {
-                            margin-bottom: -2px;   }
-}
+.icon-svg {
+  margin-left: auto;
+  margin-right: auto;
+  cursor: pointer; }

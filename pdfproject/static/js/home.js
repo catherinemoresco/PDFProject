@@ -9,6 +9,6 @@ function validateForm(){
 		}
 		return true;
 	}
-	alert("Invalid File: No file specified");
+	alert("Please pick a file to upload first!");
 	return false;
 }	

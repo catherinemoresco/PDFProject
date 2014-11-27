@@ -59,6 +59,7 @@ body{
 	bottom: 110px;
 }
 
+
 .form-background{
 	background-color:$text-color;
 	opacity:1;
@@ -66,9 +67,9 @@ body{
 	top:0;
 	height: 110px;
 	width: 100vw;
-	box-shadow: 0 0 100px $text-color;
-
+	box-shadow: 0 0 100px $text-color;]
 }
+
 
 .form-box{
 	color:white;
@@ -78,10 +79,10 @@ body{
 	top:0vh;
 }
 
+
 .form-content{
 	margin-top: 20px;
 }
-
 
 /* Form Styles */
 
@@ -94,7 +95,11 @@ input{
 	color:$text-color;
 	font-family: Montserrat, sans-serif;
 	display:none;
+}
 
+
+svg{
+	fill:white;
 }
 
 form .icon{
@@ -106,32 +111,19 @@ form .icon{
 	width:70px;
 }
 
-form .icon:hover{
+
+.icon:hover{
 	color:$accent-color;
+
+	svg{
+	fill:$accent-color;
+	}
 }
 
-svg{
+
+
+.icon-svg{
 	margin-left:auto;
 	margin-right:auto;
-cursor:pointer;
+	cursor:pointer;
 }
-
-
-.bouncing{
-	animation: bounce .5s infinite;
-}
-
-
-@keyframes bounce{
-	0%{
-		margin-bottom:2px;
-	}
-	50%{
-		margin-bottom: 0px;
-	}
-	100%{
-		margin-bottom: -2px;
-	}
-}
-
-/* Define bounce keyframes */
