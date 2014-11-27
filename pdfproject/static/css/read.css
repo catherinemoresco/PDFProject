@@ -1,6 +1,5 @@
 
 body {
-	min-width: 1024px;
 	height: auto;
     margin-top: 0;
 	margin-bottom:0;
@@ -14,4 +13,5 @@ body {
 	background-color: white;
 	margin-left: auto;
 	margin-right: auto;
+	position: relative;
 }
