@@ -8,9 +8,9 @@ Catherine Moresco, Jonathan Jin, Megan Barnes, Michael Zhao, Alberto Rios, and C
 Features to be included:
 
 ##### UI:
-- [ ] Highlights!
+- [x] Highlights!
 - [ ] Annotations!
-- [x] Deleting highlights and annotations! s
+- [x] Deleting highlights and annotations!
 - [x] Some fine-looking front-end desgin!
 
 ##### Server:
@@ -28,6 +28,15 @@ Features to be included:
 
 ##### Overall: 
 - [ ] Opportunities for user correction of algorithmic failings!
+
+## Features Not Actually Included in Iteration 2
+
+Highlights work, but do not follow the detected lines of the text. Annotations didn't work. A function was created for PDF download, but no interface to it was provided, nor was opportunity for user corrections provided.
+
+The line highlighting was difficult because keeping track of dynamic boxes along with deleting dynamic boxes and choosing which boxes where kept according to event listeners was a task of unexpected complexity.
+
+Overall, the lack of these features was largely sure to an underestimation of their difficulty and a lack of appropriately allotted amounts of time on the parts of the responsible teams.
+
 
 ## Example Usage and Recommended Acceptance Tests
 It's pretty simple to use: upload your own document with the "upload" button, and watch it appear, processed and straightened!
@@ -130,8 +139,8 @@ Following is a diagram of the organizational structure of the code:
 ```
 
 ## Who Did What
-### Alberto & Cristian: 
-We were in charge of User Interface design. We created the HTML displayed, worked on uploading files to server, passing files to CV modules, and displaying the resulting files.
+### Alberto: 
+In charge of User Interface design. Created the HTML displayed, worked on uploading files to server, passing files to CV modules, displaying the resulting files, drawing SVG highlights.
 
 ### Catherine & Megan: 
 We were in charge of the Computer Vision aspect of the project, which had several challenging aspects.
