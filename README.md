@@ -75,7 +75,8 @@ The folder 'cvtests' contains the test file and copies of source files for our i
 	2. process() calls getlines.getLines() on each straightened image.  getLines() calls its helper function, getlines.isolateLines() which contains the entire algorithm for creating a grayscale image which has black where blank space should be and white where it thinks there are text lines.  getLines() then detects the pixel coordinates of the lines and returns them in a list.
 4. processing.process() gathers the lines and puts them in a dictionary, mapped to their page number as a key.  The dictionary is returned as a json string.
 5. Passing the json string back to the web app as a ....json.txt file, upload_file() in _init_.py redirects to a page which corresponds to the uploaded_file() function in _init_.py, which displays each of the processed images that were returned after straightening and reads the line coordinates for highlighting from the ....json.txt file.  The page is once again rendered using html/css/javascript from pdfproject/templates and pdfproject/static.
-6. THE REST OF THIS NEEDS TO BE ABOUT RENDERING HIGHLIGHTS/ANNOTATIONS AND SAVING/EXPORTING FILES WHEN IT IS POSSIBLE.  PLEASE REVIEW/CORRECT/ADD STUFF
+6. Annotations are rendered as SVG objects on the page.
+7. The user will be able to export their annotations. We use Javascript libraries, in particular jsPDF, to keep this processing on the client side.
 
 ### Data Flow Diagram
 A data flow diagram for our backend processes is provided below.
