@@ -1,5 +1,6 @@
 
 body {
+	min-width: 1024px;
 	height: auto;
     margin-top: 0;
 	margin-bottom:0;
@@ -11,5 +12,6 @@ body {
 	margin: 10px;
 	box-shadow: 0 0 10px #0D161D;
 	background-color: white;
-	position: relative;
+	margin-left: auto;
+	margin-right: auto;
 }
