@@ -14,75 +14,9 @@
 			{% endfor %}
 		{% endblock %}
 	</div>
+	<script type="text/javascript" src="{{ url_for('static', filename='js/processed.js') }}"></script>
+	<script type="text/javascript" src="{{ url_for('static', filename='js/jsPDF/dist/jspdf.min.js') }}"></script>
 	<script type="text/javascript">
-		var  divs = document.getElementsByClassName('pdf-page');
-		var divLen = divs.length;
-		var divDraws= [];
-		var initX,initY,mousedown,dynamicRect;
-		for(var i=0;i<divLen;i++){
-			divID = divs[i].id;
-			divDraws[i] = SVG(divID);
-			var fpath = '/'+divs[i].id;
-			var image = divDraws[i].image(fpath);
-			divID = i;
-			divs[i].id = divID;
-			scale(image,divs[i]);
-			divs[i].addEventListener("mousedown",function(event){
-				if(event.button == 0){
-					initX = event.pageX-this.offsetLeft-this.offsetParent.offsetLeft;
-					initY= event.pageY-this.offsetTop-this.offsetParent.offsetTop;
-					//alert("X: "+initX+" Y: "+initY);
-					mousedown = true;
-					console.log(this.offsetTop);
-				}
-			})
-			
-			divs[i].addEventListener("mousemove",function(){
-				if(mousedown){
-					var endX = event.pageX-this.offsetLeft-this.offsetParent.offsetLeft;
-					var endY= event.pageY-this.offsetTop-this.offsetParent.offsetTop;
-					if(endX<initX || endY<initY){
-						mousedown =false;
-						return true;
-					}
-					if(dynamicRect){
-						dynamicRect.width(endX-initX).height(endY-initY)
-					}
-					else{
-						dynamicRect = divDraws[eval(this.id)].rect(endX-initX,endY-initY).move(initX,initY).fill('#FFFF66').opacity('0.5');
-					}
-				}
-
-			})
-			
-			divs[i].addEventListener("mouseup",function(event){
-				if(dynamicRect){
-					dynamicRect.remove();
-					dynamicRect = false;
-				}	
-				if(mousedown){
-					mousedown = false;			
-					var endX = event.pageX-this.offsetLeft-this.offsetParent.offsetLeft;
-					var endY= event.pageY-this.offsetTop-this.offsetParent.offsetTop;
-					var rect = divDraws[eval(this.id)].rect(endX-initX,endY-initY).move(initX,initY).fill('#FFFF66').opacity('0.5');
-					rect.dblclick(function(){
-						this.remove();
-					})
-					
-				}			
-			})
-		}
-		function scale (img,divElem){
-			//var w =window.innerWidth;
-			var w =1024;
-			divElem.style.width = (w + "px");
-			img.loaded(function(loader){
-				var h = (1/loader.ratio)*w;
-				img.size(w,h);
-				divElem.style.height = (h + "px");
-			})		
-		}
-
 		// Input: a string of the form "#ffc8b0"
 		// Output: A list of RGB components as integers, of the form [255, 200, 176]
 		function hexstring_to_numlist(fillColor) {
@@ -91,39 +25,48 @@
 			return c;
 		}
 
-		for(current_page_draws in divDraws) {
-			// Get all the rectangular highlights in the document.
-			// TODO: Add more annotation types here once supported
-			rects = current_page_draws.children().filter(function(el){return el.type=="rect"});
-		
-			rect_list = []; // list of rects we need to draw in the PDF
-		
-			for(current_rect in rects) {
-				// Note: These properties are string type.
-				pos_x = current_rect.node.getAttribute("x");
-				pos_y = current_rect.node.getAttribute("y");
-				width = current_rect.node.getAttribute("width");
-				height = current_rect.node.getAttribute("height");
-				fillColor = current_rect.node.getAttribute("fill");
-				fillColor_decimal = hexstring_to_numlist(fillColor);
-				opacity = current_rect.node.getAttribute("opacity");
-		
-				rect_list.push([pos_x, pos_y, width, height, fillColor_decimal, opacity]);
-			}
-		
-			// Create a new jsPDF document to hold our annotations
-			var doc = new jsPDF();
-		
-			// Import the current PDF as the base layer.
-			doc.addPage();
-		
-			// Tell jsPDF to draw each rectangle
-			for(r in rect_list) {
-				doc.setFillColor(r.fillColor);
-				doc.rect(r.pos_x, r.pos_y, r.width, r.height, "F");
-			}
-		}
+		function export_to_pdf(method) {
+			method = typeof method !== 'undefined' ? method : "datauristring";
 
+			var i, j, k;
+			for(i=0; i < divDraws.length; i++) {
+				// Get all the rectangular highlights in the document.
+				// TODO: Add more annotation types here once supported
+				rects = divDraws[i].children().filter(function(el){return el.type=="rect"});
+
+				rect_list = []; // list of rects we need to draw in the PDF
+
+				for(j=0; j<rects.length; j++) {
+					var rect_list_item = new Array();
+					// Note: These properties are string type.
+					rect_list_item["pos_x"] = parseInt( rects[j].node.getAttribute("x") );
+					rect_list_item["pos_y"] = parseInt( rects[j].node.getAttribute("y") );
+					rect_list_item["width"] = parseInt( rects[j].node.getAttribute("width") );
+					rect_list_item["height"] = parseInt( rects[j].node.getAttribute("height") );
+					fillColor = rects[j].node.getAttribute("fill");
+					rect_list_item["fillColor_decimal"] = hexstring_to_numlist(fillColor);
+					rect_list_item["opacity"] = parseInt( rects[j].node.getAttribute("opacity") );
+
+					//rect_list.push([pos_x, pos_y, width, height, fillColor_decimal, opacity]);
+					rect_list.push(rect_list_item);
+				}
+
+				// Create a new jsPDF document to hold our annotations
+				var doc = new jsPDF();
+
+				// Import the current PDF as the base layer.
+				doc.addPage();
+
+				// Tell jsPDF to draw each rectangle
+				for(k = 0; k < rect_list.length; k++) {
+					doc.setFillColor(rect_list[k]["fillColor_decimal"][0], rect_list[k]["fillColor_decimal"][1], rect_list[k]["fillColor_decimal"][2], rect_list[k]["opacity"]);
+					doc.rect(rect_list[k]["pos_x"], rect_list[k]["pos_y"], rect_list[k]["width"], rect_list[k]["height"], "F");
+					doc.setFillColor(0,0,0,0.9);
+					doc.rect(0,k * 120,100,100, "F");
+				}
+			}
+			return doc.output(method);
+		}
 
 	</script>
 </html>
