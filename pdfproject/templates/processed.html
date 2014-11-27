@@ -82,5 +82,48 @@
 				divElem.style.height = (h + "px");
 			})		
 		}
+
+		// Input: a string of the form "#ffc8b0"
+		// Output: A list of RGB components as integers, of the form [255, 200, 176]
+		function hexstring_to_numlist(fillColor) {
+			var c = [fillColor.substring(1,3), fillColor.substring(3,5), fillColor.substring(5,7)];
+			c = c.map(function(component){ return parseInt(component,16) });
+			return c;
+		}
+
+		for(current_page_draws in divDraws) {
+			// Get all the rectangular highlights in the document.
+			// TODO: Add more annotation types here once supported
+			rects = current_page_draws.children().filter(function(el){return el.type=="rect"});
+		
+			rect_list = []; // list of rects we need to draw in the PDF
+		
+			for(current_rect in rects) {
+				// Note: These properties are string type.
+				pos_x = current_rect.node.getAttribute("x");
+				pos_y = current_rect.node.getAttribute("y");
+				width = current_rect.node.getAttribute("width");
+				height = current_rect.node.getAttribute("height");
+				fillColor = current_rect.node.getAttribute("fill");
+				fillColor_decimal = hexstring_to_numlist(fillColor);
+				opacity = current_rect.node.getAttribute("opacity");
+		
+				rect_list.push([pos_x, pos_y, width, height, fillColor_decimal, opacity]);
+			}
+		
+			// Create a new jsPDF document to hold our annotations
+			var doc = new jsPDF();
+		
+			// Import the current PDF as the base layer.
+			doc.addPage();
+		
+			// Tell jsPDF to draw each rectangle
+			for(r in rect_list) {
+				doc.setFillColor(r.fillColor);
+				doc.rect(r.pos_x, r.pos_y, r.width, r.height, "F");
+			}
+		}
+
+
 	</script>
 </html>
