@@ -36,7 +36,6 @@
 	}
 
 	getData(jpath)
-	console.log(jsonArray)
 
 
 
@@ -93,11 +92,20 @@
 			
 			divs[i].addEventListener("mousemove",function(){
 				if (mousedown === true){
-					if (highlightGroup){
-					}
-					else{
+					if (!(highlightGroup)){
 						highlightGroup = pageGroups[eval(this.id)].group().id(currHighlightID);
 						currHighlightID++;
+					}
+					var endX = event.pageX-this.offsetLeft-this.offsetParent.offsetLeft;
+					var endY= event.pageY-this.offsetTop-this.offsetParent.offsetTop;
+					var pageRects = jsonArray.responseJSON[+this.id + 1]
+
+					// iterate through page lines to draw highlights
+					for (var line in pageRects){
+						if (pageRects.hasOwnProperty(line)){
+							deleteHighlight(line, i);
+							makeHighlight(pageRects[line], initX, endX, initY, endY, line, i);
+						}
 					}
 				}
 			})
@@ -106,50 +114,54 @@
 				if(highlightGroup){
 					if(mousedown){
 						mousedown = false;			
-						// get end coordinates
-						var endX = event.pageX-this.offsetLeft-this.offsetParent.offsetLeft;
-						var endY= event.pageY-this.offsetTop-this.offsetParent.offsetTop;
-						var pageRects = jsonArray.responseJSON[+this.id + 1]
-
-						// iterate through page lines to draw highlights
-						for (var line in pageRects){
-							if (pageRects.hasOwnProperty(line)){
-								var pointOne = scalepoint(pageRects[line][0])
-								pointOne[0] -= 25;
-								pointOne[1] -= 5;
-
-								var pointTwo = scalepoint(pageRects[line][1])
-								pointTwo[0] += 25;
-								pointTwo[1] += 5;
-
-								// fully highlight lines
-								if (fullHighlight([[initX, initY],[endX, endY]], [pointOne, pointTwo])){
-									var rect = highlightGroup.rect(pointTwo[0]-pointOne[0],pointTwo[1] - pointOne[1]).move(pointOne[0], pointOne[1]).fill('#FFFF66');
-									}
-								// draw partial highlights on lines that are not fully highlighted
-								else if (intersectRect([[initX, initY],[endX, endY]], [pointOne, pointTwo])){
-									var startHighlight, endHighlight;
-									if (initY < pointOne[1]){
-										startHighlight = pointOne[0];
-									}
-									else{
-										startHighlight =Math.max(pointOne[0], initX);
-									}
-									if (endY > pointTwo[1]){
-										endHighlight = pointTwo[0];
-									}
-									else{
-									 endHighlight = (pointTwo[0], endX);
-									}
-									var rect = highlightGroup.rect(endHighlight-startHighlight,pointTwo[1] - pointOne[1]).move(startHighlight, pointOne[1]).fill('#FFFF66');
-									}
-								}
-							}
 						}
 						highlightGroup = false;
 					}
 		
 			})
+		}
+
+	function makeHighlight(line, initX, endX, initY, endY, lineid, currentDiv){
+		var pointOne = scalepoint(line[0])
+		pointOne[0] -= 25;
+		pointOne[1] -= 5;
+
+		var pointTwo = scalepoint(line[1])
+		pointTwo[0] += 25;
+		pointTwo[1] += 5;
+
+		// fully highlight lines
+		if (fullHighlight([[initX, initY],[endX, endY]], [pointOne, pointTwo])){
+			var rect = highlightGroup.rect(Math.max(pointTwo[0]-pointOne[0]),Math.max(pointTwo[1] - pointOne[1], 0)).move(pointOne[0], pointOne[1]).fill('#FFFF66').id(currentDiv + "line" + lineid).attr("fullHighlight", true);
+			return rect;
+			}
+		// draw partial highlights on lines that are not fully highlighted
+		else if (intersectRect([[initX, initY],[endX, endY]], [pointOne, pointTwo])){
+			var startHighlight, endHighlight;
+			if (initY < pointOne[1]){
+				startHighlight = pointOne[0];
+			}
+			else{
+				startHighlight =Math.max(pointOne[0], initX);
+			}
+			if (endY > pointTwo[1]){
+				endHighlight = pointTwo[0];
+			}
+			else{
+			 endHighlight = (pointTwo[0], endX);
+			}
+			var rect = highlightGroup.rect(endHighlight-startHighlight,pointTwo[1] - pointOne[1]).move(startHighlight, pointOne[1]).fill('#FFFF66').id(currentDiv + "line" + lineid).attr("fullHighlight", false);
+			return rect;
+			}
+			return false;
+		};
+
+		function deleteHighlight(lineid, currentDiv){
+
+			var highlight = document.getElementById(currentDiv + "line" + lineid);
+			if (!!highlight){
+					highlight.remove();
+			}
 		}
 
 	// adjust point by a scaling factor, where a point is represented as a tuple
