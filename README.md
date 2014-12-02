@@ -30,12 +30,26 @@ directory for `jsPDF`, leaving it up to you to initialize all submodules
 separately from the main clone.
 
 ### Dependencies
-Install python packages with `pip install -r <path/to/requirements.txt>`.
+#### Submodules
+- [jsPDF](https://github.com/MrRio/jsPDF)
 
-Third party packages (see respective websites for installation instructions):
+In the case that you didn't perform a recursive clone, run the following: 
+  
+```
+git submodule init
+```
+
+#### Python Packages
+```
+pip install -r <path/to/requirements.txt>
+```
+
+#### Other
 
 - [OpenCV2](http://opencv.org/)
 - [Ghostscript](http://ghostscript.com/doc/current/Install.htm)
+
+See respective websites for download and installation instructions.
 
 ## How to Run
 After installing dependencies, you can run the app locally with 
