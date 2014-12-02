@@ -36,3 +36,6 @@ per PDF page. Images embedded in the text are OK!
 
 There is a sample PDF document: `tests/tryme.pdf`.
 
+## Note
+
+See the wiki for more info.
