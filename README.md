@@ -71,11 +71,11 @@ Third party packages (see respective websites for installation instructions):
 - [Ghostscript](http://ghostscript.com/doc/current/Install.htm)
 
 ### How to Run
-After installing dependencies, you can run the app locally with `python
-runserver.py`.
+After installing dependencies, you can run the app locally with 
+`python runserver.py`.
 
-For automatic server-crash recovery, install supervisord and start the server
-using `run.sh`.
+For automatic server-crash recovery, install [ supervisord
+](http://supervisord.org/) and start the server using `run.sh`.
 
 ## Testing
 ### How to Run Unit Tests
@@ -83,29 +83,25 @@ using `run.sh`.
 From within tests/cvtests, run the command `python -m unittest -v
 cv_unit_tests`.
 
-The folder 'cvtests' contains the test file and copies of source files for our
+The folder `cvtests` contains the test file and copies of source files for our
 image processing algorithms.  More specific information about which functions
 and what functionality the tests are concerned with is within
-'cv_unit_tests.py'.
+`cv_unit_tests.py`.
 
 *- Megan and Catherine*
 
 #### UI Tests:
- The unit tests that we initially submitted will not run given the changes in
- our UI desgin.We are researching automated processes for testing UI that will
- be incorporated into Iteration 2.
 
- 1. Run the app locally with `python runserver.py`
- 2. Run the individual test suites with `python tests/uitests/<suite_name>`
+1. Run the app locally with `python runserver.py`
+2. Run the individual test suites with `python tests/uitests/<suite_name>`
 
- *- Alberto and Cristian*
+ *- Alberto, Cristian, Jonathan*
 
 ## Program Structure (Step-by-step)
 1. Our web app contains the initial functionality for uploading a PDF.  The
    app's code can be found in `pdfproject/_init_.py`, with functions to handle
-   the home screen, as well as uploading.  The content/styling/javascript
-   functions for the app's pages can be found within pdfproject/templates and
-   pdfproject/static.
+   the home screen, as well as uploading.  The front-end is contained within
+   `pdfproject/{templates,static}`.
 
 2. Once the user has chosen a PDF to upload, the `upload_file()` function in
    `_init_.py` saves the file to the uploads folder on the server
