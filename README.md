@@ -13,7 +13,7 @@
 
 ## Setup
 
-## Checkout
+### Checkout
 
 The project has one submodule -- [jsPDF](https://github.com/MrRio/jsPDF).
 
