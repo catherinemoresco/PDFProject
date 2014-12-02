@@ -9,48 +9,6 @@
 - Alberto Rios
 - [ Cristian Saucedo ](https://github.com/saucedox)
 
-## Update 11/19/14: Iteration 2 Plans
-
-### TODO List
-
-#### UI
-- [x] Highlights!
-- [ ] Annotations!
-- [x] Deleting highlights and annotations!
-- [x] Some fine-looking front-end desgin!
-
-#### Server
-- [ ] Modified PDF document download!
-	+ Getting highlight data from frontend
-	+ Merging highlights and SVG edits
-- [x] Streamlined file handling!
-
-#### Image processing
-- [x] Refined image processing algorithms!
-	 + Better skew detection accuracy
-	 + Enhanced handling of noise and blacked-out margins
-- [x] Eliminate ImageMagick dependency!
-        + Require Ghostscript instead, which has a much simpler installation
-        process.
-
-#### Overall:
-- [ ] Opportunities for user correction of algorithmic failings!
-
-### Features Not Actually Included in Iteration 2
-
-Highlights work, but do not follow the detected lines of the text. Annotations
-didn't work. A function was created for PDF download, but no interface to it was
-provided, nor was opportunity for user corrections provided.
-
-The line highlighting was difficult because keeping track of dynamic boxes along
-with deleting dynamic boxes and choosing which boxes where kept according to
-event listeners was a task of unexpected complexity.
-
-Overall, the lack of these features was largely sure to an underestimation of
-their difficulty and a lack of appropriately allotted amounts of time on the
-parts of the responsible teams.
-
-
 ## Example Usage and Recommended Acceptance Tests
 It's pretty simple to use: upload your own document with the "upload" button,
   and watch it appear, processed and straightened!
