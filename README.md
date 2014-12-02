@@ -54,54 +54,6 @@ and what functionality the tests are concerned with is within
 
  *- Alberto, Cristian, Jonathan*
 
-## Program Structure (Step-by-step)
-1. Our web app contains the initial functionality for uploading a PDF.  The
-   app's code can be found in `pdfproject/_init_.py`, with functions to handle
-   the home screen, as well as uploading.  The front-end is contained within
-   `pdfproject/{templates,static}`.
-
-2. Once the user has chosen a PDF to upload, the `upload_file()` function in
-   `_init_.py` saves the file to the uploads folder on the server
-
-3. `upload_file()` then calls `processing.process()` from
-   `pdfproject/processing.py` on the PDF file to initialize image processing
-
-    1. `process()` first calls `extract.extractImages()` from
-       `pdfproject/extract.py` in order to pull images (.jpg) representing
-       each page of the PDF from the file.  These will be passed to the rest
-       of the image processing functions.
-
-    2. `process()` calls `skew.straighten()` (from `pdfproject/skew.py`) on
-       each of the images, which first uses `skew.horizontal_sums()` to help
-       calculate the probable skew angle of the input image and then
-       `skew.rotate()` to generate an image rotated at that angle.  It
-       returns a rotated image for every input image.
-
-    3. `process()` calls `getlines.getLines()` on each straightened image.
-       `getLines()` calls its helper function, `getlines.isolateLines()`
-       which contains the entire algorithm for creating a grayscale image
-       which has black where blank space should be and white where it thinks
-       there are text lines.  `getLines()` then detects the pixel
-       coordinates of the lines and returns them in a list.
-
-4. `processing.process()` gathers the lines and puts them in a dictionary,
-   mapped to their page number as a key.  The dictionary is returned as a json
-   string.
-
-5. Passing the json string back to the web app as a ....json.txt file,
-   `upload_file()` in `_init_.py` redirects to a page which corresponds to the
-   uploaded_file() function in `_init_.py`, which displays each of the processed
-   images that were returned after straightening and reads the line coordinates
-   for highlighting from the ....json.txt file.  The page is once again rendered
-   using html/css/javascript from `pdfproject/templates` and
-   `pdfproject/static`.
-
-6. Annotations are rendered as SVG objects on the page.
-
-7. The user will be able to export their annotations. We use Javascript
-   libraries, in particular [ jsPDF ](https://parall.ax/products/jspdf), to keep
-   this processing on the client side.
-
 ### Data Flow Diagram
 A data flow diagram for our backend processes is provided below.
 
