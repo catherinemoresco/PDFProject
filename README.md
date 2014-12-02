@@ -54,20 +54,6 @@ and what functionality the tests are concerned with is within
 
  *- Alberto, Cristian, Jonathan*
 
-### Data Flow Diagram
-A data flow diagram for our backend processes is provided below.
-
-![](readme-assets/dataflowdiagram.jpg)
-
-Our architecture resembles a hybrid between a pipe-and-filter and data-centered
-architecture. A pipe-and-filter architecture makes sense for our task, because
-image processing consists mostly of passing the PDF and image data through a
-series of filter that modifies said data and extracts needed information.
-
-Our decision to implement the project as a web application makes writing to and
-reading from memory a necessity; it is the method most suited to passing file
-data from one app route to the next.
-
 ## Evolution
 One of the major ways in which our current implementation differs from our
 initial design is the architecture and design portion of the backend. We
