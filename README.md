@@ -154,9 +154,10 @@ Our architecture resembles a hybrid between a pipe-and-filter and data-centered
 architecture. A pipe-and-filter architecture makes sense for our task, because
 image processing consists mostly of passing the PDF and image data through a
 series of filter that modifies said data and extracts needed information.
-Writing to and reading from memory is necessitated by our choice to implement
-our software as a web application; it is the method most suited to passing file
-data from one app route to the next. 
+
+Our decision to implement the project as a web application makes writing to and
+reading from memory a necessity; it is the method most suited to passing file
+data from one app route to the next.
 
 ### File Structure
 
@@ -199,10 +200,15 @@ data from one app route to the next.
 ```
 
 ## Who Did What
+
 ### Alberto: 
-In charge of UI design. Created the HTML displayed, worked on uploading files to
-server, passing files to CV modules, displaying the resulting files, drawing SVG
-highlights.
+- Front-end
+  - Drafted HTML
+  - Contributed to front-end functionality:
+    - File-uploading
+    - Passing files to CV modules
+    - Displaying the resulting files
+    - Rendering SVG highlights
 
 ### Catherine & Megan: 
 We were in charge of the Computer Vision aspect of the project, which had
@@ -310,16 +316,20 @@ to use a server-side (inevitably Python-based) library in addition or instead of
 jsPDF, which despite its novelty is still feature-limited and poorly documented.
 
 ### Jonathan Jin
-Took on primary QA and testing responsilities, in particular for the front-end
-integration test suite. Instigated the migration from the initial ad-hoc
-Javascript-based "test suite" -- using `console.log`, boolean equality
-operations, and a "test results" string -- towards an automated integration test
-suite using Python's `unittest`, [Selenium](http://www.seleniumhq.org/), and the
-[Chrome web driver](https://code.google.com/p/selenium/wiki/ChromeDriver).
+- QA and testing
+  - Front-end integration test suite
+    - Instigated the migration from the initial ad-hoc Javascript-based "test
+    suite" -- using `console.log`, boolean equality operations, and a "test
+    results" string -- towards an automated integration test suite using
+    Python's `unittest`, [Selenium](http://www.seleniumhq.org/), and the [Chrome
+    web driver](https://code.google.com/p/selenium/wiki/ChromeDriver).
+- Documentation
+  - Ensured clarity and concision in written technical and design explanations
 
 ###Cristian Saucedo
-Main framework of UI testing and UI elements, such as annotations and
-highlighting.
+- Main framework of UI testing and UI elements
+  - Annotations
+  - Highlighting
 
 ## Evolution
 One of the major ways in which our current implementation differs from our
