@@ -1,6 +1,6 @@
 # The PDF Project 
 
-*For Software Construction Fall 2014*
+*For [ University of Chicago CMSC 22001: Software Construction Fall 2014 ](http://people.cs.uchicago.edu/~shanlu/teaching/22001_fa14/index.html)*
 
 ## Team Members
 
