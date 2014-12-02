@@ -116,46 +116,6 @@ Our decision to implement the project as a web application makes writing to and
 reading from memory a necessity; it is the method most suited to passing file
 data from one app route to the next.
 
-### File Structure
-
-```
-/pdfproject
-	/pdfproject						
-		/static
-			/uploads
-			/css
-				/images
-					[image assets]
-				/svg
-					[svg image assets]
-				[css and scss files]	
-			/js
-				[JavaScript files]  		<- front-end scripts
-		/templates
-			[HTML templates for page rendering]
-		[image processing modules]			<- image processing scripts
-		__init__.py 						<- main server file
-	/tests
-		/cvtests
-			/testimg
-				[images used for testing]
-			[image processing modules]
-			cv_unit_tests.py 				<- image processing testing script
-		/uitests
-			annotation_tests.py 			<- UI unit testing scripts
-			highlight_tests.py
-			upload_tests.py
-	/readme-assets
-		[images used in readme file]
-	.gitignore
-	README.md 								<- readme (YOU ARE HERE)
-	pdfproject.log
-	requirements.txt 						<- requirements
-	run.sh
-	runserver.py 							<- script to run locally
-	supervisord.conf
-```
-
 ## Evolution
 One of the major ways in which our current implementation differs from our
 initial design is the architecture and design portion of the backend. We
