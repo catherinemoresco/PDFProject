@@ -9,7 +9,7 @@
 - [ Megan Barnes ](https://github.com/meganbarnes)
 - [ Michael Zhao ](https://github.com/ucmz)
 - Alberto Rios
-- [ Cristian Saucedo ](https://github.com/saucedox)
+- [ Cristian Saucedo ](https://github.com/saucedoc)
 
 ## Setup
 
