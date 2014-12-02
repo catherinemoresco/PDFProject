@@ -36,23 +36,3 @@ per PDF page. Images embedded in the text are OK!
 
 There is a sample PDF document: `tests/tryme.pdf`.
 
-## Testing
-### How to Run Unit Tests
-#### Image Processing Tests:
-From within tests/cvtests, run the command `python -m unittest -v
-cv_unit_tests`.
-
-The folder `cvtests` contains the test file and copies of source files for our
-image processing algorithms.  More specific information about which functions
-and what functionality the tests are concerned with is within
-`cv_unit_tests.py`.
-
-*- Megan and Catherine*
-
-#### UI Tests:
-
-1. Run the app locally with `python runserver.py`
-2. Run the individual test suites with `python tests/uitests/<suite_name>`
-
- *- Alberto, Cristian, Jonathan*
-
