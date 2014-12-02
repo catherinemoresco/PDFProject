@@ -37,7 +37,7 @@ Third party packages (see respective websites for installation instructions):
 - [OpenCV2](http://opencv.org/)
 - [Ghostscript](http://ghostscript.com/doc/current/Install.htm)
 
-### How to Run
+## How to Run
 After installing dependencies, you can run the app locally with 
 `python runserver.py`.
 
