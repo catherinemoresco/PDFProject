@@ -34,7 +34,6 @@ per PDF page. Images embedded in the text are OK!
 
 There is a sample PDF document: `tests/tryme.pdf`.
 
-
 ## Testing
 ### How to Run Unit Tests
 #### Image Processing Tests:
