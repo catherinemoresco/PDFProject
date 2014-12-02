@@ -12,6 +12,23 @@
 - [ Cristian Saucedo ](https://github.com/saucedox)
 
 ## Setup
+
+## Checkout
+
+The project has one submodule -- [jsPDF](https://github.com/MrRio/jsPDF).
+
+To properly clone this repository -- that is, such that the clone contains the
+contents of the [jsPDF](https://github.com/MrRio/jsPDF) repository at the
+requested commit -- please use the following command:
+
+```
+git clone --recursive <repo-path>
+```
+
+This is opposed to simply using `git clone`, which would simply create an empty
+directory for `jsPDF`, leaving it up to you to initialize all submodules
+separately from the main clone.
+
 ### Dependencies
 Install python packages with `pip install -r <path/to/requirements.txt>`.
 
