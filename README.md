@@ -9,16 +9,6 @@
 - Alberto Rios
 - [ Cristian Saucedo ](https://github.com/saucedox)
 
-## Example Usage and Recommended Acceptance Tests
-It's pretty simple to use: upload your own document with the "upload" button,
-  and watch it appear, processed and straightened!
-
-The best images are ones that are well formed, and have only one page of text
-per PDF page. Images embedded in the text are OK!
-
-There is a sample PDF document: `tests/tryme.pdf`.
-
-
 ## Setup
 ### Dependencies
 Install python packages with `pip install -r <path/to/requirements.txt>`.
@@ -34,6 +24,16 @@ After installing dependencies, you can run the app locally with
 
 For automatic server-crash recovery, install [ supervisord
 ](http://supervisord.org/) and start the server using `run.sh`.
+
+## Example Usage and Recommended Acceptance Tests
+It's pretty simple to use: upload your own document with the "upload" button,
+  and watch it appear, processed and straightened!
+
+The best images are ones that are well formed, and have only one page of text
+per PDF page. Images embedded in the text are OK!
+
+There is a sample PDF document: `tests/tryme.pdf`.
+
 
 ## Testing
 ### How to Run Unit Tests
