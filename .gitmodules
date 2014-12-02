@@ -1,0 +1,3 @@
+[submodule "pdfproject/static/js/jsPDF"]
+	path = pdfproject/static/js/jsPDF
+	url = https://github.com/MrRio/jsPDF.git
