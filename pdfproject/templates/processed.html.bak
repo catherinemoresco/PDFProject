@@ -24,8 +24,8 @@
 			{% endfor %}
 		{% endblock %}
 	</div>
-<!-- 	<button onclick="export_to_pdf('datauri')" style="position:fixed;bottom:1em;left:1em">Export</button>
- -->
+	<button onclick="export_to_pdf('datauri')" style="position:fixed;bottom:1em;left:1em">Export</button>
+
 	<script type="text/javascript">
 
 // get JSON data
@@ -61,7 +61,7 @@
 
 // checks if two rectangles intersect
 	function intersectRect(r1, r2){
-		if ((r1[0][0] > r2[1][0]) || (r2[0][0]) > r1[1][0]){
+		if ((r1[0][0] > r2[1][0]) || (r2[0][0]) > r1[0][0]){
 			return false;
 		}
 		if ((r1[1][1] < r2[0][1]) || (r2[1][1]) < r1[0][1]){
@@ -77,14 +77,11 @@
 		var initX,initY,mousedown,dynamicRect, highlightGroup;
 		var currHighlightID = 0;
 		var scalingFactor;
-		var imagePath = [];
 
 		for(var i=0;i<divLen;i++){
 			divID = divs[i].id;
 			divDraws[i] = SVG(divID);
-			var image_item = new Array();
 			var fpath = '/'+divs[i].id;
-			imagePath[i] = fpath;
 			var image = divDraws[i].image(fpath);
 			divID = i;
 			divs[i].id = divID;
@@ -145,6 +142,7 @@
 		if (fullHighlight([[initX, initY],[endX, endY]], [pointOne, pointTwo])){
 			var rect = highlightGroup.rect(Math.max(pointTwo[0]-pointOne[0]),Math.max(pointTwo[1] - pointOne[1], 0)).move(pointOne[0], pointOne[1]).fill('#FFFF66').id(currentDiv + "g" + highlightGroup + "line" + lineid).attr("fullHighlight", true)
 
+			console.log(rect.parent)
 			rect.on("dblclick", function(){this.parent.remove()})
 			return rect;
 			}
@@ -161,7 +159,7 @@
 				endHighlight = pointTwo[0];
 			}
 			else{
-			 endHighlight = (pointTwo[0], Math.min(endX, pointTwo[0]));
+			 endHighlight = (pointTwo[0], endX);
 			}
 			var rect = highlightGroup.rect(Math.max(endHighlight-startHighlight, 0), Math.max(pointTwo[1] - pointOne[1], 0)).move(startHighlight, pointOne[1]).fill('#FFFF66').id(currentDiv + "g" + highlightGroup + "line" + lineid).attr("fullHighlight", false);
 			return rect;
@@ -288,7 +286,7 @@
 						'image/jpeg'
 					);
 				*/
-				//pageimage = $($('.pdf-page svg')[pg]).find('image');
+				pageimage = $($('.pdf-page svg')[pg]).find('image');
 				pageimageURL = pageimage.attr('href');
 				pageimageWidth = parseInt(pageimage.attr('width'));
 				pageimageHeight = parseInt(pageimage.attr('height'));
@@ -304,8 +302,8 @@
 
 				// Tell jsPDF to draw each rectangle
 				for(k = 0; k < rect_list.length; k++) {
-					doc.setFillColor(rect_list[k]["fillColor_decimal"][0]*.25, rect_list[k]["fillColor_decimal"][1]*.25, rect_list[k]["fillColor_decimal"][2], rect_list[k]["opacity"]);
-					//doc.setFillColor(rect_list[k]["fillColor_decimal"][0], rect_list[k]["fillColor_decimal"][1], rect_list[k]["fillColor_decimal"][2]);
+					//doc.setFillColor(rect_list[k]["fillColor_decimal"][0], rect_list[k]["fillColor_decimal"][1], rect_list[k]["fillColor_decimal"][2], rect_list[k]["opacity"]);
+					doc.setFillColor(rect_list[k]["fillColor_decimal"][0], rect_list[k]["fillColor_decimal"][1], rect_list[k]["fillColor_decimal"][2]);
 					console.log("pos_x"); console.log(rect_list[k]["pos_x"]);
 					doc.rect(rect_list[k]["pos_x"], rect_list[k]["pos_y"], rect_list[k]["width"], rect_list[k]["height"], "F");
 					// debug:
@@ -332,66 +330,50 @@
 			for(pg = 0; pg < divDraws.length; pg++) { // for each page in the document
 				// rects = rect elements on the current page of the PDF document
 				rects = $($('.pdf-page svg')[pg]).find('rect');
-				//console.log(rects);
+
 				rect_list = []; // list of rects we need to draw in the PDF
 
 				rects.each(function(ix,el){
 					var rect_list_item = new Array();
-					//console.log("pos x");
-					//console.log($(this).attr('x'));
-					/*
 					rect_list_item["pos_x"] = px_to_mm(parseInt( $(this).attr('x') ));
 					rect_list_item["pox_y"] = px_to_mm(parseInt( $(this).attr('y') ));
 					rect_list_item["width"] = px_to_mm(parseInt( $(this).attr('width') ));
 					rect_list_item["height"] = px_to_mm(parseInt( $(this).attr('height') ));
-					*/
-					rect_list_item["pos_x"] = $(this).attr('x');
-					rect_list_item["pox_y"] = $(this).attr('y');
-					rect_list_item["width"] = $(this).attr('width');
-					rect_list_item["height"] = $(this).attr('height');
 					rect_list_item["fillColor"] = $(this).attr('fill');
 					rect_list_item["fillColor_decimal"] = hexstring_to_numlist(rect_list_item["fillColor"]);
 					if( !!$(this).attr('opacity') )
 						rect_list_item["opacity"] = parseInt( $(this).attr('opacity') );
 					if(!rect_list_item["opacity"] && !!$(this).css('opacity') )
 						rect_list_item["opacity"] = parseInt( $(this).css('opacity') );
-					//console.log(rect_list_item["pos_x"]);
 					rect_list.push(rect_list_item);
-					//console.log("Opacity of rect:");
-					//console.log(rect_list_item["opacity"]);
+					console.log("Opacity of rect:");
+					console.log(rect_list_item["opacity"]);
 				});
-				//console.log("rect_list is now:");
-				//console.log(rect_list);
+				console.log("rect_list is now:");
+				console.log(rect_list);
 
 				// Import the current document (as JPEG) as the base layer.
 				// addImage(imageData as raw JPEG data or base64 data-URI, format, x, y, w, h)
-				//pageimage = $($('.pdf-page svg')[pg]).find('image');
-				pageimageURL = imagePath[pg];
-				pageimageWidth = divs[pg].style.width.split['p'][0];
-				pageimageHeight = divs[pg].style.height.split['p'][0];
+				pageimage = $($('.pdf-page svg')[pg]).find('image');
+				pageimageURL = pageimage.attr('href');
+				pageimageWidth = parseInt(pageimage.attr('width'));
+				pageimageHeight = parseInt(pageimage.attr('height'));
 				pageimageX = 0;
 				pageimageY = 0;
 
-				//doc.image(pageimageURL, pageimageX, pageimageY);
+				doc.image(pageimageURL, pageimageX, pageimageY);
 
 
 				// Draw each rectangle
 				for(k = 0; k < rect_list.length; k++) {
 					console.log("drawing a rect"); console.log(rect_list[k]);
-					
-					doc.rect(rect_list[k]["pos_x"]*.25, rect_list[k]["pos_y"]*.25, rect_list[k]["width"], rect_list[k]["height"])
-					//doc.rect(0, 0, rect_list[k]["width"], rect_list[k]["height"])
+					doc.rect(rect_list[k]["pos_x"], rect_list[k]["pos_y"], rect_list[k]["width"], rect_list[k]["height"])
 						.fillOpacity(rect_list[k]["opacity"])
 						.fill(rect_list[k]["fillColor"]);
 				} // for each rectangle
 
 				// Add a new page in the generated PDF
-				//doc.rect(0,0,400,400).fillOpacity(1).fill("#ff0");
-				//doc.rect(0,0,200,400).fillOpacity(1).fill("gray");
-				if( pg != divDraws.length-1){
-					doc.addPage();
-				}
-				
+				doc.addPage();
 			} // for each page
 
 			doc.end();

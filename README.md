@@ -44,8 +44,9 @@ There is a sample PDF document: `tests/tryme.pdf`.
 ## Avoid...
 ...inputs that have very curved text lines (mostly a problem with scans of thick textbooks
 as far as text near the textbook spine).  Also, we do not expect inputs with a lot of
-background noise; solid backgrounds are best.  Please do not upload PDFs longer than 50
-pages.
+background noise; solid backgrounds are best.  PDFs with differently oriented pages are not
+expected either (one page is rotated 90 degrees, another is rotated 0 degrees).  
+Please do not upload PDFs longer than 50 pages.
 
 
 ## Advanced Usage
