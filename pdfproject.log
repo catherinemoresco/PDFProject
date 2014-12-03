@@ -1353,3 +1353,48 @@ cat:
 cat: /tmp/flask-project.pid: No such file or directory
 
 2014-12-03 00:37:05,636 CRIT uncaptured python exception, closing channel <POutputDispatcher at 139757644572864 for <Subprocess at 139757644572360 with name pdfproject-reloader in state RUNNING> (stderr)> (<type 'exceptions.IOError'>:[Errno 5] Input/output error [/usr/local/lib/python2.7/dist-packages/supervisor/supervisord.py|runforever|235] [/usr/local/lib/python2.7/dist-packages/supervisor/dispatchers.py|handle_read_event|231] [/usr/local/lib/python2.7/dist-packages/supervisor/dispatchers.py|record_output|165] [/usr/local/lib/python2.7/dist-packages/supervisor/dispatchers.py|_log|146] [/usr/local/lib/python2.7/dist-packages/supervisor/loggers.py|log|293] [/usr/local/lib/python2.7/dist-packages/supervisor/loggers.py|emit|86] [/usr/local/lib/python2.7/dist-packages/supervisor/loggers.py|handleError|90] [/usr/lib/python2.7/traceback.py|print_exception|124] [/usr/lib/python2.7/traceback.py|_print|13])
+2014-12-03 03:54:33,351 CRIT Supervisor running as root (no user in config file)
+2014-12-03 03:54:33,355 INFO supervisord started with pid 8361
+2014-12-03 03:54:34,369 INFO spawned: 'pdfproject-reloader' with pid 8364
+2014-12-03 03:54:34,383 INFO spawned: 'pdfproject' with pid 8365
+2014-12-03 03:54:34,531 DEBG 'pdfproject' stderr output:
+
+Error: Already running on PID 25514 (or pid file '/tmp/flask-project.pid' is stale)
+
+
+2014-12-03 03:54:34,545 DEBG fd 9 closed, stopped monitoring <POutputDispatcher at 140267458001808 for <Subprocess at 140267458000368 with name pdfproject in state STARTING> (stdout)>
+2014-12-03 03:54:34,546 DEBG fd 13 closed, stopped monitoring <POutputDispatcher at 140267458001880 for <Subprocess at 140267458000368 with name pdfproject in state STARTING> (stderr)>
+2014-12-03 03:54:34,546 INFO exited: pdfproject (exit status 1; not expected)
+2014-12-03 03:54:34,546 DEBG received SIGCLD indicating a child quit
+2014-12-03 03:54:35,548 INFO success: pdfproject-reloader entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2014-12-03 03:54:35,561 INFO spawned: 'pdfproject' with pid 8375
+2014-12-03 03:54:35,702 DEBG 'pdfproject' stderr output:
+
+Error: Already running on PID 25514 (or pid file '/tmp/flask-project.pid' is stale)
+
+
+2014-12-03 03:54:35,715 DEBG fd 9 closed, stopped monitoring <POutputDispatcher at 140267458001808 for <Subprocess at 140267458000368 with name pdfproject in state STARTING> (stdout)>
+2014-12-03 03:54:35,715 DEBG fd 13 closed, stopped monitoring <POutputDispatcher at 140267458000944 for <Subprocess at 140267458000368 with name pdfproject in state STARTING> (stderr)>
+2014-12-03 03:54:35,716 INFO exited: pdfproject (exit status 1; not expected)
+2014-12-03 03:54:35,716 DEBG received SIGCLD indicating a child quit
+2014-12-03 03:54:37,725 INFO spawned: 'pdfproject' with pid 8380
+2014-12-03 03:54:37,868 DEBG 'pdfproject' stderr output:
+
+Error: Already running on PID 25514 (or pid file '/tmp/flask-project.pid' is stale)
+
+
+2014-12-03 03:54:37,880 DEBG fd 9 closed, stopped monitoring <POutputDispatcher at 140267458001808 for <Subprocess at 140267458000368 with name pdfproject in state STARTING> (stdout)>
+2014-12-03 03:54:37,881 DEBG fd 13 closed, stopped monitoring <POutputDispatcher at 140267458001880 for <Subprocess at 140267458000368 with name pdfproject in state STARTING> (stderr)>
+2014-12-03 03:54:37,881 INFO exited: pdfproject (exit status 1; not expected)
+2014-12-03 03:54:37,882 DEBG received SIGCLD indicating a child quit
+2014-12-03 03:54:40,899 INFO spawned: 'pdfproject' with pid 8385
+2014-12-03 03:54:41,042 DEBG 'pdfproject' stderr output:
+
+Error: Already running on PID 25514 (or pid file '/tmp/flask-project.pid' is stale)
+
+
+2014-12-03 03:54:41,055 DEBG fd 9 closed, stopped monitoring <POutputDispatcher at 140267458000944 for <Subprocess at 140267458000368 with name pdfproject in state STARTING> (stdout)>
+2014-12-03 03:54:41,055 DEBG fd 13 closed, stopped monitoring <POutputDispatcher at 140267458002168 for <Subprocess at 140267458000368 with name pdfproject in state STARTING> (stderr)>
+2014-12-03 03:54:41,056 INFO exited: pdfproject (exit status 1; not expected)
+2014-12-03 03:54:41,056 DEBG received SIGCLD indicating a child quit
+2014-12-03 03:54:42,057 INFO gave up: pdfproject entered FATAL state, too many start retries too quickly
