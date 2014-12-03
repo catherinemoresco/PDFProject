@@ -45,15 +45,15 @@ There is a sample PDF document: `tests/tryme.pdf`.
 - Inputs that have extremely curved lines of text (mostly a problem with scans of thick textbooks
 as far as text near the textbook spine). 
 
-- Excessively noisy images and images with poor contrast (mostly a problem with photographs of documents than scanned documents).
+- Excessively noisy images and images with poor contrast (mostly a problem with photographs of documents rather than scanned documents).
 
 - Documents where pages are oriented differently. We can handle your document if *all* the pages are upside down or *all* the pages are sideways, but there will be problems if they do not all have the same orientation.
 
 - Long documents. Our software was meant to be used for documents in the 0-50 page range. PDFs longer than 50 pages may have long processing times. 
 
-- Accessing the app on a mobile device. This website is not meant to be responsive.  That means it is not meant for use on mobile browsers or tiny browser windows.
+- Accessing the app on a mobile device. This website is not meant to be responsive.  It is only optimized for viewing on a non-mobile device in a reasonably-sized browser window.
 
-- Large amounts of traffic. Scalability was not made a priority for the purposes of this project; therefore, it is not incredibly scalable. Pages may take a long time to load if multiple people are accessing it on the same server. Please be patient if you are doing acceptance tests on our server; it is not the most high-powered piece of machinery.
+- High traffic. Scalability was not made a priority for the purposes of this project; therefore, it is not incredibly scalable. Pages may take a long time to load if multiple people are accessing it on the same server. Please be patient if you are doing acceptance tests on our server; it is not the most high-powered piece of machinery.
 
 ## Advanced Usage
 
