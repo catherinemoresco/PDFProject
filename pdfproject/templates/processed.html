@@ -5,9 +5,6 @@
 		{% assets "scss_read" %}
 		<link rel="stylesheet" type="text/css" href="{{ ASSET_URL }}"/>	
 		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-<!--
-		<script type="text/javascript" src="{{ url_for('static', filename='js/rgbcolor.js') }}"></script>
--->
 		<script type="text/javascript" src="{{ url_for('static', filename='js/svg.min.js') }}"></script>
 <!--
 		<script type="text/javascript" src="{{ url_for('static', filename='js/jsPDF/dist/jspdf.min.js') }}"></script>
@@ -58,10 +55,9 @@
 			{% endfor %}
 
 	</div>
+ 	<button onclick="export_to_pdf()" style="position:fixed;bottom:1em;left:1em">Export</button>
 
 	{%endblock%}
-
- 	<button onclick="export_to_pdf('datauri')" style="position:fixed;bottom:1em;left:1em">Export</button>
 
 	<script type="text/javascript">
 
@@ -278,7 +274,7 @@
 			c = c.map(function(component){ return parseInt(component,16) });
 			return c;
 		}
-				/**
+		/**
  		* Convert an image 
  		* to a base64 string
  		* @param  {String}   url         
@@ -311,100 +307,21 @@
 			PPI = 72;
 			return px / page_px_measurement * PPI * page_inch_measurement;
 		}
-
-
-		function NOT_export_to_pdf(method) {
-			method = typeof method !== 'undefined' ? method : "datauristring";
-
-			// Create a new jsPDF document to hold our annotations
-			var doc = new jsPDF("p", "mm", [216,279]);
-
-			var k, pg;
-			for(pg = 0; pg < divDraws.length; pg++) { // for each page in the document
-				// Get all the rectangular highlights in the current page,
-				// lineDraws[page number][lineNumber] = rect
-				// Thus lineDraws[page number] = [rect]
-				// TODO: Add more annotation types here once supported
-				// rects = divDraws[pg].children().filter(function(el){return el.type=="rect"});
-				//all_els = divDraws[pg].children()
-				// The first element of all_els is the <image> element representing the PDF page.
-				// The second element is a <g> whose children are [<g>s whose children are <rect>s]
-				// rects = divDraws[pg].children().filter(function(el){return el.type=="g"});
-
-				// Let's use jQuery instead
-				// rects = rect elements on the current page of the PDF document
-				rects = $($('.pdf-page svg')[pg]).find('rect');
-
-				rect_list = []; // list of rects we need to draw in the PDF
-
-				rects.each(function(ix,el){
-					var rect_list_item = new Array();
-					rect_list_item["pos_x"] = px_to_mm(parseInt( $(this).attr('x') ));
-					rect_list_item["pox_y"] = px_to_mm(parseInt( $(this).attr('y') ));
-					rect_list_item["width"] = px_to_mm(parseInt( $(this).attr('width') ));
-					rect_list_item["height"] = px_to_mm(parseInt( $(this).attr('height') ));
-					rect_list_item["fillColor_decimal"] = hexstring_to_numlist($(this).attr('fill'));
-					if( !!$(this).attr('opacity') )
-						rect_list_item["opacity"] = parseInt( $(this).attr('opacity') );
-					if(!rect_list_item["opacity"] && !!$(this).css('opacity') )
-						rect_list_item["opacity"] = parseInt( $(this).css('opacity') );
-					rect_list.push(rect_list_item);
-					console.log("Opacity of rect:");
-					console.log(rect_list_item["opacity"]);
-				});
-				console.log("rect_list is now:");
-				console.log(rect_list);
-
-				// Import the current document (as JPEG) as the base layer.
-				// addImage(imageData as raw JPEG data or base64 data-URI, format, x, y, w, h)
-				/*
-					pageimageURL = divDraws[pg].node.children[0].href.baseVal;
-					pageimageWidth = divDraws[pg].node.children[0].width.baseVal.value;
-					pageimageHeight = divDraws[pg].node.children[0].height.baseVal.value;
-					pageimageX = 0;
-					pageimageY = 0;
-					convertImgToBase64(pageimageURL,
-						function(img){
-							doc.addImage(img, 'JPEG', 0, 0, px_to_mm(pageimageWidth), px_to_mm(pageimageHeight));
-						},
-						'image/jpeg'
-					);
-				*/
-				//pageimage = $($('.pdf-page svg')[pg]).find('image');
-				pageimageURL = pageimage.attr('href');
-				pageimageWidth = parseInt(pageimage.attr('width'));
-				pageimageHeight = parseInt(pageimage.attr('height'));
-				pageimageX = 0;
-				pageimageY = 0;
-				convertImgToBase64(pageimageURL,
-					function(img){
-						doc.addImage(img, 'JPEG', 0, 0, px_to_mm(pageimageWidth), px_to_mm(pageimageHeight));
-					},
-					'image/jpeg'
-				);
-
-
-				// Tell jsPDF to draw each rectangle
-				for(k = 0; k < rect_list.length; k++) {
-					doc.setFillColor(rect_list[k]["fillColor_decimal"][0]*.25, rect_list[k]["fillColor_decimal"][1]*.25, rect_list[k]["fillColor_decimal"][2], rect_list[k]["opacity"]);
-					//doc.setFillColor(rect_list[k]["fillColor_decimal"][0], rect_list[k]["fillColor_decimal"][1], rect_list[k]["fillColor_decimal"][2]);
-					console.log("pos_x"); console.log(rect_list[k]["pos_x"]);
-					doc.rect(rect_list[k]["pos_x"], rect_list[k]["pos_y"], rect_list[k]["width"], rect_list[k]["height"], "F");
-					// debug:
-						//doc.setFillColor(0,0,0);
-						//doc.rect(0,k * 120,100,100, "F");
-				} // for each rectangle
-
-				// Add a new page in the generated PDF
-				doc.addPage();
-			} // for each page
-			return doc.output(method);
-		} // function export_to_pdf
-
-
+/*		// https://stackoverflow.com/questions/22172604/convert-image-url-to-base64
+		// Usage: var base64 = getBase64Image($("#imageid"));
+		function getBase64Image(img) {
+			var canvas = document.createElement("canvas");
+			canvas.width = img.width;
+			canvas.height = img.height;
+			var ctx = canvas.getContext("2d");
+			ctx.drawImage(img, 0, 0);
+			var dataURL = canvas.toDataURL("image/jpg");
+			return dataURL.replace(/^data:image\/(png|jpg);base64,/, "");
+		}
+*/
 
 		function export_to_pdf(method) {
-			method = typeof method !== 'undefined' ? method : "datauristring";
+			method = typeof method !== 'undefined' ? method : "saveas";
 
 			// Create a new PDFKit document to hold our annotations
 			var doc = new PDFDocument({layout: 'portrait', size: [72*8.5, 72*11.0]});
@@ -427,24 +344,21 @@
 					rect_list_item["pos_x"] = px_to_ppts( $(this).attr('x'), page_px_width, page_inch_width );
 					rect_list_item["pos_y"] = px_to_ppts( $(this).attr('y'), page_px_height, page_inch_height );
 					rect_list_item["width"] = px_to_ppts( $(this).attr('width'), page_px_width, page_inch_width );
-					rect_list_item["height"] = px_to_ppts( $(this).attr('height'), page_px_height, page_inch_height);
+					rect_list_item["height"] = px_to_ppts( $(this).attr('height'), page_px_height, page_inch_height );
 					rect_list_item["fillColor"] = $(this).attr('fill');
 					rect_list_item["fillColor_decimal"] = hexstring_to_numlist(rect_list_item["fillColor"]);
 					if( !!$(this).attr('opacity') )
 						rect_list_item["opacity"] = parseInt( $(this).attr('opacity') );
 					if(!rect_list_item["opacity"] && !!$(this).css('opacity') )
 						rect_list_item["opacity"] = parseInt( $(this).css('opacity') );
-					//console.log(rect_list_item["pos_x"]);
 					rect_list.push(rect_list_item);
-					console.log("Y IS"); console.log(rect_list_item["pos_y"]);
 					//console.log("Opacity of rect:");
 					//console.log(rect_list_item["opacity"]);
 				});
 				//console.log("rect_list is now:");
 				//console.log(rect_list);
 
-				// Import the current document (as JPEG) as the base layer.
-				// addImage(imageData as raw JPEG data or base64 data-URI, format, x, y, w, h)
+				// Import the current document (as JPEG) as the base layer of the exported file.
 				//pageimage = $($('.pdf-page svg')[pg]).find('image');
 				pageimageURL = imagePath[pg];
 				console.log(pageimageURL);
@@ -453,10 +367,14 @@
 				pageimageX = 0;
 				pageimageY = 0;
 				console.log("Width " + pageimageWidth + "\nHeight " + pageimageHeight + "\n(x,y) " + pageimageX + "," + pageimageY);
-				doc.image(pageimageURL, pageimageX, pageimageY);
+				//doc.image(pageimageURL, pageimageX, pageimageY);
+//				doc.image(new Buffer(image.replace('data:image/jpg;base64,',''), 'base64'), pageimageX, pageimageY);
 
+convertImgToBase64(pageimageURL, function(img){
+	doc.image(new Buffer(img.replace('data:image/jpg;base64,',''), 'base64'), pageimageX, pageimageY);
+}, "image/jpg");
 
-				// Draw each rectangle
+				// Draw each rectangular highlight.
 				for(k = 0; k < rect_list.length; k++) {
 					console.log("drawing a rect"); console.log(rect_list[k]);
 					doc.rect(rect_list[k]["pos_x"], rect_list[k]["pos_y"], rect_list[k]["width"], rect_list[k]["height"])
@@ -465,19 +383,21 @@
 				} // for each rectangle
 
 				// Add a new page in the generated PDF
-				//doc.rect(0,0,400,400).fillOpacity(1).fill("#ff0");
-				//doc.rect(0,0,200,400).fillOpacity(1).fill("gray");
-				if( pg >= divDraws.length-1){
+				if(pg >= divDraws.length-1) {
 					doc.addPage();
 				}
-				
+
 			} // for each page
 
 			doc.end();
 			stream.on('finish', function(){
-				url = stream.toBlobURL('application/pdf');
-				//window.location = url;
-				saveAs(stream.toBlob(), "export.pdf");
+				if(method == 'window') {
+					url = stream.toBlobURL('application/pdf');
+					window.location = url;
+				}
+				else if(method == 'saveas') {
+					saveAs(stream.toBlob(), "export.pdf");
+				}
 			});
 		} // function export_to_pdf
 
