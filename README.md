@@ -52,6 +52,8 @@ Please do not upload PDFs longer than 50 pages.
 This website is not meant to be responsive.  That means it is not meant for use on mobile
 browsers or tiny browser windows.
 
+Also, scalability was not a priority for this project; therefore, it is not incredibly scalable. Pages may take a long time to load; please be patient if you are doing acceptance tests on our server, as it is a somewhat antiquated (yet still lovable) piece of machinery.
+
 ## Advanced Usage
 
 ### Checkout
