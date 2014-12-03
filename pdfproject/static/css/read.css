@@ -1,17 +1,67 @@
 
 body {
-	min-width: 1024px;
-	height: auto;
-    margin-top: 0;
-	margin-bottom:0;
-	background: #A8A29E;
-}
-.pdf-page {
-	width:auto;
-	height:auto;
-	margin: 10px;
-	box-shadow: 0 0 10px #0D161D;
-	background-color: white;
-	margin-left: auto;
-	margin-right: auto;
-}
+  margin: 0;
+  background-color: #A8A29E; }
+
+  body div {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none; }
+
+    svg {
+      mix-blend-mode: multiply; }
+
+      .page {
+        min-width: 300px; }
+
+        .pdf-page {
+          background-size: contain;
+          background-repeat: no-repeat;
+          background-position: center center;
+          margin: 0 auto;
+          box-shadow: 0 0 10px #0D161D;
+          background-color: white; }
+
+          .pdf-pages {
+            overflow: visible;
+            background: #A8A29E;
+            padding: 5px;
+            width: 100vw; }
+
+            .nav {
+              width: 100vw;
+              min-height: 30px;
+              position: fixed;
+              top: 0;
+              background-color: #0D161D;
+              box-shadow: 0px 0px 10px #0D161D;
+              color: white;
+              padding: 10px;
+              padding-left: 30px; }
+
+              .nav-spacer {
+                width: 100vw;
+                height: 75px; }
+
+                .site-name {
+                  width: 33%;
+                  margin: 0;
+                  display: inline-block; }
+
+                  .highlight-mode-buttons {
+                    position: absolute;
+                    right: 75px;
+                    top: 15px; }
+
+                    .svg-button {
+                      display: inline-block;
+                      margin-left: 15px;
+                      cursor: pointer; }
+                      .svg-button svg {
+                        fill: white; }
+
+.svg-button.lines svg {
+  fill: #D98C3C; }

@@ -17,13 +17,42 @@
 		<script type="text/javascript" src="{{ url_for('static', filename='js/blob-stream.js') }}"></script>
 
 		{% endassets %}	
-	<div class=page>
-		{% block body %}
+	{% block body %}
+	<div class="page">
+		<div class="nav">
+			<div class="site-name"><h1>Scannd</h1></div>
+			<div class="highlight-mode-buttons">
+				<div class="svg-button lines">
+
+					<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+						 width="30px" height="30px" viewBox="0 0 16 16" enable-background="new 0 0 16 16" xml:space="preserve">
+					<g>
+						<path d="M14,0H2C1.448,0,1,0.448,1,1v14c0,0.552,0.448,1,1,1h12c0.552,0,1-0.448,1-1V1C15,0.448,14.552,0,14,0z M14,15H2V1h12V15z"
+							/>
+						<path d="M7.5,4h4C11.775,4,12,3.776,12,3.5S11.775,3,11.5,3h-4C7.224,3,7,3.224,7,3.5S7.224,4,7.5,4z"/>
+						<path d="M4.5,7h7C11.775,7,12,6.776,12,6.5S11.775,6,11.5,6h-7C4.224,6,4,6.224,4,6.5S4.224,7,4.5,7z"/>
+						<path d="M4.5,10h7c0.275,0,0.5-0.225,0.5-0.5S11.775,9,11.5,9h-7C4.224,9,4,9.225,4,9.5S4.224,10,4.5,10z"/>
+						<path d="M4.5,13h7c0.275,0,0.5-0.225,0.5-0.5S11.775,12,11.5,12h-7C4.224,12,4,12.225,4,12.5S4.224,13,4.5,13z"/>
+					</g>
+					</svg>
+				</div>
+				<div class="svg-button nolines">
+					<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+						 width="30px" height="30px" viewBox="0 0 16 16" enable-background="new 0 0 16 16" xml:space="preserve">
+					<path d="M14,0H2C1.448,0,1,0.448,1,1v14c0,0.552,0.448,1,1,1h12c0.552,0,1-0.448,1-1V1C15,0.448,14.552,0,14,0z M14,15H2V1h12V15z"
+						/>
+					</svg>
+				</div>
+				<div class="highlight-box"></div>
+			</div>
+		</div>
+		<div class="nav-spacer"></div>
 			{% for r in result %}
 				<div id="{{r}}" class="pdf-page"></div>	
 			{% endfor %}
-		{% endblock %}
+
 	</div>
+	{% endblock %}
 <!-- 	<button onclick="export_to_pdf('datauri')" style="position:fixed;bottom:1em;left:1em">Export</button>
  -->
 	<script type="text/javascript">
@@ -70,6 +99,7 @@
 		return true; 
 	}
 
+
 		var  divs = document.getElementsByClassName('pdf-page');
 		var divLen = divs.length;
 		var divDraws= [];
@@ -78,7 +108,12 @@
 		var currHighlightID = 0;
 		var scalingFactor;
 		var imagePath = [];
+		var followLines = true;
+		var accentColor = '#D98C3C';
 
+
+
+	// create divs
 		for(var i=0;i<divLen;i++){
 			divID = divs[i].id;
 			divDraws[i] = SVG(divID);
@@ -90,9 +125,8 @@
 			divs[i].id = divID;
 			scale(image,divs[i]);
 			pageGroups[i] = divDraws[i].group().opacity(0.5);
-			console.log(divDraws[i].group().opacity());
 
-
+			// event listeners on divs to create highlights
 
 			divs[i].addEventListener("mousedown",function(event){
 				if(event.button == 0){
@@ -110,14 +144,24 @@
 					}
 					var endX = event.pageX-this.offsetLeft-this.offsetParent.offsetLeft;
 					var endY= event.pageY-this.offsetTop-this.offsetParent.offsetTop;
-					var pageRects = jsonArray.responseJSON[+this.id + 1]
 
 					// iterate through page lines to draw highlights
-					for (var line in pageRects){
-						if (pageRects.hasOwnProperty(line)){
-							deleteHighlight(line, highlightGroup, i);
-							makeHighlight(pageRects[line], initX, endX, initY, endY, line, highlightGroup, i);
+					if (followLines){
+
+					var pageRects = jsonArray.responseJSON[+this.id + 1]
+
+						for (var line in pageRects){
+							if (pageRects.hasOwnProperty(line)){
+								deleteHighlight(line, highlightGroup, i);
+								makeHighlight(pageRects[line], initX, endX, initY, endY, line, highlightGroup, i);
+							}
 						}
+					}
+
+					else{
+						deleteSimpleHighlight(highlightGroup, i);
+						makeSimpleHighlight(initX, endX, initY, endY, highlightGroup, i)
+
 					}
 				}
 			})
@@ -131,6 +175,24 @@
 		
 			})
 		}
+
+	// set highlight mode; default is lines
+	$(".svg-button.lines").bind("click", function(){
+		$(".svg-button.lines > svg").css({fill: accentColor});
+		$(".svg-button.nolines > svg").css({fill: '#ffffff'});
+		followLines = true;
+	})
+
+	$(".svg-button.nolines").bind("click", function(){
+		$(".svg-button.nolines > svg").css({fill: accentColor});
+		$(".svg-button.lines > svg").css({fill: '#ffffff'});
+		followLines = false;
+	})
+
+	function makeSimpleHighlight(initX, endX, initY, endY,highlightGroup, currentDiv){
+		var rect = highlightGroup.rect(Math.max(endX-initX, 0), Math.max(endY-initY,0)).move(initX, initY).fill('#FFFF66').id(currentDiv + "g" + highlightGroup).attr("fullHighlight", true);
+		rect.on("dblclick", function(){this.parent.remove()})
+	};
 
 	function makeHighlight(line, initX, endX, initY, endY, lineid, highlightGroup, currentDiv){
 		var pointOne = scalepoint(line[0])
@@ -169,9 +231,17 @@
 			return false;
 		};
 
-		function deleteHighlight(lineid, highlightGroup, currentDiv){
 
+		// delete a highlight on doubleclick
+		function deleteHighlight(lineid, highlightGroup, currentDiv){
 			var highlight = document.getElementById(currentDiv + "g" + highlightGroup + "line" + lineid);
+			if (!!highlight){
+					highlight.remove();
+			}
+		}
+
+		function deleteSimpleHighlight(highlightGroup, currentDiv){
+			var highlight = document.getElementById(currentDiv + "g" + highlightGroup);
 			if (!!highlight){
 					highlight.remove();
 			}

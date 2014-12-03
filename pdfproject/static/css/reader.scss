@@ -7,21 +7,32 @@
 
 body{
 	margin:0;
+	background-color: $warm-gray;
+}
+
+body div{
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;	
 }
 
 svg{
 	mix-blend-mode:multiply;
 }
 
+.page{
+	min-width: 300px;
+}
 .pdf-page{
 	background-size:contain;
 	background-repeat:no-repeat;
 	background-position:center center;
-	margin:10px;
+	margin:0 auto;
 	box-shadow: 0 0 10px $text-color;
 	background-color:white;
-	position:absolute;
-    top: 0; bottom: 0; left: 0; right: 0;
 
 }
 
@@ -30,4 +41,50 @@ svg{
 	background: $warm-gray;
 	padding:5px;
 	width:100vw;
+}
+
+.nav{
+	width:100vw;
+	min-height:30px;
+	position:fixed;
+	top:0;
+	background-color: $text-color;
+	box-shadow: 0px 0px 10px $text-color;
+	color:white;
+	padding:10px;
+	padding-left:30px;
+}
+
+.nav-spacer{
+	width:100vw;
+	height:75px;
+}
+
+.site-name{
+	width:33%;
+	margin:0;
+	display: inline-block;
+}
+
+.highlight-mode-buttons{
+	position:absolute;
+	right:75px;	
+	top:15px;
+}
+
+.svg-button{
+	display: inline-block;
+	margin-left: 15px;
+	cursor:pointer;
+
+	svg{
+		fill:white;
+	}
+}
+
+
+.svg-button.lines{
+	svg{
+		fill:$accent-color;
+	}
 }
