@@ -41,18 +41,17 @@ per PDF page. Images embedded in the text are OK!
 
 There is a sample PDF document: `tests/tryme.pdf`.
 
-## Avoid...
-...inputs that have very curved text lines (mostly a problem with scans of thick textbooks
+## Things to Avoid:
+- Inputs that have very curved text lines (mostly a problem with scans of thick textbooks
 as far as text near the textbook spine).  Also, we do not expect inputs with a lot of
 background noise; solid backgrounds are best.  PDFs with differently oriented pages are not
 expected either (one page is rotated 90 degrees, another is rotated 0 degrees).  
-Please do not upload PDFs longer than 50 pages.
 
-## Disclaimer
-This website is not meant to be responsive.  That means it is not meant for use on mobile
-browsers or tiny browser windows.
+- Long documents. Our software was meant to be used for documents in the 0-50 page range. PDFs longer than 50 pages may have long processing times. 
 
-Also, scalability was not a priority for this project; therefore, it is not incredibly scalable. Pages may take a long time to load; please be patient if you are doing acceptance tests on our server, as it is a somewhat antiquated (yet still lovable) piece of machinery.
+- Accessing the app on a mobile device. This website is not meant to be responsive.  That means it is not meant for use on mobile browsers or tiny browser windows.
+
+- Large amounts of traffic. Scalability was not made a priority for the purposes of this project; therefore, it is not incredibly scalable. Pages may take a long time to load if multiple people are accessing it on the same server. Please be patient if you are doing acceptance tests on our server; it is not the most high-powered piece of machinery.
 
 ## Advanced Usage
 
