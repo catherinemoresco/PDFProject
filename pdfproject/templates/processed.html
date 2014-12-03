@@ -15,6 +15,8 @@
 -->
 		<script type="text/javascript" src="{{ url_for('static', filename='js/pdfkit.js') }}"></script>
 		<script type="text/javascript" src="{{ url_for('static', filename='js/blob-stream.js') }}"></script>
+		<script type="text/javascript" src="{{ url_for('static', filename='js/FileSaver.min.js') }}"></script>
+
 
 		{% endassets %}	
 	<div class=page>
@@ -24,8 +26,7 @@
 			{% endfor %}
 		{% endblock %}
 	</div>
-<!-- 	<button onclick="export_to_pdf('datauri')" style="position:fixed;bottom:1em;left:1em">Export</button>
- -->
+ 	<button onclick="export_to_pdf('datauri')" style="position:fixed;bottom:1em;left:1em">Export</button>
 	<script type="text/javascript">
 
 // get JSON data
@@ -229,6 +230,10 @@
 			return px;
 			return (px*25.4)/DPI;
 		}
+		function px_to_ppts(px, page_px_measurement, page_inch_measurement) {
+			PPI = 72;
+			return px / page_px_measurement * PPI * page_inch_measurement;
+		}
 
 
 		function NOT_export_to_pdf(method) {
@@ -325,11 +330,16 @@
 			method = typeof method !== 'undefined' ? method : "datauristring";
 
 			// Create a new PDFKit document to hold our annotations
-			var doc = new PDFDocument;
+			var doc = new PDFDocument({layout: 'portrait', size: [72*8.5, 72*11.0]});
 			stream = doc.pipe(blobStream());
 
 			var k, pg;
 			for(pg = 0; pg < divDraws.length; pg++) { // for each page in the document
+				page_px_width = $('svg image')[pg].width.baseVal.value;
+				page_px_height = $('svg image')[pg].height.baseVal.value;
+				page_inch_width = 8.5;
+				page_inch_height = 11;
+
 				// rects = rect elements on the current page of the PDF document
 				rects = $($('.pdf-page svg')[pg]).find('rect');
 				//console.log(rects);
@@ -337,18 +347,10 @@
 
 				rects.each(function(ix,el){
 					var rect_list_item = new Array();
-					//console.log("pos x");
-					//console.log($(this).attr('x'));
-					/*
-					rect_list_item["pos_x"] = px_to_mm(parseInt( $(this).attr('x') ));
-					rect_list_item["pox_y"] = px_to_mm(parseInt( $(this).attr('y') ));
-					rect_list_item["width"] = px_to_mm(parseInt( $(this).attr('width') ));
-					rect_list_item["height"] = px_to_mm(parseInt( $(this).attr('height') ));
-					*/
-					rect_list_item["pos_x"] = $(this).attr('x');
-					rect_list_item["pox_y"] = $(this).attr('y');
-					rect_list_item["width"] = $(this).attr('width');
-					rect_list_item["height"] = $(this).attr('height');
+					rect_list_item["pos_x"] = px_to_ppts( $(this).attr('x'), page_px_width, page_inch_width );
+					rect_list_item["pos_y"] = px_to_ppts( $(this).attr('y'), page_px_height, page_inch_height );
+					rect_list_item["width"] = px_to_ppts( $(this).attr('width'), page_px_width, page_inch_width );
+					rect_list_item["height"] = px_to_ppts( $(this).attr('height'), page_px_height, page_inch_height);
 					rect_list_item["fillColor"] = $(this).attr('fill');
 					rect_list_item["fillColor_decimal"] = hexstring_to_numlist(rect_list_item["fillColor"]);
 					if( !!$(this).attr('opacity') )
@@ -357,6 +359,7 @@
 						rect_list_item["opacity"] = parseInt( $(this).css('opacity') );
 					//console.log(rect_list_item["pos_x"]);
 					rect_list.push(rect_list_item);
+					console.log("Y IS"); console.log(rect_list_item["pos_y"]);
 					//console.log("Opacity of rect:");
 					//console.log(rect_list_item["opacity"]);
 				});
@@ -367,20 +370,19 @@
 				// addImage(imageData as raw JPEG data or base64 data-URI, format, x, y, w, h)
 				//pageimage = $($('.pdf-page svg')[pg]).find('image');
 				pageimageURL = imagePath[pg];
-				pageimageWidth = divs[pg].style.width.split['p'][0];
-				pageimageHeight = divs[pg].style.height.split['p'][0];
+				console.log(pageimageURL);
+				pageimageWidth = parseInt(divs[pg].style.width.split('p')[0]);
+				pageimageHeight = parseInt(divs[pg].style.height.split('p')[0]);
 				pageimageX = 0;
 				pageimageY = 0;
-
-				//doc.image(pageimageURL, pageimageX, pageimageY);
+				console.log("Width " + pageimageWidth + "\nHeight " + pageimageHeight + "\n(x,y) " + pageimageX + "," + pageimageY);
+				doc.image(pageimageURL, pageimageX, pageimageY);
 
 
 				// Draw each rectangle
 				for(k = 0; k < rect_list.length; k++) {
 					console.log("drawing a rect"); console.log(rect_list[k]);
-					
-					doc.rect(rect_list[k]["pos_x"]*.25, rect_list[k]["pos_y"]*.25, rect_list[k]["width"], rect_list[k]["height"])
-					//doc.rect(0, 0, rect_list[k]["width"], rect_list[k]["height"])
+					doc.rect(rect_list[k]["pos_x"], rect_list[k]["pos_y"], rect_list[k]["width"], rect_list[k]["height"])
 						.fillOpacity(rect_list[k]["opacity"])
 						.fill(rect_list[k]["fillColor"]);
 				} // for each rectangle
@@ -388,7 +390,7 @@
 				// Add a new page in the generated PDF
 				//doc.rect(0,0,400,400).fillOpacity(1).fill("#ff0");
 				//doc.rect(0,0,200,400).fillOpacity(1).fill("gray");
-				if( pg != divDraws.length-1){
+				if( pg >= divDraws.length-1){
 					doc.addPage();
 				}
 				
@@ -397,7 +399,8 @@
 			doc.end();
 			stream.on('finish', function(){
 				url = stream.toBlobURL('application/pdf');
-				window.location = url;
+				//window.location = url;
+				saveAs(stream.toBlob(), "export.pdf");
 			});
 		} // function export_to_pdf
 
