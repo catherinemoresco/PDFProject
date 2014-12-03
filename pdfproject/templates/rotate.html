@@ -6,10 +6,15 @@
 			<link rel="stylesheet" type="text/css" href="{{ ASSET_URL }}"/>
 		{% endassets %}	
 
-	<div class="page-content">
-		<div class="rotate-header">
-			<h1>Rotate your document so the text is right-side up.</h1>
-			<p>Don't worry about the fine-tuning; just tell us which way is up, and we'll do the rest.</p>
+	<div class="page-one-content">
+		<div class="header-container">
+			<div class="header-bg"></div>
+
+			<div class="rotate-header-box">
+
+				<h1>Rotate your document so the text is right-side up.</h1>
+				<p>Don't worry about the fine-tuning; just tell us which way is up, and we'll do the rest.</p>
+			</div>
 		</div>
 			
 
@@ -45,38 +50,34 @@
 					</div>
 		</div>
 
-		<div class="form-container">
+	<div class="form-container">
+		<div class="form-background"></div>
+			<div class="form-box">
+				<div class="form-content">
+					<form id="rotateForm" method="post" action="/process/{{filename}}" >
 
+						<label>
+							<div class="svg-icon submit icon">
+								<svg version="1.1" id="Layer_3" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+									 width="45px" height="45px" viewBox="0 0 100 100" enable-background="new 0 0 100 100" xml:space="preserve">
+								<path d="M74.927,50L46.524,21.598c-2.041-2.042-2.041-5.352,0-7.393c2.041-2.042,5.351-2.042,7.393,0l32.1,32.099
+									c1.02,1.021,1.53,2.358,1.53,3.696s-0.511,2.676-1.53,3.696l-32.1,32.099c-2.042,2.042-5.352,2.042-7.393,0
+									c-2.041-2.041-2.041-5.352,0-7.393L74.927,50z M13.983,78.402c-2.041,2.041-2.041,5.352,0,7.393c2.041,2.042,5.35,2.042,7.393,0
+									l32.1-32.099c1.02-1.021,1.529-2.358,1.529-3.696s-0.51-2.676-1.529-3.696l-32.1-32.099c-2.043-2.042-5.352-2.042-7.393,0
+									c-2.041,2.041-2.041,5.351,0,7.393L42.386,50L13.983,78.402z"/>
+								</svg>
+								<br>
+								CONTINUE
 
-			<form id="rotateForm" method="post" action="/process/{{filename}}" >
-				<div class="buttons">
+							</div>
+							<input id="submit" onsubmit="insertValue();" type="submit" value="Submit">
+						</label>
+						<input id="rotate" name="rotateby" type="text">
 
-					</div>
-					
-				</div>
-
-				<label>
-					<div class="svg-icon submit icon">
-						<svg version="1.1" id="Layer_3" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-							 width="45px" height="45px" viewBox="0 0 100 100" enable-background="new 0 0 100 100" xml:space="preserve">
-						<path d="M74.927,50L46.524,21.598c-2.041-2.042-2.041-5.352,0-7.393c2.041-2.042,5.351-2.042,7.393,0l32.1,32.099
-							c1.02,1.021,1.53,2.358,1.53,3.696s-0.511,2.676-1.53,3.696l-32.1,32.099c-2.042,2.042-5.352,2.042-7.393,0
-							c-2.041-2.041-2.041-5.352,0-7.393L74.927,50z M13.983,78.402c-2.041,2.041-2.041,5.352,0,7.393c2.041,2.042,5.35,2.042,7.393,0
-							l32.1-32.099c1.02-1.021,1.529-2.358,1.529-3.696s-0.51-2.676-1.529-3.696l-32.1-32.099c-2.043-2.042-5.352-2.042-7.393,0
-							c-2.041,2.041-2.041,5.351,0,7.393L42.386,50L13.983,78.402z"/>
-						</svg>
-						<br>
-						CONTINUE
-
-					</div>
-					<input id="submit" onsubmit="insertValue();" type="submit" value="Submit">
-				</label>
-				<input id="rotate" name="rotateby" type="text">
-
-			</form>
-
+					</form>
 		</div>
 	</div>
+
 
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 		<script type="text/javascript" src="{{ url_for('static', filename='js/transit.min.js') }}"></script>
