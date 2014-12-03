@@ -3332,3 +3332,88 @@ ran?
 2014-12-03 22:12:09,244 INFO spawned: 'pdfproject' with pid 8720
 2014-12-03 22:12:10,249 INFO success: pdfproject-reloader entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
 2014-12-03 22:12:10,250 INFO success: pdfproject entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2014-12-03 22:22:21,756 WARN received SIGTERM indicating exit request
+2014-12-03 22:22:21,769 DEBG killing pdfproject (pid 8720) with signal SIGTERM
+2014-12-03 22:22:21,773 INFO waiting for pdfproject-reloader, pdfproject to die
+2014-12-03 22:22:21,773 DEBG 'pdfproject' stdout output:
+/static/uploads/tryme.pdf2014-12-03_221838.100575thumb.jpeg
+./pdfproject/static/uploads/uch_041181.pdf2014-12-03_221623.403729
+angle:0
+straightening...
+straightening...
+images found: 2
+ran?
+upload file
+<type 'file'>
+filenametryme.pdf
+allowing file
+saved?
+./pdfproject/static/uploads/tryme.pdf2014-12-03_221838.100575
+./pdfproject/static/uploads/tryme.pdf2014-12-03_222122.534643
+angle:0
+straightening...
+straightening...
+images found: 2
+ran?
+/static/uploads/uch_041181.pdf2014-12-03_221623.403729thumb.jpeg
+./pdfproject/static/uploads/tryme.pdf2014-12-03_221838.100575
+angle:0
+straightening...
+straightening...
+images found: 2
+ran?
+/static/uploads/tryme.pdf2014-12-03_222122.534643thumb.jpeg
+upload file
+<type 'file'>
+filenameuch_041181.pdf
+allowing file
+saved?
+./pdfproject/static/uploads/uch_041181.pdf2014-12-03_221623.403729
+upload file
+<type 'file'>
+filenametryme.pdf
+allowing file
+saved?
+./pdfproject/static/uploads/tryme.pdf2014-12-03_222122.534643
+
+2014-12-03 22:22:21,776 DEBG fd 6 closed, stopped monitoring <POutputDispatcher at 140132306790736 for <Subprocess at 140132306790304 with name pdfproject-reloader in state RUNNING> (stdout)>
+2014-12-03 22:22:21,776 DEBG fd 8 closed, stopped monitoring <POutputDispatcher at 140132306790952 for <Subprocess at 140132306790304 with name pdfproject-reloader in state RUNNING> (stderr)>
+2014-12-03 22:22:21,777 INFO exited: pdfproject-reloader (terminated by SIGTERM; not expected)
+2014-12-03 22:22:21,777 DEBG received SIGCLD indicating a child quit
+2014-12-03 22:22:21,809 DEBG fd 9 closed, stopped monitoring <POutputDispatcher at 140132306791744 for <Subprocess at 140132306790088 with name pdfproject in state STOPPING> (stdout)>
+2014-12-03 22:22:21,809 DEBG fd 13 closed, stopped monitoring <POutputDispatcher at 140132306791816 for <Subprocess at 140132306790088 with name pdfproject in state STOPPING> (stderr)>
+2014-12-03 22:22:21,810 INFO stopped: pdfproject (exit status 0)
+2014-12-03 22:22:21,810 DEBG received SIGCLD indicating a child quit
+2014-12-03 22:22:30,514 CRIT Supervisor running as root (no user in config file)
+2014-12-03 22:22:30,518 INFO supervisord started with pid 12392
+2014-12-03 22:22:31,533 INFO spawned: 'pdfproject-reloader' with pid 12395
+2014-12-03 22:22:31,544 INFO spawned: 'pdfproject' with pid 12396
+2014-12-03 22:22:32,547 INFO success: pdfproject-reloader entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2014-12-03 22:22:32,547 INFO success: pdfproject entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2014-12-03 22:24:01,210 DEBG 'pdfproject' stdout output:
+upload file
+<type '_io.BytesIO'>
+filenameStatus of Teaching as a Profession chapter.pdf
+allowing file
+saved?
+./pdfproject/static/uploads/Status_of_Teaching_as_a_Profession_chapter.pdf2014-12-03_222327.388399
+./pdfproject/static/uploads/Status_of_Teaching_as_a_Profession_chapter.pdf2014-12-03_222327.388399
+angle:0
+straightening...
+straightening...
+straightening...
+straightening...
+straightening...
+straightening...
+straightening...
+straightening...
+straightening...
+straightening...
+
+2014-12-03 22:24:01,210 CRIT uncaptured python exception, closing channel <POutputDispatcher at 140687624891712 for <Subprocess at 140687624890056 with name pdfproject in state RUNNING> (stdout)> (<type 'exceptions.IOError'>:[Errno 5] Input/output error [/usr/local/lib/python2.7/dist-packages/supervisor/supervisord.py|runforever|235] [/usr/local/lib/python2.7/dist-packages/supervisor/dispatchers.py|handle_read_event|231] [/usr/local/lib/python2.7/dist-packages/supervisor/dispatchers.py|record_output|165] [/usr/local/lib/python2.7/dist-packages/supervisor/dispatchers.py|_log|146] [/usr/local/lib/python2.7/dist-packages/supervisor/loggers.py|log|293] [/usr/local/lib/python2.7/dist-packages/supervisor/loggers.py|emit|86] [/usr/local/lib/python2.7/dist-packages/supervisor/loggers.py|handleError|90] [/usr/lib/python2.7/traceback.py|print_exception|124] [/usr/lib/python2.7/traceback.py|_print|13])
+2014-12-03 22:27:44,152 CRIT Supervisor running as root (no user in config file)
+2014-12-03 22:27:44,156 INFO supervisord started with pid 12453
+2014-12-03 22:27:45,171 INFO spawned: 'pdfproject-reloader' with pid 12456
+2014-12-03 22:27:45,184 INFO spawned: 'pdfproject' with pid 12457
+2014-12-03 22:27:46,186 INFO success: pdfproject-reloader entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2014-12-03 22:27:46,187 INFO success: pdfproject entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
