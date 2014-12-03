@@ -41,27 +41,31 @@ body {
               color: white;
               padding: 10px;
               padding-left: 30px; }
+              .nav .nav-content {
+                max-width: 1024px;
+                margin: 0 auto;
+                position: relative; }
 
-              .nav-spacer {
-                width: 100vw;
-                height: 75px; }
+.nav-spacer {
+  width: 100vw;
+  height: 75px; }
 
-                .site-name {
-                  width: 33%;
-                  margin: 0;
-                  display: inline-block; }
+  .site-name {
+    width: 33%;
+    margin: 0;
+    display: inline-block; }
 
-                  .highlight-mode-buttons {
-                    position: absolute;
-                    right: 75px;
-                    top: 15px; }
+    .highlight-mode-buttons {
+      position: absolute;
+      right: 75px;
+      top: 5px; }
 
-                    .svg-button {
-                      display: inline-block;
-                      margin-left: 15px;
-                      cursor: pointer; }
-                      .svg-button svg {
-                        fill: white; }
+      .svg-button {
+        display: inline-block;
+        margin-left: 15px;
+        cursor: pointer; }
+        .svg-button svg {
+          fill: white; }
 
 .svg-button.lines svg {
   fill: #D98C3C; }

@@ -53,6 +53,13 @@ svg{
 	color:white;
 	padding:10px;
 	padding-left:30px;
+
+	.nav-content{
+		max-width:1024px;
+		margin: 0 auto;
+		position: relative;
+
+	}
 }
 
 .nav-spacer{
@@ -69,7 +76,7 @@ svg{
 .highlight-mode-buttons{
 	position:absolute;
 	right:75px;	
-	top:15px;
+	top:5px;
 }
 
 .svg-button{
