@@ -11,8 +11,12 @@ def process(pdf, coarse_rotate_angle):
 	## Get images from PDF
 	images = extract.extractImages(pdf)
 	## Straighten images
+	if coarse_rotate_angle < 0:
+		coarse_rotate_angle = 360 - (abs(coarse_rotate_angle) % 360)
+	else:
+		coarse_rotate_angle = coarse_rotate_angle % 360
 	print "angle:" + str(coarse_rotate_angle)
-	images = [skew.straighten(skew.rotate(i, coarse_rotate_angle)) for i in images]
+	images = [skew.straighten(skew.coarserotate(i, coarse_rotate_angle)) for i in images]
 	print "images found: " + str(len(images))
 
 	## Iterate through list of images, storing lists of corresponding line locations

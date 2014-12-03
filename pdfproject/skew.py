@@ -11,6 +11,13 @@ def rotate(img, angle):
 	## Return transformed image
 	return cv2.warpAffine(img, rotmat, (width, height), borderMode=cv2.BORDER_CONSTANT, borderValue = (255, 255, 255))
 
+def coarserotate(img, angle):
+	for i in range(0, angle/90):
+		print angle
+		img = cv2.transpose(img)
+		img = cv2.flip(img, 0)
+	return img
+
 def horizontal_sums(img):
 	""" Return list of sums of pixel values across regularly spaced rows """
 	## NumPy function sums rows of image array

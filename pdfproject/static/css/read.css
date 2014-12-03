@@ -23,7 +23,8 @@ body {
           background-position: center center;
           margin: 0 auto;
           box-shadow: 0 0 10px #0D161D;
-          background-color: white; }
+          background-color: white;
+          margin: 15px; }
 
           .pdf-pages {
             overflow: visible;
@@ -54,18 +55,27 @@ body {
     width: 33%;
     margin: 0;
     display: inline-block; }
+    .site-name a {
+      font-family: Montserrat, serif;
+      text-decoration: none;
+      font-weight: normal;
+      margin: 0;
+      color: white;
+      font-size: 30px; }
+      .site-name a:hover {
+        color: #D98C3C; }
 
-    .highlight-mode-buttons {
-      position: absolute;
-      right: 75px;
-      top: 5px; }
+.highlight-mode-buttons {
+  position: absolute;
+  right: 75px;
+  top: 5px; }
 
-      .svg-button {
-        display: inline-block;
-        margin-left: 15px;
-        cursor: pointer; }
-        .svg-button svg {
-          fill: white; }
+  .svg-button {
+    display: inline-block;
+    margin-left: 15px;
+    cursor: pointer; }
+    .svg-button svg {
+      fill: white; }
 
 .svg-button.lines svg {
   fill: #D98C3C; }
