@@ -32,7 +32,7 @@ To add a highlight to a text line, simply highlight the text line with your mous
 
 In some cases, the text line detection may fail--in this case, you may choose to draw rectangle highlights wherever you want on the document by clicking on the rectangle icon in the navigation bar.
 
-Double-click to make it disappear.  
+Double-click on a highlight to make it disappear.  
 
 Clicking the "export" button will initiate a download of the edited PDF to your desktop.
 
