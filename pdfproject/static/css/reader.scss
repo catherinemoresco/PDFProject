@@ -30,10 +30,9 @@ svg{
 	background-size:contain;
 	background-repeat:no-repeat;
 	background-position:center center;
-	margin:0 auto;
+	margin:15px auto;
 	box-shadow: 0 0 10px $text-color;
 	background-color:white;
-
 }
 
 .pdf-pages{
@@ -58,7 +57,6 @@ svg{
 		max-width:1024px;
 		margin: 0 auto;
 		position: relative;
-
 	}
 }
 
@@ -71,6 +69,18 @@ svg{
 	width:33%;
 	margin:0;
 	display: inline-block;
+
+	a{
+		font-family: $header-font;
+		text-decoration:none;
+		font-weight:normal;
+		margin:0;
+		color:white;
+		font-size: 30px;
+	}
+	a:hover{
+		color:$accent-color;
+	}
 }
 
 .highlight-mode-buttons{
@@ -95,3 +105,4 @@ svg{
 		fill:$accent-color;
 	}
 }
+
