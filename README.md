@@ -42,10 +42,12 @@ per PDF page. Images embedded in the text are OK!
 There is a sample PDF document: `tests/tryme.pdf`.
 
 ## Things to Avoid:
-- Inputs that have very curved text lines (mostly a problem with scans of thick textbooks
-as far as text near the textbook spine).  Also, we do not expect inputs with a lot of
-background noise; solid backgrounds are best.  PDFs with differently oriented pages are not
-expected either (one page is rotated 90 degrees, another is rotated 0 degrees).  
+- Inputs that have very curved lines of text (mostly a problem with scans of thick textbooks
+as far as text near the textbook spine). 
+
+-Excessively noisy images and images with poor contrast; this is more of a problem with photographs of documents than scanned documents.
+
+- Documents where pages are oriented differently. We can handle your document if *all* the pages are upside down or *all* the pages are sideways, but there will be problems if they do not all have the same orientation.
 
 - Long documents. Our software was meant to be used for documents in the 0-50 page range. PDFs longer than 50 pages may have long processing times. 
 
