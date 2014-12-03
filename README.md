@@ -29,6 +29,9 @@ You'll be prompted to manually rotate your PDF until it is right-side up (in cas
 a PDF that is upside down).  Then watch it appear, processed and straightened!
 
 To add a highlight to a text line, simply highlight the text line with your mouse.  
+
+In some cases, the text line detection may fail--in this case, you maychoose to draw rectangle highlights wherever you want on the document by selecting that option on the navigation bar.
+
 Double-click to make it disappear.  
 
 Clicking the "export" button will initiate a download of the edited PDF to your desktop.
