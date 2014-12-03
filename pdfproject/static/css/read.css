@@ -46,6 +46,7 @@ body {
                 max-width: 1024px;
                 margin: 0 auto;
                 position: relative; }
+			a { color: white; text-decoration: none; }
 
 .nav-spacer {
   width: 100vw;
