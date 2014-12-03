@@ -1441,3 +1441,652 @@ cat: /tmp/flask-project.pid: No such file or directory
 /bin/sh: 1: kill: Usage: kill [-s sigspec | -signum | -sigspec] [pid | job]... or
 kill -l [exitstatus]
 
+2014-12-03 06:20:16,236 DEBG 'pdfproject-reloader' stderr output:
+cat: 
+2014-12-03 06:20:16,238 DEBG 'pdfproject-reloader' stderr output:
+/tmp/flask-project.pid
+2014-12-03 06:20:16,238 DEBG 'pdfproject-reloader' stderr output:
+: No such file or directory
+2014-12-03 06:20:16,239 DEBG 'pdfproject-reloader' stderr output:
+
+
+2014-12-03 06:20:16,239 DEBG 'pdfproject-reloader' stderr output:
+/bin/sh: 1: kill: Usage: kill [-s sigspec | -signum | -sigspec] [pid | job]... or
+kill -l [exitstatus]
+
+2014-12-03 06:25:38,880 DEBG 'pdfproject-reloader' stderr output:
+cat: /tmp/flask-project.pid: No such file or directory
+/bin/sh: 1: kill: Usage: kill [-s sigspec | -signum | -sigspec] [pid | job]... or
+kill -l [exitstatus]
+
+2014-12-03 06:25:38,882 DEBG 'pdfproject-reloader' stderr output:
+cat: /tmp/flask-project.pid: No such file or directory
+/bin/sh: 1: kill: Usage: kill [-s sigspec | -signum | -sigspec] [pid | job]... or
+kill -l [exitstatus]
+
+2014-12-03 06:25:38,897 DEBG 'pdfproject-reloader' stderr output:
+cat: /tmp/flask-project.pid: No such file or directory
+/bin/sh: 1: kill: Usage: kill [-s sigspec | -signum | -sigspec] [pid | job]... or
+kill -l [exitstatus]
+
+2014-12-03 06:26:25,058 DEBG 'pdfproject-reloader' stderr output:
+cat: /tmp/flask-project.pid: No such file or directory
+
+2014-12-03 06:26:25,061 DEBG 'pdfproject-reloader' stderr output:
+/bin/sh: 1: kill: Usage: kill [-s sigspec | -signum | -sigspec] [pid | job]... or
+kill -l [exitstatus]
+
+2014-12-03 06:26:25,105 DEBG 'pdfproject-reloader' stderr output:
+cat: /tmp/flask-project.pid: No such file or directory
+cat: /tmp/flask-project.pid: No such file or directory
+/bin/sh: 1: kill: Usage: kill [-s sigspec | -signum | -sigspec] [pid | job]... or
+kill -l [exitstatus]
+/bin/sh: 1: kill: Usage: kill [-s sigspec | -signum | -sigspec] [pid | job]... or
+kill -l [exitstatus]
+
+2014-12-03 06:27:00,953 DEBG 'pdfproject-reloader' stderr output:
+cat: /tmp/flask-project.pid: No such file or directory
+
+2014-12-03 06:27:00,954 DEBG 'pdfproject-reloader' stderr output:
+/bin/sh: 1: kill: Usage: kill [-s sigspec | -signum | -sigspec] [pid | job]... or
+kill -l [exitstatus]
+
+2014-12-03 06:27:46,288 DEBG 'pdfproject-reloader' stderr output:
+cat: /tmp/flask-project.pid: No such file or directory
+/bin/sh: 1: kill: Usage: kill [-s sigspec | -signum | -sigspec] [pid | job]... or
+kill -l [exitstatus]
+
+2014-12-03 06:27:46,311 DEBG 'pdfproject-reloader' stderr output:
+cat: 
+2014-12-03 06:27:46,311 DEBG 'pdfproject-reloader' stderr output:
+/tmp/flask-project.pid
+2014-12-03 06:27:46,311 DEBG 'pdfproject-reloader' stderr output:
+: No such file or directory
+2014-12-03 06:27:46,311 DEBG 'pdfproject-reloader' stderr output:
+
+
+2014-12-03 06:27:46,313 DEBG 'pdfproject-reloader' stderr output:
+/bin/sh: 1: kill: Usage: kill [-s sigspec | -signum | -sigspec] [pid | job]... or
+kill -l [exitstatus]
+
+2014-12-03 06:27:58,758 DEBG 'pdfproject-reloader' stderr output:
+cat: /tmp/flask-project.pid: No such file or directory
+
+2014-12-03 06:27:58,760 DEBG 'pdfproject-reloader' stderr output:
+/bin/sh: 1: kill: Usage: kill [-s sigspec | -signum | -sigspec] [pid | job]... or
+kill -l [exitstatus]
+
+2014-12-03 06:27:58,769 DEBG 'pdfproject-reloader' stderr output:
+cat: /tmp/flask-project.pid: No such file or directory
+/bin/sh: 1: kill: Usage: kill [-s sigspec | -signum | -sigspec] [pid | job]... or
+kill -l [exitstatus]
+
+2014-12-03 06:27:58,802 DEBG 'pdfproject-reloader' stderr output:
+cat: 
+2014-12-03 06:27:58,803 DEBG 'pdfproject-reloader' stderr output:
+/tmp/flask-project.pid
+2014-12-03 06:27:58,803 DEBG 'pdfproject-reloader' stderr output:
+: No such file or directory
+2014-12-03 06:27:58,803 DEBG 'pdfproject-reloader' stderr output:
+
+
+2014-12-03 06:27:58,804 DEBG 'pdfproject-reloader' stderr output:
+/bin/sh: 1: kill: Usage: kill [-s sigspec | -signum | -sigspec] [pid | job]... or
+kill -l [exitstatus]
+
+2014-12-03 06:27:58,806 DEBG 'pdfproject-reloader' stderr output:
+cat: 
+2014-12-03 06:27:58,806 DEBG 'pdfproject-reloader' stderr output:
+/tmp/flask-project.pid
+2014-12-03 06:27:58,807 DEBG 'pdfproject-reloader' stderr output:
+: No such file or directory
+2014-12-03 06:27:58,807 DEBG 'pdfproject-reloader' stderr output:
+
+
+2014-12-03 06:27:58,809 DEBG 'pdfproject-reloader' stderr output:
+/bin/sh: 1: kill: Usage: kill [-s sigspec | -signum | -sigspec] [pid | job]... or
+kill -l [exitstatus]
+
+2014-12-03 06:29:13,832 DEBG 'pdfproject-reloader' stderr output:
+cat: 
+2014-12-03 06:29:13,834 DEBG 'pdfproject-reloader' stderr output:
+/tmp/flask-project.pid
+2014-12-03 06:29:13,840 DEBG 'pdfproject-reloader' stderr output:
+: No such file or directory
+2014-12-03 06:29:13,841 DEBG 'pdfproject-reloader' stderr output:
+
+
+2014-12-03 06:29:13,849 DEBG 'pdfproject-reloader' stderr output:
+/bin/sh: 1: kill: 
+2014-12-03 06:29:13,850 DEBG 'pdfproject-reloader' stderr output:
+Usage: kill [-s sigspec | -signum | -sigspec] [pid | job]... or
+kill -l [exitstatus]
+2014-12-03 06:29:13,853 DEBG 'pdfproject-reloader' stderr output:
+
+
+2014-12-03 06:30:15,915 DEBG 'pdfproject-reloader' stderr output:
+cat: 
+2014-12-03 06:30:15,915 DEBG 'pdfproject-reloader' stderr output:
+/tmp/flask-project.pid
+2014-12-03 06:30:15,917 DEBG 'pdfproject-reloader' stderr output:
+: No such file or directory
+2014-12-03 06:30:15,917 DEBG 'pdfproject-reloader' stderr output:
+
+
+2014-12-03 06:30:15,924 DEBG 'pdfproject-reloader' stderr output:
+/bin/sh: 1: kill: 
+2014-12-03 06:30:15,924 DEBG 'pdfproject-reloader' stderr output:
+Usage: kill [-s sigspec | -signum | -sigspec] [pid | job]... or
+kill -l [exitstatus]
+2014-12-03 06:30:15,925 DEBG 'pdfproject-reloader' stderr output:
+
+
+2014-12-03 06:30:30,161 DEBG 'pdfproject-reloader' stderr output:
+cat: /tmp/flask-project.pid: No such file or directory
+/bin/sh: 1: kill: Usage: kill [-s sigspec | -signum | -sigspec] [pid | job]... or
+kill -l [exitstatus]
+
+2014-12-03 06:30:55,628 DEBG 'pdfproject-reloader' stderr output:
+cat: /tmp/flask-project.pid: No such file or directory
+/bin/sh: 1: kill: Usage: kill [-s sigspec | -signum | -sigspec] [pid | job]... or
+kill -l [exitstatus]
+
+2014-12-03 06:31:43,399 DEBG 'pdfproject-reloader' stderr output:
+cat: 
+2014-12-03 06:31:43,400 DEBG 'pdfproject-reloader' stderr output:
+/tmp/flask-project.pid
+2014-12-03 06:31:43,400 DEBG 'pdfproject-reloader' stderr output:
+: No such file or directory
+2014-12-03 06:31:43,401 DEBG 'pdfproject-reloader' stderr output:
+
+
+2014-12-03 06:31:43,401 DEBG 'pdfproject-reloader' stderr output:
+/bin/sh: 1: kill: 
+2014-12-03 06:31:43,401 DEBG 'pdfproject-reloader' stderr output:
+Usage: kill [-s sigspec | -signum | -sigspec] [pid | job]... or
+kill -l [exitstatus]
+2014-12-03 06:31:43,401 DEBG 'pdfproject-reloader' stderr output:
+
+
+2014-12-03 06:31:57,744 DEBG 'pdfproject-reloader' stderr output:
+cat: 
+2014-12-03 06:31:57,744 DEBG 'pdfproject-reloader' stderr output:
+/tmp/flask-project.pid
+2014-12-03 06:31:57,744 DEBG 'pdfproject-reloader' stderr output:
+: No such file or directory
+2014-12-03 06:31:57,744 DEBG 'pdfproject-reloader' stderr output:
+
+
+2014-12-03 06:31:57,745 DEBG 'pdfproject-reloader' stderr output:
+/bin/sh: 1: kill: 
+2014-12-03 06:31:57,745 DEBG 'pdfproject-reloader' stderr output:
+Usage: kill [-s sigspec | -signum | -sigspec] [pid | job]... or
+kill -l [exitstatus]
+2014-12-03 06:31:57,748 DEBG 'pdfproject-reloader' stderr output:
+
+
+2014-12-03 06:32:15,654 DEBG 'pdfproject-reloader' stderr output:
+cat: 
+2014-12-03 06:32:15,668 DEBG 'pdfproject-reloader' stderr output:
+cat: /tmp/flask-project.pid: No such file or directory
+/bin/sh: 1: kill: Usage: kill [-s sigspec | -signum | -sigspec] [pid | job]... or
+kill -l [exitstatus]
+
+2014-12-03 06:32:15,737 DEBG 'pdfproject-reloader' stderr output:
+cat: /tmp/flask-project.pid: No such file or directory
+/bin/sh: 1: kill: Usage: kill [-s sigspec | -signum | -sigspec] [pid | job]... or
+kill -l [exitstatus]
+/tmp/flask-project.pid: No such file or directory
+/bin/sh: 1: kill: Usage: kill [-s sigspec | -signum | -sigspec] [pid | job]... or
+kill -l [exitstatus]
+
+2014-12-03 06:32:23,461 DEBG 'pdfproject-reloader' stderr output:
+cat: 
+2014-12-03 06:32:23,462 DEBG 'pdfproject-reloader' stderr output:
+/tmp/flask-project.pid: No such file or directory
+/bin/sh: 1: kill: Usage: kill [-s sigspec | -signum | -sigspec] [pid | job]... or
+kill -l [exitstatus]
+
+2014-12-03 06:33:38,626 DEBG 'pdfproject-reloader' stderr output:
+cat: 
+2014-12-03 06:33:38,626 DEBG 'pdfproject-reloader' stderr output:
+/tmp/flask-project.pid
+2014-12-03 06:33:38,626 DEBG 'pdfproject-reloader' stderr output:
+: No such file or directory
+2014-12-03 06:33:38,626 DEBG 'pdfproject-reloader' stderr output:
+
+
+2014-12-03 06:33:38,627 DEBG 'pdfproject-reloader' stderr output:
+/bin/sh: 1: kill: Usage: kill [-s sigspec | -signum | -sigspec] [pid | job]... or
+kill -l [exitstatus]
+
+2014-12-03 06:33:38,671 DEBG 'pdfproject-reloader' stderr output:
+cat: /tmp/flask-project.pid: No such file or directory
+
+2014-12-03 06:33:38,672 DEBG 'pdfproject-reloader' stderr output:
+/bin/sh: 1: kill: Usage: kill [-s sigspec | -signum | -sigspec] [pid | job]... or
+kill -l [exitstatus]
+
+2014-12-03 06:34:22,613 DEBG 'pdfproject-reloader' stderr output:
+cat: 
+2014-12-03 06:34:22,613 DEBG 'pdfproject-reloader' stderr output:
+/tmp/flask-project.pid
+2014-12-03 06:34:22,613 DEBG 'pdfproject-reloader' stderr output:
+: No such file or directory
+2014-12-03 06:34:22,614 DEBG 'pdfproject-reloader' stderr output:
+
+
+2014-12-03 06:34:22,614 DEBG 'pdfproject-reloader' stderr output:
+/bin/sh: 1: kill: Usage: kill [-s sigspec | -signum | -sigspec] [pid | job]... or
+kill -l [exitstatus]
+
+2014-12-03 06:34:22,663 DEBG 'pdfproject-reloader' stderr output:
+cat: 
+2014-12-03 06:34:22,664 DEBG 'pdfproject-reloader' stderr output:
+/tmp/flask-project.pid
+2014-12-03 06:34:22,664 DEBG 'pdfproject-reloader' stderr output:
+: No such file or directory
+2014-12-03 06:34:22,664 DEBG 'pdfproject-reloader' stderr output:
+
+
+2014-12-03 06:34:22,665 DEBG 'pdfproject-reloader' stderr output:
+/bin/sh: 1: kill: Usage: kill [-s sigspec | -signum | -sigspec] [pid | job]... or
+kill -l [exitstatus]
+
+2014-12-03 06:34:46,086 DEBG 'pdfproject-reloader' stderr output:
+cat: 
+2014-12-03 06:34:46,089 DEBG 'pdfproject-reloader' stderr output:
+/tmp/flask-project.pid
+2014-12-03 06:34:46,091 DEBG 'pdfproject-reloader' stderr output:
+: No such file or directory
+2014-12-03 06:34:46,091 DEBG 'pdfproject-reloader' stderr output:
+
+
+2014-12-03 06:34:46,092 DEBG 'pdfproject-reloader' stderr output:
+/bin/sh: 1: kill: 
+2014-12-03 06:34:46,092 DEBG 'pdfproject-reloader' stderr output:
+Usage: kill [-s sigspec | -signum | -sigspec] [pid | job]... or
+kill -l [exitstatus]
+2014-12-03 06:34:46,096 DEBG 'pdfproject-reloader' stderr output:
+
+
+2014-12-03 06:35:14,367 DEBG 'pdfproject-reloader' stderr output:
+cat: 
+2014-12-03 06:35:14,369 DEBG 'pdfproject-reloader' stderr output:
+/tmp/flask-project.pid: No such file or directory
+/bin/sh: 1: kill: Usage: kill [-s sigspec | -signum | -sigspec] [pid | job]... or
+kill -l [exitstatus]
+cat: /tmp/flask-project.pid: No such file or directory
+/bin/sh: 1: kill: Usage: kill [-s sigspec | -signum | -sigspec] [pid | job]... or
+kill -l [exitstatus]
+cat: /tmp/flask-project.pid: No such file or directory
+/bin/sh: 1: kill: Usage: kill [-s sigspec | -signum | -sigspec] [pid | job]... or
+kill -l [exitstatus]
+
+2014-12-03 06:35:18,987 DEBG 'pdfproject-reloader' stderr output:
+cat: /tmp/flask-project.pid: No such file or directory
+
+2014-12-03 06:35:18,989 DEBG 'pdfproject-reloader' stderr output:
+/bin/sh: 1: kill: Usage: kill [-s sigspec | -signum | -sigspec] [pid | job]... or
+kill -l [exitstatus]
+
+2014-12-03 06:35:49,471 DEBG 'pdfproject-reloader' stderr output:
+cat: /tmp/flask-project.pid: No such file or directory
+
+2014-12-03 06:35:49,473 DEBG 'pdfproject-reloader' stderr output:
+/bin/sh: 1: kill: Usage: kill [-s sigspec | -signum | -sigspec] [pid | job]... or
+kill -l [exitstatus]
+cat: /tmp/flask-project.pid: No such file or directory
+/bin/sh: 1: kill: Usage: kill [-s sigspec | -signum | -sigspec] [pid | job]... or
+kill -l [exitstatus]
+
+2014-12-03 06:36:02,219 DEBG 'pdfproject-reloader' stderr output:
+cat: /tmp/flask-project.pid: No such file or directory
+
+2014-12-03 06:36:02,220 DEBG 'pdfproject-reloader' stderr output:
+/bin/sh: 1: kill: Usage: kill [-s sigspec | -signum | -sigspec] [pid | job]... or
+kill -l [exitstatus]
+
+2014-12-03 06:36:37,866 DEBG 'pdfproject-reloader' stderr output:
+cat: 
+2014-12-03 06:36:37,868 DEBG 'pdfproject-reloader' stderr output:
+/tmp/flask-project.pid
+2014-12-03 06:36:37,869 DEBG 'pdfproject-reloader' stderr output:
+: No such file or directory
+2014-12-03 06:36:37,869 DEBG 'pdfproject-reloader' stderr output:
+
+
+2014-12-03 06:36:37,869 DEBG 'pdfproject-reloader' stderr output:
+/bin/sh: 1: kill: 
+2014-12-03 06:36:37,870 DEBG 'pdfproject-reloader' stderr output:
+Usage: kill [-s sigspec | -signum | -sigspec] [pid | job]... or
+kill -l [exitstatus]
+
+2014-12-03 06:36:45,982 DEBG 'pdfproject-reloader' stderr output:
+cat: 
+2014-12-03 06:36:45,982 DEBG 'pdfproject-reloader' stderr output:
+/tmp/flask-project.pid
+2014-12-03 06:36:45,982 DEBG 'pdfproject-reloader' stderr output:
+: No such file or directory
+2014-12-03 06:36:45,982 DEBG 'pdfproject-reloader' stderr output:
+
+
+2014-12-03 06:36:45,983 DEBG 'pdfproject-reloader' stderr output:
+/bin/sh: 1: kill: 
+2014-12-03 06:36:45,983 DEBG 'pdfproject-reloader' stderr output:
+Usage: kill [-s sigspec | -signum | -sigspec] [pid | job]... or
+kill -l [exitstatus]
+2014-12-03 06:36:45,983 DEBG 'pdfproject-reloader' stderr output:
+
+
+2014-12-03 06:37:10,158 DEBG 'pdfproject-reloader' stderr output:
+cat: 
+2014-12-03 06:37:10,158 DEBG 'pdfproject-reloader' stderr output:
+/tmp/flask-project.pid
+2014-12-03 06:37:10,158 DEBG 'pdfproject-reloader' stderr output:
+: No such file or directory
+2014-12-03 06:37:10,159 DEBG 'pdfproject-reloader' stderr output:
+
+
+2014-12-03 06:37:10,161 DEBG 'pdfproject-reloader' stderr output:
+/bin/sh: 1: kill: Usage: kill [-s sigspec | -signum | -sigspec] [pid | job]... or
+kill -l [exitstatus]
+
+2014-12-03 06:38:22,355 DEBG 'pdfproject-reloader' stderr output:
+cat: 
+2014-12-03 06:38:22,360 DEBG 'pdfproject-reloader' stderr output:
+/tmp/flask-project.pid
+2014-12-03 06:38:22,361 DEBG 'pdfproject-reloader' stderr output:
+: No such file or directory
+2014-12-03 06:38:22,361 DEBG 'pdfproject-reloader' stderr output:
+
+
+2014-12-03 06:38:22,364 DEBG 'pdfproject-reloader' stderr output:
+/bin/sh: 1: kill: 
+2014-12-03 06:38:22,365 DEBG 'pdfproject-reloader' stderr output:
+Usage: kill [-s sigspec | -signum | -sigspec] [pid | job]... or
+kill -l [exitstatus]
+2014-12-03 06:38:22,365 DEBG 'pdfproject-reloader' stderr output:
+
+
+2014-12-03 06:38:45,749 DEBG 'pdfproject-reloader' stderr output:
+cat: 
+2014-12-03 06:38:45,750 DEBG 'pdfproject-reloader' stderr output:
+/tmp/flask-project.pid
+2014-12-03 06:38:45,750 DEBG 'pdfproject-reloader' stderr output:
+: No such file or directory
+2014-12-03 06:38:45,750 DEBG 'pdfproject-reloader' stderr output:
+
+
+2014-12-03 06:38:45,751 DEBG 'pdfproject-reloader' stderr output:
+/bin/sh: 1: kill: Usage: kill [-s sigspec | -signum | -sigspec] [pid | job]... or
+kill -l [exitstatus]
+
+2014-12-03 06:39:30,387 DEBG 'pdfproject-reloader' stderr output:
+cat: /tmp/flask-project.pid: No such file or directory
+
+2014-12-03 06:39:30,387 DEBG 'pdfproject-reloader' stderr output:
+/bin/sh: 1: kill: Usage: kill [-s sigspec | -signum | -sigspec] [pid | job]... or
+kill -l [exitstatus]
+
+2014-12-03 06:39:30,443 DEBG 'pdfproject-reloader' stderr output:
+cat: 
+2014-12-03 06:39:30,444 DEBG 'pdfproject-reloader' stderr output:
+/tmp/flask-project.pid
+2014-12-03 06:39:30,444 DEBG 'pdfproject-reloader' stderr output:
+: No such file or directory
+2014-12-03 06:39:30,445 DEBG 'pdfproject-reloader' stderr output:
+
+
+2014-12-03 06:39:30,449 DEBG 'pdfproject-reloader' stderr output:
+/bin/sh: 1: kill: 
+2014-12-03 06:39:30,449 DEBG 'pdfproject-reloader' stderr output:
+Usage: kill [-s sigspec | -signum | -sigspec] [pid | job]... or
+kill -l [exitstatus]
+2014-12-03 06:39:30,450 DEBG 'pdfproject-reloader' stderr output:
+
+
+2014-12-03 06:39:30,515 DEBG 'pdfproject-reloader' stderr output:
+cat: 
+2014-12-03 06:39:30,515 DEBG 'pdfproject-reloader' stderr output:
+/tmp/flask-project.pid
+2014-12-03 06:39:30,515 DEBG 'pdfproject-reloader' stderr output:
+: No such file or directory
+2014-12-03 06:39:30,516 DEBG 'pdfproject-reloader' stderr output:
+
+
+2014-12-03 06:39:30,521 DEBG 'pdfproject-reloader' stderr output:
+/bin/sh: 1: kill: Usage: kill [-s sigspec | -signum | -sigspec] [pid | job]... or
+kill -l [exitstatus]
+
+2014-12-03 06:39:30,559 DEBG 'pdfproject-reloader' stderr output:
+cat: 
+2014-12-03 06:39:30,559 DEBG 'pdfproject-reloader' stderr output:
+/tmp/flask-project.pid
+2014-12-03 06:39:30,560 DEBG 'pdfproject-reloader' stderr output:
+: No such file or directory
+2014-12-03 06:39:30,560 DEBG 'pdfproject-reloader' stderr output:
+
+
+2014-12-03 06:39:30,563 DEBG 'pdfproject-reloader' stderr output:
+/bin/sh: 1: kill: 
+2014-12-03 06:39:30,563 DEBG 'pdfproject-reloader' stderr output:
+Usage: kill [-s sigspec | -signum | -sigspec] [pid | job]... or
+kill -l [exitstatus]
+2014-12-03 06:39:30,566 DEBG 'pdfproject-reloader' stderr output:
+
+
+2014-12-03 06:39:57,879 DEBG 'pdfproject-reloader' stderr output:
+cat: 
+2014-12-03 06:39:57,879 DEBG 'pdfproject-reloader' stderr output:
+/tmp/flask-project.pid
+2014-12-03 06:39:57,879 DEBG 'pdfproject-reloader' stderr output:
+: No such file or directory
+2014-12-03 06:39:57,880 DEBG 'pdfproject-reloader' stderr output:
+
+
+2014-12-03 06:39:57,884 DEBG 'pdfproject-reloader' stderr output:
+/bin/sh: 1: kill: 
+2014-12-03 06:39:57,885 DEBG 'pdfproject-reloader' stderr output:
+Usage: kill [-s sigspec | -signum | -sigspec] [pid | job]... or
+kill -l [exitstatus]
+2014-12-03 06:39:57,885 DEBG 'pdfproject-reloader' stderr output:
+
+
+2014-12-03 06:40:01,184 DEBG 'pdfproject-reloader' stderr output:
+cat: /tmp/flask-project.pid: No such file or directory
+/bin/sh: 1: kill: Usage: kill [-s sigspec | -signum | -sigspec] [pid | job]... or
+kill -l [exitstatus]
+
+2014-12-03 06:40:42,390 DEBG 'pdfproject-reloader' stderr output:
+cat: 
+2014-12-03 06:40:42,393 DEBG 'pdfproject-reloader' stderr output:
+/tmp/flask-project.pid
+2014-12-03 06:40:42,393 DEBG 'pdfproject-reloader' stderr output:
+: No such file or directory
+2014-12-03 06:40:42,393 DEBG 'pdfproject-reloader' stderr output:
+
+
+2014-12-03 06:40:42,396 DEBG 'pdfproject-reloader' stderr output:
+/bin/sh: 1: kill: 
+2014-12-03 06:40:42,397 DEBG 'pdfproject-reloader' stderr output:
+Usage: kill [-s sigspec | -signum | -sigspec] [pid | job]... or
+kill -l [exitstatus]
+2014-12-03 06:40:42,397 DEBG 'pdfproject-reloader' stderr output:
+
+
+2014-12-03 06:40:42,469 DEBG 'pdfproject-reloader' stderr output:
+cat: 
+2014-12-03 06:40:42,473 DEBG 'pdfproject-reloader' stderr output:
+/tmp/flask-project.pid
+2014-12-03 06:40:42,473 DEBG 'pdfproject-reloader' stderr output:
+: No such file or directory
+2014-12-03 06:40:42,473 DEBG 'pdfproject-reloader' stderr output:
+
+
+2014-12-03 06:40:42,474 DEBG 'pdfproject-reloader' stderr output:
+/bin/sh: 1: kill: Usage: kill [-s sigspec | -signum | -sigspec] [pid | job]... or
+kill -l [exitstatus]
+
+2014-12-03 06:41:15,114 DEBG 'pdfproject-reloader' stderr output:
+cat: 
+2014-12-03 06:41:15,114 DEBG 'pdfproject-reloader' stderr output:
+/tmp/flask-project.pid
+2014-12-03 06:41:15,114 DEBG 'pdfproject-reloader' stderr output:
+: No such file or directory
+2014-12-03 06:41:15,114 DEBG 'pdfproject-reloader' stderr output:
+
+
+2014-12-03 06:41:15,115 DEBG 'pdfproject-reloader' stderr output:
+/bin/sh: 1: kill: 
+2014-12-03 06:41:15,115 DEBG 'pdfproject-reloader' stderr output:
+Usage: kill [-s sigspec | -signum | -sigspec] [pid | job]... or
+kill -l [exitstatus]
+
+2014-12-03 06:41:15,166 DEBG 'pdfproject-reloader' stderr output:
+cat: 
+2014-12-03 06:41:15,166 DEBG 'pdfproject-reloader' stderr output:
+/tmp/flask-project.pid
+2014-12-03 06:41:15,167 DEBG 'pdfproject-reloader' stderr output:
+: No such file or directory
+2014-12-03 06:41:15,167 DEBG 'pdfproject-reloader' stderr output:
+
+
+2014-12-03 06:41:15,167 DEBG 'pdfproject-reloader' stderr output:
+/bin/sh: 1: kill: Usage: kill [-s sigspec | -signum | -sigspec] [pid | job]... or
+kill -l [exitstatus]
+
+2014-12-03 06:42:01,232 DEBG 'pdfproject-reloader' stderr output:
+cat: 
+2014-12-03 06:42:01,233 DEBG 'pdfproject-reloader' stderr output:
+/tmp/flask-project.pid
+2014-12-03 06:42:01,233 DEBG 'pdfproject-reloader' stderr output:
+: No such file or directory
+2014-12-03 06:42:01,234 DEBG 'pdfproject-reloader' stderr output:
+
+
+2014-12-03 06:42:01,237 DEBG 'pdfproject-reloader' stderr output:
+/bin/sh: 1: kill: 
+2014-12-03 06:42:01,237 DEBG 'pdfproject-reloader' stderr output:
+Usage: kill [-s sigspec | -signum | -sigspec] [pid | job]... or
+kill -l [exitstatus]
+2014-12-03 06:42:01,237 DEBG 'pdfproject-reloader' stderr output:
+
+
+2014-12-03 06:43:32,302 DEBG 'pdfproject-reloader' stderr output:
+cat: 
+2014-12-03 06:43:32,302 DEBG 'pdfproject-reloader' stderr output:
+/tmp/flask-project.pid
+2014-12-03 06:43:32,303 DEBG 'pdfproject-reloader' stderr output:
+: No such file or directory
+2014-12-03 06:43:32,303 DEBG 'pdfproject-reloader' stderr output:
+
+
+2014-12-03 06:43:32,304 DEBG 'pdfproject-reloader' stderr output:
+/bin/sh: 1: kill: Usage: kill [-s sigspec | -signum | -sigspec] [pid | job]... or
+kill -l [exitstatus]
+
+2014-12-03 06:43:59,598 DEBG 'pdfproject-reloader' stderr output:
+cat: /tmp/flask-project.pid: No such file or directory
+
+2014-12-03 06:43:59,601 DEBG 'pdfproject-reloader' stderr output:
+/bin/sh: 1: kill: Usage: kill [-s sigspec | -signum | -sigspec] [pid | job]... or
+kill -l [exitstatus]
+
+2014-12-03 06:44:07,595 DEBG 'pdfproject-reloader' stderr output:
+cat: 
+2014-12-03 06:44:07,596 DEBG 'pdfproject-reloader' stderr output:
+/tmp/flask-project.pid
+2014-12-03 06:44:07,597 DEBG 'pdfproject-reloader' stderr output:
+: No such file or directory
+2014-12-03 06:44:07,597 DEBG 'pdfproject-reloader' stderr output:
+
+
+2014-12-03 06:44:07,598 DEBG 'pdfproject-reloader' stderr output:
+/bin/sh: 1: kill: Usage: kill [-s sigspec | -signum | -sigspec] [pid | job]... or
+kill -l [exitstatus]
+
+2014-12-03 06:44:48,718 DEBG 'pdfproject-reloader' stderr output:
+cat: 
+2014-12-03 06:44:48,724 DEBG 'pdfproject-reloader' stderr output:
+/tmp/flask-project.pid
+2014-12-03 06:44:48,724 DEBG 'pdfproject-reloader' stderr output:
+: No such file or directory
+2014-12-03 06:44:48,724 DEBG 'pdfproject-reloader' stderr output:
+
+
+2014-12-03 06:44:48,727 DEBG 'pdfproject-reloader' stderr output:
+/bin/sh: 1: kill: 
+2014-12-03 06:44:48,727 DEBG 'pdfproject-reloader' stderr output:
+Usage: kill [-s sigspec | -signum | -sigspec] [pid | job]... or
+kill -l [exitstatus]
+2014-12-03 06:44:48,729 DEBG 'pdfproject-reloader' stderr output:
+
+
+2014-12-03 06:45:16,218 DEBG 'pdfproject-reloader' stderr output:
+cat: 
+2014-12-03 06:45:16,219 DEBG 'pdfproject-reloader' stderr output:
+/tmp/flask-project.pid
+2014-12-03 06:45:16,219 DEBG 'pdfproject-reloader' stderr output:
+: No such file or directory
+2014-12-03 06:45:16,219 DEBG 'pdfproject-reloader' stderr output:
+
+
+2014-12-03 06:45:16,220 DEBG 'pdfproject-reloader' stderr output:
+/bin/sh: 1: kill: Usage: kill [-s sigspec | -signum | -sigspec] [pid | job]... or
+kill -l [exitstatus]
+
+2014-12-03 06:45:16,263 DEBG 'pdfproject-reloader' stderr output:
+cat: 
+2014-12-03 06:45:16,263 DEBG 'pdfproject-reloader' stderr output:
+/tmp/flask-project.pid
+2014-12-03 06:45:16,263 DEBG 'pdfproject-reloader' stderr output:
+: No such file or directory
+2014-12-03 06:45:16,263 DEBG 'pdfproject-reloader' stderr output:
+
+
+2014-12-03 06:45:16,264 DEBG 'pdfproject-reloader' stderr output:
+/bin/sh: 1: kill: Usage: kill [-s sigspec | -signum | -sigspec] [pid | job]... or
+kill -l [exitstatus]
+
+2014-12-03 06:46:14,069 DEBG 'pdfproject-reloader' stderr output:
+cat: 
+2014-12-03 06:46:14,069 DEBG 'pdfproject-reloader' stderr output:
+/tmp/flask-project.pid
+2014-12-03 06:46:14,069 DEBG 'pdfproject-reloader' stderr output:
+: No such file or directory
+2014-12-03 06:46:14,070 DEBG 'pdfproject-reloader' stderr output:
+
+
+2014-12-03 06:46:14,074 DEBG 'pdfproject-reloader' stderr output:
+/bin/sh: 1: kill: Usage: kill [-s sigspec | -signum | -sigspec] [pid | job]... or
+kill -l [exitstatus]
+
+2014-12-03 06:46:14,116 DEBG 'pdfproject-reloader' stderr output:
+cat: 
+2014-12-03 06:46:14,121 DEBG 'pdfproject-reloader' stderr output:
+/tmp/flask-project.pid
+2014-12-03 06:46:14,121 DEBG 'pdfproject-reloader' stderr output:
+: No such file or directory
+2014-12-03 06:46:14,121 DEBG 'pdfproject-reloader' stderr output:
+
+
+2014-12-03 06:46:14,122 DEBG 'pdfproject-reloader' stderr output:
+/bin/sh: 1: kill: 
+2014-12-03 06:46:14,122 DEBG 'pdfproject-reloader' stderr output:
+Usage: kill [-s sigspec | -signum | -sigspec] [pid | job]... or
+kill -l [exitstatus]
+
+2014-12-03 06:46:27,250 DEBG 'pdfproject-reloader' stderr output:
+cat: /tmp/flask-project.pid: No such file or directory
+cat: /tmp/flask-project.pid: No such file or directory
+
+2014-12-03 06:46:27,252 DEBG 'pdfproject-reloader' stderr output:
+/bin/sh: 1: kill: Usage: kill [-s sigspec | -signum | -sigspec] [pid | job]... or
+kill -l [exitstatus]
+/bin/sh: 1: kill: Usage: kill [-s sigspec | -signum | -sigspec] [pid | job]... or
+kill -l [exitstatus]
+
+2014-12-03 06:47:09,009 DEBG 'pdfproject-reloader' stderr output:
+cat: 
+2014-12-03 06:47:09,010 CRIT uncaptured python exception, closing channel <POutputDispatcher at 140267458001088 for <Subprocess at 140267458000584 with name pdfproject-reloader in state RUNNING> (stderr)> (<type 'exceptions.IOError'>:[Errno 5] Input/output error [/usr/local/lib/python2.7/dist-packages/supervisor/supervisord.py|runforever|235] [/usr/local/lib/python2.7/dist-packages/supervisor/dispatchers.py|handle_read_event|231] [/usr/local/lib/python2.7/dist-packages/supervisor/dispatchers.py|record_output|165] [/usr/local/lib/python2.7/dist-packages/supervisor/dispatchers.py|_log|146] [/usr/local/lib/python2.7/dist-packages/supervisor/loggers.py|log|293] [/usr/local/lib/python2.7/dist-packages/supervisor/loggers.py|emit|86] [/usr/local/lib/python2.7/dist-packages/supervisor/loggers.py|handleError|90] [/usr/lib/python2.7/traceback.py|print_exception|124] [/usr/lib/python2.7/traceback.py|_print|13])

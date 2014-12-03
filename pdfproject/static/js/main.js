@@ -1,4 +1,3 @@
-
 // get JSON data
 	var jsonArray
 	var jpath = "/static/uploads/"+window.location.pathname.split('/')[2]+'.json.txt';
@@ -246,18 +245,6 @@
 			PPI = 72;
 			return px / page_px_measurement * PPI * page_inch_measurement;
 		}
-/*		// https://stackoverflow.com/questions/22172604/convert-image-url-to-base64
-		// Usage: var base64 = getBase64Image($("#imageid"));
-		function getBase64Image(img) {
-			var canvas = document.createElement("canvas");
-			canvas.width = img.width;
-			canvas.height = img.height;
-			var ctx = canvas.getContext("2d");
-			ctx.drawImage(img, 0, 0);
-			var dataURL = canvas.toDataURL("image/jpg");
-			return dataURL.replace(/^data:image\/(png|jpg);base64,/, "");
-		}
-*/
 
 		function export_to_pdf(method) {
 			method = typeof method !== 'undefined' ? method : "saveas";
