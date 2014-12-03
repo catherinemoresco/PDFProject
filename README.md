@@ -48,6 +48,9 @@ background noise; solid backgrounds are best.  PDFs with differently oriented pa
 expected either (one page is rotated 90 degrees, another is rotated 0 degrees).  
 Please do not upload PDFs longer than 50 pages.
 
+## Disclaimer
+This website is not meant to be responsive.  That means it is not meant for use on mobile
+browsers or tiny browser windows.
 
 ## Advanced Usage
 
