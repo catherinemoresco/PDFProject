@@ -1,0 +1,103 @@
+@import "main";
+
+body{
+	background-color:$text-color;
+	color:white;
+}
+
+body div{
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;	
+}
+
+img{
+	display:block;
+	margin:auto;
+	max-height:100%;
+	max-width:100%;
+}
+
+svg{
+	fill:white;
+
+}
+
+form{
+	display:block;
+	margin:auto;
+}
+
+
+input{
+	display:none;
+}
+
+
+.page-content{
+	min-width:500px;
+}
+
+.rotate-header{
+	text-align:center;
+	padding:30px;
+}
+
+
+.center-container{
+	width:500px;
+	margin-left:auto;
+	margin-right:auto;
+	margin-bottom:30px;
+	text-align:center;
+
+
+	div{
+		display:inline-block;
+	}
+
+	.image-container{
+		width:300px;
+		height:300px;
+	}
+
+}
+
+/* rotate and submit buttons */
+.svg-icon{
+	width:60px;
+	text-align:center;
+	margin-left:auto;
+	margin-right:auto;
+	font-family:Montserrat, sans-serif;
+	cursor:pointer;
+}
+
+
+.submit{
+	width:300px;
+}
+
+.buttons{
+	margin-left:auto;
+	margin-right:auto;
+	width:210px;
+}
+
+.rotate-button{
+	width:60px;
+	display:inline-block;
+	position:relative;
+	top:-150px;
+}
+
+.icon:hover{
+	color:$accent-color;
+
+	svg{
+	fill:$accent-color;
+	}
+}

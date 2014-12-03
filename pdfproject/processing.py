@@ -5,13 +5,14 @@ import cv2
 import json
 
 
-def process(pdf):
+def process(pdf, coarse_rotate_angle):
 	""" Extract images, fix skew, and get line positions, writing images and data to files. There is no return value."""
 
 	## Get images from PDF
 	images = extract.extractImages(pdf)
 	## Straighten images
-	images = [skew.straighten(i) for i in images]
+	print "angle:" + str(coarse_rotate_angle)
+	images = [skew.straighten(skew.rotate(i, coarse_rotate_angle)) for i in images]
 	print "images found: " + str(len(images))
 
 	## Iterate through list of images, storing lists of corresponding line locations

@@ -150,7 +150,7 @@
 				endHighlight = pointTwo[0];
 			}
 			else{
-			 endHighlight = (pointTwo[0], endX);
+			 endHighlight = (pointTwo[0], Math.min(endX, pointTwo[0]));
 			}
 			var rect = highlightGroup.rect(Math.max(endHighlight-startHighlight, 0), Math.max(pointTwo[1] - pointOne[1], 0)).move(startHighlight, pointOne[1]).fill('#FFFF66').id(currentDiv + "g" + highlightGroup + "line" + lineid).attr("fullHighlight", false);
 			return rect;

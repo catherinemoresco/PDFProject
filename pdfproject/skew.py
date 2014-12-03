@@ -20,6 +20,7 @@ def horizontal_sums(img):
 def straighten(img0):
 	""" Find rotation angle that maximizes variation of row sums, and returns image rotated at that angle """
 	## Create copy of image for processing
+	print "straightening..."
 	img = np.copy(img0)
 
 	## Convert to grayscale
@@ -37,11 +38,11 @@ def straighten(img0):
 
 	## Iterate through range of angles to find maximum row sum variance
 	variances = {}
-	for x in range(-90, 90, 10):
+	for x in range(-45, 45, 5):
 		variances[np.var(horizontal_sums(rotate(img, x)))] = x
 	angle = variances[max(variances.keys())]
 	## Iterate through a finer range of values around previous result
-	for i in range(angle-10, angle+10):
+	for i in range(angle-5, angle+5):
 		variances[np.var(horizontal_sums(rotate(img, i)))] = i
 	angle = variances[max(variances.keys())]
 	
