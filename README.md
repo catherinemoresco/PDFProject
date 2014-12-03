@@ -39,7 +39,7 @@ we don't expect).  For that, see 'Advanced Usage' below.
 The best images are ones that are well formed, and have only one page of text
 per PDF page. Images embedded in the text are OK!
 
-There is a sample PDF document: `tests/tryme.pdf`.
+Don't have your own PDF to test with? No problem! Try our sample PDF: `tests/tryme.pdf`.
 
 ## Things to Avoid:
 - Inputs that have extremely curved lines of text (mostly a problem with scans of thick textbooks
