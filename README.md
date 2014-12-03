@@ -67,6 +67,10 @@ per PDF page. Images embedded in the text are OK!
 
 There is a sample PDF document: `tests/tryme.pdf`.
 
-## Note
-
-See the wiki for more info.
+## Notable Wiki Articles
+- [ Evolution ](https://github.com/catherinemoresco/PDFProject/wiki/Evolution)
+- [ Who Did What ](https://github.com/catherinemoresco/PDFProject/wiki/Who-Did-What)
+- [ PDF Rasterizing ](https://github.com/catherinemoresco/PDFProject/wiki/PDF-Rasterizing)
+- [ Program Structure ](https://github.com/catherinemoresco/PDFProject/wiki/Program-Structure)
+- [ Skew Detection ](https://github.com/catherinemoresco/PDFProject/wiki/Skew-Detection)
+- [ Postmortem ](https://github.com/catherinemoresco/PDFProject/wiki/Postmortem)
