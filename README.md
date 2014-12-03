@@ -42,10 +42,10 @@ per PDF page. Images embedded in the text are OK!
 There is a sample PDF document: `tests/tryme.pdf`.
 
 ## Things to Avoid:
-- Inputs that have very curved lines of text (mostly a problem with scans of thick textbooks
+- Inputs that have extremely curved lines of text (mostly a problem with scans of thick textbooks
 as far as text near the textbook spine). 
 
--Excessively noisy images and images with poor contrast; this is more of a problem with photographs of documents than scanned documents.
+- Excessively noisy images and images with poor contrast (mostly a problem with photographs of documents than scanned documents).
 
 - Documents where pages are oriented differently. We can handle your document if *all* the pages are upside down or *all* the pages are sideways, but there will be problems if they do not all have the same orientation.
 
