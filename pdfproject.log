@@ -1398,3 +1398,33 @@ Error: Already running on PID 25514 (or pid file '/tmp/flask-project.pid' is sta
 2014-12-03 03:54:41,056 INFO exited: pdfproject (exit status 1; not expected)
 2014-12-03 03:54:41,056 DEBG received SIGCLD indicating a child quit
 2014-12-03 03:54:42,057 INFO gave up: pdfproject entered FATAL state, too many start retries too quickly
+2014-12-03 05:12:24,463 DEBG 'pdfproject-reloader' stderr output:
+cat: 
+2014-12-03 05:12:24,472 DEBG 'pdfproject-reloader' stderr output:
+/tmp/flask-project.pid
+2014-12-03 05:12:24,473 DEBG 'pdfproject-reloader' stderr output:
+: No such file or directory
+2014-12-03 05:12:24,473 DEBG 'pdfproject-reloader' stderr output:
+
+
+2014-12-03 05:12:24,476 DEBG 'pdfproject-reloader' stderr output:
+/bin/sh: 1: kill: Usage: kill [-s sigspec | -signum | -sigspec] [pid | job]... or
+kill -l [exitstatus]
+
+2014-12-03 05:29:25,414 DEBG 'pdfproject-reloader' stderr output:
+cat: 
+2014-12-03 05:29:25,417 DEBG 'pdfproject-reloader' stderr output:
+/tmp/flask-project.pid
+2014-12-03 05:29:25,420 DEBG 'pdfproject-reloader' stderr output:
+: No such file or directory
+2014-12-03 05:29:25,421 DEBG 'pdfproject-reloader' stderr output:
+
+
+2014-12-03 05:29:25,421 DEBG 'pdfproject-reloader' stderr output:
+/bin/sh: 1: kill: 
+2014-12-03 05:29:25,424 DEBG 'pdfproject-reloader' stderr output:
+Usage: kill [-s sigspec | -signum | -sigspec] [pid | job]... or
+kill -l [exitstatus]
+2014-12-03 05:29:25,425 DEBG 'pdfproject-reloader' stderr output:
+
+
