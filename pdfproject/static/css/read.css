@@ -21,10 +21,9 @@ body {
           background-size: contain;
           background-repeat: no-repeat;
           background-position: center center;
-          margin: 0 auto;
+          margin: 15px auto;
           box-shadow: 0 0 10px #0D161D;
-          background-color: white;
-          margin: 15px; }
+          background-color: white; }
 
           .pdf-pages {
             overflow: visible;
@@ -46,7 +45,6 @@ body {
                 max-width: 1024px;
                 margin: 0 auto;
                 position: relative; }
-			a { color: white; text-decoration: none; }
 
 .nav-spacer {
   width: 100vw;
