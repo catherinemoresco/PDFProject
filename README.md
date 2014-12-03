@@ -22,7 +22,7 @@ out of a desire for an automated way to clean up often crooked, hard-to-read tex
 and view them easily in the browser.
 
 ## Usage Guide
-It's pretty simple to use: once you navigate to [Scannd](https://spark.uchicago.edu), 
+It's pretty simple to use: once you navigate to [Scannd](spark.uchicago.edu), 
 upload your own document with the "upload" button, and click the "read" button.
 
 You'll be prompted to manually rotate your PDF until it is right-side up (in case you upload
