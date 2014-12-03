@@ -1,6 +1,8 @@
+
 // get JSON data
 	var jsonArray
-	var jpath = "/static"+window.location.pathname+'.json.txt'; 
+	var jpath = "/static/uploads/"+window.location.pathname.split('/')[2]+'.json.txt';
+	console.log(jpath);
 	function getData(jpath){
 		jsonArray = $.getJSON( jpath, function() {
 			console.log( "success" );
