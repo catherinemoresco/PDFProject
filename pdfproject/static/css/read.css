@@ -1,3 +1,25 @@
+#waiting_game {
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	margin-right: -50%;
+	transform: translate(-50%, -50%);
+	z-index: 1000;
+	background: #0D161D;
+	box-shadow: 0 0 10px #0D161D;
+}
+#waiting_game p {
+	font-size: 2em;
+	color: #fff;
+	text-align: center;
+	margin: .5em 0 0 0;
+}
+#waiting_game iframe {
+	width: 50vw;
+	height: 50vh;
+	overflow: hidden;
+	border: none;
+}
 
 body {
   margin: 0;
