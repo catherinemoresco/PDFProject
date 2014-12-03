@@ -180,18 +180,76 @@ body {
   .svg-icon.submit {
     width: 300px; }
 
-    .buttons {
-      margin-left: auto;
-      margin-right: auto;
-      width: 210px; }
+    .rotate-button {
+      width: 60px;
+      display: inline-block;
+      position: relative;
+      top: -150px; }
 
-      .rotate-button {
-        width: 60px;
-        display: inline-block;
-        position: relative;
-        top: -150px; }
+      .icon:hover {
+        color: #D98C3C; }
+        .icon:hover svg {
+          fill: #D98C3C; }
 
-        .icon:hover {
-          color: #D98C3C; }
-          .icon:hover svg {
-            fill: #D98C3C; }
+.loader {
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  position: absolute;
+  z-index: 50;
+  background-color: #0D161D;
+  visibility: hidden; }
+
+  .spinner-container-outer {
+    height: 100vh;
+    display: table;
+    margin: 0 auto;
+    visibility: hidden; }
+
+    .spinner-container-inner {
+      display: table-cell;
+      vertical-align: middle;
+      text-align: center; }
+
+      .sk-spinner-three-bounce.sk-spinner {
+        margin: 0 auto;
+        width: 140px;
+        text-align: center;
+        margin-bottom: 15px; }
+
+        .sk-spinner-three-bounce div {
+          width: 36px;
+          height: 36px;
+          background-color: #D98C3C;
+          border-radius: 100%;
+          display: inline-block;
+          -webkit-animation: sk-threeBounceDelay 1.4s infinite ease-in-out;
+          animation: sk-threeBounceDelay 1.4s infinite ease-in-out;
+          -webkit-animation-fill-mode: both;
+          animation-fill-mode: both; }
+
+          .sk-spinner-three-bounce .sk-bounce1 {
+            -webkit-animation-delay: -0.32s;
+            animation-delay: -0.32s; }
+
+            .sk-spinner-three-bounce .sk-bounce2 {
+              -webkit-animation-delay: -0.16s;
+              animation-delay: -0.16s; }
+
+              @-webkit-keyframes sk-threeBounceDelay {
+                0%, 80%, 100% {
+                  -webkit-transform: scale(0);
+                  transform: scale(0);   }
+                  40% {
+                    -webkit-transform: scale(1);
+                    transform: scale(1);   }
+}
+
+@keyframes sk-threeBounceDelay {
+  0%, 80%, 100% {
+    -webkit-transform: scale(0);
+    transform: scale(0);   }
+    40% {
+      -webkit-transform: scale(1);
+      transform: scale(1);   }
+}

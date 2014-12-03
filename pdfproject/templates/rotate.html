@@ -6,6 +6,20 @@
 			<link rel="stylesheet" type="text/css" href="{{ ASSET_URL }}"/>
 		{% endassets %}	
 
+	<div class="loader">
+		<div class="spinner-container-outer">
+			<div class="spinner-container-inner">
+		     <div class="sk-spinner sk-spinner-three-bounce">
+		       <div class="sk-bounce1"></div>
+		       <div class="sk-bounce2"></div>
+		       <div class="sk-bounce3"></div>
+		     </div>
+		     <h3>WORKING...</h3>
+		    </div>
+		</div>
+	 </div>
+	</div>
+
 	<div class="page-one-content">
 		<div class="header-container">
 			<div class="header-bg"></div>
@@ -84,6 +98,24 @@
 	<script>
 
 	$(document).ready(function(){
+
+		// show elements
+		$('.loader').hide().css({visibility:'visible'});
+		$('.rotate-header-box').hide().fadeIn();
+		$('.center-container').hide().fadeIn();
+		$('#rotateForm').css({position:'relative',x:'10000px'}).transition({x:'0px'})
+
+
+		// hide elements on submit and pull up loader
+		$('#rotateForm').bind("submit", function(){
+			$('.rotate-header-box').fadeOut();
+			$('.center-container').fadeOut();
+			$('#rotateForm').transition({x:'-10000px'})
+			$('.loader').fadeIn();
+			$('.spinner-container-outer').css({position:'relative', y:'-10000px', visibility:'visible'}).transition({y:'0px'})
+		})		
+
+		// handle rotation for input
 		var rotateBy = 0;
 
 
@@ -107,17 +139,6 @@
 
 		};
 
-
-		jQuery.fn.rotate = function(degrees) {
-		    $(this).animate({  borderSpacing: degrees }, {
-			    step: function(now,fx) {
-			      $(this).css('-webkit-transform','rotate('+now+'deg)'); 
-			      $(this).css('-moz-transform','rotate('+now+'deg)');
-			      $(this).css('transform','rotate('+now+'deg)');
-    },
-    duration:'slow'
-},'linear');
-		};
 
 
 	});

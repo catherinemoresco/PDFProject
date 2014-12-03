@@ -7,6 +7,8 @@ function validateForm(){
 			alert("Invalid File: Not a PDF");
 			return false;
 		}
+		$('#uploadForm').transition({x:'-10000px'});
+		$('.header-box').fadeOut();
 		return true;
 	}
 	alert("Please pick a file to upload first!");
