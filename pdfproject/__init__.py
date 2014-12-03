@@ -1,5 +1,7 @@
 import processing
 import os
+import time
+import datetime
 import fnmatch
 from flask import Flask, Response, request, session, g, redirect, url_for, abort, render_template, flash, send_from_directory,jsonify
 from werkzeug import secure_filename
@@ -7,7 +9,7 @@ import shelve
 import socket
 import re
 from flask.ext.assets import Environment, Bundle
-import datetime
+from apscheduler.schedulers.background import BackgroundScheduler
 
 ALLOWED_EXTENSIONS = set(['pdf','PDF'])
 
@@ -23,8 +25,9 @@ assets.register('scss_all', scss)
 assets.register('scss_home', homescss)
 assets.register('scss_read', readscss)
 
-
-
+## Maximum Time To Keep Files in Seconds
+maxTime = 10800
+removalInterval = int(round(maxTime/60))
 ## Set upload folder to static/uploads
 app.config['UPLOAD_FOLDER'] = './pdfproject/static/uploads'
 
@@ -42,6 +45,21 @@ def findFile(pattern, path):
 				result.append(os.path.join(root, name))
 	return result
 
+##Automatically remove files after specified max time
+sched = BackgroundScheduler();
+@sched.scheduled_job('interval',minutes=removalInterval)
+def timed_removal():
+	print("Removal Time")
+	currentTime = datetime.datetime.now();
+	for file in os.listdir("./pdfproject/static/uploads"):
+		pathToFile = "./pdfproject/static/uploads/"+file
+		timeCreated = datetime.datetime.fromtimestamp(os.path.getctime(pathToFile)) 
+		timePassed = currentTime-timeCreated;
+		if (timePassed>datetime.timedelta(seconds=maxTime)):
+			print(currentTime)
+			print(pathToFile)
+			os.remove(pathToFile)
+sched.start()
 @app.route("/")
 def homeprint():
 	""" Render homepage """ 

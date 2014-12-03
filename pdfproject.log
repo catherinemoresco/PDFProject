@@ -1,0 +1,1355 @@
+2014-12-01 19:28:46,235 CRIT Supervisor running as root (no user in config file)
+2014-12-01 19:28:46,239 INFO supervisord started with pid 24290
+2014-12-01 19:28:47,253 INFO spawned: 'pdfproject-reloader' with pid 24293
+2014-12-01 19:28:47,268 INFO spawned: 'pdfproject' with pid 24294
+2014-12-01 19:28:47,412 DEBG 'pdfproject' stderr output:
+
+Error: Already running on PID 11376 (or pid file '/tmp/flask-project.pid' is stale)
+
+
+2014-12-01 19:28:47,426 DEBG fd 9 closed, stopped monitoring <POutputDispatcher at 139673291061872 for <Subprocess at 139673291060432 with name pdfproject in state STARTING> (stdout)>
+2014-12-01 19:28:47,427 DEBG fd 13 closed, stopped monitoring <POutputDispatcher at 139673291061944 for <Subprocess at 139673291060432 with name pdfproject in state STARTING> (stderr)>
+2014-12-01 19:28:47,427 INFO exited: pdfproject (exit status 1; not expected)
+2014-12-01 19:28:47,428 DEBG received SIGCLD indicating a child quit
+2014-12-01 19:28:48,429 INFO success: pdfproject-reloader entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2014-12-01 19:28:48,443 INFO spawned: 'pdfproject' with pid 24304
+2014-12-01 19:28:48,594 DEBG 'pdfproject' stderr output:
+
+Error: Already running on PID 11376 (or pid file '/tmp/flask-project.pid' is stale)
+
+
+2014-12-01 19:28:48,606 DEBG fd 9 closed, stopped monitoring <POutputDispatcher at 139673291061872 for <Subprocess at 139673291060432 with name pdfproject in state STARTING> (stdout)>
+2014-12-01 19:28:48,607 DEBG fd 13 closed, stopped monitoring <POutputDispatcher at 139673291061008 for <Subprocess at 139673291060432 with name pdfproject in state STARTING> (stderr)>
+2014-12-01 19:28:48,607 INFO exited: pdfproject (exit status 1; not expected)
+2014-12-01 19:28:48,607 DEBG received SIGCLD indicating a child quit
+2014-12-01 19:28:50,622 INFO spawned: 'pdfproject' with pid 24309
+2014-12-01 19:28:50,762 DEBG 'pdfproject' stderr output:
+
+Error: Already running on PID 11376 (or pid file '/tmp/flask-project.pid' is stale)
+
+
+2014-12-01 19:28:50,774 DEBG fd 9 closed, stopped monitoring <POutputDispatcher at 139673291061872 for <Subprocess at 139673291060432 with name pdfproject in state STARTING> (stdout)>
+2014-12-01 19:28:50,775 DEBG fd 13 closed, stopped monitoring <POutputDispatcher at 139673291061944 for <Subprocess at 139673291060432 with name pdfproject in state STARTING> (stderr)>
+2014-12-01 19:28:50,775 INFO exited: pdfproject (exit status 1; not expected)
+2014-12-01 19:28:50,775 DEBG received SIGCLD indicating a child quit
+2014-12-01 19:28:53,791 INFO spawned: 'pdfproject' with pid 24314
+2014-12-01 19:28:53,950 DEBG 'pdfproject' stderr output:
+
+Error: Already running on PID 11376 (or pid file '/tmp/flask-project.pid' is stale)
+
+
+2014-12-01 19:28:53,962 DEBG fd 9 closed, stopped monitoring <POutputDispatcher at 139673291061008 for <Subprocess at 139673291060432 with name pdfproject in state STARTING> (stdout)>
+2014-12-01 19:28:53,963 DEBG fd 13 closed, stopped monitoring <POutputDispatcher at 139673291062232 for <Subprocess at 139673291060432 with name pdfproject in state STARTING> (stderr)>
+2014-12-01 19:28:53,963 INFO exited: pdfproject (exit status 1; not expected)
+2014-12-01 19:28:53,963 DEBG received SIGCLD indicating a child quit
+2014-12-01 19:28:54,965 INFO gave up: pdfproject entered FATAL state, too many start retries too quickly
+2014-12-01 19:30:21,614 CRIT Supervisor running as root (no user in config file)
+2014-12-01 19:30:21,618 INFO supervisord started with pid 24329
+2014-12-01 19:30:22,632 INFO spawned: 'pdfproject-reloader' with pid 24332
+2014-12-01 19:30:22,644 INFO spawned: 'pdfproject' with pid 24333
+2014-12-01 19:30:22,800 DEBG 'pdfproject' stderr output:
+
+Error: Already running on PID 11376 (or pid file '/tmp/flask-project.pid' is stale)
+
+
+2014-12-01 19:30:22,815 DEBG fd 9 closed, stopped monitoring <POutputDispatcher at 139997970918000 for <Subprocess at 139997970916560 with name pdfproject in state STARTING> (stdout)>
+2014-12-01 19:30:22,815 DEBG fd 13 closed, stopped monitoring <POutputDispatcher at 139997970918072 for <Subprocess at 139997970916560 with name pdfproject in state STARTING> (stderr)>
+2014-12-01 19:30:22,816 INFO exited: pdfproject (exit status 1; not expected)
+2014-12-01 19:30:22,816 DEBG received SIGCLD indicating a child quit
+2014-12-01 19:30:23,818 INFO success: pdfproject-reloader entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2014-12-01 19:30:23,833 INFO spawned: 'pdfproject' with pid 24343
+2014-12-01 19:30:23,992 DEBG 'pdfproject' stderr output:
+
+Error: Already running on PID 11376 (or pid file '/tmp/flask-project.pid' is stale)
+
+
+2014-12-01 19:30:24,004 DEBG fd 9 closed, stopped monitoring <POutputDispatcher at 139997970918000 for <Subprocess at 139997970916560 with name pdfproject in state STARTING> (stdout)>
+2014-12-01 19:30:24,005 DEBG fd 13 closed, stopped monitoring <POutputDispatcher at 139997970917136 for <Subprocess at 139997970916560 with name pdfproject in state STARTING> (stderr)>
+2014-12-01 19:30:24,005 INFO exited: pdfproject (exit status 1; not expected)
+2014-12-01 19:30:24,005 DEBG received SIGCLD indicating a child quit
+2014-12-01 19:30:26,021 INFO spawned: 'pdfproject' with pid 24348
+2014-12-01 19:30:26,187 DEBG 'pdfproject' stderr output:
+
+Error: Already running on PID 11376 (or pid file '/tmp/flask-project.pid' is stale)
+
+
+2014-12-01 19:30:26,199 DEBG fd 9 closed, stopped monitoring <POutputDispatcher at 139997970918000 for <Subprocess at 139997970916560 with name pdfproject in state STARTING> (stdout)>
+2014-12-01 19:30:26,200 DEBG fd 13 closed, stopped monitoring <POutputDispatcher at 139997970918072 for <Subprocess at 139997970916560 with name pdfproject in state STARTING> (stderr)>
+2014-12-01 19:30:26,200 INFO exited: pdfproject (exit status 1; not expected)
+2014-12-01 19:30:26,201 DEBG received SIGCLD indicating a child quit
+2014-12-01 19:30:29,216 INFO spawned: 'pdfproject' with pid 24353
+2014-12-01 19:30:29,359 DEBG 'pdfproject' stderr output:
+
+Error: Already running on PID 11376 (or pid file '/tmp/flask-project.pid' is stale)
+
+
+2014-12-01 19:30:29,371 DEBG fd 9 closed, stopped monitoring <POutputDispatcher at 139997970917136 for <Subprocess at 139997970916560 with name pdfproject in state STARTING> (stdout)>
+2014-12-01 19:30:29,371 DEBG fd 13 closed, stopped monitoring <POutputDispatcher at 139997970918360 for <Subprocess at 139997970916560 with name pdfproject in state STARTING> (stderr)>
+2014-12-01 19:30:29,372 INFO exited: pdfproject (exit status 1; not expected)
+2014-12-01 19:30:29,372 DEBG received SIGCLD indicating a child quit
+2014-12-01 19:30:30,374 INFO gave up: pdfproject entered FATAL state, too many start retries too quickly
+2014-12-02 17:36:44,293 WARN received SIGTERM indicating exit request
+2014-12-02 17:36:44,304 WARN received SIGTERM indicating exit request
+2014-12-02 17:36:56,513 CRIT Supervisor running as root (no user in config file)
+2014-12-02 17:36:56,517 INFO supervisord started with pid 24703
+2014-12-02 17:36:57,531 INFO spawned: 'pdfproject-reloader' with pid 24706
+2014-12-02 17:36:57,544 INFO spawned: 'pdfproject' with pid 24707
+2014-12-02 17:36:58,546 INFO success: pdfproject-reloader entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2014-12-02 17:36:58,547 INFO success: pdfproject entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2014-12-02 17:46:10,677 DEBG 'pdfproject' stdout output:
+upload file
+<type '_io.BytesIO'>
+filenameFlag_of_Chicago%2C_Illinois.pdf
+allowing file
+saved?
+./pdfproject/static/uploads/Flag_of_Chicago2C_Illinois.pdf2014-12-02_173707.356918
+./pdfproject/static/uploads/Flag_of_Chicago2C_Illinois.pdf2014-12-02_173707.356918
+images found: 1
+ran?
+
+2014-12-02 20:46:02,125 DEBG 'pdfproject' stdout output:
+upload file
+<type '_io.BytesIO'>
+filenametherac.pdf
+allowing file
+saved?
+./pdfproject/static/uploads/therac.pdf2014-12-02_203550.876948
+./pdfproject/static/uploads/therac.pdf2014-12-02_203550.876948
+images found: 4
+ran?
+upload file
+<type '_io.BytesIO'>
+filenameFlag_of_Chicago%2C_Illinois.pdf
+allowing file
+saved?
+./pdfproject/static/uploads/Flag_of_Chicago2C_Illinois.pdf2014-12-02_181106.822538
+./pdfproject/static/uploads/Flag_of_Chicago2C_Illinois.pdf2014-12-02_181106.822538
+images found: 1
+ran?
+
+2014-12-02 20:46:02,141 CRIT uncaptured python exception, closing channel <POutputDispatcher at 140331847089040 for <Subprocess at 140331847087600 with name pdfproject in state RUNNING> (stdout)> (<type 'exceptions.IOError'>:[Errno 5] Input/output error [/usr/local/lib/python2.7/dist-packages/supervisor/supervisord.py|runforever|235] [/usr/local/lib/python2.7/dist-packages/supervisor/dispatchers.py|handle_read_event|231] [/usr/local/lib/python2.7/dist-packages/supervisor/dispatchers.py|record_output|165] [/usr/local/lib/python2.7/dist-packages/supervisor/dispatchers.py|_log|146] [/usr/local/lib/python2.7/dist-packages/supervisor/loggers.py|log|293] [/usr/local/lib/python2.7/dist-packages/supervisor/loggers.py|emit|86] [/usr/local/lib/python2.7/dist-packages/supervisor/loggers.py|handleError|90] [/usr/lib/python2.7/traceback.py|print_exception|124] [/usr/lib/python2.7/traceback.py|_print|13])
+2014-12-02 21:29:29,332 CRIT Supervisor running as root (no user in config file)
+2014-12-02 21:29:29,336 INFO supervisord started with pid 25142
+2014-12-02 21:29:30,351 INFO spawned: 'pdfproject-reloader' with pid 25145
+2014-12-02 21:29:30,363 INFO spawned: 'pdfproject' with pid 25146
+2014-12-02 21:29:31,367 INFO success: pdfproject-reloader entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2014-12-02 21:29:31,368 INFO success: pdfproject entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2014-12-02 22:08:22,634 DEBG 'pdfproject' stderr output:
+ImportError
+2014-12-02 22:08:22,645 DEBG 'pdfproject' stderr output:
+: 
+2014-12-02 22:08:22,645 DEBG 'pdfproject' stderr output:
+numpy.core.multiarray failed to import
+2014-12-02 22:08:22,646 DEBG 'pdfproject' stderr output:
+
+
+2014-12-02 22:08:22,682 DEBG 'pdfproject' stderr output:
+ImportError
+2014-12-02 22:08:22,695 DEBG 'pdfproject' stderr output:
+: 
+2014-12-02 22:08:22,705 DEBG 'pdfproject' stderr output:
+numpy.core.multiarray failed to import
+2014-12-02 22:08:22,705 DEBG 'pdfproject' stderr output:
+
+
+2014-12-02 22:08:22,808 DEBG 'pdfproject' stderr output:
+ImportError
+2014-12-02 22:08:22,813 DEBG 'pdfproject' stderr output:
+: 
+2014-12-02 22:08:22,817 DEBG 'pdfproject' stderr output:
+numpy.core.multiarray failed to import
+2014-12-02 22:08:22,821 DEBG 'pdfproject' stderr output:
+
+
+2014-12-02 22:08:22,918 DEBG 'pdfproject' stderr output:
+ImportError
+2014-12-02 22:08:22,953 DEBG 'pdfproject' stderr output:
+: 
+2014-12-02 22:08:22,959 DEBG 'pdfproject' stderr output:
+numpy.core.multiarray failed to import
+2014-12-02 22:08:22,961 DEBG 'pdfproject' stderr output:
+
+
+2014-12-02 22:08:22,987 DEBG 'pdfproject' stderr output:
+ImportError
+2014-12-02 22:08:23,017 DEBG 'pdfproject' stderr output:
+: 
+2014-12-02 22:08:23,018 DEBG 'pdfproject' stderr output:
+
+
+2014-12-02 22:08:23,126 DEBG 'pdfproject' stderr output:
+ImportError
+2014-12-02 22:08:23,135 DEBG 'pdfproject' stderr output:
+: 
+2014-12-02 22:08:23,141 DEBG 'pdfproject' stderr output:
+
+
+2014-12-02 22:08:23,516 DEBG fd 9 closed, stopped monitoring <POutputDispatcher at 139792499006352 for <Subprocess at 139792499004912 with name pdfproject in state RUNNING> (stdout)>
+2014-12-02 22:08:23,517 DEBG fd 13 closed, stopped monitoring <POutputDispatcher at 139792499006424 for <Subprocess at 139792499004912 with name pdfproject in state RUNNING> (stderr)>
+2014-12-02 22:08:23,517 INFO exited: pdfproject (exit status 255; not expected)
+2014-12-02 22:08:23,517 DEBG received SIGCLD indicating a child quit
+2014-12-02 22:08:24,532 INFO spawned: 'pdfproject' with pid 25514
+2014-12-02 22:08:25,536 INFO success: pdfproject entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2014-12-02 22:11:17,160 CRIT Supervisor running as root (no user in config file)
+2014-12-02 22:11:17,164 INFO supervisord started with pid 25745
+2014-12-02 22:11:18,178 INFO spawned: 'pdfproject-reloader' with pid 25748
+2014-12-02 22:11:18,193 INFO spawned: 'pdfproject' with pid 25749
+2014-12-02 22:11:18,352 DEBG 'pdfproject' stderr output:
+
+Error: Already running on PID 25514 (or pid file '/tmp/flask-project.pid' is stale)
+
+
+2014-12-02 22:11:18,367 DEBG fd 9 closed, stopped monitoring <POutputDispatcher at 139670965222288 for <Subprocess at 139670965220848 with name pdfproject in state STARTING> (stdout)>
+2014-12-02 22:11:18,368 DEBG fd 13 closed, stopped monitoring <POutputDispatcher at 139670965222360 for <Subprocess at 139670965220848 with name pdfproject in state STARTING> (stderr)>
+2014-12-02 22:11:18,368 INFO exited: pdfproject (exit status 1; not expected)
+2014-12-02 22:11:18,368 DEBG received SIGCLD indicating a child quit
+2014-12-02 22:11:19,370 INFO success: pdfproject-reloader entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2014-12-02 22:11:19,384 INFO spawned: 'pdfproject' with pid 25759
+2014-12-02 22:11:19,538 DEBG 'pdfproject' stderr output:
+
+Error: Already running on PID 25514 (or pid file '/tmp/flask-project.pid' is stale)
+
+
+2014-12-02 22:11:19,550 DEBG fd 9 closed, stopped monitoring <POutputDispatcher at 139670965222288 for <Subprocess at 139670965220848 with name pdfproject in state STARTING> (stdout)>
+2014-12-02 22:11:19,551 DEBG fd 13 closed, stopped monitoring <POutputDispatcher at 139670965221424 for <Subprocess at 139670965220848 with name pdfproject in state STARTING> (stderr)>
+2014-12-02 22:11:19,551 INFO exited: pdfproject (exit status 1; not expected)
+2014-12-02 22:11:19,551 DEBG received SIGCLD indicating a child quit
+2014-12-02 22:11:21,567 INFO spawned: 'pdfproject' with pid 25764
+2014-12-02 22:11:21,717 DEBG 'pdfproject' stderr output:
+
+Error: Already running on PID 25514 (or pid file '/tmp/flask-project.pid' is stale)
+
+
+2014-12-02 22:11:21,729 DEBG fd 9 closed, stopped monitoring <POutputDispatcher at 139670965222288 for <Subprocess at 139670965220848 with name pdfproject in state STARTING> (stdout)>
+2014-12-02 22:11:21,730 DEBG fd 13 closed, stopped monitoring <POutputDispatcher at 139670965222360 for <Subprocess at 139670965220848 with name pdfproject in state STARTING> (stderr)>
+2014-12-02 22:11:21,730 INFO exited: pdfproject (exit status 1; not expected)
+2014-12-02 22:11:21,730 DEBG received SIGCLD indicating a child quit
+2014-12-02 22:11:24,750 INFO spawned: 'pdfproject' with pid 25769
+2014-12-02 22:11:24,898 DEBG 'pdfproject' stderr output:
+
+Error: Already running on PID 25514 (or pid file '/tmp/flask-project.pid' is stale)
+
+
+2014-12-02 22:11:24,910 DEBG fd 9 closed, stopped monitoring <POutputDispatcher at 139670965221424 for <Subprocess at 139670965220848 with name pdfproject in state STARTING> (stdout)>
+2014-12-02 22:11:24,911 DEBG fd 13 closed, stopped monitoring <POutputDispatcher at 139670965222648 for <Subprocess at 139670965220848 with name pdfproject in state STARTING> (stderr)>
+2014-12-02 22:11:24,911 INFO exited: pdfproject (exit status 1; not expected)
+2014-12-02 22:11:24,911 DEBG received SIGCLD indicating a child quit
+2014-12-02 22:11:25,913 INFO gave up: pdfproject entered FATAL state, too many start retries too quickly
+2014-12-02 22:21:01,286 DEBG 'pdfproject' stderr output:
+Exception in thread APScheduler (most likely raised during interpreter shutdown):
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/threading.py", line 810, in __bootstrap_inner
+  File "/usr/lib/python2.7/threading.py", line 763, in run
+  File "/usr/local/lib/python2.7/dist-packages/apscheduler/schedulers/blocking.py", line 27, in _main_loop
+  File "/usr/local/lib/python2.7/dist-packages/apscheduler/schedulers/base.py", line 796, in _process_jobs
+<type 'exceptions.AttributeError'>: 'NoneType' object has no attribute 'now'
+
+2014-12-02 22:21:01,840 DEBG 'pdfproject' stderr output:
+Exception in thread APScheduler (most likely raised during interpreter shutdown):
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/threading.py", line 810, in __bootstrap_inner
+  File "/usr/lib/python2.7/threading.py", line 763, in run
+  File "/usr/local/lib/python2.7/dist-packages/apscheduler/schedulers/blocking.py", line 27, in _main_loop
+  File "/usr/local/lib/python2.7/dist-packages/apscheduler/schedulers/base.py", line 835, in _process_jobs
+  File "/usr/lib/python2.7/threading.py", line 215, in __exit__
+  File "/usr/lib/python2.7/threading.py", line 202, in release
+<type 'exceptions.TypeError'>: 'NoneType' object is not callable
+
+2014-12-02 22:22:55,549 DEBG 'pdfproject' stderr output:
+Exception in thread APScheduler (most likely raised during interpreter shutdown):
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/threading.py", line 810, in __bootstrap_inner
+  File "/usr/lib/python2.7/threading.py", line 763, in run
+  File "/usr/local/lib/python2.7/dist-packages/apscheduler/schedulers/blocking.py", line 27, in _main_loop
+  File "/usr/local/lib/python2.7/dist-packages/apscheduler/schedulers/base.py", line 796, in _process_jobs
+<type 'exceptions.AttributeError'>: 'NoneType' object has no attribute 'now'
+
+2014-12-02 22:22:55,553 DEBG 'pdfproject' stderr output:
+Exception in thread APScheduler (most likely raised during interpreter shutdown):
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/threading.py", line 810, in __bootstrap_inner
+  File "/usr/lib/python2.7/threading.py", line 763, in run
+  File "/usr/local/lib/python2.7/dist-packages/apscheduler/schedulers/blocking.py", line 27, in _main_loop
+  File "/usr/local/lib/python2.7/dist-packages/apscheduler/schedulers/base.py", line 796, in _process_jobs
+<type 'exceptions.AttributeError'>: 'NoneType' object has no attribute 'now'
+
+2014-12-02 22:22:57,926 DEBG 'pdfproject' stderr output:
+Exception in thread APScheduler (most likely raised during interpreter shutdown):
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/threading.py", line 810, in __bootstrap_inner
+  File "/usr/lib/python2.7/threading.py", line 763, in run
+  File "/usr/local/lib/python2.7/dist-packages/apscheduler/schedulers/blocking.py", line 27, in _main_loop
+  File "/usr/local/lib/python2.7/dist-packages/apscheduler/schedulers/base.py", line 796, in _process_jobs
+<type 'exceptions.AttributeError'>: 'NoneType' object has no attribute 'now'
+
+2014-12-02 22:25:26,255 CRIT Supervisor running as root (no user in config file)
+2014-12-02 22:25:26,260 INFO supervisord started with pid 26285
+2014-12-02 22:25:27,273 INFO spawned: 'pdfproject-reloader' with pid 26288
+2014-12-02 22:25:27,284 INFO spawned: 'pdfproject' with pid 26289
+2014-12-02 22:25:27,438 DEBG 'pdfproject' stderr output:
+
+Error: Already running on PID 25514 (or pid file '/tmp/flask-project.pid' is stale)
+
+
+2014-12-02 22:25:27,453 DEBG fd 9 closed, stopped monitoring <POutputDispatcher at 139757644573584 for <Subprocess at 139757644572144 with name pdfproject in state STARTING> (stdout)>
+2014-12-02 22:25:27,454 DEBG fd 13 closed, stopped monitoring <POutputDispatcher at 139757644573656 for <Subprocess at 139757644572144 with name pdfproject in state STARTING> (stderr)>
+2014-12-02 22:25:27,454 INFO exited: pdfproject (exit status 1; not expected)
+2014-12-02 22:25:27,454 DEBG received SIGCLD indicating a child quit
+2014-12-02 22:25:28,456 INFO success: pdfproject-reloader entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2014-12-02 22:25:28,470 INFO spawned: 'pdfproject' with pid 26299
+2014-12-02 22:25:28,633 DEBG 'pdfproject' stderr output:
+
+Error: Already running on PID 25514 (or pid file '/tmp/flask-project.pid' is stale)
+
+
+2014-12-02 22:25:28,646 DEBG fd 9 closed, stopped monitoring <POutputDispatcher at 139757644573584 for <Subprocess at 139757644572144 with name pdfproject in state STARTING> (stdout)>
+2014-12-02 22:25:28,646 DEBG fd 13 closed, stopped monitoring <POutputDispatcher at 139757644572720 for <Subprocess at 139757644572144 with name pdfproject in state STARTING> (stderr)>
+2014-12-02 22:25:28,646 INFO exited: pdfproject (exit status 1; not expected)
+2014-12-02 22:25:28,647 DEBG received SIGCLD indicating a child quit
+2014-12-02 22:25:30,662 INFO spawned: 'pdfproject' with pid 26304
+2014-12-02 22:25:30,818 DEBG 'pdfproject' stderr output:
+
+Error: Already running on PID 25514 (or pid file '/tmp/flask-project.pid' is stale)
+
+
+2014-12-02 22:25:30,831 DEBG fd 9 closed, stopped monitoring <POutputDispatcher at 139757644573584 for <Subprocess at 139757644572144 with name pdfproject in state STARTING> (stdout)>
+2014-12-02 22:25:30,831 DEBG fd 13 closed, stopped monitoring <POutputDispatcher at 139757644573656 for <Subprocess at 139757644572144 with name pdfproject in state STARTING> (stderr)>
+2014-12-02 22:25:30,832 INFO exited: pdfproject (exit status 1; not expected)
+2014-12-02 22:25:30,832 DEBG received SIGCLD indicating a child quit
+2014-12-02 22:25:33,852 INFO spawned: 'pdfproject' with pid 26309
+2014-12-02 22:25:34,013 DEBG 'pdfproject' stderr output:
+
+Error: Already running on PID 25514 (or pid file '/tmp/flask-project.pid' is stale)
+
+
+2014-12-02 22:25:34,025 DEBG fd 9 closed, stopped monitoring <POutputDispatcher at 139757644572720 for <Subprocess at 139757644572144 with name pdfproject in state STARTING> (stdout)>
+2014-12-02 22:25:34,026 DEBG fd 13 closed, stopped monitoring <POutputDispatcher at 139757644573944 for <Subprocess at 139757644572144 with name pdfproject in state STARTING> (stderr)>
+2014-12-02 22:25:34,026 INFO exited: pdfproject (exit status 1; not expected)
+2014-12-02 22:25:34,026 DEBG received SIGCLD indicating a child quit
+2014-12-02 22:25:35,028 INFO gave up: pdfproject entered FATAL state, too many start retries too quickly
+2014-12-02 22:26:26,946 DEBG 'pdfproject' stdout output:
+Removal Time
+
+2014-12-02 22:26:26,953 DEBG 'pdfproject' stdout output:
+Removal Time
+Removal Time
+
+2014-12-02 22:26:26,961 DEBG 'pdfproject' stdout output:
+Removal Time
+
+2014-12-02 22:26:53,142 DEBG 'pdfproject' stderr output:
+Exception in thread APScheduler (most likely raised during interpreter shutdown):
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/threading.py", line 810, in __bootstrap_inner
+  File "/usr/lib/python2.7/threading.py", line 763, in run
+  File "/usr/local/lib/python2.7/dist-packages/apscheduler/schedulers/blocking.py", line 27, in _main_loop
+  File "/usr/local/lib/python2.7/dist-packages/apscheduler/schedulers/base.py", line 796, in _process_jobs
+<type 'exceptions.AttributeError'>: 'NoneType' object has no attribute 'now'
+
+2014-12-02 22:27:10,140 DEBG 'pdfproject' stderr output:
+Exception in thread APScheduler (most likely raised during interpreter shutdown):
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/threading.py", line 810, in __bootstrap_inner
+  File "/usr/lib/python2.7/threading.py", line 763, in run
+  File "/usr/local/lib/python2.7/dist-packages/apscheduler/schedulers/blocking.py", line 27, in _main_loop
+  File "/usr/local/lib/python2.7/dist-packages/apscheduler/schedulers/base.py", line 796, in _process_jobs
+<type 'exceptions.AttributeError'>: 'NoneType' object has no attribute 'now'
+
+2014-12-02 22:27:10,195 DEBG 'pdfproject' stderr output:
+Exception in thread APScheduler (most likely raised during interpreter shutdown):
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/threading.py", line 810, in __bootstrap_inner
+  File "/usr/lib/python2.7/threading.py", line 763, in run
+  File "/usr/local/lib/python2.7/dist-packages/apscheduler/schedulers/blocking.py", line 27, in _main_loop
+  File "/usr/local/lib/python2.7/dist-packages/apscheduler/schedulers/base.py", line 796, in _process_jobs
+<type 'exceptions.AttributeError'>: 'NoneType' object has no attribute 'now'
+
+2014-12-02 22:27:12,265 DEBG 'pdfproject' stderr output:
+Exception in thread APScheduler (most likely raised during interpreter shutdown):
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/threading.py", line 810, in __bootstrap_inner
+  File "/usr/lib/python2.7/threading.py", line 763, in run
+  File "/usr/local/lib/python2.7/dist-packages/apscheduler/schedulers/blocking.py", line 27, in _main_loop
+  File "/usr/local/lib/python2.7/dist-packages/apscheduler/schedulers/base.py", line 796, in _process_jobs
+<type 'exceptions.AttributeError'>: 'NoneType' object has no attribute 'now'
+
+2014-12-02 22:27:27,108 DEBG 'pdfproject' stderr output:
+Exception in thread APScheduler (most likely raised during interpreter shutdown):
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/threading.py", line 810, in __bootstrap_inner
+  File "/usr/lib/python2.7/threading.py", line 763, in run
+  File "/usr/local/lib/python2.7/dist-packages/apscheduler/schedulers/blocking.py", line 27, in _main_loop
+  File "/usr/local/lib/python2.7/dist-packages/apscheduler/schedulers/base.py", line 796, in _process_jobs
+<type 'exceptions.AttributeError'>: 'NoneType' object has no attribute 'now'
+
+2014-12-02 22:27:27,114 DEBG 'pdfproject' stderr output:
+Exception in thread APScheduler (most likely raised during interpreter shutdown):
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/threading.py", line 810, in __bootstrap_inner
+  File "/usr/lib/python2.7/threading.py", line 763, in run
+  File "/usr/local/lib/python2.7/dist-packages/apscheduler/schedulers/blocking.py", line 27, in _main_loop
+  File "/usr/local/lib/python2.7/dist-packages/apscheduler/schedulers/base.py", line 796, in _process_jobs
+<type 'exceptions.AttributeError'>: 'NoneType' object has no attribute 'now'
+
+2014-12-02 22:27:27,193 DEBG 'pdfproject' stderr output:
+Exception in thread APScheduler (most likely raised during interpreter shutdown):
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/threading.py", line 810, in __bootstrap_inner
+  File "/usr/lib/python2.7/threading.py", line 763, in run
+  File "/usr/local/lib/python2.7/dist-packages/apscheduler/schedulers/blocking.py", line 27, in _main_loop
+  File "/usr/local/lib/python2.7/dist-packages/apscheduler/schedulers/base.py", line 796, in _process_jobs
+<type 'exceptions.AttributeError'>: 'NoneType' object has no attribute 'now'
+
+2014-12-02 22:27:30,159 DEBG 'pdfproject' stderr output:
+Exception in thread APScheduler (most likely raised during interpreter shutdown):
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/threading.py", line 810, in __bootstrap_inner
+  File "/usr/lib/python2.7/threading.py", line 763, in run
+  File "/usr/local/lib/python2.7/dist-packages/apscheduler/schedulers/blocking.py", line 27, in _main_loop
+  File "/usr/local/lib/python2.7/dist-packages/apscheduler/schedulers/base.py", line 796, in _process_jobs
+<type 'exceptions.AttributeError'>: 'NoneType' object has no attribute 'now'
+
+2014-12-02 22:27:30,470 DEBG 'pdfproject' stderr output:
+Exception in thread APScheduler (most likely raised during interpreter shutdown):
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/threading.py", line 810, in __bootstrap_inner
+  File "/usr/lib/python2.7/threading.py", line 763, in run
+  File "/usr/local/lib/python2.7/dist-packages/apscheduler/schedulers/blocking.py", line 27, in _main_loop
+  File "/usr/local/lib/python2.7/dist-packages/apscheduler/schedulers/base.py", line 796, in _process_jobs
+<type 'exceptions.AttributeError'>: 'NoneType' object has no attribute 'now'
+
+2014-12-02 22:34:34,803 DEBG 'pdfproject' stdout output:
+upload file
+<type 'file'>
+filenamegoneBy730.pdf
+allowing file
+saved?
+./pdfproject/static/uploads/goneBy730.pdf2014-12-02_223215.059909
+./pdfproject/static/uploads/goneBy730.pdf2014-12-02_223215.059909
+images found: 2
+ran?
+
+2014-12-02 22:34:34,825 DEBG 'pdfproject' stdout output:
+upload file
+<type 'file'>
+filenametryme.pdf
+allowing file
+saved?
+./pdfproject/static/uploads/tryme.pdf2014-12-02_222805.566492
+./pdfproject/static/uploads/tryme.pdf2014-12-02_222805.566492
+images found: 2
+ran?
+
+2014-12-02 22:34:34,970 DEBG 'pdfproject' stderr output:
+Exception in thread APScheduler (most likely raised during interpreter shutdown):
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/threading.py", line 810, in __bootstrap_inner
+  File "/usr/lib/python2.7/threading.py", line 763, in run
+  File "/usr/local/lib/python2.7/dist-packages/apscheduler/schedulers/blocking.py", line 27, in _main_loop
+  File "/usr/local/lib/python2.7/dist-packages/apscheduler/schedulers/base.py", line 796, in _process_jobs
+<type 'exceptions.AttributeError'>: 'NoneType' object has no attribute 'now'
+
+2014-12-02 22:34:35,044 DEBG 'pdfproject' stderr output:
+Exception in thread APScheduler (most likely raised during interpreter shutdown):
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/threading.py", line 810, in __bootstrap_inner
+  File "/usr/lib/python2.7/threading.py", line 763, in run
+  File "/usr/local/lib/python2.7/dist-packages/apscheduler/schedulers/blocking.py", line 27, in _main_loop
+  File "/usr/local/lib/python2.7/dist-packages/apscheduler/schedulers/base.py", line 796, in _process_jobs
+<type 'exceptions.AttributeError'>: 'NoneType' object has no attribute 'now'
+
+2014-12-02 22:34:35,049 DEBG 'pdfproject' stderr output:
+Exception in thread APScheduler (most likely raised during interpreter shutdown):
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/threading.py", line 810, in __bootstrap_inner
+  File "/usr/lib/python2.7/threading.py", line 763, in run
+  File "/usr/local/lib/python2.7/dist-packages/apscheduler/schedulers/blocking.py", line 27, in _main_loop
+  File "/usr/local/lib/python2.7/dist-packages/apscheduler/schedulers/base.py", line 796, in _process_jobs
+<type 'exceptions.AttributeError'>: 'NoneType' object has no attribute 'now'
+
+2014-12-02 22:34:35,077 DEBG 'pdfproject' stderr output:
+Exception in thread APScheduler (most likely raised during interpreter shutdown):
+Traceback (most recent call last):
+
+2014-12-02 22:34:35,078 DEBG 'pdfproject' stderr output:
+  File "/usr/lib/python2.7/threading.py", line 810, in __bootstrap_inner
+  File "/usr/lib/python2.7/threading.py", line 763, in run
+  File "/usr/local/lib/python2.7/dist-packages/apscheduler/schedulers/blocking.py", line 27, in _main_loop
+  File "/usr/local/lib/python2.7/dist-packages/apscheduler/schedulers/base.py", line 796, in _process_jobs
+<type 'exceptions.AttributeError'>: 'NoneType' object has no attribute 'now'
+
+2014-12-02 22:34:37,258 DEBG 'pdfproject' stderr output:
+Exception in thread APScheduler (most likely raised during interpreter shutdown):
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/threading.py", line 810, in __bootstrap_inner
+  File "/usr/lib/python2.7/threading.py", line 763, in run
+  File "/usr/local/lib/python2.7/dist-packages/apscheduler/schedulers/blocking.py", line 27, in _main_loop
+  File "/usr/local/lib/python2.7/dist-packages/apscheduler/schedulers/base.py", line 796, in _process_jobs
+<type 'exceptions.AttributeError'>: 'NoneType' object has no attribute 'now'
+
+2014-12-02 22:34:37,648 DEBG 'pdfproject' stderr output:
+Exception in thread APScheduler (most likely raised during interpreter shutdown):
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/threading.py", line 810, in __bootstrap_inner
+  File "/usr/lib/python2.7/threading.py", line 763, in run
+  File "/usr/local/lib/python2.7/dist-packages/apscheduler/schedulers/blocking.py", line 27, in _main_loop
+  File "/usr/local/lib/python2.7/dist-packages/apscheduler/schedulers/base.py", line 796, in _process_jobs
+<type 'exceptions.AttributeError'>: 'NoneType' object has no attribute 'now'
+
+2014-12-02 23:00:31,585 DEBG 'pdfproject' stdout output:
+upload file
+<type 'file'>
+filenametryme.pdf
+allowing file
+saved?
+./pdfproject/static/uploads/tryme.pdf2014-12-02_223635.413500
+./pdfproject/static/uploads/tryme.pdf2014-12-02_223635.413500
+images found: 2
+ran?
+
+2014-12-02 23:00:31,700 DEBG 'pdfproject' stderr output:
+Exception in thread APScheduler (most likely raised during interpreter shutdown):
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/threading.py", line 810, in __bootstrap_inner
+  File "/usr/lib/python2.7/threading.py", line 763, in run
+  File "/usr/local/lib/python2.7/dist-packages/apscheduler/schedulers/blocking.py", line 27, in _main_loop
+  File "/usr/local/lib/python2.7/dist-packages/apscheduler/schedulers/base.py", line 796, in _process_jobs
+<type 'exceptions.AttributeError'>: 'NoneType' object has no attribute 'now'
+
+2014-12-02 23:00:31,728 DEBG 'pdfproject' stderr output:
+Exception in thread APScheduler (most likely raised during interpreter shutdown):
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/threading.py", line 810, in __bootstrap_inner
+  File "/usr/lib/python2.7/threading.py", line 763, in run
+  File "/usr/local/lib/python2.7/dist-packages/apscheduler/schedulers/blocking.py", line 27, in _main_loop
+  File "/usr/local/lib/python2.7/dist-packages/apscheduler/schedulers/base.py", line 796, in _process_jobs
+<type 'exceptions.AttributeError'>: 'NoneType' object has no attribute 'now'
+
+2014-12-02 23:00:31,799 DEBG 'pdfproject' stderr output:
+Exception in thread APScheduler (most likely raised during interpreter shutdown):
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/threading.py", line 810, in __bootstrap_inner
+  File "/usr/lib/python2.7/threading.py", line 763, in run
+  File "/usr/local/lib/python2.7/dist-packages/apscheduler/schedulers/blocking.py", line 27, in _main_loop
+  File "/usr/local/lib/python2.7/dist-packages/apscheduler/schedulers/base.py", line 796, in _process_jobs
+<type 'exceptions.AttributeError'>: 'NoneType' object has no attribute 'now'
+
+2014-12-02 23:00:31,804 DEBG 'pdfproject' stderr output:
+Exception in thread APScheduler (most likely raised during interpreter shutdown):
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/threading.py", line 810, in __bootstrap_inner
+  File "/usr/lib/python2.7/threading.py", line 763, in run
+  File "/usr/local/lib/python2.7/dist-packages/apscheduler/schedulers/blocking.py", line 27, in _main_loop
+  File "/usr/local/lib/python2.7/dist-packages/apscheduler/schedulers/base.py", line 796, in _process_jobs
+<type 'exceptions.AttributeError'>: 'NoneType' object has no attribute 'now'
+
+2014-12-02 23:00:35,371 DEBG 'pdfproject' stderr output:
+Exception in thread APScheduler (most likely raised during interpreter shutdown):
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/threading.py", line 810, in __bootstrap_inner
+  File "/usr/lib/python2.7/threading.py", line 763, in run
+  File "/usr/local/lib/python2.7/dist-packages/apscheduler/schedulers/blocking.py", line 27, in _main_loop
+  File "/usr/local/lib/python2.7/dist-packages/apscheduler/schedulers/base.py", line 796, in _process_jobs
+<type 'exceptions.AttributeError'>: 'NoneType' object has no attribute 'now'
+
+2014-12-02 23:13:26,499 DEBG 'pdfproject' stdout output:
+upload file
+<type '_io.BytesIO'>
+filenameps1_fall2014.pdf
+allowing file
+saved?
+./pdfproject/static/uploads/ps1_fall2014.pdf2014-12-02_230650.353590
+./pdfproject/static/uploads/ps1_fall2014.pdf2014-12-02_230650.353590
+images found: 5
+ran?
+
+2014-12-02 23:13:26,727 DEBG 'pdfproject' stderr output:
+Exception in thread APScheduler (most likely raised during interpreter shutdown):
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/threading.py", line 810, in __bootstrap_inner
+  File "/usr/lib/python2.7/threading.py", line 763, in run
+  File "/usr/local/lib/python2.7/dist-packages/apscheduler/schedulers/blocking.py", line 27, in _main_loop
+  File "/usr/local/lib/python2.7/dist-packages/apscheduler/schedulers/base.py", line 796, in _process_jobs
+<type 'exceptions.AttributeError'>: 'NoneType' object has no attribute 'now'
+
+2014-12-02 23:13:26,738 DEBG 'pdfproject' stderr output:
+Exception in thread APScheduler (most likely raised during interpreter shutdown):
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/threading.py", line 810, in __bootstrap_inner
+  File "/usr/lib/python2.7/threading.py", line 763, in run
+  File "/usr/local/lib/python2.7/dist-packages/apscheduler/schedulers/blocking.py", line 27, in _main_loop
+  File "/usr/local/lib/python2.7/dist-packages/apscheduler/schedulers/base.py", line 796, in _process_jobs
+<type 'exceptions.AttributeError'>: 'NoneType' object has no attribute 'now'
+
+2014-12-02 23:13:30,506 DEBG 'pdfproject' stderr output:
+Exception in thread APScheduler (most likely raised during interpreter shutdown):
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/threading.py", line 810, in __bootstrap_inner
+  File "/usr/lib/python2.7/threading.py", line 763, in run
+  File "/usr/local/lib/python2.7/dist-packages/apscheduler/schedulers/blocking.py", line 27, in _main_loop
+  File "/usr/local/lib/python2.7/dist-packages/apscheduler/schedulers/base.py", line 796, in _process_jobs
+<type 'exceptions.AttributeError'>: 'NoneType' object has no attribute 'now'
+
+2014-12-02 23:13:32,208 DEBG 'pdfproject' stderr output:
+Exception in thread APScheduler (most likely raised during interpreter shutdown):
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/threading.py", line 810, in __bootstrap_inner
+  File "/usr/lib/python2.7/threading.py", line 763, in run
+  File "/usr/local/lib/python2.7/dist-packages/apscheduler/schedulers/blocking.py", line 27, in _main_loop
+  File "/usr/local/lib/python2.7/dist-packages/apscheduler/schedulers/base.py", line 796, in _process_jobs
+<type 'exceptions.AttributeError'>: 'NoneType' object has no attribute 'now'
+
+2014-12-02 23:13:33,226 DEBG 'pdfproject' stderr output:
+Exception in thread APScheduler (most likely raised during interpreter shutdown):
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/threading.py", line 810, in __bootstrap_inner
+  File "/usr/lib/python2.7/threading.py", line 763, in run
+  File "/usr/local/lib/python2.7/dist-packages/apscheduler/schedulers/blocking.py", line 27, in _main_loop
+  File "/usr/local/lib/python2.7/dist-packages/apscheduler/schedulers/base.py", line 796, in _process_jobs
+<type 'exceptions.AttributeError'>: 'NoneType' object has no attribute 'now'
+
+2014-12-02 23:13:33,320 DEBG 'pdfproject' stderr output:
+Exception in thread APScheduler (most likely raised during interpreter shutdown):
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/threading.py", line 810, in __bootstrap_inner
+  File "/usr/lib/python2.7/threading.py", line 763, in run
+  File "/usr/local/lib/python2.7/dist-packages/apscheduler/schedulers/blocking.py", line 27, in _main_loop
+  File "/usr/local/lib/python2.7/dist-packages/apscheduler/schedulers/base.py", line 796, in _process_jobs
+<type 'exceptions.AttributeError'>: 'NoneType' object has no attribute 'now'
+
+2014-12-02 23:23:57,995 DEBG 'pdfproject' stderr output:
+Exception in thread APScheduler (most likely raised during interpreter shutdown):
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/threading.py", line 810, in __bootstrap_inner
+  File "/usr/lib/python2.7/threading.py", line 763, in run
+  File "/usr/local/lib/python2.7/dist-packages/apscheduler/schedulers/blocking.py", line 27, in _main_loop
+  File "/usr/local/lib/python2.7/dist-packages/apscheduler/schedulers/base.py", line 796, in _process_jobs
+<type 'exceptions.AttributeError'>: 'NoneType' object has no attribute 'now'
+
+2014-12-02 23:24:00,988 DEBG 'pdfproject' stderr output:
+Exception in thread APScheduler (most likely raised during interpreter shutdown):
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/threading.py", line 810, in __bootstrap_inner
+  File "/usr/lib/python2.7/threading.py", line 763, in run
+  File "/usr/local/lib/python2.7/dist-packages/apscheduler/schedulers/blocking.py", line 27, in _main_loop
+
+2014-12-02 23:24:00,990 DEBG 'pdfproject' stderr output:
+  File "/usr/local/lib/python2.7/dist-packages/apscheduler/schedulers/base.py", line 796, in _process_jobs
+<type 'exceptions.AttributeError'>: 'NoneType' object has no attribute 'now'
+
+2014-12-02 23:24:01,015 DEBG 'pdfproject' stderr output:
+Exception in thread APScheduler (most likely raised during interpreter shutdown):
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/threading.py", line 810, in __bootstrap_inner
+  File "/usr/lib/python2.7/threading.py", line 763, in run
+  File "/usr/local/lib/python2.7/dist-packages/apscheduler/schedulers/blocking.py", line 27, in _main_loop
+  File "/usr/local/lib/python2.7/dist-packages/apscheduler/schedulers/base.py", line 796, in _process_jobs
+<type 'exceptions.AttributeError'>: 'NoneType' object has no attribute 'now'
+
+2014-12-02 23:24:01,035 DEBG 'pdfproject' stderr output:
+Exception in thread APScheduler (most likely raised during interpreter shutdown):
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/threading.py", line 810, in __bootstrap_inner
+  File "/usr/lib/python2.7/threading.py", line 763, in run
+  File "/usr/local/lib/python2.7/dist-packages/apscheduler/schedulers/blocking.py", line 27, in _main_loop
+  File "/usr/local/lib/python2.7/dist-packages/apscheduler/schedulers/base.py", line 796, in _process_jobs
+<type 'exceptions.AttributeError'>: 'NoneType' object has no attribute 'now'
+
+2014-12-02 23:24:07,955 DEBG 'pdfproject' stderr output:
+Exception in thread APScheduler (most likely raised during interpreter shutdown):
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/threading.py", line 810, in __bootstrap_inner
+  File "/usr/lib/python2.7/threading.py", line 763, in run
+  File "/usr/local/lib/python2.7/dist-packages/apscheduler/schedulers/blocking.py", line 27, in _main_loop
+  File "/usr/local/lib/python2.7/dist-packages/apscheduler/schedulers/base.py", line 796, in _process_jobs
+<type 'exceptions.AttributeError'>: 'NoneType' object has no attribute 'now'
+
+2014-12-02 23:24:10,890 DEBG 'pdfproject' stderr output:
+Exception in thread APScheduler (most likely raised during interpreter shutdown):
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/threading.py", line 810, in __bootstrap_inner
+  File "/usr/lib/python2.7/threading.py", line 763, in run
+  File "/usr/local/lib/python2.7/dist-packages/apscheduler/schedulers/blocking.py", line 28, in _main_loop
+  File "/usr/lib/python2.7/threading.py", line 620, in wait
+  File "/usr/lib/python2.7/threading.py", line 348, in wait
+<type 'exceptions.TypeError'>: 'NoneType' object is not callable
+
+2014-12-02 23:27:59,673 DEBG 'pdfproject' stdout output:
+upload file
+<type '_io.BytesIO'>
+filenametherac.pdf
+allowing file
+saved?
+./pdfproject/static/uploads/therac.pdf2014-12-02_232439.331813
+./pdfproject/static/uploads/therac.pdf2014-12-02_232439.331813
+images found: 4
+ran?
+
+2014-12-02 23:27:59,804 DEBG 'pdfproject' stderr output:
+Exception in thread APScheduler (most likely raised during interpreter shutdown):
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/threading.py", line 810, in __bootstrap_inner
+  File "/usr/lib/python2.7/threading.py", line 763, in run
+  File "/usr/local/lib/python2.7/dist-packages/apscheduler/schedulers/blocking.py", line 27, in _main_loop
+  File "/usr/local/lib/python2.7/dist-packages/apscheduler/schedulers/base.py", line 796, in _process_jobs
+<type 'exceptions.AttributeError'>: 'NoneType' object has no attribute 'now'
+
+2014-12-02 23:27:59,930 DEBG 'pdfproject' stderr output:
+Exception in thread APScheduler (most likely raised during interpreter shutdown):
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/threading.py", line 810, in __bootstrap_inner
+  File "/usr/lib/python2.7/threading.py", line 763, in run
+  File "/usr/local/lib/python2.7/dist-packages/apscheduler/schedulers/blocking.py", line 27, in _main_loop
+  File "/usr/local/lib/python2.7/dist-packages/apscheduler/schedulers/base.py", line 796, in _process_jobs
+<type 'exceptions.AttributeError'>: 'NoneType' object has no attribute 'now'
+
+2014-12-02 23:27:59,937 DEBG 'pdfproject' stderr output:
+Exception in thread APScheduler (most likely raised during interpreter shutdown):
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/threading.py", line 810, in __bootstrap_inner
+  File "/usr/lib/python2.7/threading.py", line 763, in run
+  File "/usr/local/lib/python2.7/dist-packages/apscheduler/schedulers/blocking.py", line 27, in _main_loop
+  File "/usr/local/lib/python2.7/dist-packages/apscheduler/schedulers/base.py", line 796, in _process_jobs
+<type 'exceptions.AttributeError'>: 'NoneType' object has no attribute 'now'
+
+2014-12-02 23:28:48,389 DEBG 'pdfproject' stderr output:
+Exception in thread APScheduler (most likely raised during interpreter shutdown):
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/threading.py", line 810, in __bootstrap_inner
+  File "/usr/lib/python2.7/threading.py", line 763, in run
+  File "/usr/local/lib/python2.7/dist-packages/apscheduler/schedulers/blocking.py", line 27, in _main_loop
+  File "/usr/local/lib/python2.7/dist-packages/apscheduler/schedulers/base.py", line 796, in _process_jobs
+<type 'exceptions.AttributeError'>: 'NoneType' object has no attribute 'now'
+
+2014-12-02 23:28:49,143 DEBG 'pdfproject' stderr output:
+Exception in thread APScheduler (most likely raised during interpreter shutdown):
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/threading.py", line 810, in __bootstrap_inner
+  File "/usr/lib/python2.7/threading.py", line 763, in run
+  File "/usr/local/lib/python2.7/dist-packages/apscheduler/schedulers/blocking.py", line 27, in _main_loop
+  File "/usr/local/lib/python2.7/dist-packages/apscheduler/schedulers/base.py", line 796, in _process_jobs
+<type 'exceptions.AttributeError'>: 'NoneType' object has no attribute 'now'
+
+2014-12-02 23:29:37,460 DEBG 'pdfproject' stderr output:
+Exception in thread APScheduler (most likely raised during interpreter shutdown):
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/threading.py", line 810, in __bootstrap_inner
+  File "/usr/lib/python2.7/threading.py", line 763, in run
+  File "/usr/local/lib/python2.7/dist-packages/apscheduler/schedulers/blocking.py", line 27, in _main_loop
+  File "/usr/local/lib/python2.7/dist-packages/apscheduler/schedulers/base.py", line 796, in _process_jobs
+<type 'exceptions.AttributeError'>: 'NoneType' object has no attribute 'now'
+
+2014-12-02 23:29:37,499 DEBG 'pdfproject' stderr output:
+Exception in thread APScheduler (most likely raised during interpreter shutdown):
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/threading.py", line 810, in __bootstrap_inner
+  File "/usr/lib/python2.7/threading.py", line 763, in run
+  File "/usr/local/lib/python2.7/dist-packages/apscheduler/schedulers/blocking.py", line 27, in _main_loop
+  File "/usr/local/lib/python2.7/dist-packages/apscheduler/schedulers/base.py", line 796, in _process_jobs
+<type 'exceptions.AttributeError'>: 'NoneType' object has no attribute 'now'
+
+2014-12-02 23:29:40,398 DEBG 'pdfproject' stderr output:
+Exception in thread APScheduler (most likely raised during interpreter shutdown):
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/threading.py", line 810, in __bootstrap_inner
+  File "/usr/lib/python2.7/threading.py", line 763, in run
+  File "/usr/local/lib/python2.7/dist-packages/apscheduler/schedulers/blocking.py", line 27, in _main_loop
+  File "/usr/local/lib/python2.7/dist-packages/apscheduler/schedulers/base.py", line 796, in _process_jobs
+<type 'exceptions.AttributeError'>: 'NoneType' object has no attribute 'now'
+
+2014-12-02 23:29:40,475 DEBG 'pdfproject' stderr output:
+Exception in thread APScheduler (most likely raised during interpreter shutdown):
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/threading.py", line 810, in __bootstrap_inner
+  File "/usr/lib/python2.7/threading.py", line 763, in run
+  File "/usr/local/lib/python2.7/dist-packages/apscheduler/schedulers/blocking.py", line 27, in _main_loop
+  File "/usr/local/lib/python2.7/dist-packages/apscheduler/schedulers/base.py", line 796, in _process_jobs
+<type 'exceptions.AttributeError'>: 'NoneType' object has no attribute 'now'
+
+2014-12-02 23:29:40,751 DEBG 'pdfproject' stderr output:
+Exception in thread APScheduler (most likely raised during interpreter shutdown):
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/threading.py", line 810, in __bootstrap_inner
+  File "/usr/lib/python2.7/threading.py", line 763, in run
+  File "/usr/local/lib/python2.7/dist-packages/apscheduler/schedulers/blocking.py", line 27, in _main_loop
+  File "/usr/local/lib/python2.7/dist-packages/apscheduler/schedulers/base.py", line 796, in _process_jobs
+<type 'exceptions.AttributeError'>: 'NoneType' object has no attribute 'now'
+
+2014-12-02 23:29:40,803 DEBG 'pdfproject' stderr output:
+Exception in thread APScheduler (most likely raised during interpreter shutdown):
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/threading.py", line 810, in __bootstrap_inner
+  File "/usr/lib/python2.7/threading.py", line 763, in run
+  File "/usr/local/lib/python2.7/dist-packages/apscheduler/schedulers/blocking.py", line 27, in _main_loop
+  File "/usr/local/lib/python2.7/dist-packages/apscheduler/schedulers/base.py", line 796, in _process_jobs
+<type 'exceptions.AttributeError'>: 'NoneType' object has no attribute 'now'
+
+2014-12-02 23:30:27,995 DEBG 'pdfproject' stderr output:
+Exception in thread APScheduler (most likely raised during interpreter shutdown):
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/threading.py", line 810, in __bootstrap_inner
+  File "/usr/lib/python2.7/threading.py", line 763, in run
+  File "/usr/local/lib/python2.7/dist-packages/apscheduler/schedulers/blocking.py", line 27, in _main_loop
+  File "/usr/local/lib/python2.7/dist-packages/apscheduler/schedulers/base.py", line 796, in _process_jobs
+<type 'exceptions.AttributeError'>: 'NoneType' object has no attribute 'now'
+
+2014-12-02 23:30:28,063 DEBG 'pdfproject' stderr output:
+Exception in thread APScheduler (most likely raised during interpreter shutdown):
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/threading.py", line 810, in __bootstrap_inner
+  File "/usr/lib/python2.7/threading.py", line 763, in run
+  File "/usr/local/lib/python2.7/dist-packages/apscheduler/schedulers/blocking.py", line 27, in _main_loop
+  File "/usr/local/lib/python2.7/dist-packages/apscheduler/schedulers/base.py", line 796, in _process_jobs
+<type 'exceptions.AttributeError'>: 'NoneType' object has no attribute 'now'
+
+2014-12-02 23:32:00,878 DEBG 'pdfproject' stderr output:
+Exception in thread APScheduler (most likely raised during interpreter shutdown):
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/threading.py", line 810, in __bootstrap_inner
+  File "/usr/lib/python2.7/threading.py", line 763, in run
+  File "/usr/local/lib/python2.7/dist-packages/apscheduler/schedulers/blocking.py", line 27, in _main_loop
+  File "/usr/local/lib/python2.7/dist-packages/apscheduler/schedulers/base.py", line 796, in _process_jobs
+<type 'exceptions.AttributeError'>: 'NoneType' object has no attribute 'now'
+
+2014-12-02 23:32:00,944 DEBG 'pdfproject' stderr output:
+Exception in thread APScheduler (most likely raised during interpreter shutdown):
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/threading.py", line 810, in __bootstrap_inner
+  File "/usr/lib/python2.7/threading.py", line 763, in run
+  File "/usr/local/lib/python2.7/dist-packages/apscheduler/schedulers/blocking.py", line 27, in _main_loop
+  File "/usr/local/lib/python2.7/dist-packages/apscheduler/schedulers/base.py", line 796, in _process_jobs
+<type 'exceptions.AttributeError'>: 'NoneType' object has no attribute 'now'
+
+2014-12-02 23:32:02,516 DEBG 'pdfproject' stderr output:
+Exception in thread APScheduler (most likely raised during interpreter shutdown):
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/threading.py", line 810, in __bootstrap_inner
+  File "/usr/lib/python2.7/threading.py", line 763, in run
+  File "/usr/local/lib/python2.7/dist-packages/apscheduler/schedulers/blocking.py", line 27, in _main_loop
+  File "/usr/local/lib/python2.7/dist-packages/apscheduler/schedulers/base.py", line 796, in _process_jobs
+<type 'exceptions.AttributeError'>: 'NoneType' object has no attribute 'now'
+
+2014-12-02 23:32:26,459 DEBG 'pdfproject' stderr output:
+Exception in thread APScheduler (most likely raised during interpreter shutdown):
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/threading.py", line 810, in __bootstrap_inner
+  File "/usr/lib/python2.7/threading.py", line 763, in run
+  File "/usr/local/lib/python2.7/dist-packages/apscheduler/schedulers/blocking.py", line 27, in _main_loop
+  File "/usr/local/lib/python2.7/dist-packages/apscheduler/schedulers/base.py", line 796, in _process_jobs
+<type 'exceptions.AttributeError'>: 'NoneType' object has no attribute 'now'
+
+2014-12-02 23:32:26,573 DEBG 'pdfproject' stderr output:
+Exception in thread APScheduler (most likely raised during interpreter shutdown):
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/threading.py", line 810, in __bootstrap_inner
+  File "/usr/lib/python2.7/threading.py", line 763, in run
+  File "/usr/local/lib/python2.7/dist-packages/apscheduler/schedulers/blocking.py", line 27, in _main_loop
+  File "/usr/local/lib/python2.7/dist-packages/apscheduler/schedulers/base.py", line 796, in _process_jobs
+<type 'exceptions.AttributeError'>: 'NoneType' object has no attribute 'now'
+
+2014-12-02 23:32:30,539 DEBG 'pdfproject' stderr output:
+Exception in thread APScheduler (most likely raised during interpreter shutdown):
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/threading.py", line 810, in __bootstrap_inner
+  File "/usr/lib/python2.7/threading.py", line 763, in run
+  File "/usr/local/lib/python2.7/dist-packages/apscheduler/schedulers/blocking.py", line 27, in _main_loop
+  File "/usr/local/lib/python2.7/dist-packages/apscheduler/schedulers/base.py", line 796, in _process_jobs
+<type 'exceptions.AttributeError'>: 'NoneType' object has no attribute 'now'
+
+2014-12-02 23:32:31,196 DEBG 'pdfproject' stderr output:
+Exception in thread APScheduler (most likely raised during interpreter shutdown):
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/threading.py", line 810, in __bootstrap_inner
+  File "/usr/lib/python2.7/threading.py", line 763, in run
+  File "/usr/local/lib/python2.7/dist-packages/apscheduler/schedulers/blocking.py", line 27, in _main_loop
+  File "/usr/local/lib/python2.7/dist-packages/apscheduler/schedulers/base.py", line 796, in _process_jobs
+<type 'exceptions.AttributeError'>: 'NoneType' object has no attribute 'now'
+
+2014-12-02 23:32:31,222 DEBG 'pdfproject' stderr output:
+Exception in thread APScheduler (most likely raised during interpreter shutdown):
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/threading.py", line 810, in __bootstrap_inner
+  File "/usr/lib/python2.7/threading.py", line 763, in run
+  File "/usr/local/lib/python2.7/dist-packages/apscheduler/schedulers/blocking.py", line 27, in _main_loop
+  File "/usr/local/lib/python2.7/dist-packages/apscheduler/schedulers/base.py", line 796, in _process_jobs
+<type 'exceptions.AttributeError'>: 'NoneType' object has no attribute 'now'
+
+2014-12-02 23:32:31,227 DEBG 'pdfproject' stderr output:
+Exception in thread APScheduler (most likely raised during interpreter shutdown):
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/threading.py", line 810, in __bootstrap_inner
+  File "/usr/lib/python2.7/threading.py", line 763, in run
+  File "/usr/local/lib/python2.7/dist-packages/apscheduler/schedulers/blocking.py", line 27, in _main_loop
+  File "/usr/local/lib/python2.7/dist-packages/apscheduler/schedulers/base.py", line 796, in _process_jobs
+<type 'exceptions.AttributeError'>: 'NoneType' object has no attribute 'now'
+
+2014-12-02 23:32:31,236 DEBG 'pdfproject' stderr output:
+Exception in thread APScheduler (most likely raised during interpreter shutdown):
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/threading.py", line 810, in __bootstrap_inner
+  File "/usr/lib/python2.7/threading.py", line 763, in run
+  File "/usr/local/lib/python2.7/dist-packages/apscheduler/schedulers/blocking.py", line 27, in _main_loop
+  File "/usr/local/lib/python2.7/dist-packages/apscheduler/schedulers/base.py", line 796, in _process_jobs
+<type 'exceptions.AttributeError'>: 'NoneType' object has no attribute 'now'
+
+2014-12-02 23:35:49,935 DEBG 'pdfproject' stderr output:
+Exception in thread APScheduler (most likely raised during interpreter shutdown):
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/threading.py", line 810, in __bootstrap_inner
+  File "/usr/lib/python2.7/threading.py", line 763, in run
+  File "/usr/local/lib/python2.7/dist-packages/apscheduler/schedulers/blocking.py", line 27, in _main_loop
+  File "/usr/local/lib/python2.7/dist-packages/apscheduler/schedulers/base.py", line 796, in _process_jobs
+<type 'exceptions.AttributeError'>: 'NoneType' object has no attribute 'now'
+
+2014-12-02 23:35:50,072 DEBG 'pdfproject' stderr output:
+Exception in thread APScheduler (most likely raised during interpreter shutdown):
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/threading.py", line 810, in __bootstrap_inner
+  File "/usr/lib/python2.7/threading.py", line 763, in run
+  File "/usr/local/lib/python2.7/dist-packages/apscheduler/schedulers/blocking.py", line 27, in _main_loop
+  File "/usr/local/lib/python2.7/dist-packages/apscheduler/schedulers/base.py", line 796, in _process_jobs
+<type 'exceptions.AttributeError'>: 'NoneType' object has no attribute 'now'
+
+2014-12-02 23:35:50,441 DEBG 'pdfproject' stderr output:
+Exception in thread APScheduler (most likely raised during interpreter shutdown):
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/threading.py", line 810, in __bootstrap_inner
+  File "/usr/lib/python2.7/threading.py", line 763, in run
+  File "/usr/local/lib/python2.7/dist-packages/apscheduler/schedulers/blocking.py", line 27, in _main_loop
+  File "/usr/local/lib/python2.7/dist-packages/apscheduler/schedulers/base.py", line 796, in _process_jobs
+<type 'exceptions.AttributeError'>: 'NoneType' object has no attribute 'now'
+
+2014-12-02 23:40:29,021 DEBG 'pdfproject-reloader' stderr output:
+cat: 
+2014-12-02 23:40:29,022 DEBG 'pdfproject-reloader' stderr output:
+/tmp/flask-project.pid
+2014-12-02 23:40:29,022 DEBG 'pdfproject-reloader' stderr output:
+: No such file or directory
+2014-12-02 23:40:29,023 DEBG 'pdfproject-reloader' stderr output:
+
+
+2014-12-02 23:40:29,023 DEBG 'pdfproject-reloader' stderr output:
+/bin/sh: 1: kill: Usage: kill [-s sigspec | -signum | -sigspec] [pid | job]... or
+kill -l [exitstatus]
+
+2014-12-02 23:40:29,204 DEBG 'pdfproject' stderr output:
+Exception in thread APScheduler (most likely raised during interpreter shutdown):
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/threading.py", line 810, in __bootstrap_inner
+  File "/usr/lib/python2.7/threading.py", line 763, in run
+  File "/usr/local/lib/python2.7/dist-packages/apscheduler/schedulers/blocking.py", line 27, in _main_loop
+  File "/usr/local/lib/python2.7/dist-packages/apscheduler/schedulers/base.py", line 796, in _process_jobs
+<type 'exceptions.AttributeError'>: 'NoneType' object has no attribute 'now'
+
+2014-12-02 23:40:29,237 DEBG 'pdfproject' stderr output:
+Exception in thread APScheduler (most likely raised during interpreter shutdown):
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/threading.py", line 810, in __bootstrap_inner
+  File "/usr/lib/python2.7/threading.py", line 763, in run
+  File "/usr/local/lib/python2.7/dist-packages/apscheduler/schedulers/blocking.py", line 27, in _main_loop
+  File "/usr/local/lib/python2.7/dist-packages/apscheduler/schedulers/base.py", line 796, in _process_jobs
+<type 'exceptions.AttributeError'>: 'NoneType' object has no attribute 'now'
+
+2014-12-02 23:41:01,766 DEBG 'pdfproject' stderr output:
+Exception in thread APScheduler (most likely raised during interpreter shutdown):
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/threading.py", line 810, in __bootstrap_inner
+  File "/usr/lib/python2.7/threading.py", line 763, in run
+  File "/usr/local/lib/python2.7/dist-packages/apscheduler/schedulers/blocking.py", line 27, in _main_loop
+  File "/usr/local/lib/python2.7/dist-packages/apscheduler/schedulers/base.py", line 796, in _process_jobs
+<type 'exceptions.AttributeError'>: 'NoneType' object has no attribute 'now'
+
+2014-12-02 23:41:01,772 DEBG 'pdfproject' stderr output:
+Exception in thread APScheduler (most likely raised during interpreter shutdown):
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/threading.py", line 810, in __bootstrap_inner
+  File "/usr/lib/python2.7/threading.py", line 763, in run
+  File "/usr/local/lib/python2.7/dist-packages/apscheduler/schedulers/blocking.py", line 27, in _main_loop
+  File "/usr/local/lib/python2.7/dist-packages/apscheduler/schedulers/base.py", line 796, in _process_jobs
+
+2014-12-02 23:41:01,774 DEBG 'pdfproject' stderr output:
+<type 'exceptions.AttributeError'>: 'NoneType' object has no attribute 'now'
+
+2014-12-02 23:42:27,427 DEBG 'pdfproject' stderr output:
+Exception in thread APScheduler (most likely raised during interpreter shutdown):
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/threading.py", line 810, in __bootstrap_inner
+  File "/usr/lib/python2.7/threading.py", line 763, in run
+  File "/usr/local/lib/python2.7/dist-packages/apscheduler/schedulers/blocking.py", line 27, in _main_loop
+  File "/usr/local/lib/python2.7/dist-packages/apscheduler/schedulers/base.py", line 796, in _process_jobs
+<type 'exceptions.AttributeError'>: 'NoneType' object has no attribute 'now'
+
+2014-12-02 23:42:27,451 DEBG 'pdfproject' stderr output:
+Exception in thread APScheduler (most likely raised during interpreter shutdown):
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/threading.py", line 810, in __bootstrap_inner
+  File "/usr/lib/python2.7/threading.py", line 763, in run
+  File "/usr/local/lib/python2.7/dist-packages/apscheduler/schedulers/blocking.py", line 27, in _main_loop
+  File "/usr/local/lib/python2.7/dist-packages/apscheduler/schedulers/base.py", line 796, in _process_jobs
+<type 'exceptions.AttributeError'>: 'NoneType' object has no attribute 'now'
+
+2014-12-02 23:42:27,453 DEBG 'pdfproject' stderr output:
+Exception in thread APScheduler (most likely raised during interpreter shutdown):
+2014-12-02 23:42:27,454 DEBG 'pdfproject' stderr output:
+
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/threading.py", line 810, in __bootstrap_inner
+  File "/usr/lib/python2.7/threading.py", line 763, in run
+  File "/usr/local/lib/python2.7/dist-packages/apscheduler/schedulers/blocking.py", line 27, in _main_loop
+  File "/usr/local/lib/python2.7/dist-packages/apscheduler/schedulers/base.py", line 796, in _process_jobs
+<type 'exceptions.AttributeError'>: 'NoneType' object has no attribute 'now'
+
+2014-12-02 23:43:10,198 DEBG 'pdfproject' stderr output:
+Exception in thread APScheduler (most likely raised during interpreter shutdown):
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/threading.py", line 810, in __bootstrap_inner
+  File "/usr/lib/python2.7/threading.py", line 763, in run
+  File "/usr/local/lib/python2.7/dist-packages/apscheduler/schedulers/blocking.py", line 27, in _main_loop
+  File "/usr/local/lib/python2.7/dist-packages/apscheduler/schedulers/base.py", line 796, in _process_jobs
+<type 'exceptions.AttributeError'>: 'NoneType' object has no attribute 'now'
+
+2014-12-02 23:43:10,210 DEBG 'pdfproject' stderr output:
+Exception in thread APScheduler (most likely raised during interpreter shutdown):
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/threading.py", line 810, in __bootstrap_inner
+  File "/usr/lib/python2.7/threading.py", line 763, in run
+  File "/usr/local/lib/python2.7/dist-packages/apscheduler/schedulers/blocking.py", line 27, in _main_loop
+  File "/usr/local/lib/python2.7/dist-packages/apscheduler/schedulers/base.py", line 796, in _process_jobs
+<type 'exceptions.AttributeError'>: 'NoneType' object has no attribute 'now'
+
+2014-12-02 23:43:10,238 DEBG 'pdfproject' stderr output:
+Exception in thread APScheduler (most likely raised during interpreter shutdown):
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/threading.py", line 810, in __bootstrap_inner
+  File "/usr/lib/python2.7/threading.py", line 763, in run
+  File "/usr/local/lib/python2.7/dist-packages/apscheduler/schedulers/blocking.py", line 27, in _main_loop
+  File "/usr/local/lib/python2.7/dist-packages/apscheduler/schedulers/base.py", line 796, in _process_jobs
+<type 'exceptions.AttributeError'>: 'NoneType' object has no attribute 'now'
+
+2014-12-02 23:43:12,672 DEBG 'pdfproject' stderr output:
+Exception in thread APScheduler (most likely raised during interpreter shutdown):
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/threading.py", line 810, in __bootstrap_inner
+  File "/usr/lib/python2.7/threading.py", line 763, in run
+  File "/usr/local/lib/python2.7/dist-packages/apscheduler/schedulers/blocking.py", line 27, in _main_loop
+  File "/usr/local/lib/python2.7/dist-packages/apscheduler/schedulers/base.py", line 796, in _process_jobs
+<type 'exceptions.AttributeError'>: 'NoneType' object has no attribute 'now'
+
+2014-12-02 23:44:00,044 DEBG 'pdfproject' stderr output:
+Exception in thread APScheduler (most likely raised during interpreter shutdown):
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/threading.py", line 810, in __bootstrap_inner
+  File "/usr/lib/python2.7/threading.py", line 763, in run
+  File "/usr/local/lib/python2.7/dist-packages/apscheduler/schedulers/blocking.py", line 27, in _main_loop
+  File "/usr/local/lib/python2.7/dist-packages/apscheduler/schedulers/base.py", line 796, in _process_jobs
+<type 'exceptions.AttributeError'>: 'NoneType' object has no attribute 'now'
+
+2014-12-02 23:44:00,055 DEBG 'pdfproject' stderr output:
+Exception in thread APScheduler (most likely raised during interpreter shutdown):
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/threading.py", line 810, in __bootstrap_inner
+  File "/usr/lib/python2.7/threading.py", line 763, in run
+  File "/usr/local/lib/python2.7/dist-packages/apscheduler/schedulers/blocking.py", line 27, in _main_loop
+  File "/usr/local/lib/python2.7/dist-packages/apscheduler/schedulers/base.py", line 796, in _process_jobs
+<type 'exceptions.AttributeError'>: 'NoneType' object has no attribute 'now'
+
+2014-12-02 23:44:00,094 DEBG 'pdfproject' stderr output:
+Exception in thread APScheduler (most likely raised during interpreter shutdown):
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/threading.py", line 810, in __bootstrap_inner
+  File "/usr/lib/python2.7/threading.py", line 763, in run
+  File "/usr/local/lib/python2.7/dist-packages/apscheduler/schedulers/blocking.py", line 27, in _main_loop
+  File "/usr/local/lib/python2.7/dist-packages/apscheduler/schedulers/base.py", line 796, in _process_jobs
+<type 'exceptions.AttributeError'>: 'NoneType' object has no attribute 'now'
+
+2014-12-02 23:45:02,188 DEBG 'pdfproject' stderr output:
+Exception in thread APScheduler (most likely raised during interpreter shutdown):
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/threading.py", line 810, in __bootstrap_inner
+  File "/usr/lib/python2.7/threading.py", line 763, in run
+  File "/usr/local/lib/python2.7/dist-packages/apscheduler/schedulers/blocking.py", line 27, in _main_loop
+  File "/usr/local/lib/python2.7/dist-packages/apscheduler/schedulers/base.py", line 796, in _process_jobs
+<type 'exceptions.AttributeError'>: 'NoneType' object has no attribute 'now'
+
+2014-12-02 23:45:02,196 DEBG 'pdfproject' stderr output:
+Exception in thread APScheduler (most likely raised during interpreter shutdown):
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/threading.py", line 810, in __bootstrap_inner
+  File "/usr/lib/python2.7/threading.py", line 763, in run
+  File "/usr/local/lib/python2.7/dist-packages/apscheduler/schedulers/blocking.py", line 27, in _main_loop
+  File "/usr/local/lib/python2.7/dist-packages/apscheduler/schedulers/base.py", line 796, in _process_jobs
+<type 'exceptions.AttributeError'>: 'NoneType' object has no attribute 'now'
+
+2014-12-02 23:45:02,199 DEBG 'pdfproject' stderr output:
+Exception in thread APScheduler (most likely raised during interpreter shutdown):
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/threading.py", line 810, in __bootstrap_inner
+  File "/usr/lib/python2.7/threading.py", line 763, in run
+  File "/usr/local/lib/python2.7/dist-packages/apscheduler/schedulers/blocking.py", line 27, in _main_loop
+  File "/usr/local/lib/python2.7/dist-packages/apscheduler/schedulers/base.py", line 796, in _process_jobs
+<type 'exceptions.AttributeError'>: 'NoneType' object has no attribute 'now'
+
+2014-12-02 23:45:02,203 DEBG 'pdfproject' stderr output:
+Exception in thread APScheduler (most likely raised during interpreter shutdown):
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/threading.py", line 810, in __bootstrap_inner
+  File "/usr/lib/python2.7/threading.py", line 763, in run
+  File "/usr/local/lib/python2.7/dist-packages/apscheduler/schedulers/blocking.py", line 27, in _main_loop
+  File "/usr/local/lib/python2.7/dist-packages/apscheduler/schedulers/base.py", line 796, in _process_jobs
+<type 'exceptions.AttributeError'>: 'NoneType' object has no attribute 'now'
+
+2014-12-02 23:46:07,151 DEBG 'pdfproject' stderr output:
+Exception in thread APScheduler (most likely raised during interpreter shutdown):
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/threading.py", line 810, in __bootstrap_inner
+  File "/usr/lib/python2.7/threading.py", line 763, in run
+  File "/usr/local/lib/python2.7/dist-packages/apscheduler/schedulers/blocking.py", line 27, in _main_loop
+  File "/usr/local/lib/python2.7/dist-packages/apscheduler/schedulers/base.py", line 796, in _process_jobs
+<type 'exceptions.AttributeError'>: 'NoneType' object has no attribute 'now'
+
+2014-12-02 23:46:09,731 DEBG 'pdfproject' stderr output:
+Exception in thread APScheduler (most likely raised during interpreter shutdown):
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/threading.py", line 810, in __bootstrap_inner
+  File "/usr/lib/python2.7/threading.py", line 763, in run
+  File "/usr/local/lib/python2.7/dist-packages/apscheduler/schedulers/blocking.py", line 27, in _main_loop
+  File "/usr/local/lib/python2.7/dist-packages/apscheduler/schedulers/base.py", line 835, in _process_jobs
+  File "/usr/lib/python2.7/threading.py", line 215, in __exit__
+  File "/usr/lib/python2.7/threading.py", line 202, in release
+<type 'exceptions.TypeError'>: 'NoneType' object is not callable
+
+2014-12-02 23:46:09,739 DEBG 'pdfproject' stderr output:
+Exception in thread APScheduler (most likely raised during interpreter shutdown):
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/threading.py", line 810, in __bootstrap_inner
+  File "/usr/lib/python2.7/threading.py", line 763, in run
+  File "/usr/local/lib/python2.7/dist-packages/apscheduler/schedulers/blocking.py", line 27, in _main_loop
+  File "/usr/local/lib/python2.7/dist-packages/apscheduler/schedulers/base.py", line 796, in _process_jobs
+<type 'exceptions.AttributeError'>: 'NoneType' object has no attribute 'now'
+
+2014-12-02 23:46:50,825 DEBG 'pdfproject' stderr output:
+Exception in thread APScheduler (most likely raised during interpreter shutdown):
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/threading.py", line 810, in __bootstrap_inner
+  File "/usr/lib/python2.7/threading.py", line 763, in run
+  File "/usr/local/lib/python2.7/dist-packages/apscheduler/schedulers/blocking.py", line 27, in _main_loop
+  File "/usr/local/lib/python2.7/dist-packages/apscheduler/schedulers/base.py", line 796, in _process_jobs
+<type 'exceptions.AttributeError'>: 'NoneType' object has no attribute 'now'
+
+2014-12-02 23:46:50,840 DEBG 'pdfproject' stderr output:
+Exception in thread APScheduler (most likely raised during interpreter shutdown):
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/threading.py", line 810, in __bootstrap_inner
+  File "/usr/lib/python2.7/threading.py", line 763, in run
+  File "/usr/local/lib/python2.7/dist-packages/apscheduler/schedulers/blocking.py", line 27, in _main_loop
+  File "/usr/local/lib/python2.7/dist-packages/apscheduler/schedulers/base.py", line 796, in _process_jobs
+<type 'exceptions.AttributeError'>: 'NoneType' object has no attribute 'now'
+
+2014-12-02 23:46:53,303 DEBG 'pdfproject' stderr output:
+Exception in thread APScheduler (most likely raised during interpreter shutdown):
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/threading.py", line 810, in __bootstrap_inner
+  File "/usr/lib/python2.7/threading.py", line 763, in run
+  File "/usr/local/lib/python2.7/dist-packages/apscheduler/schedulers/blocking.py", line 27, in _main_loop
+  File "/usr/local/lib/python2.7/dist-packages/apscheduler/schedulers/base.py", line 796, in _process_jobs
+<type 'exceptions.AttributeError'>: 'NoneType' object has no attribute 'now'
+
+2014-12-02 23:47:15,649 DEBG 'pdfproject' stderr output:
+Exception in thread APScheduler (most likely raised during interpreter shutdown):
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/threading.py", line 810, in __bootstrap_inner
+  File "/usr/lib/python2.7/threading.py", line 763, in run
+  File "/usr/local/lib/python2.7/dist-packages/apscheduler/schedulers/blocking.py", line 27, in _main_loop
+  File "/usr/local/lib/python2.7/dist-packages/apscheduler/schedulers/base.py", line 796, in _process_jobs
+<type 'exceptions.AttributeError'>: 'NoneType' object has no attribute 'now'
+
+2014-12-02 23:47:17,741 DEBG 'pdfproject' stderr output:
+Exception in thread APScheduler (most likely raised during interpreter shutdown):
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/threading.py", line 810, in __bootstrap_inner
+  File "/usr/lib/python2.7/threading.py", line 763, in run
+  File "/usr/local/lib/python2.7/dist-packages/apscheduler/schedulers/blocking.py", line 27, in _main_loop
+  File "/usr/local/lib/python2.7/dist-packages/apscheduler/schedulers/base.py", line 796, in _process_jobs
+<type 'exceptions.AttributeError'>: 'NoneType' object has no attribute 'now'
+
+2014-12-02 23:47:18,028 DEBG 'pdfproject' stderr output:
+Exception in thread APScheduler (most likely raised during interpreter shutdown):
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/threading.py", line 810, in __bootstrap_inner
+  File "/usr/lib/python2.7/threading.py", line 763, in run
+  File "/usr/local/lib/python2.7/dist-packages/apscheduler/schedulers/blocking.py", line 27, in _main_loop
+  File "/usr/local/lib/python2.7/dist-packages/apscheduler/schedulers/base.py", line 796, in _process_jobs
+<type 'exceptions.AttributeError'>: 'NoneType' object has no attribute 'now'
+
+2014-12-03 00:11:42,628 DEBG 'pdfproject' stderr output:
+Exception in thread APScheduler (most likely raised during interpreter shutdown):
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/threading.py", line 810, in __bootstrap_inner
+  File "/usr/lib/python2.7/threading.py", line 763, in run
+  File "/usr/local/lib/python2.7/dist-packages/apscheduler/schedulers/blocking.py", line 27, in _main_loop
+  File "/usr/local/lib/python2.7/dist-packages/apscheduler/schedulers/base.py", line 796, in _process_jobs
+<type 'exceptions.AttributeError'>: 'NoneType' object has no attribute 'now'
+
+2014-12-03 00:11:45,935 DEBG 'pdfproject' stderr output:
+Exception in thread APScheduler (most likely raised during interpreter shutdown):
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/threading.py", line 810, in __bootstrap_inner
+  File "/usr/lib/python2.7/threading.py", line 763, in run
+  File "/usr/local/lib/python2.7/dist-packages/apscheduler/schedulers/blocking.py", line 27, in _main_loop
+  File "/usr/local/lib/python2.7/dist-packages/apscheduler/schedulers/base.py", line 796, in _process_jobs
+<type 'exceptions.AttributeError'>: 'NoneType' object has no attribute 'now'
+
+2014-12-03 00:11:47,513 DEBG 'pdfproject' stderr output:
+Exception in thread APScheduler (most likely raised during interpreter shutdown):
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/threading.py", line 810, in __bootstrap_inner
+  File "/usr/lib/python2.7/threading.py", line 763, in run
+  File "/usr/local/lib/python2.7/dist-packages/apscheduler/schedulers/blocking.py", line 28, in _main_loop
+  File "/usr/lib/python2.7/threading.py", line 620, in wait
+  File "/usr/lib/python2.7/threading.py", line 354, in wait
+<type 'exceptions.TypeError'>: 'NoneType' object is not callable
+
+2014-12-03 00:16:13,635 DEBG 'pdfproject' stderr output:
+Exception in thread APScheduler (most likely raised during interpreter shutdown):
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/threading.py", line 810, in __bootstrap_inner
+  File "/usr/lib/python2.7/threading.py", line 763, in run
+  File "/usr/local/lib/python2.7/dist-packages/apscheduler/schedulers/blocking.py", line 27, in _main_loop
+  File "/usr/local/lib/python2.7/dist-packages/apscheduler/schedulers/base.py", line 796, in _process_jobs
+<type 'exceptions.AttributeError'>: 'NoneType' object has no attribute 'now'
+
+2014-12-03 00:16:13,711 DEBG 'pdfproject' stderr output:
+Exception in thread APScheduler (most likely raised during interpreter shutdown):
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/threading.py", line 810, in __bootstrap_inner
+  File "/usr/lib/python2.7/threading.py", line 763, in run
+  File "/usr/local/lib/python2.7/dist-packages/apscheduler/schedulers/blocking.py", line 27, in _main_loop
+  File "/usr/local/lib/python2.7/dist-packages/apscheduler/schedulers/base.py", line 796, in _process_jobs
+<type 'exceptions.AttributeError'>: 'NoneType' object has no attribute 'now'
+
+2014-12-03 00:16:13,719 DEBG 'pdfproject' stderr output:
+Exception in thread APScheduler (most likely raised during interpreter shutdown):
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/threading.py", line 810, in __bootstrap_inner
+  File "/usr/lib/python2.7/threading.py", line 763, in run
+  File "/usr/local/lib/python2.7/dist-packages/apscheduler/schedulers/blocking.py", line 27, in _main_loop
+  File "/usr/local/lib/python2.7/dist-packages/apscheduler/schedulers/base.py", line 796, in _process_jobs
+<type 'exceptions.AttributeError'>: 'NoneType' object has no attribute 'now'
+
+2014-12-03 00:16:13,723 DEBG 'pdfproject' stderr output:
+Exception in thread APScheduler (most likely raised during interpreter shutdown):
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/threading.py", line 810, in __bootstrap_inner
+  File "/usr/lib/python2.7/threading.py", line 763, in run
+  File "/usr/local/lib/python2.7/dist-packages/apscheduler/schedulers/blocking.py", line 27, in _main_loop
+  File "/usr/local/lib/python2.7/dist-packages/apscheduler/schedulers/base.py", line 796, in _process_jobs
+<type 'exceptions.AttributeError'>: 'NoneType' object has no attribute 'now'
+
+2014-12-03 00:18:24,379 DEBG 'pdfproject' stderr output:
+Exception in thread APScheduler (most likely raised during interpreter shutdown):
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/threading.py", line 810, in __bootstrap_inner
+  File "/usr/lib/python2.7/threading.py", line 763, in run
+  File "/usr/local/lib/python2.7/dist-packages/apscheduler/schedulers/blocking.py", line 27, in _main_loop
+  File "/usr/local/lib/python2.7/dist-packages/apscheduler/schedulers/base.py", line 796, in _process_jobs
+<type 'exceptions.AttributeError'>: 'NoneType' object has no attribute 'now'
+
+2014-12-03 00:18:24,467 DEBG 'pdfproject' stderr output:
+Exception in thread APScheduler (most likely raised during interpreter shutdown):
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/threading.py", line 810, in __bootstrap_inner
+  File "/usr/lib/python2.7/threading.py", line 763, in run
+  File "/usr/local/lib/python2.7/dist-packages/apscheduler/schedulers/blocking.py", line 27, in _main_loop
+  File "/usr/local/lib/python2.7/dist-packages/apscheduler/schedulers/base.py", line 796, in _process_jobs
+<type 'exceptions.AttributeError'>: 'NoneType' object has no attribute 'now'
+
+2014-12-03 00:18:27,486 DEBG 'pdfproject' stderr output:
+Exception in thread APScheduler (most likely raised during interpreter shutdown):
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/threading.py", line 810, in __bootstrap_inner
+  File "/usr/lib/python2.7/threading.py", line 763, in run
+  File "/usr/local/lib/python2.7/dist-packages/apscheduler/schedulers/blocking.py", line 27, in _main_loop
+  File "/usr/local/lib/python2.7/dist-packages/apscheduler/schedulers/base.py", line 796, in _process_jobs
+<type 'exceptions.AttributeError'>: 'NoneType' object has no attribute 'now'
+
+2014-12-03 00:18:27,506 DEBG 'pdfproject' stderr output:
+Exception in thread APScheduler (most likely raised during interpreter shutdown):
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/threading.py", line 810, in __bootstrap_inner
+  File "/usr/lib/python2.7/threading.py", line 763, in run
+  File "/usr/local/lib/python2.7/dist-packages/apscheduler/schedulers/blocking.py", line 27, in _main_loop
+  File "/usr/local/lib/python2.7/dist-packages/apscheduler/schedulers/base.py", line 796, in _process_jobs
+<type 'exceptions.AttributeError'>: 'NoneType' object has no attribute 'now'
+
+2014-12-03 00:19:04,039 DEBG 'pdfproject' stderr output:
+Exception in thread APScheduler (most likely raised during interpreter shutdown):
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/threading.py", line 810, in __bootstrap_inner
+  File "/usr/lib/python2.7/threading.py", line 763, in run
+  File "/usr/local/lib/python2.7/dist-packages/apscheduler/schedulers/blocking.py", line 27, in _main_loop
+  File "/usr/local/lib/python2.7/dist-packages/apscheduler/schedulers/base.py", line 796, in _process_jobs
+<type 'exceptions.AttributeError'>: 'NoneType' object has no attribute 'now'
+
+2014-12-03 00:19:04,046 DEBG 'pdfproject' stderr output:
+Exception in thread APScheduler (most likely raised during interpreter shutdown):
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/threading.py", line 810, in __bootstrap_inner
+  File "/usr/lib/python2.7/threading.py", line 763, in run
+  File "/usr/local/lib/python2.7/dist-packages/apscheduler/schedulers/blocking.py", line 27, in _main_loop
+  File "/usr/local/lib/python2.7/dist-packages/apscheduler/schedulers/base.py", line 796, in _process_jobs
+<type 'exceptions.AttributeError'>: 'NoneType' object has no attribute 'now'
+
+2014-12-03 00:19:25,109 DEBG 'pdfproject' stderr output:
+Exception in thread APScheduler (most likely raised during interpreter shutdown):
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/threading.py", line 810, in __bootstrap_inner
+  File "/usr/lib/python2.7/threading.py", line 763, in run
+  File "/usr/local/lib/python2.7/dist-packages/apscheduler/schedulers/blocking.py", line 27, in _main_loop
+  File "/usr/local/lib/python2.7/dist-packages/apscheduler/schedulers/base.py", line 796, in _process_jobs
+<type 'exceptions.AttributeError'>: 'NoneType' object has no attribute 'now'
+
+2014-12-03 00:19:25,308 DEBG 'pdfproject' stderr output:
+Exception in thread APScheduler (most likely raised during interpreter shutdown):
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/threading.py", line 810, in __bootstrap_inner
+  File "/usr/lib/python2.7/threading.py", line 763, in run
+  File "/usr/local/lib/python2.7/dist-packages/apscheduler/schedulers/blocking.py", line 28, in _main_loop
+  File "/usr/lib/python2.7/threading.py", line 620, in wait
+  File "/usr/lib/python2.7/threading.py", line 354, in wait
+<type 'exceptions.TypeError'>: 'NoneType' object is not callable
+
+2014-12-03 00:22:55,699 DEBG 'pdfproject' stderr output:
+Exception in thread APScheduler (most likely raised during interpreter shutdown):
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/threading.py", line 810, in __bootstrap_inner
+  File "/usr/lib/python2.7/threading.py", line 763, in run
+  File "/usr/local/lib/python2.7/dist-packages/apscheduler/schedulers/blocking.py", line 27, in _main_loop
+  File "/usr/local/lib/python2.7/dist-packages/apscheduler/schedulers/base.py", line 796, in _process_jobs
+<type 'exceptions.AttributeError'>: 'NoneType' object has no attribute 'now'
+
+2014-12-03 00:23:50,625 DEBG 'pdfproject' stderr output:
+Exception in thread APScheduler (most likely raised during interpreter shutdown):
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/threading.py", line 810, in __bootstrap_inner
+  File "/usr/lib/python2.7/threading.py", line 763, in run
+  File "/usr/local/lib/python2.7/dist-packages/apscheduler/schedulers/blocking.py", line 27, in _main_loop
+  File "/usr/local/lib/python2.7/dist-packages/apscheduler/schedulers/base.py", line 796, in _process_jobs
+<type 'exceptions.AttributeError'>: 'NoneType' object has no attribute 'now'
+
+2014-12-03 00:35:23,502 DEBG 'pdfproject' stderr output:
+Exception in thread APScheduler (most likely raised during interpreter shutdown):
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/threading.py", line 810, in __bootstrap_inner
+  File "/usr/lib/python2.7/threading.py", line 763, in run
+  File "/usr/local/lib/python2.7/dist-packages/apscheduler/schedulers/blocking.py", line 27, in _main_loop
+  File "/usr/local/lib/python2.7/dist-packages/apscheduler/schedulers/base.py", line 796, in _process_jobs
+<type 'exceptions.AttributeError'>: 'NoneType' object has no attribute 'now'
+
+2014-12-03 00:35:23,503 CRIT uncaptured python exception, closing channel <POutputDispatcher at 139792499005488 for <Subprocess at 139792499004912 with name pdfproject in state RUNNING> (stderr)> (<type 'exceptions.IOError'>:[Errno 5] Input/output error [/usr/local/lib/python2.7/dist-packages/supervisor/supervisord.py|runforever|235] [/usr/local/lib/python2.7/dist-packages/supervisor/dispatchers.py|handle_read_event|231] [/usr/local/lib/python2.7/dist-packages/supervisor/dispatchers.py|record_output|165] [/usr/local/lib/python2.7/dist-packages/supervisor/dispatchers.py|_log|146] [/usr/local/lib/python2.7/dist-packages/supervisor/loggers.py|log|293] [/usr/local/lib/python2.7/dist-packages/supervisor/loggers.py|emit|86] [/usr/local/lib/python2.7/dist-packages/supervisor/loggers.py|handleError|90] [/usr/lib/python2.7/traceback.py|print_exception|124] [/usr/lib/python2.7/traceback.py|_print|13])
+2014-12-03 00:36:26,219 DEBG 'pdfproject-reloader' stderr output:
+cat: 
+2014-12-03 00:36:26,219 CRIT uncaptured python exception, closing channel <POutputDispatcher at 139670965221568 for <Subprocess at 139670965221064 with name pdfproject-reloader in state RUNNING> (stderr)> (<type 'exceptions.IOError'>:[Errno 5] Input/output error [/usr/local/lib/python2.7/dist-packages/supervisor/supervisord.py|runforever|235] [/usr/local/lib/python2.7/dist-packages/supervisor/dispatchers.py|handle_read_event|231] [/usr/local/lib/python2.7/dist-packages/supervisor/dispatchers.py|record_output|165] [/usr/local/lib/python2.7/dist-packages/supervisor/dispatchers.py|_log|146] [/usr/local/lib/python2.7/dist-packages/supervisor/loggers.py|log|293] [/usr/local/lib/python2.7/dist-packages/supervisor/loggers.py|emit|86] [/usr/local/lib/python2.7/dist-packages/supervisor/loggers.py|handleError|90] [/usr/lib/python2.7/traceback.py|print_exception|124] [/usr/lib/python2.7/traceback.py|_print|13])
+2014-12-03 00:37:05,636 DEBG 'pdfproject-reloader' stderr output:
+cat: /tmp/flask-project.pid: No such file or directory
+
+2014-12-03 00:37:05,636 CRIT uncaptured python exception, closing channel <POutputDispatcher at 139757644572864 for <Subprocess at 139757644572360 with name pdfproject-reloader in state RUNNING> (stderr)> (<type 'exceptions.IOError'>:[Errno 5] Input/output error [/usr/local/lib/python2.7/dist-packages/supervisor/supervisord.py|runforever|235] [/usr/local/lib/python2.7/dist-packages/supervisor/dispatchers.py|handle_read_event|231] [/usr/local/lib/python2.7/dist-packages/supervisor/dispatchers.py|record_output|165] [/usr/local/lib/python2.7/dist-packages/supervisor/dispatchers.py|_log|146] [/usr/local/lib/python2.7/dist-packages/supervisor/loggers.py|log|293] [/usr/local/lib/python2.7/dist-packages/supervisor/loggers.py|emit|86] [/usr/local/lib/python2.7/dist-packages/supervisor/loggers.py|handleError|90] [/usr/lib/python2.7/traceback.py|print_exception|124] [/usr/lib/python2.7/traceback.py|_print|13])
