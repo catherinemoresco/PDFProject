@@ -89,10 +89,15 @@
 			</div>
 	</body>
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script type="text/javascript" src="{{ url_for('static', filename='js/transit.min.js') }}"></script>
 <!-- Change upload icon once file is selected -->
 	<script type="text/javascript">
 
 		$(document).ready(function(){
+
+			$('.header-box').hide().fadeIn();
+			$('#uploadForm').css({position:'relative',x:'1000px'}).transition({x:'0px'})
+
 			$("#choose-file").bind("change", function(){
 				$("#upload-icon").html('<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="50px" height="50px" viewBox="0 0 16 16" enable-background="new 0 0 16 16" xml:space="preserve"><g><path d="M13,13H3V3h7.376L11,2H3C2.448,2,2,2.448,2,3v10c0,0.552,0.448,1,1,1h10c0.552,0,1-0.448,1-1V6.397L13,8V13z"/><path d="M14.684,1.114C14.564,1.037,14.432,1,14.301,1c-0.228,0-0.451,0.112-0.586,0.317L8.279,9.159l-2.103-2.4 c-0.285-0.263-0.727-0.246-0.99,0.038C4.923,7.081,4.941,7.524,5.225,7.786l2.528,2.885l0.061,0.07l0.064,0.073l0.026,0.016 l0.053,0.053l0.137,0.062l0.031,0.015l0.215,0.037l0.009-0.002c0.19,0.001,0.379-0.069,0.518-0.22l0.057-0.092l0.003-0.004 l5.96-8.597C15.098,1.76,15.007,1.326,14.684,1.114z"/></g></svg>');
 
