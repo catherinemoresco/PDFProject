@@ -1,4 +1,4 @@
-import processing
+import processing, extract
 import os
 import time
 import datetime
@@ -21,9 +21,12 @@ assets.url = app.static_url_path
 scss = Bundle('css/main.scss', 'css/base.scss', filters='pyscss', output='css/all.css')
 homescss = Bundle('css/main.scss', 'css/homepage.scss', filters='pyscss', output='css/home.css')
 readscss = Bundle('css/main.scss', 'css/reader.scss', filters='pyscss', output='css/read.css')
+rotatescss = Bundle('css/main.scss', 'css/rotate.scss', filters='pyscss', output='css/rotate.css')
 assets.register('scss_all', scss)
 assets.register('scss_home', homescss)
 assets.register('scss_read', readscss)
+assets.register('scss_rotate', rotatescss)
+
 
 ## Maximum Time To Keep Files in Seconds
 maxTime = 10800
@@ -65,9 +68,9 @@ def homeprint():
 	""" Render homepage """ 
 	return render_template("start.html")
 
-@app.route("/process/",methods=['GET','POST'])
-def upload_file():
-	""" Upload and process file """
+@app.route("/upload/", methods=['GET','POST'])
+def upload():
+	"""Upload file and allow user to orient page"""
 	print 'upload file'
 	## Check for existence of specified upload folder, and create one if it does not exist.
 	try:
@@ -87,15 +90,38 @@ def upload_file():
 			file.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
 			print "saved?"
 			print (os.path.join(app.config['UPLOAD_FOLDER'], filename))
-			## Run image processing modules, which write processed images to upload folder.
-			processing.process(os.path.join(app.config['UPLOAD_FOLDER'], filename))
-			print "ran?"
-			## Redirect to reading view
-			return redirect(url_for('uploaded_file', filename=filename)) #"upload success" #redirect(url_for('uploaded_file',filename=filename))
+			## Get and save image thumbnails
+			extract.getThumbnailImage(app.config['UPLOAD_FOLDER'],filename)
+			return redirect(url_for('rotate', filename=filename)) #"upload success" 
+			print filename
 		return "No!"
 	return "No file uploaded. Please try again."
 
-@app.route('/uploads/<filename>')
+
+@app.route("/rotate/<filename>")
+def rotate(filename):
+	thumb = "/static/uploads/" +  filename +  "thumb.jpeg"
+	print thumb
+	return render_template('rotate.html', thumb=thumb, filename=filename)
+
+
+@app.route("/process/<filename>", methods=['GET', 'POST'])
+def process_file(filename):
+	""" Upload and process file """
+	if request.method=='POST':
+		try:
+			rotate_angle = int(request.form['rotateby'])
+			if rotate_angle**2 > 16:
+				rotate_angle = (rotate_angle % 4)
+			rotate_angle = rotate_angle * 90
+		except:
+			rotate_angle = 0
+	processing.process(os.path.join(app.config['UPLOAD_FOLDER'], filename), rotate_angle)
+	print "ran?"
+	## Redirect to reading view
+	return redirect(url_for('uploaded_file', filename=filename)) #"upload success" #redirect(url_for('uploaded_file',filename=filename))
+
+@app.route('/upload/<filename>')
 def uploaded_file(filename):
 	""" Display uploaded file """
 	## Create pattern

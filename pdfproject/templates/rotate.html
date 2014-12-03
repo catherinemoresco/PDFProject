@@ -1,0 +1,127 @@
+<!doctype html>
+
+<html>
+	{% include 'head.html' %}
+		{% assets "scss_rotate" %}
+			<link rel="stylesheet" type="text/css" href="{{ ASSET_URL }}"/>
+		{% endassets %}	
+
+	<div class="page-one-content">
+		<div class="header-container">
+			<div class="header-bg"></div>
+
+			<div class="rotate-header-box">
+
+				<h1>Rotate your document so the text is right-side up.</h1>
+				<p>Don't worry about the fine-tuning; just tell us which way is up, and we'll do the rest.</p>
+			</div>
+		</div>
+			
+
+		<div class="center-container">
+			<div class="rotate-button">
+				<div class="svg-icon left icon">
+					<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+						 width="60px" height="60px" viewBox="0 0 600 600" enable-background="new 0 0 600 600" xml:space="preserve">
+					<path d="M123.932,323.927c0,97.085,78.983,176.07,176.071,176.07c97.082,0,176.065-78.985,176.065-176.07
+					c0-92.274-71.364-168.143-161.791-175.441v-34.212c0-5.099-2.725-9.815-7.137-12.363c-4.42-2.551-9.857-2.551-14.275,0
+					l-82.904,47.864c-4.42,2.548-7.137,7.264-7.137,12.363c0,5.102,2.717,9.814,7.137,12.362l82.904,47.857
+					c2.209,1.276,4.67,1.914,7.137,1.914c2.462,0,4.93-0.639,7.139-1.914c4.412-2.551,7.137-7.263,7.137-12.362v-32.863
+					c74.664,7.211,133.24,70.276,133.24,146.798c0,81.342-66.174,147.518-147.516,147.518c-81.348,0-147.52-66.176-147.52-147.518
+					c0-7.883-6.393-14.275-14.279-14.275C130.32,309.654,123.932,316.047,123.932,323.927z"/>
+					</svg>
+				</div>
+			</div>
+			<div class="image-container">
+				<img src="{{thumb}}" id="thumbnail">
+			</div>
+			<div class="rotate-button">
+						<div class="svg-icon right icon">
+							<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+								 width="60px" height="60px" viewBox="0 0 600 600" enable-background="new 0 0 600 600" xml:space="preserve">
+							<path d="M461.797,309.654c-7.887,0-14.279,6.393-14.279,14.275c0,81.342-66.172,147.518-147.52,147.518
+								c-81.342,0-147.515-66.176-147.515-147.518c0-76.521,58.575-139.587,133.239-146.798v32.863c0,5.099,2.725,9.811,7.137,12.362
+								c2.21,1.275,4.677,1.914,7.139,1.914c2.467,0,4.928-0.638,7.137-1.914l82.904-47.857c4.42-2.548,7.137-7.26,7.137-12.362
+								c0-5.099-2.717-9.815-7.137-12.363l-82.904-47.864c-4.418-2.551-9.856-2.551-14.276,0c-4.412,2.548-7.137,7.264-7.137,12.363v34.212
+								c-90.426,7.298-161.791,83.167-161.791,175.441c0,97.085,78.984,176.07,176.066,176.07c97.088,0,176.071-78.985,176.071-176.07
+								C476.068,316.047,469.68,309.654,461.797,309.654z"/>
+							</svg>
+						</div>
+					</div>
+		</div>
+
+	<div class="form-container">
+		<div class="form-background"></div>
+			<div class="form-box">
+				<div class="form-content">
+					<form id="rotateForm" method="post" action="/process/{{filename}}" >
+
+						<label>
+							<div class="svg-icon submit icon">
+								<svg version="1.1" id="Layer_3" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+									 width="45px" height="45px" viewBox="0 0 100 100" enable-background="new 0 0 100 100" xml:space="preserve">
+								<path d="M74.927,50L46.524,21.598c-2.041-2.042-2.041-5.352,0-7.393c2.041-2.042,5.351-2.042,7.393,0l32.1,32.099
+									c1.02,1.021,1.53,2.358,1.53,3.696s-0.511,2.676-1.53,3.696l-32.1,32.099c-2.042,2.042-5.352,2.042-7.393,0
+									c-2.041-2.041-2.041-5.352,0-7.393L74.927,50z M13.983,78.402c-2.041,2.041-2.041,5.352,0,7.393c2.041,2.042,5.35,2.042,7.393,0
+									l32.1-32.099c1.02-1.021,1.529-2.358,1.529-3.696s-0.51-2.676-1.529-3.696l-32.1-32.099c-2.043-2.042-5.352-2.042-7.393,0
+									c-2.041,2.041-2.041,5.351,0,7.393L42.386,50L13.983,78.402z"/>
+								</svg>
+								<br>
+								CONTINUE
+
+							</div>
+							<input id="submit" onsubmit="insertValue();" type="submit" value="Submit">
+						</label>
+						<input id="rotate" name="rotateby" type="text">
+
+					</form>
+		</div>
+	</div>
+
+
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+		<script type="text/javascript" src="{{ url_for('static', filename='js/transit.min.js') }}"></script>
+	<script>
+
+	$(document).ready(function(){
+		var rotateBy = 0;
+
+
+		$('.svg-icon.left').bind("click", function(){
+			rotateBy = rotateBy + 1;
+			degrees = -90*rotateBy
+			$("img#thumbnail").transition({ rotate: degrees+'deg'});
+			insertValue();
+		})
+
+		$('.svg-icon.right').bind("click", function(){
+			rotateBy = rotateBy + -1;
+			degrees = -90*rotateBy
+			$("img#thumbnail").transition({ rotate: degrees+'deg'});
+			insertValue();
+		})
+
+		function insertValue(){
+			$('input#rotate').val(rotateBy)
+			console.log($('input#rotate').val())
+
+		};
+
+
+		jQuery.fn.rotate = function(degrees) {
+		    $(this).animate({  borderSpacing: degrees }, {
+			    step: function(now,fx) {
+			      $(this).css('-webkit-transform','rotate('+now+'deg)'); 
+			      $(this).css('-moz-transform','rotate('+now+'deg)');
+			      $(this).css('transform','rotate('+now+'deg)');
+    },
+    duration:'slow'
+},'linear');
+		};
+
+
+	});
+
+
+	</script>
+<html>

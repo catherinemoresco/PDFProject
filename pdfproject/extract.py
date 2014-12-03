@@ -46,3 +46,11 @@ def extractImages(filename):
     ## Return decoded images
     return decoded_images
 
+
+def getThumbnailImage(path, filename):
+    """ Get image thumbnail and write to file as a png, returning no value """
+    path_to_image = path+"/"+filename
+    thumbnail_name = path_to_image + "thumb.jpeg"
+    pipe = subprocess.Popen("gs -dNOPAUSE -sDEVICE=jpeg -sOutputFile="+thumbnail_name+ " -dLastPage=1 -dJPEGQ=100 -r100 -q "+ path_to_image + " -c quit", shell=True)
+    ## ensures file is written before function ends
+    pipe.communicate()

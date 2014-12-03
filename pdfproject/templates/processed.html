@@ -24,8 +24,8 @@
 			{% endfor %}
 		{% endblock %}
 	</div>
-	<button onclick="export_to_pdf('datauri')" style="position:fixed;bottom:1em;left:1em">Export</button>
-
+<!-- 	<button onclick="export_to_pdf('datauri')" style="position:fixed;bottom:1em;left:1em">Export</button>
+ -->
 	<script type="text/javascript">
 
 // get JSON data
@@ -61,7 +61,7 @@
 
 // checks if two rectangles intersect
 	function intersectRect(r1, r2){
-		if ((r1[0][0] > r2[1][0]) || (r2[0][0]) > r1[0][0]){
+		if ((r1[0][0] > r2[1][0]) || (r2[0][0]) > r1[1][0]){
 			return false;
 		}
 		if ((r1[1][1] < r2[0][1]) || (r2[1][1]) < r1[0][1]){
@@ -145,7 +145,6 @@
 		if (fullHighlight([[initX, initY],[endX, endY]], [pointOne, pointTwo])){
 			var rect = highlightGroup.rect(Math.max(pointTwo[0]-pointOne[0]),Math.max(pointTwo[1] - pointOne[1], 0)).move(pointOne[0], pointOne[1]).fill('#FFFF66').id(currentDiv + "g" + highlightGroup + "line" + lineid).attr("fullHighlight", true)
 
-			console.log(rect.parent)
 			rect.on("dblclick", function(){this.parent.remove()})
 			return rect;
 			}
@@ -162,7 +161,7 @@
 				endHighlight = pointTwo[0];
 			}
 			else{
-			 endHighlight = (pointTwo[0], endX);
+			 endHighlight = (pointTwo[0], Math.min(endX, pointTwo[0]));
 			}
 			var rect = highlightGroup.rect(Math.max(endHighlight-startHighlight, 0), Math.max(pointTwo[1] - pointOne[1], 0)).move(startHighlight, pointOne[1]).fill('#FFFF66').id(currentDiv + "g" + highlightGroup + "line" + lineid).attr("fullHighlight", false);
 			return rect;
