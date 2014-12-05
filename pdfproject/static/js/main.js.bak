@@ -1,0 +1,375 @@
+// get JSON data
+	var jsonArray
+	var jpath = "/static/uploads/"+window.location.pathname.split('/')[2]+'.json.txt';
+	console.log(jpath);
+	function getData(jpath){
+		jsonArray = $.getJSON( jpath, function() {
+			console.log( "success" );
+		})
+		.done(function() {
+			console.log( "second success" );
+		})
+		.fail(function() {
+			console.log( "error" );
+		});
+	}
+
+	getData(jpath)
+
+
+
+// a line is fully highlighted if the selection
+// area spans its entire height, and the x-coordinates
+// overlap
+	function fullHighlight(selectionBox, lineBox){
+		if ((lineBox[0][1] > selectionBox[0][1]) && (lineBox[1][1] < selectionBox[1][1])){
+			if (!(selectionBox[0][0] > lineBox[1][0] || lineBox[0][0] > selectionBox[1][0])){
+				return true;
+			}
+		}
+		return false;
+	}
+
+// checks if two rectangles intersect
+	function intersectRect(r1, r2){
+		if ((r1[0][0] > r2[1][0]) || (r2[0][0]) > r1[1][0]){
+			return false;
+		}
+		if ((r1[1][1] < r2[0][1]) || (r2[1][1]) < r1[0][1]){
+			return false;
+		}
+		return true; 
+	}
+
+
+		var  divs = document.getElementsByClassName('pdf-page');
+		var divLen = divs.length;
+		var divDraws= [];
+		var pageGroups = []
+		var initX,initY,mousedown,dynamicRect, highlightGroup;
+		var currHighlightID = 0;
+		var scalingFactor;
+		var imagePath = [];
+		var followLines = true;
+		var accentColor = '#D98C3C';
+
+
+
+	// create divs
+		for(var i=0;i<divLen;i++){
+			divID = divs[i].id;
+			divDraws[i] = SVG(divID);
+			var image_item = new Array();
+			var fpath = '/'+divs[i].id;
+			imagePath[i] = fpath;
+			var image = divDraws[i].image(fpath);
+			divID = i;
+			divs[i].id = divID;
+			scale(image,divs[i]);
+			pageGroups[i] = divDraws[i].group().opacity(0.5);
+
+			// event listeners on divs to create highlights
+
+			divs[i].addEventListener("mousedown",function(event){
+				if(event.button == 0){
+					initX = event.pageX-this.offsetLeft-this.offsetParent.offsetLeft;
+					initY= event.pageY-this.offsetTop-this.offsetParent.offsetTop;
+					mousedown = true;
+				}
+			})
+			
+			divs[i].addEventListener("mousemove",function(){
+				if (mousedown === true){
+					if (!(highlightGroup)){
+						highlightGroup = pageGroups[eval(this.id)].group().id(currHighlightID);
+						currHighlightID++;
+					}
+					var endX = event.pageX-this.offsetLeft-this.offsetParent.offsetLeft;
+					var endY= event.pageY-this.offsetTop-this.offsetParent.offsetTop;
+
+					// iterate through page lines to draw highlights
+					if (followLines){
+
+					var pageRects = jsonArray.responseJSON[+this.id + 1]
+
+						for (var line in pageRects){
+							if (pageRects.hasOwnProperty(line)){
+								deleteHighlight(line, highlightGroup, i);
+								makeHighlight(pageRects[line], initX, endX, initY, endY, line, highlightGroup, i);
+							}
+						}
+					}
+
+					else{
+						deleteSimpleHighlight(highlightGroup, i);
+						makeSimpleHighlight(initX, endX, initY, endY, highlightGroup, i)
+
+					}
+				}
+			})
+			
+			divs[i].addEventListener("mouseup",function(event){
+				mousedown = false;			
+
+				if(highlightGroup){
+						highlightGroup = false;
+					}
+		
+			})
+		}
+
+	// set highlight mode; default is lines
+	$(".svg-button.lines").bind("click", function(){
+		$(".svg-button.lines > svg").css({fill: accentColor});
+		$(".svg-button.nolines > svg").css({fill: '#ffffff'});
+		followLines = true;
+	})
+
+	$(".svg-button.nolines").bind("click", function(){
+		$(".svg-button.nolines > svg").css({fill: accentColor});
+		$(".svg-button.lines > svg").css({fill: '#ffffff'});
+		followLines = false;
+	})
+
+	function makeSimpleHighlight(initX, endX, initY, endY,highlightGroup, currentDiv){
+		var rect = highlightGroup.rect(Math.max(endX-initX, 0), Math.max(endY-initY,0)).move(initX, initY).fill('#FFFF66').id(currentDiv + "g" + highlightGroup).attr("fullHighlight", true);
+		rect.on("dblclick", function(){this.parent.remove()})
+	};
+
+	function makeHighlight(line, initX, endX, initY, endY, lineid, highlightGroup, currentDiv){
+		var pointOne = scalepoint(line[0])
+		pointOne[0] -= 25;
+		pointOne[1] -= 5;
+
+		var pointTwo = scalepoint(line[1])
+		pointTwo[0] += 25;
+		pointTwo[1] += 5;
+
+		// fully highlight lines
+		if (fullHighlight([[initX, initY],[endX, endY]], [pointOne, pointTwo])){
+			var rect = highlightGroup.rect(Math.max(pointTwo[0]-pointOne[0]),Math.max(pointTwo[1] - pointOne[1], 0)).move(pointOne[0], pointOne[1]).fill('#FFFF66').id(currentDiv + "g" + highlightGroup + "line" + lineid).attr("fullHighlight", true)
+
+			rect.on("dblclick", function(){this.parent.remove()})
+			return rect;
+			}
+		// draw partial highlights on lines that are not fully highlighted
+		else if (intersectRect([[initX, initY],[endX, endY]], [pointOne, pointTwo])){
+			var startHighlight, endHighlight;
+			if (initY < pointOne[1]){
+				startHighlight = pointOne[0];
+			}
+			else{
+				startHighlight =Math.max(pointOne[0], initX);
+			}
+			if (endY > pointTwo[1]){
+				endHighlight = pointTwo[0];
+			}
+			else{
+			 endHighlight = (pointTwo[0], Math.min(endX, pointTwo[0]));
+			}
+			var rect = highlightGroup.rect(Math.max(endHighlight-startHighlight, 0), Math.max(pointTwo[1] - pointOne[1], 0)).move(startHighlight, pointOne[1]).fill('#FFFF66').id(currentDiv + "g" + highlightGroup + "line" + lineid).attr("fullHighlight", false);
+			return rect;
+			}
+			return false;
+		};
+
+
+		// delete a highlight on doubleclick
+		function deleteHighlight(lineid, highlightGroup, currentDiv){
+			var highlight = document.getElementById(currentDiv + "g" + highlightGroup + "line" + lineid);
+			if (!!highlight){
+					highlight.remove();
+			}
+		}
+
+		function deleteSimpleHighlight(highlightGroup, currentDiv){
+			var highlight = document.getElementById(currentDiv + "g" + highlightGroup);
+			if (!!highlight){
+					highlight.remove();
+			}
+		}
+
+	// adjust point by a scaling factor, where a point is represented as a tuple
+		function scalepoint(point){
+			return [point[0] * scalingFactor, point[1]*scalingFactor];
+		}
+
+		function scale (img,divElem){
+			//var w =window.innerWidth;
+			var w =1024;
+			divElem.style.width = (w + "px");
+			img.loaded(function(loader){
+				var h = (1/loader.ratio)*w;
+				scalingFactor = w/loader.width;
+				img.size(w,h);
+				divElem.style.height = (h + "px");
+			})		
+		}
+		// Input: a string of the form "#ffc8b0"
+		// Output: A list of RGB components as integers, of the form [255, 200, 176]
+		function hexstring_to_numlist(fillColor) {
+			var c = [fillColor.substring(1,3), fillColor.substring(3,5), fillColor.substring(5,7)];
+			c = c.map(function(component){ return parseInt(component,16) });
+			return c;
+		}
+		/**
+ 		* Convert an image 
+ 		* to a base64 string
+ 		* @param  {String}   url         
+ 		* @param  {Function} callback    
+ 		* @param  {String}   [outputFormat=image/png]           
+		* http://stackoverflow.com/questions/6150289/how-to-convert-image-into-base64-string-using-javascript?lq=1
+ 		*/
+		function convertImgToBase64(url, callback, outputFormat){
+    		var canvas = document.createElement('CANVAS'),
+        		ctx = canvas.getContext('2d'),
+        		img = new Image;
+    		img.crossOrigin = 'Anonymous';
+    		img.onload = function(){
+        		var dataURL;
+        		canvas.height = img.height;
+        		canvas.width = img.width;
+        		ctx.drawImage(img, 0, 0);
+        		dataURL = canvas.toDataURL(outputFormat);
+        		callback.call(this, dataURL);
+        		canvas = null; 
+    		};
+    		img.src = url;
+		}
+		function px_to_ppts(px, page_px_measurement, page_inch_measurement) {
+			PPI = 72;
+			return px / page_px_measurement * PPI * page_inch_measurement;
+		}
+
+		function process_pages() {
+			
+		}
+
+		function export_to_pdf(method) {
+			method = typeof method !== 'undefined' ? method : "saveas";
+
+			$('body').prepend('<div id="waiting_game"><p>While you wait&#8230;</p><iframe src="http://codeincomplete.com/projects/tetris/"></iframe></div>');
+			$('#waiting_game iframe').focus();
+
+			// Create a new PDFKit document to hold our annotations
+			var doc = new PDFDocument({layout: 'portrait', size: [72*8.5, 72*11.0]});
+			stream = doc.pipe(blobStream());
+
+			doc = process_pages(doc);
+
+			var pg;
+			for(pg = 0; pg < divDraws.length; pg++) { // for each page in the document
+////////////////////////////
+				// Import the current document (as JPEG) as the base layer of the exported file.
+				//pageimage = $($('.pdf-page svg')[pg]).find('image');
+				pageimageURL = imagePath[pg];
+				console.log(pageimageURL);
+				pageimageWidth = parseInt(divs[pg].style.width.split('p')[0]);
+				pageimageHeight = parseInt(divs[pg].style.height.split('p')[0]);
+				pageimageX = 0;
+				pageimageY = 0;
+				console.log("Width " + pageimageWidth + "\nHeight " + pageimageHeight + "\n(x,y) " + pageimageX + "," + pageimageY);
+//				doc.image(pageimageURL, pageimageX, pageimageY);
+//				doc.image("/PDFProject/pdfproject"+pageimageURL, pageimageX, pageimageY);
+//				doc.image(new Buffer(image.replace('data:image/jpg;base64,',''), 'base64'), pageimageX, pageimageY);
+
+				convertImgToBase64(pageimageURL, function(img){
+
+
+
+				page_px_width = $('svg image')[pg].width.baseVal.value;
+				page_px_height = $('svg image')[pg].height.baseVal.value;
+				page_inch_width = 8.5;
+				page_inch_height = 11;
+
+				// rects = rect elements on the current page of the PDF document
+				rects = $($('.pdf-page svg')[pg]).find('rect');
+				//console.log(rects);
+				rect_list = []; // list of rects we need to draw in the PDF
+
+				rects.each(function(ix,el){
+					var rect_list_item = new Array();
+					rect_list_item["pos_x"] = px_to_ppts( $(this).attr('x'), page_px_width, page_inch_width );
+					rect_list_item["pos_y"] = px_to_ppts( $(this).attr('y'), page_px_height, page_inch_height );
+					rect_list_item["width"] = px_to_ppts( $(this).attr('width'), page_px_width, page_inch_width );
+					rect_list_item["height"] = px_to_ppts( $(this).attr('height'), page_px_height, page_inch_height );
+					rect_list_item["fillColor"] = $(this).attr('fill');
+					rect_list_item["fillColor_decimal"] = hexstring_to_numlist(rect_list_item["fillColor"]);
+					if( !!$(this).attr('opacity') )
+						rect_list_item["opacity"] = parseInt( $(this).attr('opacity') );
+					if(!rect_list_item["opacity"] && !!$(this).css('opacity') )
+						rect_list_item["opacity"] = parseInt( $(this).css('opacity') );
+					rect_list.push(rect_list_item);
+					//console.log("Opacity of rect:");
+					//console.log(rect_list_item["opacity"]);
+				});
+				//console.log("rect_list is now:");
+				//console.log(rect_list);
+
+
+
+					//doc.image("data:image/jpeg;base64,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", pageimageX, pageimageY);
+					console.log("Drawing the page as image");
+					console.log(img);
+					doc.image(img, pageimageX, pageimageY, {height: 72*11});
+					//new Buffer(img.replace('data:image/jpg;base64,',''), 'base64'), pageimageX, pageimageY);
+
+					var k;
+					// Draw each rectangular highlight.
+					for(k = 0; k < rect_list.length; k++) {
+						console.log("drawing a rect"); console.log(rect_list[k]);
+						doc.rect(rect_list[k]["pos_x"], rect_list[k]["pos_y"], rect_list[k]["width"], rect_list[k]["height"])
+							.fillOpacity(0.5)//rect_list[k]["opacity"])
+							.fill(rect_list[k]["fillColor"]);
+					} // for each rectangle
+
+					// Add a new page in the generated PDF
+					if(pg != divDraws.length-1) {
+						doc.addPage();
+					}
+
+				}, "image/jpeg");
+
+			} // for each page
+
+/*
+			setTimeout(function(){
+			doc.end();
+			stream.on('finish', function(){
+				if(method == 'window') {
+					url = stream.toBlobURL('application/pdf');
+					window.location = url;
+				}
+				else if(method == 'saveas') {
+					saveAs(stream.toBlob(), "export.pdf");
+				}
+				$('#waiting_game').remove();
+			});
+			}, 10000 * divDraws.length);
+*/
+
+		} // function export_to_pdf
+
+		function draw_to_canvas(canvas_id) {
+			canvas_id = typeof canvas_id !== 'undefined' ? canvas_id : "exportcanvas";
+			$('#'+canvas_id).width( $( $('.pdf-page svg')[0]).width() );
+			$('#'+canvas_id).height( $( $('.pdf-page svg')[0]).height() );
+			console.log($('#'+canvas_id).height());
+//			$('#'+canvas_id).css('visibility','hidden');
+			canvg(canvas_id, $('.pdf-page svg')[0].outerHTML);
+
+
+			var imgData = $('#'+canvas_id)[0].toDataURL("image/jpeg", 1.0);
+
+			var doc = new PDFDocument({layout: 'portrait', size: [72*8.5, 72*11.0]});
+			var stream = doc.pipe(blobStream());
+			var imagedata = $('#'+canvas_id)[0].toDataURL("image/jpeg", 1.0);
+			console.log(imagedata);
+			doc.image(imagedata, 0, 0, {width:72*8.5, height:72*11});
+			setTimeout(function(){
+			doc.end();
+			stream.on('finish', function(){
+				saveAs(stream.toBlob(), "export.pdf");
+			});
+			}, 5000);
+		}

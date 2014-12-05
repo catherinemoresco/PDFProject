@@ -41,6 +41,7 @@ def extractImages(filename):
             break
     ## Images are decoded with OpenCV, which represents them as NumPy arrays.
         decoded_image = cv2.imdecode(np.fromstring(stream[next_img_start:next_img_end+2], np.uint8), cv2.CV_LOAD_IMAGE_COLOR)
+        #decoded_image = cv2.resize(_image, (1024, int(_image.shape[0] * 1024.0/_image.shape[1]) ))
         decoded_images.append(decoded_image)
         i = next_img_end + 2
     ## Return decoded images

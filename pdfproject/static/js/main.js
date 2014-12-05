@@ -238,34 +238,44 @@
     		};
     		img.src = url;
 		}
-		function px_to_mm(px) {
-			var DPI = 120;
-			return px;
-			return (px*25.4)/DPI;
+		function getBase64Image(img) {
+    		// Create an empty canvas element
+    		var canvas = document.createElement("canvas");
+    		canvas.width = img.width;
+    		canvas.height = img.height;
+		
+    		// Copy the image contents to the canvas
+    		var ctx = canvas.getContext("2d");
+    		ctx.drawImage(img, 0, 0);
+		
+    		// Get the data-URL formatted image
+    		// Firefox supports PNG and JPEG. You could check img.src to
+    		// guess the original format, but be aware the using "image/jpg"
+    		// will re-encode the image.
+    		var dataURL = canvas.toDataURL("image/png");
+
+			return dataURL;
+    		//return dataURL.replace(/^data:image\/(png|jpg);base64,/, "");
 		}
 		function px_to_ppts(px, page_px_measurement, page_inch_measurement) {
 			PPI = 72;
 			return px / page_px_measurement * PPI * page_inch_measurement;
 		}
 
-		function export_to_pdf(method) {
-			method = typeof method !== 'undefined' ? method : "saveas";
+		function process_pages(doc) {
+			var r = $.Deferred();
 
-			// Create a new PDFKit document to hold our annotations
-			var doc = new PDFDocument({layout: 'portrait', size: [72*8.5, 72*11.0]});
-			stream = doc.pipe(blobStream());
-
-			var k, pg;
+			var pg;
 			for(pg = 0; pg < divDraws.length; pg++) { // for each page in the document
-				page_px_width = $('svg image')[pg].width.baseVal.value;
-				page_px_height = $('svg image')[pg].height.baseVal.value;
-				page_inch_width = 8.5;
-				page_inch_height = 11;
+				var page_px_width = $('svg image')[pg].width.baseVal.value;
+				var page_px_height = $('svg image')[pg].height.baseVal.value;
+				var page_inch_width = 8.5;
+				var page_inch_height = 11;
 
 				// rects = rect elements on the current page of the PDF document
-				rects = $($('.pdf-page svg')[pg]).find('rect');
+				var rects = $($('.pdf-page svg')[pg]).find('rect');
 				//console.log(rects);
-				rect_list = []; // list of rects we need to draw in the PDF
+				var rect_list = []; // list of rects we need to draw in the PDF
 
 				rects.each(function(ix,el){
 					var rect_list_item = new Array();
@@ -280,43 +290,82 @@
 					if(!rect_list_item["opacity"] && !!$(this).css('opacity') )
 						rect_list_item["opacity"] = parseInt( $(this).css('opacity') );
 					rect_list.push(rect_list_item);
-					//console.log("Opacity of rect:");
-					//console.log(rect_list_item["opacity"]);
+					console.log("This is a rect at " + rect_list_item["pos_x"]);
+					console.debug(rect_list_item);
 				});
 				//console.log("rect_list is now:");
 				//console.log(rect_list);
 
+				console.log("Page images");
 				// Import the current document (as JPEG) as the base layer of the exported file.
-				//pageimage = $($('.pdf-page svg')[pg]).find('image');
-				pageimageURL = imagePath[pg];
-				console.log(pageimageURL);
-				pageimageWidth = parseInt(divs[pg].style.width.split('p')[0]);
-				pageimageHeight = parseInt(divs[pg].style.height.split('p')[0]);
-				pageimageX = 0;
-				pageimageY = 0;
-				console.log("Width " + pageimageWidth + "\nHeight " + pageimageHeight + "\n(x,y) " + pageimageX + "," + pageimageY);
-				//doc.image(pageimageURL, pageimageX, pageimageY);
-//				doc.image(new Buffer(image.replace('data:image/jpg;base64,',''), 'base64'), pageimageX, pageimageY);
+				var pageimage = $($('.pdf-page svg')[pg]).find('image');
+				var pageimageURL = pageimage.attr('href');
+				var pageimageWidth = parseInt(divs[pg].style.width.split('p')[0]);
+				var pageimageHeight = parseInt(divs[pg].style.height.split('p')[0]);
+				var pageimageX = 0;
+				var pageimageY = 0;
+				console.log("Width " + pageimageWidth + ", Height " + pageimageHeight + ", (x,y) " + pageimageX + "," + pageimageY);
 
-convertImgToBase64(pageimageURL, function(img){
-	doc.image(new Buffer(img.replace('data:image/jpg;base64,',''), 'base64'), pageimageX, pageimageY);
-}, "image/jpg");
+				var pageimagedummy = new Image();
+				pageimagedummy.src = pageimageURL;
+				pageimagedummy.alt = '';
+				var img = getBase64Image(pageimagedummy);
+				console.log("Drawing the page as image from " + pageimagedummy.src);
+				doc.image(img, pageimageX, pageimageY, {height: 72*11});
 
+				console.log("Done with images of page " + pg);
+
+				var k;
 				// Draw each rectangular highlight.
 				for(k = 0; k < rect_list.length; k++) {
 					console.log("drawing a rect"); console.log(rect_list[k]);
-					doc.rect(rect_list[k]["pos_x"], rect_list[k]["pos_y"], rect_list[k]["width"], rect_list[k]["height"])
-						.fillOpacity(rect_list[k]["opacity"])
-						.fill(rect_list[k]["fillColor"]);
+					doc.highlight(rect_list[k]["pos_x"], rect_list[k]["pos_y"], rect_list[k]["width"], rect_list[k]["height"]);
 				} // for each rectangle
+				console.log("Done drawing rects");
 
-				// Add a new page in the generated PDF
-				if(pg >= divDraws.length-1) {
+				if(pg < divDraws.length-1) {
 					doc.addPage();
+					console.log("adding a new page under pg " + pg);
 				}
-
+				else {
+					console.log("at last page (" + pg + ")")
+				}
 			} // for each page
 
+			r.resolve(doc);
+			return r;
+		}
+
+		function finish_processing(doc) {
+			console.log('done with ' + doc);
+			doc.end();
+		}
+
+		function export_to_pdf(method) {
+			method = typeof method !== 'undefined' ? method : "saveas";
+
+			$('body').prepend('<div id="waiting_game"><p>While you wait&#8230;</p><iframe src="http://codeincomplete.com/projects/tetris/"></iframe></div>');
+			$('#waiting_game iframe').focus();
+
+			// Create a new PDFKit document to hold our annotations
+			var doc = new PDFDocument({layout: 'portrait', size: [72*8.5, 72*11.0], bufferPages: true});
+			stream = doc.pipe(blobStream());
+
+			process_pages(doc).done(finish_processing);
+
+			stream.on('finish', function(){
+				if(method == 'window') {
+					url = stream.toBlobURL('application/pdf');
+					window.location = url;
+				}
+				else if(method == 'saveas') {
+					saveAs(stream.toBlob(), "export.pdf");
+				}
+				$('#waiting_game').remove();
+			});
+
+/*
+			setTimeout(function(){
 			doc.end();
 			stream.on('finish', function(){
 				if(method == 'window') {
@@ -326,5 +375,33 @@ convertImgToBase64(pageimageURL, function(img){
 				else if(method == 'saveas') {
 					saveAs(stream.toBlob(), "export.pdf");
 				}
+				$('#waiting_game').remove();
 			});
+			}, 10000 * divDraws.length);
+*/
+
 		} // function export_to_pdf
+
+		function draw_to_canvas(canvas_id) {
+			canvas_id = typeof canvas_id !== 'undefined' ? canvas_id : "exportcanvas";
+			$('#'+canvas_id).width( $( $('.pdf-page svg')[0]).width() );
+			$('#'+canvas_id).height( $( $('.pdf-page svg')[0]).height() );
+			console.log($('#'+canvas_id).height());
+//			$('#'+canvas_id).css('visibility','hidden');
+			canvg(canvas_id, $('.pdf-page svg')[0].outerHTML);
+
+
+			var imgData = $('#'+canvas_id)[0].toDataURL("image/jpeg", 1.0);
+
+			var doc = new PDFDocument({layout: 'portrait', size: [72*8.5, 72*11.0]});
+			var stream = doc.pipe(blobStream());
+			var imagedata = $('#'+canvas_id)[0].toDataURL("image/jpeg", 1.0);
+			console.log(imagedata);
+			doc.image(imagedata, 0, 0, {width:72*8.5, height:72*11});
+			setTimeout(function(){
+			doc.end();
+			stream.on('finish', function(){
+				saveAs(stream.toBlob(), "export.pdf");
+			});
+			}, 5000);
+		}
