@@ -147,7 +147,7 @@
 
 		// fully highlight lines
 		if (fullHighlight([[initX, initY],[endX, endY]], [pointOne, pointTwo])){
-			var rect = highlightGroup.rect(Math.max(pointTwo[0]-pointOne[0]),Math.max(pointTwo[1] - pointOne[1], 0)).move(pointOne[0], pointOne[1]).fill('#FFFF66').id(currentDiv + "g" + highlightGroup + "line" + lineid).attr("fullHighlight", true)
+			var rect = highlightGroup.rect(Math.max(pointTwo[0]-pointOne[0], 0),Math.max(pointTwo[1] - pointOne[1], 0)).move(pointOne[0], pointOne[1]).fill('#FFFF66').id(currentDiv + "g" + highlightGroup + "line" + lineid).attr("fullHighlight", true)
 
 			rect.on("dblclick", function(){this.parent.remove()})
 			return rect;
@@ -169,7 +169,6 @@
 			}
 			var rect = highlightGroup.rect(Math.max(endHighlight-startHighlight, 0), Math.max(pointTwo[1] - pointOne[1], 0)).move(startHighlight, pointOne[1]).fill('#FFFF66').id(currentDiv + "g" + highlightGroup + "line" + lineid).attr("fullHighlight", false);
 			rect.on("dblclick", function(){this.parent.remove()})
-	
 			return rect;
 			}
 			return false;
